@@ -432,14 +432,14 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
+  m_ForceIntoRT: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -1531,12 +1531,12 @@ PrefabInstance:
     - target: {fileID: 1424324586595517727, guid: 5e95b65b397fb6b4595b281f48459a3f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.009142332
+      value: -0.0091423495
       objectReference: {fileID: 0}
     - target: {fileID: 1424324586595517727, guid: 5e95b65b397fb6b4595b281f48459a3f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.06909804
+      value: -0.069098115
       objectReference: {fileID: 0}
     - target: {fileID: 1424324586030795299, guid: 5e95b65b397fb6b4595b281f48459a3f,
         type: 3}
