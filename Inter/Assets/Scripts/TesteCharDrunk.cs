@@ -20,6 +20,13 @@ public class TesteCharDrunk : MonoBehaviour
 	private Vector3 moveDirection = Vector3.zero;
 
 
+	public Animator portaAnim;
+
+	public bool abriArm;
+
+	public Transform armarioPos;
+
+
 
 
 	// Variaveis para as mecanicas de bebado//
@@ -129,6 +136,20 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 
+
+		// abrir porta do armario//
+
+		if (abriArm == true)
+		{
+			portaAnim.SetTrigger("AbriPorta");
+			abriArm = false;
+		}
+
+		else
+		{
+			portaAnim.ResetTrigger("AbriPorta");
+
+		}
 
 
 
@@ -253,7 +274,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 	void Drunk()
 	{	
-		time = 0;
+		time = 0;	
 		drunkSpeed = Random.Range (drunkMin,drunkMax);
 		 
 	}
@@ -273,6 +294,16 @@ public class TesteCharDrunk : MonoBehaviour
 		if (other.CompareTag("Obstaculo") && carregando == true)
 		{
 			carregando = false;
+		}
+
+	}
+
+
+	void OnTriggerStay(Collider other)
+	{
+		if (other.CompareTag("Armario") && Input.GetKey(KeyCode.E))
+		{
+			abriArm = true;
 		}
 	}
 
@@ -314,6 +345,12 @@ public class TesteCharDrunk : MonoBehaviour
 			vodka = 0;
 			carregando = true;
 		}
+
+	}
+
+
+	void EntraArmario()
+	{
 
 	}
 }
