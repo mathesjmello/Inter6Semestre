@@ -22,9 +22,12 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public Animator portaAnim;
 
+	public Animator portaAnim2;
+
 	public bool abriArm;
 
-	public Transform armarioPos;
+	public bool abriArm2;
+
 
 
 
@@ -51,7 +54,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public int upTrue = 0;
 
-	public bool carregando = true;
+	public bool carregando = false;
 
 	public bool levantaCaido = false;
 
@@ -150,6 +153,20 @@ public class TesteCharDrunk : MonoBehaviour
 			portaAnim.ResetTrigger("AbriPorta");
 
 		}
+
+
+		if (abriArm2 == true)
+		{
+			portaAnim2.SetTrigger("AbriPorta");
+			abriArm2 = false;
+		}
+
+		else
+		{
+			portaAnim2.ResetTrigger("AbriPorta");
+
+		}
+
 
 
 
@@ -304,6 +321,11 @@ public class TesteCharDrunk : MonoBehaviour
 		if (other.CompareTag("Armario") && Input.GetKey(KeyCode.E))
 		{
 			abriArm = true;
+		}
+
+		if (other.CompareTag("Armario2") && Input.GetKey(KeyCode.E))
+		{
+			abriArm2 = true;
 		}
 	}
 
