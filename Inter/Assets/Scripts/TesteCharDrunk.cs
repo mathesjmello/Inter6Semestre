@@ -69,6 +69,13 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 
+	//variavel fase 01
+	public GameObject movel;
+
+	public int calça;
+
+
+
 	void Start()
 	{
 		controller = GetComponent<CharacterController>();
@@ -81,34 +88,34 @@ public class TesteCharDrunk : MonoBehaviour
 
 	
 	
-	/* void ObjGrab()
+	 /*/void ObjGrab()
 	 {
 		 Vector3 from = cam.transform.position;
 		 Vector3 direction = cam.transform.TransformDirection(Vector3.forward);
 		 Ray ray = new Ray(cam.transform.position, direction);
 
 		 RaycastHit hit;
-		 if (Physics.Raycast(ray, out hit, 5))
+		 if (Physics.Raycast(ray, out hit, 1000))
 		 {
-			 if (hit.collider.CompareTag("crate"))
+			 if (hit.collider.CompareTag("Movel"))
 			 {
 				 GameObject hitObj = hit.collider.gameObject;
 				 hitObj.GetComponent<Renderer>().material.color = Color.red;
 
-				 if (Input.GetKeyDown(KeyCode.E))
+				 if (Input.GetKeyDown(KeyCode.LeftShift))
 				 {
 					 hitObj.transform.SetParent(cam.transform);
 					 hitObj.GetComponent<Rigidbody>().isKinematic = true;
 				 }
 
-				 if (Input.GetKeyUp(KeyCode.E))
+				 if (Input.GetKeyUp(KeyCode.LeftShift))
 				 {
 					 hitObj.transform.SetParent(null);
 					 hitObj.GetComponent<Rigidbody>().isKinematic = false;
 				 }
 			 }
 		 }
-		 Debug.DrawRay(from, direction * 5, Color.blue);
+		 Debug.DrawRay(from, direction * 100, Color.blue);
 	 }*/
 
 
@@ -221,8 +228,11 @@ public class TesteCharDrunk : MonoBehaviour
 
 		
 
-		// ObjGrab();
+		//  ObjGrab();			
 		RotateView();
+
+
+
 
 		if (controller.isGrounded)
 		{
@@ -313,6 +323,19 @@ public class TesteCharDrunk : MonoBehaviour
 			carregando = false;
 		}
 
+
+		if (other.CompareTag("Limites"))
+		{
+			movel.GetComponent<Movel>().arrastaMov = false;
+		}
+
+		if (other.CompareTag("Calça"))
+		{
+			calça = 1;
+			Destroy(other.gameObject);
+		}
+
+
 	}
 
 
@@ -326,6 +349,16 @@ public class TesteCharDrunk : MonoBehaviour
 		if (other.CompareTag("Armario2") && Input.GetKey(KeyCode.E))
 		{
 			abriArm2 = true;
+		}
+
+
+	}
+
+	void OnTriggerExit(Collider other){
+
+		if (other.CompareTag("Limites"))
+		{
+			movel.GetComponent<Movel>().arrastaMov = true;
 		}
 	}
 
@@ -370,9 +403,4 @@ public class TesteCharDrunk : MonoBehaviour
 
 	}
 
-
-	void EntraArmario()
-	{
-
-	}
 }
