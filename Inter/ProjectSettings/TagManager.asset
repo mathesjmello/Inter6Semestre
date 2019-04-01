@@ -7,6 +7,8 @@ TagManager:
   - Vodka
   - Obstaculo
   - Armario
+  - Armario2
+  - "Cal\xE7a"
   layers:
   - Default
   - TransparentFX
