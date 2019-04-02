@@ -14,6 +14,15 @@ public class AtivaRay : MonoBehaviour
 
     public GameObject teste05;
 
+    
+    public GameObject teste06;
+    public GameObject teste07;
+    public GameObject teste08;
+
+    public GameObject teste09;
+
+    public GameObject teste10;
+
 
 
     void Update()
@@ -25,6 +34,11 @@ public class AtivaRay : MonoBehaviour
             teste03.GetComponent<RayCastSight>().rayOn = true;
             teste04.GetComponent<RayCastSight>().rayOn = true;
             teste05.GetComponent<RayCastSight>().rayOn = true;
+            teste06.GetComponent<RayCastSight>().rayOn = true;
+            teste07.GetComponent<RayCastSight>().rayOn = true;
+            teste08.GetComponent<RayCastSight>().rayOn = true;
+            teste09.GetComponent<RayCastSight>().rayOn = true;
+            teste10.GetComponent<RayCastSight>().rayOn = true;
 
         }
 
@@ -35,6 +49,11 @@ public class AtivaRay : MonoBehaviour
             teste03.GetComponent<RayCastSight>().rayOn = false;
             teste04.GetComponent<RayCastSight>().rayOn = false;
             teste05.GetComponent<RayCastSight>().rayOn = false;
+            teste06.GetComponent<RayCastSight>().rayOn = false;
+            teste07.GetComponent<RayCastSight>().rayOn = false;
+            teste08.GetComponent<RayCastSight>().rayOn = false;
+            teste09.GetComponent<RayCastSight>().rayOn = false;
+            teste10.GetComponent<RayCastSight>().rayOn = false;
 
         }
     }

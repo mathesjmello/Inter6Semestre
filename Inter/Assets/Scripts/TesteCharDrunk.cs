@@ -30,7 +30,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 	// Variaveis para as mecanicas de bebado//
-	public float drunkSpeed;
+/*	public float drunkSpeed;
 
 	public float drunkMax = 4;
 
@@ -59,9 +59,18 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public float maxTimeCaido = 15;
 
-	//public GameObject dimiCaido;
+	public GameObject dimiCaido;
 
-	//public GameObject dimiCarregado;
+	public GameObject dimiCarregado;*/
+
+	public GameObject movel;
+
+	public GameObject esposa;
+
+	public Animator portaGrandeAnim;
+
+
+	public GameObject camUp;
 
 
 
@@ -114,7 +123,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 		// para dar efeito de andar bebado//	
-		if (carregando == true)
+		/*if (carregando == true)
 		{	
 			//dimiCaido.SetActive(false);
 			//dimiCarregado.SetActive(true);
@@ -132,7 +141,7 @@ public class TesteCharDrunk : MonoBehaviour
 
              Drunk();
              SetRandomTime();
-        }
+        }*/
 
 
 
@@ -155,14 +164,16 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 
+
+
 		// para levantar o bebado//
 
-		if (carregando == false)
+		/*if (carregando == false)
 		{
 			//dimiCaido.SetActive(true);
 		//dimiCarregado.SetActive(false);
 			drunkSpeed = 0;
-		}
+		}*/
 
 
 
@@ -170,7 +181,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 
-		 if (Input.GetKey(KeyCode.E))
+		/* if (Input.GetKey(KeyCode.E))
 		 {
 			 levantaCaido = true;
 
@@ -194,7 +205,7 @@ public class TesteCharDrunk : MonoBehaviour
 		 if (vodka == 3)
 		 {
 			 carregando = false;
-		 }
+		 }*/
 
 
 		
@@ -210,21 +221,21 @@ public class TesteCharDrunk : MonoBehaviour
 			if (Input.GetKey(KeyCode.A))
 			{
 				//transform.Rotate(Vector3.down * mouseSensivity * 2 * Time.deltaTime);
-			   moveDirection.x = -walkSpeed + drunkSpeed;
+			   moveDirection.x = -walkSpeed;  // + drunkSpeed;
 			}
 			if (Input.GetKey(KeyCode.D))
 			{
 				//transform.Rotate(Vector3.up * mouseSensivity * 2 * Time.deltaTime);
-			   moveDirection.x = walkSpeed + drunkSpeed;
+			   moveDirection.x = walkSpeed;  // + drunkSpeed;
 			}
 			if (Input.GetKey(KeyCode.W))
 			{
-				moveDirection.z = walkSpeed + drunkSpeed;
+				moveDirection.z = walkSpeed; //+ drunkSpeed;
 
 			}
 			if (Input.GetKey(KeyCode.S))
 			{
-				moveDirection.z = -walkSpeed + drunkSpeed;
+				moveDirection.z = -walkSpeed; // + drunkSpeed;
 
 			}
 
@@ -262,7 +273,8 @@ public class TesteCharDrunk : MonoBehaviour
 													 cam.transform.localEulerAngles.z);
 	}
 
-	void SetRandomTime()
+
+/*	void SetRandomTime()
 	{
          changeTime = Random.Range(minTime, maxTime);
     }
@@ -272,11 +284,11 @@ public class TesteCharDrunk : MonoBehaviour
 		time = 0;	
 		drunkSpeed = Random.Range (drunkMin,drunkMax);
 		 
-	}
+	}*/
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("Vodka"))
+		/*if (other.CompareTag("Vodka"))
 		{
 		// para aumentar o quao bebado//
 		vodka ++;	
@@ -289,6 +301,13 @@ public class TesteCharDrunk : MonoBehaviour
 		if (other.CompareTag("Obstaculo") && carregando == true)
 		{
 			carregando = false;
+		}*/
+
+		if (other.CompareTag("Calça"))
+		{
+			esposa.SetActive(true);
+			Destroy(other.gameObject);
+			portaGrandeAnim.SetInteger("ComCalça", 1);
 		}
 
 	}
@@ -301,8 +320,30 @@ public class TesteCharDrunk : MonoBehaviour
 			abriArm = true;
 			portaAnim = other.GetComponent<Animator>();
 			portaAnim.SetTrigger("AbriPorta");
-			//portaAnim.ResetTrigger("AbriPorta");
+			portaAnim.ResetTrigger("AbriPorta");
 		}
+
+		if (other.CompareTag("Limites")) 
+		{ 
+			movel.GetComponent<Movel>().arrastaMov = false; 
+		} 
+
+		if (other.CompareTag("InsideArm"))
+		{
+			cam.SetActive(false);
+			camUp.SetActive(true);
+		}
+	}
+
+	 void OnTriggerExit(Collider other) 
+	 {
+		 
+		if (other.CompareTag("InsideArm"))
+		{
+			cam.SetActive(true);
+			camUp.SetActive(false);
+		}
+		
 	}
 
 
@@ -346,9 +387,4 @@ public class TesteCharDrunk : MonoBehaviour
 
 	}*/
 
-
-	void EntraArmario()
-	{
-
-	}
 }
