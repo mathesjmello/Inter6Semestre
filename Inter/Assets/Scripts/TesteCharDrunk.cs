@@ -275,17 +275,6 @@ public class TesteCharDrunk : MonoBehaviour
 			playerAnim.SetBool("isWalking", false);
 		}
 
-
-		if (Input.GetKey(KeyCode.Escape))
-		{
-			PauseScreen.SetActive(!PauseScreen.activeSelf);
-			Cursor.lockState = PauseScreen.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
-			Cursor.visible = PauseScreen.activeSelf;
-			
-		}
-
-
-
 	}
 
 	
