@@ -77,6 +77,9 @@ public class TesteCharDrunk : MonoBehaviour
 	public GameObject camUp;
 
 
+	public GameObject PauseScreen;
+
+
 
 
 	void Start()
@@ -275,8 +278,19 @@ public class TesteCharDrunk : MonoBehaviour
 		}
 
 
+		if (Input.GetKey(KeyCode.Escape))
+		{
+			PauseScreen.SetActive(!PauseScreen.activeSelf);
+			Cursor.lockState = PauseScreen.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
+			Cursor.visible = PauseScreen.activeSelf;
+			
+		}
+
+
+
 	}
 
+	
 
 
 	void RotateView()
