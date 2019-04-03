@@ -26,6 +26,8 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public bool abriArm;
 
+	public GameObject canvas;
+
 
 
 
@@ -271,6 +273,8 @@ public class TesteCharDrunk : MonoBehaviour
 		{
 			playerAnim.SetBool("isWalking", false);
 		}
+
+
 	}
 
 
