@@ -35,11 +35,11 @@ public class Movel : MonoBehaviour
         } 
  
  
-        //if (Vector3.Distance(transform.position, target.position) < 0.001f) 
-        //{ 
+        if (Vector3.Distance(transform.position, target.position) < 0.001f) 
+        { 
+             target.position *= -1.0f;
              
-             
-        //} 
+        } 
  
  
  

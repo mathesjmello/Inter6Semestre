@@ -12,12 +12,14 @@ public class TesteCharDrunk : MonoBehaviour
 
 	private CharacterController controller;
 	private float AngularSpeed = 100;
-	private float walkSpeed = 5;
+	private float walkSpeed = 2;
 	private float gravity = 0.5f;
 	public float jumpSpeed = 5;
 	public float mouseSensivity = 30;
 	private float rotationX = 0;
 	private Vector3 moveDirection = Vector3.zero;
+
+	public Animator playerAnim;
 
 
 	Animator portaAnim;
@@ -156,16 +158,6 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
-
-
-
 		// para levantar o bebado//
 
 		/*if (carregando == false)
@@ -213,6 +205,8 @@ public class TesteCharDrunk : MonoBehaviour
 		// ObjGrab();
 		RotateView();
 
+
+
 		if (controller.isGrounded)
 		{
 
@@ -221,24 +215,34 @@ public class TesteCharDrunk : MonoBehaviour
 			if (Input.GetKey(KeyCode.A))
 			{
 				//transform.Rotate(Vector3.down * mouseSensivity * 2 * Time.deltaTime);
-			   moveDirection.x = -walkSpeed;  // + drunkSpeed;
+			   //moveDirection.x = -walkSpeed;  // + drunkSpeed;
+			   transform.Rotate(-Vector3.up * AngularSpeed * Time.deltaTime);
+			   isWalking = true;
 			}
-			if (Input.GetKey(KeyCode.D))
+			else if (Input.GetKey(KeyCode.D))
 			{
 				//transform.Rotate(Vector3.up * mouseSensivity * 2 * Time.deltaTime);
-			   moveDirection.x = walkSpeed;  // + drunkSpeed;
+			   //moveDirection.x = walkSpeed;  // + drunkSpeed;
+			   transform.Rotate(Vector3.up * AngularSpeed * Time.deltaTime);
+			   isWalking = true;
 			}
-			if (Input.GetKey(KeyCode.W))
+			else if (Input.GetKey(KeyCode.W))
 			{
 				moveDirection.z = walkSpeed; //+ drunkSpeed;
+				isWalking = true;
 
 			}
-			if (Input.GetKey(KeyCode.S))
+			else if (Input.GetKey(KeyCode.S))
 			{
 				moveDirection.z = -walkSpeed; // + drunkSpeed;
+				isWalking = true;
 
 			}
 
+			else
+			{
+				isWalking = false;
+			}
 
 
 			moveDirection = transform.TransformDirection(moveDirection);
@@ -255,6 +259,18 @@ public class TesteCharDrunk : MonoBehaviour
 		moveDirection.y -= gravity;
 
 		controller.Move(moveDirection * Time.deltaTime);
+
+
+		
+
+		if (isWalking)
+		{
+			playerAnim.SetBool("isWalking", true);
+		}
+		else
+		{
+			playerAnim.SetBool("isWalking", false);
+		}
 	}
 
 
