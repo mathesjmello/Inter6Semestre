@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1802834, g: 0.2257135, b: 0.3069223, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5664,10 +5664,10 @@ MonoBehaviour:
   mouseSensivity: 30
   playerAnim: {fileID: 977139281}
   abriArm: 0
-  canvas: {fileID: 0}
+  canvas: {fileID: 430746721}
   movel: {fileID: 807484882}
   esposa: {fileID: 2060672728}
-  portaGrandeAnim: {fileID: 1778055129}
+  portaGrandeAnim: {fileID: 977139281}
   camUp: {fileID: 1699224426}
   PauseScreen: {fileID: 1042179162}
 --- !u!143 &977139284
@@ -6274,7 +6274,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-60058
+  m_Name: pb_Mesh15770
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -7354,7 +7354,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30560
+  m_Name: pb_Mesh16220
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -11498,37 +11498,37 @@ PrefabInstance:
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.6330004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.776
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.075
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11714407
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7383295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.13290858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.65075505
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
@@ -13248,13 +13248,13 @@ MonoBehaviour:
   mark: {fileID: 1424324585652825952}
   jumpSpeed: 5
   mouseSensivity: 30
-  playerAnim: {fileID: 977139281}
+  playerAnim: {fileID: 0}
   abriArm: 0
   canvas: {fileID: 0}
   movel: {fileID: 807484882}
-  esposa: {fileID: 2060672728}
-  portaGrandeAnim: {fileID: 1778055129}
-  camUp: {fileID: 1699224426}
+  esposa: {fileID: 0}
+  portaGrandeAnim: {fileID: 0}
+  camUp: {fileID: 0}
   PauseScreen: {fileID: 0}
 --- !u!1 &1424324586559755144
 GameObject:

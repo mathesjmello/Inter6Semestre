@@ -78,11 +78,9 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 	public GameObject PauseScreen;
+    private int calça;
 
-
-
-
-	void Start()
+    void Start()
 	{
 		controller = GetComponent<CharacterController>();
 		Cursor.lockState = CursorLockMode.Locked;
