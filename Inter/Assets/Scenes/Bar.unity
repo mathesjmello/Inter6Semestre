@@ -7595,7 +7595,7 @@ MonoBehaviour:
     m_InputAxisValue: 0
     m_InvertAxis: 1
   m_Heading:
-    m_HeadingDefinition: 1
+    m_HeadingDefinition: 2
     m_VelocityFilterStrength: 0
     m_HeadingBias: 0
   m_RecenterToTargetHeading:

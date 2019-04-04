@@ -12,7 +12,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 	private CharacterController controller;
 	private float AngularSpeed = 100;
-	private float walkSpeed = 2;
+	private float walkSpeed = 1.5f;
 	private float gravity = 0.5f;
 	public float jumpSpeed = 5;
 	public float mouseSensivity = 30;
@@ -55,7 +55,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public int upTrue = 0;
 
-	public bool carregando = true;
+	public bool carregando = false;
 
 	public bool levantaCaido = false;
 
@@ -77,48 +77,59 @@ public class TesteCharDrunk : MonoBehaviour
 	public GameObject camUp;
 
 
+	public GameObject PauseScreen;
+    private int calça;
 
+	public AudioClip walkSound;
 
-	void Start()
+	public AudioSource playerSound;
+
+	public bool isWalkPlaying;
+
+	public bool isWalkingBack;
+
+    void Start()
 	{
 		controller = GetComponent<CharacterController>();
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 
+
+		
 			
 		
 	}
 
 	
 	
-	/* void ObjGrab()
+	 /*/void ObjGrab()
 	 {
 		 Vector3 from = cam.transform.position;
 		 Vector3 direction = cam.transform.TransformDirection(Vector3.forward);
 		 Ray ray = new Ray(cam.transform.position, direction);
 
 		 RaycastHit hit;
-		 if (Physics.Raycast(ray, out hit, 5))
+		 if (Physics.Raycast(ray, out hit, 1000))
 		 {
-			 if (hit.collider.CompareTag("crate"))
+			 if (hit.collider.CompareTag("Movel"))
 			 {
 				 GameObject hitObj = hit.collider.gameObject;
 				 hitObj.GetComponent<Renderer>().material.color = Color.red;
 
-				 if (Input.GetKeyDown(KeyCode.E))
+				 if (Input.GetKeyDown(KeyCode.LeftShift))
 				 {
 					 hitObj.transform.SetParent(cam.transform);
 					 hitObj.GetComponent<Rigidbody>().isKinematic = true;
 				 }
 
-				 if (Input.GetKeyUp(KeyCode.E))
+				 if (Input.GetKeyUp(KeyCode.LeftShift))
 				 {
 					 hitObj.transform.SetParent(null);
 					 hitObj.GetComponent<Rigidbody>().isKinematic = false;
 				 }
 			 }
 		 }
-		 Debug.DrawRay(from, direction * 5, Color.blue);
+		 Debug.DrawRay(from, direction * 100, Color.blue);
 	 }*/
 
 
@@ -204,7 +215,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 		
 
-		// ObjGrab();
+		//  ObjGrab();			
 		RotateView();
 
 
@@ -233,17 +244,19 @@ public class TesteCharDrunk : MonoBehaviour
 				moveDirection.z = walkSpeed; //+ drunkSpeed;
 				isWalking = true;
 
+
 			}
 			else if (Input.GetKey(KeyCode.S))
 			{
 				moveDirection.z = -walkSpeed; // + drunkSpeed;
-				isWalking = true;
+				isWalkingBack = true;
 
 			}
 
 			else
 			{
 				isWalking = false;
+				isWalkingBack = false;
 			}
 
 
@@ -262,20 +275,49 @@ public class TesteCharDrunk : MonoBehaviour
 
 		controller.Move(moveDirection * Time.deltaTime);
 
+		if (isWalkingBack)
+		{
+			playerAnim.SetBool("isWalkingBack", true);
 
+			if (!playerSound.isPlaying)
+			{
+				playerSound.Play(0);	
+			}
+		}
 		
 
-		if (isWalking)
+		 if (isWalking)
 		{
 			playerAnim.SetBool("isWalking", true);
+
+			if (!playerSound.isPlaying)
+			{
+				playerSound.Play(0);	
+			}
+			
 		}
-		else
+		if (isWalking == false )
 		{
 			playerAnim.SetBool("isWalking", false);
+			
 		}
 
 
+		if (isWalkingBack == false)
+		{
+
+			playerAnim.SetBool("isWalkingBack", false);
+		}
+
+		if (isWalking == false && isWalkingBack == false)
+		{
+			playerSound.Stop();
+			isWalkPlaying = false;
+		}
+
 	}
+
+
 
 
 
@@ -329,6 +371,19 @@ public class TesteCharDrunk : MonoBehaviour
 			Destroy(other.gameObject);
 			portaGrandeAnim.SetInteger("ComCalça", 1);
 		}
+
+
+		if (other.CompareTag("Limites"))
+		{
+			movel.GetComponent<Movel>().arrastaMov = false;
+		}
+
+		if (other.CompareTag("Calça"))
+		{
+			calça = 1;
+			Destroy(other.gameObject);
+		}
+
 
 	}
 
