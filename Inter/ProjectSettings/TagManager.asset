@@ -9,9 +9,9 @@ TagManager:
   - Armario
   - Armario2
   - "Cal\xE7a"
-  - Movel
   - Limites
-  - Zona
+  - Movel
+  - InsideArm
   layers:
   - Default
   - TransparentFX

@@ -12,28 +12,29 @@ public class TesteCharDrunk : MonoBehaviour
 
 	private CharacterController controller;
 	private float AngularSpeed = 100;
-	private float walkSpeed = 5;
+	private float walkSpeed = 1.5f;
 	private float gravity = 0.5f;
 	public float jumpSpeed = 5;
 	public float mouseSensivity = 30;
 	private float rotationX = 0;
 	private Vector3 moveDirection = Vector3.zero;
 
+	public Animator playerAnim;
 
-	public Animator portaAnim;
 
-	public Animator portaAnim2;
+	Animator portaAnim;
 
 	public bool abriArm;
 
-	public bool abriArm2;
+	public GameObject canvas;
+
 
 
 
 
 
 	// Variaveis para as mecanicas de bebado//
-	public float drunkSpeed;
+/*	public float drunkSpeed;
 
 	public float drunkMax = 4;
 
@@ -64,24 +65,37 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public GameObject dimiCaido;
 
-	public GameObject dimiCarregado;
+	public GameObject dimiCarregado;*/
 
-
-
-
-	//variavel fase 01
 	public GameObject movel;
 
-	public int calça;
+	public GameObject esposa;
+
+	public Animator portaGrandeAnim;
 
 
+	public GameObject camUp;
 
-	void Start()
+
+	public GameObject PauseScreen;
+    private int calça;
+
+	public AudioClip walkSound;
+
+	public AudioSource playerSound;
+
+	public bool isWalkPlaying;
+
+	public bool isWalkingBack;
+
+    void Start()
 	{
 		controller = GetComponent<CharacterController>();
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 
+
+		
 			
 		
 	}
@@ -124,10 +138,10 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 		// para dar efeito de andar bebado//	
-		if (carregando == true)
+		/*if (carregando == true)
 		{	
-			dimiCaido.SetActive(false);
-			dimiCarregado.SetActive(true);
+			//dimiCaido.SetActive(false);
+			//dimiCarregado.SetActive(true);
 			time += Time.deltaTime;
 		}
 
@@ -142,7 +156,7 @@ public class TesteCharDrunk : MonoBehaviour
 
              Drunk();
              SetRandomTime();
-        }
+        }*/
 
 
 
@@ -155,51 +169,24 @@ public class TesteCharDrunk : MonoBehaviour
 			abriArm = false;
 		}
 
-		else
-		{
-			portaAnim.ResetTrigger("AbriPorta");
-
-		}
-
-
-		if (abriArm2 == true)
-		{
-			portaAnim2.SetTrigger("AbriPorta");
-			abriArm2 = false;
-		}
-
-		else
-		{
-			portaAnim2.ResetTrigger("AbriPorta");
-
-		}
-
-
-
-
-
-
-
-
-
 
 
 		// para levantar o bebado//
 
-		if (carregando == false)
+		/*if (carregando == false)
 		{
-			dimiCaido.SetActive(true);
-			dimiCarregado.SetActive(false);
+			//dimiCaido.SetActive(true);
+		//dimiCarregado.SetActive(false);
 			drunkSpeed = 0;
-		}
+		}*/
 
 
 
-		Levanta();
+		//Levanta();
 
 
 
-		 if (Input.GetKey(KeyCode.E))
+		/* if (Input.GetKey(KeyCode.E))
 		 {
 			 levantaCaido = true;
 
@@ -223,14 +210,13 @@ public class TesteCharDrunk : MonoBehaviour
 		 if (vodka == 3)
 		 {
 			 carregando = false;
-		 }
+		 }*/
 
 
 		
 
 		//  ObjGrab();			
 		RotateView();
-
 
 
 
@@ -242,24 +228,36 @@ public class TesteCharDrunk : MonoBehaviour
 			if (Input.GetKey(KeyCode.A))
 			{
 				//transform.Rotate(Vector3.down * mouseSensivity * 2 * Time.deltaTime);
-			   moveDirection.x = -walkSpeed + drunkSpeed;
+			   //moveDirection.x = -walkSpeed;  // + drunkSpeed;
+			   transform.Rotate(-Vector3.up * AngularSpeed * Time.deltaTime);
+			   isWalking = true;
 			}
-			if (Input.GetKey(KeyCode.D))
+			else if (Input.GetKey(KeyCode.D))
 			{
 				//transform.Rotate(Vector3.up * mouseSensivity * 2 * Time.deltaTime);
-			   moveDirection.x = walkSpeed + drunkSpeed;
+			   //moveDirection.x = walkSpeed;  // + drunkSpeed;
+			   transform.Rotate(Vector3.up * AngularSpeed * Time.deltaTime);
+			   isWalking = true;
 			}
-			if (Input.GetKey(KeyCode.W))
+			else if (Input.GetKey(KeyCode.W))
 			{
-				moveDirection.z = walkSpeed + drunkSpeed;
+				moveDirection.z = walkSpeed; //+ drunkSpeed;
+				isWalking = true;
+
 
 			}
-			if (Input.GetKey(KeyCode.S))
+			else if (Input.GetKey(KeyCode.S))
 			{
-				moveDirection.z = -walkSpeed + drunkSpeed;
+				moveDirection.z = -walkSpeed; // + drunkSpeed;
+				isWalkingBack = true;
 
 			}
 
+			else
+			{
+				isWalking = false;
+				isWalkingBack = false;
+			}
 
 
 			moveDirection = transform.TransformDirection(moveDirection);
@@ -276,7 +274,50 @@ public class TesteCharDrunk : MonoBehaviour
 		moveDirection.y -= gravity;
 
 		controller.Move(moveDirection * Time.deltaTime);
+
+		if (isWalkingBack)
+		{
+			playerAnim.SetBool("isWalkingBack", true);
+
+			if (!playerSound.isPlaying)
+			{
+				playerSound.Play(0);	
+			}
+		}
+		
+
+		 if (isWalking)
+		{
+			playerAnim.SetBool("isWalking", true);
+
+			if (!playerSound.isPlaying)
+			{
+				playerSound.Play(0);	
+			}
+			
+		}
+		if (isWalking == false )
+		{
+			playerAnim.SetBool("isWalking", false);
+			
+		}
+
+
+		if (isWalkingBack == false)
+		{
+
+			playerAnim.SetBool("isWalkingBack", false);
+		}
+
+		if (isWalking == false && isWalkingBack == false)
+		{
+			playerSound.Stop();
+			isWalkPlaying = false;
+		}
+
 	}
+
+
 
 
 
@@ -294,7 +335,8 @@ public class TesteCharDrunk : MonoBehaviour
 													 cam.transform.localEulerAngles.z);
 	}
 
-	void SetRandomTime()
+
+/*	void SetRandomTime()
 	{
          changeTime = Random.Range(minTime, maxTime);
     }
@@ -304,11 +346,11 @@ public class TesteCharDrunk : MonoBehaviour
 		time = 0;	
 		drunkSpeed = Random.Range (drunkMin,drunkMax);
 		 
-	}
+	}*/
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("Vodka"))
+		/*if (other.CompareTag("Vodka"))
 		{
 		// para aumentar o quao bebado//
 		vodka ++;	
@@ -321,6 +363,13 @@ public class TesteCharDrunk : MonoBehaviour
 		if (other.CompareTag("Obstaculo") && carregando == true)
 		{
 			carregando = false;
+		}*/
+
+		if (other.CompareTag("Calça"))
+		{
+			esposa.SetActive(true);
+			Destroy(other.gameObject);
+			portaGrandeAnim.SetInteger("ComCalça", 1);
 		}
 
 
@@ -344,26 +393,36 @@ public class TesteCharDrunk : MonoBehaviour
 		if (other.CompareTag("Armario") && Input.GetKey(KeyCode.E))
 		{
 			abriArm = true;
+			portaAnim = other.GetComponent<Animator>();
+			portaAnim.SetTrigger("AbriPorta");
+			portaAnim.ResetTrigger("AbriPorta");
 		}
 
-		if (other.CompareTag("Armario2") && Input.GetKey(KeyCode.E))
+		if (other.CompareTag("Limites")) 
+		{ 
+			movel.GetComponent<Movel>().arrastaMov = false; 
+		} 
+
+		if (other.CompareTag("InsideArm"))
 		{
-			abriArm2 = true;
+			cam.SetActive(false);
+			camUp.SetActive(true);
 		}
-
-
 	}
 
-	void OnTriggerExit(Collider other){
-
-		if (other.CompareTag("Limites"))
+	 void OnTriggerExit(Collider other) 
+	 {
+		 
+		if (other.CompareTag("InsideArm"))
 		{
-			movel.GetComponent<Movel>().arrastaMov = true;
+			cam.SetActive(true);
+			camUp.SetActive(false);
 		}
+		
 	}
 
 
-	void Levanta()
+	/*void Levanta()
 	{
 		// tem que apertar J e o H alternadamente dentro do limite de tempo para conseguir levantar ele//
 		if (carregando == false && levantaCaido == true)
@@ -401,6 +460,6 @@ public class TesteCharDrunk : MonoBehaviour
 			carregando = true;
 		}
 
-	}
+	}*/
 
 }
