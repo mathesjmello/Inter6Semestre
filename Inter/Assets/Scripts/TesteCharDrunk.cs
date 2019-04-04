@@ -12,7 +12,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 	private CharacterController controller;
 	private float AngularSpeed = 100;
-	private float walkSpeed = 2;
+	private float walkSpeed = 1.5f;
 	private float gravity = 0.5f;
 	public float jumpSpeed = 5;
 	public float mouseSensivity = 30;
@@ -80,12 +80,22 @@ public class TesteCharDrunk : MonoBehaviour
 	public GameObject PauseScreen;
     private int calça;
 
+	public AudioClip walkSound;
+
+	public AudioSource playerSound;
+
+	public bool isWalkPlaying;
+
+	public bool isWalkingBack;
+
     void Start()
 	{
 		controller = GetComponent<CharacterController>();
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 
+
+		
 			
 		
 	}
@@ -234,17 +244,19 @@ public class TesteCharDrunk : MonoBehaviour
 				moveDirection.z = walkSpeed; //+ drunkSpeed;
 				isWalking = true;
 
+
 			}
 			else if (Input.GetKey(KeyCode.S))
 			{
 				moveDirection.z = -walkSpeed; // + drunkSpeed;
-				isWalking = true;
+				isWalkingBack = true;
 
 			}
 
 			else
 			{
 				isWalking = false;
+				isWalkingBack = false;
 			}
 
 
@@ -263,21 +275,50 @@ public class TesteCharDrunk : MonoBehaviour
 
 		controller.Move(moveDirection * Time.deltaTime);
 
+		if (isWalkingBack)
+		{
+			playerAnim.SetBool("isWalkingBack", true);
 
+			if (!playerSound.isPlaying)
+			{
+				playerSound.Play(0);	
+			}
+		}
 		
 
-		if (isWalking)
+		 if (isWalking)
 		{
 			playerAnim.SetBool("isWalking", true);
+
+			if (!playerSound.isPlaying)
+			{
+				playerSound.Play(0);	
+			}
+			
 		}
-		else
+		if (isWalking == false )
 		{
 			playerAnim.SetBool("isWalking", false);
+			
+		}
+
+
+		if (isWalkingBack == false)
+		{
+
+			playerAnim.SetBool("isWalkingBack", false);
+		}
+
+		if (isWalking == false && isWalkingBack == false)
+		{
+			playerSound.Stop();
+			isWalkPlaying = false;
 		}
 
 	}
 
-	
+
+
 
 
 	void RotateView()

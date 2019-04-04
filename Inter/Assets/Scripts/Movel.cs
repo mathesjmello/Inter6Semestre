@@ -13,6 +13,8 @@ public class Movel : MonoBehaviour
     public bool canArrasta; 
  
     public bool arrastaMov = true; 
+
+    public AudioSource movelSound;
  
  
  
@@ -29,23 +31,25 @@ public class Movel : MonoBehaviour
      
         if (canArrasta == true) 
         { 
- 
+       
         float step =  speed * Time.deltaTime; 
         transform.position = Vector3.MoveTowards(transform.position, target.position, step); 
+        
         } 
  
  
-        if (Vector3.Distance(transform.position, target.position) < 0.001f) 
-        { 
-             target.position *= -1.0f;
+        //if (Vector3.Distance(transform.position, target.position) < 0.001f) 
+        //{ 
              
-        } 
+             
+        //} 
  
  
  
         if(Input.GetKeyUp(KeyCode.LeftShift)) 
         { 
             canArrasta = false; 
+            movelSound.Stop();
         } 
          
  
