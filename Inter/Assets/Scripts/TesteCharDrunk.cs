@@ -375,7 +375,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 		if (other.CompareTag("Limites"))
 		{
-			movel.GetComponent<Movel>().arrastaMov = false;
+			movel.GetComponent<Movel>().ArrastaMov = false;
 		}
 
 		if (other.CompareTag("Calça"))
@@ -400,7 +400,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 		if (other.CompareTag("Limites")) 
 		{ 
-			movel.GetComponent<Movel>().arrastaMov = false; 
+			movel.GetComponent<Movel>().ArrastaMov = false; 
 		} 
 
 		if (other.CompareTag("InsideArm"))
