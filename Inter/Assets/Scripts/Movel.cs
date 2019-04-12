@@ -35,9 +35,11 @@ public class Movel : MonoBehaviour
     { 
         if (CanArrasta == true) 
         { 
-       
+
+        
+        
         float step =  Speed * Time.deltaTime; 
-        transform.position = Vector3.MoveTowards(transform.position, _target.position, step); 
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3 (_target.position.x, transform.position.y , _target.position.z), step); 
         
         } 
  
@@ -70,7 +72,10 @@ public class Movel : MonoBehaviour
 		    {
 		        Anim.SetTrigger(AnimName);
 		    }
+
+            MovelSound.Play(0);
 		} 
+
  
     } 
  
