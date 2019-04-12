@@ -4,71 +4,58 @@ using UnityEngine;
 
 public class AtivaRay : MonoBehaviour
 {
-    public  bool miraOn;
+    public  bool MiraOn;
 
-    public GameObject teste01;
-    public GameObject teste02;
-    public GameObject teste03;
+    // iniciando uma lista que pega diretamente o componente do raycast evitamos de dar getcomponent o tempotodo que é pouco performatico
+    public List<RayCastSight> RayCasts;
+   
 
-    public GameObject teste04;
-
-    public GameObject teste05;
-
-    
-    public GameObject teste06;
-    public GameObject teste07;
-    public GameObject teste08;
-
-    public GameObject teste09;
-
-    public GameObject teste10;
-
+    private void Start()
+    {
+        // isso é apenas para se esquecermos de colocar no inspector os ray casts dentro da lista ele pega automaticamente no começo 
+        
+        if (RayCasts.Capacity == 0)
+        {
+            foreach (var raycast in gameObject.GetComponentsInChildren(typeof(RayCastSight)))
+            {
+                RayCasts.Add(raycast.GetComponent<RayCastSight>());
+            }
+        }
+    }
 
 
     void Update()
     {
-        if (miraOn == true)
+        if (MiraOn == true)
         {
-            teste01.GetComponent<RayCastSight>().rayOn = true;
-            teste02.GetComponent<RayCastSight>().rayOn = true;
-            teste03.GetComponent<RayCastSight>().rayOn = true;
-            teste04.GetComponent<RayCastSight>().rayOn = true;
-            teste05.GetComponent<RayCastSight>().rayOn = true;
-            teste06.GetComponent<RayCastSight>().rayOn = true;
-            teste07.GetComponent<RayCastSight>().rayOn = true;
-            teste08.GetComponent<RayCastSight>().rayOn = true;
-            teste09.GetComponent<RayCastSight>().rayOn = true;
-            teste10.GetComponent<RayCastSight>().rayOn = true;
-
+            //roda a lista toda ativando os raycasts
+            foreach (var rk in RayCasts)
+            {
+                rk.rayOn = true;
+            }
         }
 
         else
         {
-            teste01.GetComponent<RayCastSight>().rayOn = false;
-            teste02.GetComponent<RayCastSight>().rayOn = false;
-            teste03.GetComponent<RayCastSight>().rayOn = false;
-            teste04.GetComponent<RayCastSight>().rayOn = false;
-            teste05.GetComponent<RayCastSight>().rayOn = false;
-            teste06.GetComponent<RayCastSight>().rayOn = false;
-            teste07.GetComponent<RayCastSight>().rayOn = false;
-            teste08.GetComponent<RayCastSight>().rayOn = false;
-            teste09.GetComponent<RayCastSight>().rayOn = false;
-            teste10.GetComponent<RayCastSight>().rayOn = false;
-
+            //roda a lista toda desativando os raycasts
+            foreach (var rk in RayCasts)
+            {
+                rk.rayOn = false;
+            }
         }
     }
 
     void OnTriggerEnter(Collider col)
     {
         if(col.CompareTag("Player")){
-            miraOn = true;
+            MiraOn = true;
         }
     }
 
     void OnTriggerExit(Collider col)
     {
         if(col.CompareTag("Player")){
-            miraOn = false;
+            MiraOn = false;
         }
     }
 }

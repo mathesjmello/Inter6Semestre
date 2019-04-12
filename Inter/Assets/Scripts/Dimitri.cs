@@ -17,7 +17,7 @@ public class Dimitri : MonoBehaviour
 
     // Update is called once per frame
     void CallSound(){
-        Invoke("RandomSound",5);
+        Invoke("RandomSound",10);
     }
 
     void RandomSound(){

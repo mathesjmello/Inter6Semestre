@@ -7,10 +7,10 @@ public class RayCastSight : MonoBehaviour
 {
     public bool rayOn;
 
-    public bool soundPlayed = false;
-    public int rayCheck = 0;
+    public bool SoundPlayed = false;
+    public int RayCheck = 0;
 
-    public AudioSource npcSound;
+    public AudioSource FindPlayerSound;
 
     void Update()
     {        
@@ -20,13 +20,14 @@ public class RayCastSight : MonoBehaviour
             RayOn();
         }
 
-        if (rayCheck == 1 && soundPlayed == false)
+        if (RayCheck == 1 && SoundPlayed == false)
         {
-            npcSound.Play();
+            FindPlayerSound.Play(0);
+            SoundPlayed = true;
         }
-        if (soundPlayed == true)
+        if (SoundPlayed == true)
         {
-            SceneManager.LoadScene("J1");
+           // SceneManager.LoadScene("Fase01");
         }
 
     }
@@ -44,8 +45,8 @@ public class RayCastSight : MonoBehaviour
 
             if (hit.collider.CompareTag("Player"))
             {
-                SceneManager.LoadScene("Fase01");
-                rayCheck = 1;
+                //SceneManager.LoadScene("Fase01");
+                RayCheck = 1;
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
                 Debug.Log("Hit");
             }
