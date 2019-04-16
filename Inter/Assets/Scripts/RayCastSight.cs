@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class RayCastSight : MonoBehaviour
 {
     public bool rayOn;
 
-    public bool SoundPlayed = false;
+    public  bool SoundPlayed = false;
     public int RayCheck = 0;
 
     public AudioSource FindPlayerSound;
+
+    public GameObject player;
+
 
     void Update()
     {        
@@ -24,11 +26,12 @@ public class RayCastSight : MonoBehaviour
         {
             FindPlayerSound.Play(0);
             SoundPlayed = true;
+
         }
         if (SoundPlayed == true)
         {
-           // SceneManager.LoadScene("Fase01");
         }
+
 
     }
 
@@ -45,7 +48,6 @@ public class RayCastSight : MonoBehaviour
 
             if (hit.collider.CompareTag("Player"))
             {
-                //SceneManager.LoadScene("Fase01");
                 RayCheck = 1;
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
                 Debug.Log("Hit");

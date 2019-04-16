@@ -51,10 +51,10 @@ public class NPC01 : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target.position, step); 
         npcAnim.SetBool("isWalking", true);
 
-         if (Vector3.Distance(transform.position, target.position) < 0.5f)
+         if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
             changeDirection *= -1;
-            npc.transform.Rotate(0, Time.deltaTime * 30, 0, Space.Self);
+            npc.transform.Rotate(0, 180, 0);
         }
     }
 }

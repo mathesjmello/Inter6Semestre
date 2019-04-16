@@ -80,7 +80,8 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public GameObject PauseScreen;
 
-    private int calça;
+
+	public static int calca;
 
 
 	//variaveis som
@@ -92,6 +93,9 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public bool isWalkingBack;
 
+
+
+
     void Start()
 	{
 		controller = GetComponent<CharacterController>();
@@ -99,8 +103,7 @@ public class TesteCharDrunk : MonoBehaviour
 		Cursor.visible = false;
 
 
-		
-			
+
 		
 	}
 
@@ -187,6 +190,8 @@ public class TesteCharDrunk : MonoBehaviour
 		    dimiCarregado.SetActive(false);
 			drunkSpeed = 0;
 		}
+
+
 
 
 
@@ -394,7 +399,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 		if (other.CompareTag("Calça"))
 		{
-			calça = 1;
+			calca = 1;
 			Destroy(other.gameObject);
 		}
 
@@ -414,7 +419,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 		if (other.CompareTag("Dimitri") && Input.GetKey(KeyCode.E))
 		{
-			if (calça == 1)
+			if (calca == 1)
 			{
 				carregando = true;
 			}
