@@ -93,6 +93,17 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public bool isWalkingBack;
 
+	public bool respawn;
+
+	public Vector3 respawnPos;
+
+	public GameObject cartaz;
+
+	public bool comCartaz;
+
+	public GameObject rayPlayer;
+
+	
 
 
 
@@ -103,7 +114,7 @@ public class TesteCharDrunk : MonoBehaviour
 		Cursor.visible = false;
 
 
-
+		respawnPos = transform.position;
 		
 	}
 
@@ -144,6 +155,15 @@ public class TesteCharDrunk : MonoBehaviour
 	{	
 
 
+		if (respawn == true)
+		{
+				
+		Respawn();
+			
+		}
+
+
+
 		// para dar efeito de andar bebado//	
 		if (carregando == true)
 		{	
@@ -168,6 +188,22 @@ public class TesteCharDrunk : MonoBehaviour
              Drunk();
              SetRandomTime();
         }
+
+
+
+
+		if (comCartaz)
+		{
+			cartaz.SetActive(true);
+			rayPlayer.SetActive(true);
+		}
+		
+		else
+		{
+			cartaz.SetActive(false);
+			rayPlayer.SetActive(false);
+			
+		}
 
 
 
@@ -425,6 +461,12 @@ public class TesteCharDrunk : MonoBehaviour
 			}
 		}
 
+		if (other.CompareTag("Cartaz") && Input.GetKey(KeyCode.E))
+		{
+			comCartaz = true;
+			Destroy(other.gameObject);
+		}
+
 		if (other.CompareTag("Limites")) 
 		{ 
 			movel.GetComponent<Movel>().ArrastaMov = false; 
@@ -488,5 +530,14 @@ public class TesteCharDrunk : MonoBehaviour
 		}
 
 	}*/
+
+
+
+	void Respawn(){
+
+		transform.position = respawnPos;
+
+
+	}
 
 }

@@ -13,6 +13,15 @@ public class RayCastSight : MonoBehaviour
 
     public GameObject player;
 
+    public GameObject spawnPos;
+
+    private Transform spawnTarget;
+
+    public float Speed = 0.1f;
+
+    void Start() {
+        spawnTarget = spawnPos.transform;
+    }
 
     void Update()
     {        
@@ -30,6 +39,8 @@ public class RayCastSight : MonoBehaviour
         }
         if (SoundPlayed == true)
         {
+        player.GetComponent<TesteCharDrunk>().respawn = true;
+        SoundPlayed = false;
         }
 
 
