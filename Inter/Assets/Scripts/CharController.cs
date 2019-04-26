@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class CharController : MonoBehaviour
 {
-	public GameObject player;
-	public bool isWalking = false;
+	public GameObject Player;
+	public bool IsWalking = false;
 
-	public GameObject cam;
-	public GameObject mark;
+	public GameObject Cam;
+	public GameObject Mark;
 
-	private CharacterController controller;
-	private float AngularSpeed = 100;
-	private float walkSpeed = 5;
-	private float gravity = 0.5f;
-	public float jumpSpeed = 5;
-	public float mouseSensivity = 30;
-	private float rotationX = 0;
-	private Vector3 moveDirection = Vector3.zero;
+	private CharacterController _controller;
+	private float _angularSpeed = 100;
+	private float _walkSpeed = 5;
+	private float _gravity = 0.5f;
+	public float JumpSpeed = 5;
+	public float MouseSensivity = 30;
+	private float _rotationX = 0;
+	private Vector3 _moveDirection = Vector3.zero;
 
 
 
@@ -64,7 +64,7 @@ public class CharController : MonoBehaviour
 
 	void Start()
 	{
-		controller = GetComponent<CharacterController>();
+		_controller = GetComponent<CharacterController>();
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 
@@ -190,48 +190,48 @@ public class CharController : MonoBehaviour
 		// ObjGrab();
 		RotateView();
 
-		if (controller.isGrounded)
+		if (_controller.isGrounded)
 		{
 
-			moveDirection = Vector3.zero;
+			_moveDirection = Vector3.zero;
 
 			if (Input.GetKey(KeyCode.A))
 			{
 				//transform.Rotate(Vector3.down * mouseSensivity * 2 * Time.deltaTime);
-			   moveDirection.x = -walkSpeed; //+ drunkSpeed;
+			   _moveDirection.x = -_walkSpeed; //+ drunkSpeed;
 			}
 			if (Input.GetKey(KeyCode.D))
 			{
 				//transform.Rotate(Vector3.up * mouseSensivity * 2 * Time.deltaTime);
-			   moveDirection.x = walkSpeed;// + drunkSpeed;
+			   _moveDirection.x = _walkSpeed;// + drunkSpeed;
 			}
 			if (Input.GetKey(KeyCode.W))
 			{
-				moveDirection.z = walkSpeed;// + drunkSpeed;
+				_moveDirection.z = _walkSpeed;// + drunkSpeed;
 
 			}
 			if (Input.GetKey(KeyCode.S))
 			{
-				moveDirection.z = -walkSpeed;// + drunkSpeed;
+				_moveDirection.z = -_walkSpeed;// + drunkSpeed;
 
 			}
 
 
 
-			moveDirection = transform.TransformDirection(moveDirection);
+			_moveDirection = transform.TransformDirection(_moveDirection);
 
 			if (Input.GetKey(KeyCode.Space))
 			{
-				moveDirection.y = jumpSpeed;
+				_moveDirection.y = JumpSpeed;
 				
 				
 			}
 
 		}
 
-		moveDirection.y -= gravity;
+		_moveDirection.y -= _gravity;
 
-		controller.Move(moveDirection * Time.deltaTime);
+		_controller.Move(_moveDirection * Time.deltaTime);
 	}
 
 
@@ -239,15 +239,15 @@ public class CharController : MonoBehaviour
 	void RotateView()
 	{
 		//rotaciona a câmera na horizontal
-		transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensivity * Time.deltaTime);
+		transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * MouseSensivity * Time.deltaTime);
 
 		//rotaciona a câmera na vertical
-		rotationX += Input.GetAxis("Mouse Y") * mouseSensivity * Time.deltaTime * -1;
-		rotationX = Mathf.Clamp(rotationX, -45, 45);
+		_rotationX += Input.GetAxis("Mouse Y") * MouseSensivity * Time.deltaTime * -1;
+		_rotationX = Mathf.Clamp(_rotationX, -45, 45);
 
-		cam.transform.localEulerAngles = new Vector3(-rotationX,
-													 cam.transform.localEulerAngles.y,
-													 cam.transform.localEulerAngles.z);
+		Cam.transform.localEulerAngles = new Vector3(-_rotationX,
+													 Cam.transform.localEulerAngles.y,
+													 Cam.transform.localEulerAngles.z);
 	} 	
 	
 	/* 	

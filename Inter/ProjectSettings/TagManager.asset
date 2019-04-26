@@ -12,6 +12,9 @@ TagManager:
   - Limites
   - Movel
   - InsideArm
+  - Dimitri
+  - Cartaz
+  - Parede
   layers:
   - Default
   - TransparentFX

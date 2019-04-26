@@ -4,36 +4,42 @@ using UnityEngine;
 
 public class Movel : MonoBehaviour
 {
-    public float speed = 3.0f; 
+    public float Speed = 3.0f; 
  
-    private Transform target; 
+    private Transform _target; 
  
-    public GameObject player; 
+    public GameObject Player; 
  
-    public bool canArrasta; 
+    public bool CanArrasta; 
  
-    public bool arrastaMov = true; 
+    public bool ArrastaMov = true; 
 
-    public AudioSource movelSound;
- 
+    public AudioSource MovelSound;
+
+    //variaveis para saber se algo acontece depois de mover o movel
+    
+    public bool AfterMove = false;
+    
+    public Animator Anim;
+
+    public string AnimName= "Cai";
  
  
     void Awake() 
     { 
-        target = player.transform; 
+        _target = Player.transform; 
  
     } 
  
      void Update() 
     { 
- 
- 
-     
-        if (canArrasta == true) 
+        if (CanArrasta == true) 
         { 
-       
-        float step =  speed * Time.deltaTime; 
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step); 
+
+        
+        
+        float step =  Speed * Time.deltaTime; 
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3 (_target.position.x, transform.position.y , _target.position.z), step); 
         
         } 
  
@@ -48,8 +54,8 @@ public class Movel : MonoBehaviour
  
         if(Input.GetKeyUp(KeyCode.LeftShift)) 
         { 
-            canArrasta = false; 
-            movelSound.Stop();
+            CanArrasta = false; 
+            MovelSound.Stop();
         } 
          
  
@@ -59,10 +65,17 @@ public class Movel : MonoBehaviour
  
     void OnTriggerStay(Collider other) 
     { 
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.LeftShift) && arrastaMov == true) 
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.LeftShift) && ArrastaMov == true) 
 		{ 
-			canArrasta = true; 
+			CanArrasta = true;
+		    if (AfterMove)
+		    {
+		        Anim.SetTrigger(AnimName);
+		    }
+
+            MovelSound.Play(0);
 		} 
+
  
     } 
  
