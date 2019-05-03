@@ -7,9 +7,12 @@ public class NPC01 : MonoBehaviour
 
     public float speed = 0.1f;
 
+    public float turnSpeed = 30f;
+
     public GameObject npc;
 
     private Transform target;
+
 
     public GameObject point1;
 
@@ -18,10 +21,14 @@ public class NPC01 : MonoBehaviour
 
     public int changeDirection = 1;
 
+    public List<RayCastSight> RayCasts;
+
     // Start is called before the first frame update
     void Start()
     {
-        npcAnim.SetBool("isWalking", true);
+        npcAnim.SetBool("isWalking", true);     
+
+       
     }
 
     // Update is called once per frame
@@ -44,11 +51,10 @@ public class NPC01 : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target.position, step); 
         npcAnim.SetBool("isWalking", true);
 
-         if (Vector3.Distance(transform.position, target.position) < 0.001f)
+         if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
             changeDirection *= -1;
-            npc.transform.Rotate(0, 180, 0, Space.World);
-            npcAnim.SetBool("isWalking", false);
+            npc.transform.Rotate(0, 180, 0);
         }
     }
 }
