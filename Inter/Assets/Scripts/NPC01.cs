@@ -17,9 +17,12 @@ public class NPC01 : MonoBehaviour
     public GameObject point1;
 
     public GameObject point2;
+
     public Animator npcAnim;
 
     public int changeDirection = 1;
+
+    public int direction = -1;
 
     public List<RayCastSight> RayCasts;
 
@@ -38,12 +41,14 @@ public class NPC01 : MonoBehaviour
         if (changeDirection == 1)
         {
             target = point1.transform;
-            
+            direction = -1;
+
         }
 
         if (changeDirection == -1)
         {
             target = point2.transform;
+            direction = 1;
             
         }
 
@@ -51,10 +56,19 @@ public class NPC01 : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target.position, step); 
         npcAnim.SetBool("isWalking", true);
 
-         if (Vector3.Distance(transform.position, target.position) < 0.1f)
+
+        Vector3 targetDir = target.position - transform.position;
+
+        float step2 = turnSpeed * Time.deltaTime;
+
+        Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step2, 0.0f);
+
+        transform.rotation = Quaternion.LookRotation(newDir);
+
+        if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
-            changeDirection *= -1;
-            npc.transform.Rotate(0, 180, 0);
+            changeDirection += direction;
         }
     }
+
 }
