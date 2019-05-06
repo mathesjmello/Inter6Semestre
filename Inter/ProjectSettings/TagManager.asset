@@ -15,6 +15,7 @@ TagManager:
   - Dimitri
   - Cartaz
   - Parede
+  - AreaDimi
   layers:
   - Default
   - TransparentFX
