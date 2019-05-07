@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7c672ab7c67682448b1f8304eaf2bb9f
+guid: 9549641f94e150043b991858d8b32323
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -199,7 +199,7 @@ ModelImporter:
     400192: //RootNode
     2100000: new_soldado_phongE1
     4300000: new_soldado:Head1
-    7400000: serguei_car_2
+    7400000: Take 001
     9500000: //RootNode
     13700000: new_soldado:Head1
   externalObjects: {}
@@ -229,36 +229,8 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: serguei_car_2
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 60
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    isReadable: 0
+    clipAnimations: []
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -293,7 +265,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1
-  copyAvatar: 1
+  copyAvatar: 0
   humanDescription:
     serializedVersion: 2
     human: []
@@ -309,8 +281,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 3fc3475d05e3b73418b66aa528186591,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0

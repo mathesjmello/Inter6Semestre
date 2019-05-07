@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: abacd850d5b9b0a4f9816ead0da842c1
+guid: df5ad51b9fbb0e74fa3f49745937a69f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -124,6 +124,7 @@ ModelImporter:
     100236: dimitri:transform8
     100238: dimitri:transform9
     100240: //RootNode
+    100242: new_soldado:nurbsCircle10
     400000: dimitri:bacia
     400002: dimitri:base_cabec
     400004: dimitri:Bigode
@@ -245,9 +246,10 @@ ModelImporter:
     400236: dimitri:transform8
     400238: dimitri:transform9
     400240: //RootNode
+    400242: new_soldado:nurbsCircle10
     2100000: dimitri_lambert2
     4300000: dimitri:Dimitri1
-    7400000: dimitri_car_2
+    7400000: dimitri_lev_2
     9500000: //RootNode
     13700000: dimitri:Dimitri1
   externalObjects: {}
@@ -279,7 +281,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: dimitri_car_2
+      name: dimitri_lev_2
       takeName: Take 001
       firstFrame: 1
       lastFrame: 60
@@ -306,7 +308,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1

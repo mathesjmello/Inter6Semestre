@@ -249,7 +249,7 @@ ModelImporter:
     400242: new_soldado:nurbsCircle10
     2100000: dimitri_lambert2
     4300000: dimitri:Dimitri1
-    7400000: Take 001
+    7400000: dimitri_car_3
     9500000: //RootNode
     13700000: dimitri:Dimitri1
   externalObjects: {}
@@ -281,7 +281,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: dimitri_car_3
       takeName: Take 001
       firstFrame: 1
       lastFrame: 60
