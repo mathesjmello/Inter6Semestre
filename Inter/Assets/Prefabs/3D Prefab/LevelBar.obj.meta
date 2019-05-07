@@ -1,0 +1,177 @@
+fileFormatVersion: 2
+guid: a0dd939027fcd3b4aa2b3da686852f8d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cena_T3:pPlane1_gg
+    100002: gg_Cena_T3:pCylinder8
+    100004: gg_Cena_T3:polySurface11
+    100006: gg_Cena_T3:polySurface4
+    100008: gg_Cena_T3:polySurface7
+    100010: gg_Cena_T3:polySurface8
+    100012: gg_Cena_T3:polySurface9
+    100014: gg_Cena_T3:pPlane10
+    100016: gg_Cena_T3:pPlane2
+    100018: gg_Cena_T3:pPlane3
+    100020: gg_Cena_T3:pPlane4
+    100022: gg_Cena_T3:pPlane5
+    100024: gg_Cena_T3:pPlane8
+    100026: gg_Cena_T3:pPlane9
+    100028: //RootNode
+    400000: Cena_T3:pPlane1_gg
+    400002: gg_Cena_T3:pCylinder8
+    400004: gg_Cena_T3:polySurface11
+    400006: gg_Cena_T3:polySurface4
+    400008: gg_Cena_T3:polySurface7
+    400010: gg_Cena_T3:polySurface8
+    400012: gg_Cena_T3:polySurface9
+    400014: gg_Cena_T3:pPlane10
+    400016: gg_Cena_T3:pPlane2
+    400018: gg_Cena_T3:pPlane3
+    400020: gg_Cena_T3:pPlane4
+    400022: gg_Cena_T3:pPlane5
+    400024: gg_Cena_T3:pPlane8
+    400026: gg_Cena_T3:pPlane9
+    400028: //RootNode
+    2100000: Cena_T3_pPlane1_ggMat
+    2100002: gg_Cena_T3_pCylinder8Mat
+    2100004: gg_Cena_T3_polySurface11Mat
+    2100006: gg_Cena_T3_polySurface4Mat
+    2100008: gg_Cena_T3_polySurface7Mat
+    2100010: gg_Cena_T3_polySurface8Mat
+    2100012: gg_Cena_T3_polySurface9Mat
+    2100014: gg_Cena_T3_pPlane10Mat
+    2100016: gg_Cena_T3_pPlane2Mat
+    2100018: gg_Cena_T3_pPlane3Mat
+    2100020: gg_Cena_T3_pPlane4Mat
+    2100022: gg_Cena_T3_pPlane5Mat
+    2100024: gg_Cena_T3_pPlane8Mat
+    2100026: gg_Cena_T3_pPlane9Mat
+    2300000: Cena_T3:pPlane1_gg
+    2300002: gg_Cena_T3:pCylinder8
+    2300004: gg_Cena_T3:polySurface11
+    2300006: gg_Cena_T3:polySurface4
+    2300008: gg_Cena_T3:polySurface7
+    2300010: gg_Cena_T3:polySurface8
+    2300012: gg_Cena_T3:polySurface9
+    2300014: gg_Cena_T3:pPlane10
+    2300016: gg_Cena_T3:pPlane2
+    2300018: gg_Cena_T3:pPlane3
+    2300020: gg_Cena_T3:pPlane4
+    2300022: gg_Cena_T3:pPlane5
+    2300024: gg_Cena_T3:pPlane8
+    2300026: gg_Cena_T3:pPlane9
+    3300000: Cena_T3:pPlane1_gg
+    3300002: gg_Cena_T3:pCylinder8
+    3300004: gg_Cena_T3:polySurface11
+    3300006: gg_Cena_T3:polySurface4
+    3300008: gg_Cena_T3:polySurface7
+    3300010: gg_Cena_T3:polySurface8
+    3300012: gg_Cena_T3:polySurface9
+    3300014: gg_Cena_T3:pPlane10
+    3300016: gg_Cena_T3:pPlane2
+    3300018: gg_Cena_T3:pPlane3
+    3300020: gg_Cena_T3:pPlane4
+    3300022: gg_Cena_T3:pPlane5
+    3300024: gg_Cena_T3:pPlane8
+    3300026: gg_Cena_T3:pPlane9
+    4300000: Cena_T3:pPlane1_gg
+    4300002: gg_Cena_T3:pCylinder8
+    4300004: gg_Cena_T3:polySurface11
+    4300006: gg_Cena_T3:polySurface4
+    4300008: gg_Cena_T3:polySurface7
+    4300010: gg_Cena_T3:polySurface8
+    4300012: gg_Cena_T3:polySurface9
+    4300014: gg_Cena_T3:pPlane10
+    4300016: gg_Cena_T3:pPlane2
+    4300018: gg_Cena_T3:pPlane3
+    4300020: gg_Cena_T3:pPlane4
+    4300022: gg_Cena_T3:pPlane5
+    4300024: gg_Cena_T3:pPlane8
+    4300026: gg_Cena_T3:pPlane9
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
