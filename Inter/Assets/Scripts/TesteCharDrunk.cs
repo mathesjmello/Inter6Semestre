@@ -192,11 +192,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 
-		if (comCartaz)
-		{
-			cartaz.SetActive(true);
-			rayPlayer.SetActive(true);
-		}
+
 		
 		else
 		{
@@ -463,9 +459,15 @@ public class TesteCharDrunk : MonoBehaviour
 
 		if (other.CompareTag("Cartaz") && Input.GetKey(KeyCode.E))
 		{
-			comCartaz = true;
-			Destroy(other.gameObject);
+			//comCartaz = true;
+			other.transform.parent = player.transform;
 		}
+
+		if (other.CompareTag("AreaDimi") && Input.GetKey(KeyCode.E))
+		{
+			dimiCarregado.transform.parent = null;
+		}
+
 
 		if (other.CompareTag("Limites")) 
 		{ 
