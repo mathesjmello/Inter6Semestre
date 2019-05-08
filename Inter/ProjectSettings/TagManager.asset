@@ -32,9 +32,9 @@ TagManager:
   - Movel
   - Trigger
   - Parede
-  - 
-  - 
-  - 
+  - Target
+  - Obstacles
+  - Unselectable
   - 
   - 
   - 
