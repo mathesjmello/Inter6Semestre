@@ -12,6 +12,10 @@ TagManager:
   - Limites
   - Movel
   - InsideArm
+  - Dimitri
+  - Cartaz
+  - Parede
+  - AreaDimi
   layers:
   - Default
   - TransparentFX
@@ -28,9 +32,9 @@ TagManager:
   - Movel
   - Trigger
   - Parede
-  - 
-  - 
-  - 
+  - Target
+  - Obstacles
+  - Unselectable
   - 
   - 
   - 

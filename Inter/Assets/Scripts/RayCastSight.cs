@@ -1,16 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class RayCastSight : MonoBehaviour
 {
     public bool rayOn;
 
-    public bool SoundPlayed = false;
+    public  bool SoundPlayed = false;
     public int RayCheck = 0;
 
-    public AudioSource NpcSound;
+    public AudioSource FindPlayerSound;
+
+    public GameObject player;
+
+    public GameObject spawnPos;
+
+    private Transform spawnTarget;
+
+    public float Speed = 0.1f;
+
+    void Start() {
+        spawnTarget = spawnPos.transform;
+    }
 
     void Update()
     {        
@@ -22,12 +33,16 @@ public class RayCastSight : MonoBehaviour
 
         if (RayCheck == 1 && SoundPlayed == false)
         {
-            NpcSound.Play();
+            FindPlayerSound.Play(0);
+            SoundPlayed = true;
+
         }
         if (SoundPlayed == true)
         {
-            SceneManager.LoadScene("J1");
+        player.GetComponent<TesteCharDrunk>().respawn = true;
+        SoundPlayed = false;
         }
+
 
     }
 
@@ -44,7 +59,6 @@ public class RayCastSight : MonoBehaviour
 
             if (hit.collider.CompareTag("Player"))
             {
-                SceneManager.LoadScene("Fase01");
                 RayCheck = 1;
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
                 Debug.Log("Hit");

@@ -1,0 +1,983 @@
+fileFormatVersion: 2
+guid: 9f4d28ce07a3bc54f966662d8bb9ff18
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: dimitri:bacia
+    100002: dimitri:base_cabec
+    100004: dimitri:Bigode
+    100006: dimitri:boca
+    100008: dimitri:Botao
+    100010: dimitri:Botao1
+    100012: dimitri:Botao2
+    100014: dimitri:Botao3
+    100016: dimitri:Botao4
+    100018: dimitri:Botoes
+    100020: dimitri:Calca
+    100022: dimitri:Dimitri
+    100024: dimitri:Dimitri1
+    100026: dimitri:dir_anel_1
+    100028: dimitri:dir_anel_2
+    100030: dimitri:dir_anel_3
+    100032: dimitri:dir_anel_4
+    100034: dimitri:dir_calcanha
+    100036: dimitri:dir_clavic
+    100038: dimitri:dir_cotov
+    100040: dimitri:dir_femur
+    100042: dimitri:dir_indic_1
+    100044: dimitri:dir_indic_2
+    100046: dimitri:dir_indic_3
+    100048: dimitri:dir_indic_4
+    100050: dimitri:dir_joelho
+    100052: dimitri:dir_medio_1
+    100054: dimitri:dir_medio_2
+    100056: dimitri:dir_medio_3
+    100058: dimitri:dir_medio_4
+    100060: dimitri:dir_meio_pe
+    100062: dimitri:dir_minin_1
+    100064: dimitri:dir_minin_2
+    100066: dimitri:dir_minin_3
+    100068: dimitri:dir_minin_4
+    100070: dimitri:dir_olho
+    100072: dimitri:dir_ombro
+    100074: dimitri:dir_poleg1
+    100076: dimitri:dir_poleg2
+    100078: dimitri:dir_poleg3
+    100080: dimitri:dir_poleg4
+    100082: dimitri:dir_ponta_pe
+    100084: dimitri:dir_punho
+    100086: dimitri:dir_soc_mao
+    100088: dimitri:esq_anel_1
+    100090: dimitri:esq_anel_2
+    100092: dimitri:esq_anel_3
+    100094: dimitri:esq_anel_4
+    100096: dimitri:esq_calcanha
+    100098: dimitri:esq_clavic
+    100100: dimitri:esq_cotov
+    100102: dimitri:esq_femur
+    100104: dimitri:esq_indic_1
+    100106: dimitri:esq_indic_2
+    100108: dimitri:esq_indic_3
+    100110: dimitri:esq_indic_4
+    100112: dimitri:esq_joelho
+    100114: dimitri:esq_medio_1
+    100116: dimitri:esq_medio_2
+    100118: dimitri:esq_medio_3
+    100120: dimitri:esq_medio_4
+    100122: dimitri:esq_meio_pe
+    100124: dimitri:esq_minin_1
+    100126: dimitri:esq_minin_2
+    100128: dimitri:esq_minin_3
+    100130: dimitri:esq_minin_4
+    100132: dimitri:esq_olho
+    100134: dimitri:esq_ombro
+    100136: dimitri:esq_poleg1
+    100138: dimitri:esq_poleg2
+    100140: dimitri:esq_poleg3
+    100142: dimitri:esq_poleg4
+    100144: dimitri:esq_ponta_pe
+    100146: dimitri:esq_punho
+    100148: dimitri:esq_soc_mao
+    100150: dimitri:Estrela1
+    100152: dimitri:Estrela2
+    100154: dimitri:Eyes
+    100156: dimitri:Face
+    100158: dimitri:Group61445
+    100160: dimitri:Hair
+    100162: dimitri:Hands
+    100164: dimitri:joint1
+    100166: dimitri:meio_cabec
+    100168: dimitri:nurbsCircle11
+    100170: dimitri:nurbsCircle12
+    100172: dimitri:nurbsCircle13
+    100174: dimitri:nurbsCircle17
+    100176: dimitri:nurbsCircle19
+    100178: dimitri:nurbsCircle3
+    100180: dimitri:nurbsCircle4
+    100182: dimitri:pescoc
+    100184: dimitri:Pinta
+    100186: dimitri:Sapato
+    100188: dimitri:Sobrancelha
+    100190: dimitri:soc_peito
+    100192: dimitri:spline1
+    100194: dimitri:spline2
+    100196: dimitri:spline3
+    100198: dimitri:Terno
+    100200: dimitri:top_cabec
+    100202: dimitri:transform1
+    100204: dimitri:transform10
+    100206: dimitri:transform11
+    100208: dimitri:transform12
+    100210: dimitri:transform13
+    100212: dimitri:transform14
+    100214: dimitri:transform15
+    100216: dimitri:transform16
+    100218: dimitri:transform17
+    100220: dimitri:transform18
+    100222: dimitri:transform19
+    100224: dimitri:transform2
+    100226: dimitri:transform3
+    100228: dimitri:transform4
+    100230: dimitri:transform5
+    100232: dimitri:transform6
+    100234: dimitri:transform7
+    100236: dimitri:transform8
+    100238: dimitri:transform9
+    100240: //RootNode
+    100242: new_soldado:nurbsCircle10
+    400000: dimitri:bacia
+    400002: dimitri:base_cabec
+    400004: dimitri:Bigode
+    400006: dimitri:boca
+    400008: dimitri:Botao
+    400010: dimitri:Botao1
+    400012: dimitri:Botao2
+    400014: dimitri:Botao3
+    400016: dimitri:Botao4
+    400018: dimitri:Botoes
+    400020: dimitri:Calca
+    400022: dimitri:Dimitri
+    400024: dimitri:Dimitri1
+    400026: dimitri:dir_anel_1
+    400028: dimitri:dir_anel_2
+    400030: dimitri:dir_anel_3
+    400032: dimitri:dir_anel_4
+    400034: dimitri:dir_calcanha
+    400036: dimitri:dir_clavic
+    400038: dimitri:dir_cotov
+    400040: dimitri:dir_femur
+    400042: dimitri:dir_indic_1
+    400044: dimitri:dir_indic_2
+    400046: dimitri:dir_indic_3
+    400048: dimitri:dir_indic_4
+    400050: dimitri:dir_joelho
+    400052: dimitri:dir_medio_1
+    400054: dimitri:dir_medio_2
+    400056: dimitri:dir_medio_3
+    400058: dimitri:dir_medio_4
+    400060: dimitri:dir_meio_pe
+    400062: dimitri:dir_minin_1
+    400064: dimitri:dir_minin_2
+    400066: dimitri:dir_minin_3
+    400068: dimitri:dir_minin_4
+    400070: dimitri:dir_olho
+    400072: dimitri:dir_ombro
+    400074: dimitri:dir_poleg1
+    400076: dimitri:dir_poleg2
+    400078: dimitri:dir_poleg3
+    400080: dimitri:dir_poleg4
+    400082: dimitri:dir_ponta_pe
+    400084: dimitri:dir_punho
+    400086: dimitri:dir_soc_mao
+    400088: dimitri:esq_anel_1
+    400090: dimitri:esq_anel_2
+    400092: dimitri:esq_anel_3
+    400094: dimitri:esq_anel_4
+    400096: dimitri:esq_calcanha
+    400098: dimitri:esq_clavic
+    400100: dimitri:esq_cotov
+    400102: dimitri:esq_femur
+    400104: dimitri:esq_indic_1
+    400106: dimitri:esq_indic_2
+    400108: dimitri:esq_indic_3
+    400110: dimitri:esq_indic_4
+    400112: dimitri:esq_joelho
+    400114: dimitri:esq_medio_1
+    400116: dimitri:esq_medio_2
+    400118: dimitri:esq_medio_3
+    400120: dimitri:esq_medio_4
+    400122: dimitri:esq_meio_pe
+    400124: dimitri:esq_minin_1
+    400126: dimitri:esq_minin_2
+    400128: dimitri:esq_minin_3
+    400130: dimitri:esq_minin_4
+    400132: dimitri:esq_olho
+    400134: dimitri:esq_ombro
+    400136: dimitri:esq_poleg1
+    400138: dimitri:esq_poleg2
+    400140: dimitri:esq_poleg3
+    400142: dimitri:esq_poleg4
+    400144: dimitri:esq_ponta_pe
+    400146: dimitri:esq_punho
+    400148: dimitri:esq_soc_mao
+    400150: dimitri:Estrela1
+    400152: dimitri:Estrela2
+    400154: dimitri:Eyes
+    400156: dimitri:Face
+    400158: dimitri:Group61445
+    400160: dimitri:Hair
+    400162: dimitri:Hands
+    400164: dimitri:joint1
+    400166: dimitri:meio_cabec
+    400168: dimitri:nurbsCircle11
+    400170: dimitri:nurbsCircle12
+    400172: dimitri:nurbsCircle13
+    400174: dimitri:nurbsCircle17
+    400176: dimitri:nurbsCircle19
+    400178: dimitri:nurbsCircle3
+    400180: dimitri:nurbsCircle4
+    400182: dimitri:pescoc
+    400184: dimitri:Pinta
+    400186: dimitri:Sapato
+    400188: dimitri:Sobrancelha
+    400190: dimitri:soc_peito
+    400192: dimitri:spline1
+    400194: dimitri:spline2
+    400196: dimitri:spline3
+    400198: dimitri:Terno
+    400200: dimitri:top_cabec
+    400202: dimitri:transform1
+    400204: dimitri:transform10
+    400206: dimitri:transform11
+    400208: dimitri:transform12
+    400210: dimitri:transform13
+    400212: dimitri:transform14
+    400214: dimitri:transform15
+    400216: dimitri:transform16
+    400218: dimitri:transform17
+    400220: dimitri:transform18
+    400222: dimitri:transform19
+    400224: dimitri:transform2
+    400226: dimitri:transform3
+    400228: dimitri:transform4
+    400230: dimitri:transform5
+    400232: dimitri:transform6
+    400234: dimitri:transform7
+    400236: dimitri:transform8
+    400238: dimitri:transform9
+    400240: //RootNode
+    400242: new_soldado:nurbsCircle10
+    2100000: dimitri_lambert2
+    4300000: dimitri:Dimitri1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: dimitri:Dimitri1
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'dimitri:spline3' has translation animation
+      that will be discarded.\n\t'dimitri:base_cabec' has translation animation that
+      will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton:
+    - name: dimitri_3(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle10
+      parentName: dimitri_3(Clone)
+      position: {x: -0, y: 0.0053740465, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Dimitri
+      parentName: dimitri_3(Clone)
+      position: {x: -0, y: 0.9491525, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Botao1
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform19
+      parentName: dimitri:Botao1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Botao2
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform18
+      parentName: dimitri:Botao2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Botao3
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform17
+      parentName: dimitri:Botao3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Botao4
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform16
+      parentName: dimitri:Botao4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Botoes
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform15
+      parentName: dimitri:Botoes
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Bigode
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform14
+      parentName: dimitri:Bigode
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Group61445
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform13
+      parentName: dimitri:Group61445
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Pinta
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform12
+      parentName: dimitri:Pinta
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Hair
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform11
+      parentName: dimitri:Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Face
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform10
+      parentName: dimitri:Face
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Eyes
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform9
+      parentName: dimitri:Eyes
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Sapato
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform8
+      parentName: dimitri:Sapato
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Calca
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform7
+      parentName: dimitri:Calca
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Terno
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform6
+      parentName: dimitri:Terno
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Estrela1
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform5
+      parentName: dimitri:Estrela1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Estrela2
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform4
+      parentName: dimitri:Estrela2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Botao
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform3
+      parentName: dimitri:Botao
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Sobrancelha
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform2
+      parentName: dimitri:Sobrancelha
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Hands
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:transform1
+      parentName: dimitri:Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:Dimitri1
+      parentName: dimitri:Dimitri
+      position: {x: -0, y: -0.9491525, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:nurbsCircle19
+      parentName: dimitri_3(Clone)
+      position: {x: 0.6395086, y: 0.018281527, z: 0.05477679}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:nurbsCircle12
+      parentName: dimitri:nurbsCircle19
+      position: {x: 1.4210854e-16, y: 0.77225876, z: 0.03379415}
+      rotation: {x: 0.03800765, y: -0, z: -0, w: 0.9992775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:nurbsCircle11
+      parentName: dimitri:nurbsCircle12
+      position: {x: -0.02478218, y: -1.430473e-16, z: -6.917628e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:nurbsCircle13
+      parentName: dimitri:nurbsCircle12
+      position: {x: 5.3290704e-17, y: 0.5247225, z: 0.028579492}
+      rotation: {x: 0.06509418, y: -0.06550348, z: 0.004282233, w: 0.9957177}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:nurbsCircle3
+      parentName: dimitri:nurbsCircle13
+      position: {x: -0.6453793, y: 0.19168857, z: 0.086965814}
+      rotation: {x: 0.2558574, y: 0.5823875, z: 0.19898118, w: 0.7454988}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:nurbsCircle17
+      parentName: dimitri:nurbsCircle13
+      position: {x: 8.8817837e-17, y: 0.25005493, z: -0.035660964}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:nurbsCircle4
+      parentName: dimitri:nurbsCircle13
+      position: {x: 0.46574783, y: -0.34739876, z: 0.106872626}
+      rotation: {x: 0, y: -0, z: -0.6340646, w: 0.77328014}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:joint1
+      parentName: dimitri_3(Clone)
+      position: {x: 0.6395086, y: -2.220446e-18, z: 0.15301877}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:bacia
+      parentName: dimitri:joint1
+      position: {x: -0.02478218, y: 0.7905403, z: -0.064447835}
+      rotation: {x: 0.4386651, y: -0.56533873, z: -0.48662373, w: 0.501161}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:spline1
+      parentName: dimitri:bacia
+      position: {x: -0.19184327, y: 2.6645352e-17, z: -2.1298882e-17}
+      rotation: {x: 0.005030607, y: 0.040902056, z: -0.22582465, w: 0.9732959}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:spline2
+      parentName: dimitri:spline1
+      position: {x: -0.1967031, y: -1.7763568e-17, z: -1.8541664e-17}
+      rotation: {x: 0.98867387, y: -0.15008003, z: 2.3461034e-17, w: 6.549518e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:spline3
+      parentName: dimitri:spline2
+      position: {x: -0.1386212, y: 0.055244625, z: -0.0029397812}
+      rotation: {x: 0.91449517, y: -0.40459678, z: -1.220858e-16, w: 1.2943556e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:soc_peito
+      parentName: dimitri:spline3
+      position: {x: -0.08466667, y: 2.0872193e-16, z: -2.0231397e-17}
+      rotation: {x: -7.2828403e-25, y: -6.2735614e-17, z: -0.17168169, w: 0.9851525}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:pescoc
+      parentName: dimitri:soc_peito
+      position: {x: -0.12881121, y: -8.881784e-18, z: -1.5922132e-17}
+      rotation: {x: 0.8934875, y: -0.44908807, z: -2.7498713e-17, w: 5.471033e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:base_cabec
+      parentName: dimitri:pescoc
+      position: {x: -0.03677265, y: 0.026935024, z: -0.0065355003}
+      rotation: {x: 0.026733903, y: -0.03742669, z: -0.31942573, w: 0.94649446}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:meio_cabec
+      parentName: dimitri:base_cabec
+      position: {x: -0.09433642, y: 1.3322676e-17, z: 4.0372436e-18}
+      rotation: {x: 0, y: -0, z: -0.11150593, w: 0.9937638}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:top_cabec
+      parentName: dimitri:meio_cabec
+      position: {x: -0.15053, y: 3.25104e-17, z: 2.0269962e-17}
+      rotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_olho
+      parentName: dimitri:meio_cabec
+      position: {x: -0.025479708, y: -0.12401778, z: -0.07495167}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_olho
+      parentName: dimitri:meio_cabec
+      position: {x: -0.025478326, y: -0.12401774, z: 0.0749517}
+      rotation: {x: 7.961839e-19, y: -0.000000007450581, z: 1, w: 6.123234e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:boca
+      parentName: dimitri:base_cabec
+      position: {x: 0.016750304, y: -0.20401174, z: -8.6258566e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_clavic
+      parentName: dimitri:soc_peito
+      position: {x: -0.032586724, y: 0.007603569, z: 0.21295598}
+      rotation: {x: -0.5394592, y: 0.40380502, z: 0.53697836, w: 0.5075229}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_ombro
+      parentName: dimitri:esq_clavic
+      position: {x: -0.15114352, y: 8.881784e-18, z: 6.4300256e-17}
+      rotation: {x: 0.1813189, y: -0.26006424, z: -0.1381243, w: 0.9383026}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_cotov
+      parentName: dimitri:esq_ombro
+      position: {x: -0.24382839, y: -0.052665114, z: -2.1302046e-17}
+      rotation: {x: 0.068523996, y: 0.75526273, z: -0.21986029, w: 0.6136319}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_punho
+      parentName: dimitri:esq_cotov
+      position: {x: -0.2601334, y: 5.746405e-16, z: 1.7763568e-17}
+      rotation: {x: -0.2918239, y: 0.18841359, z: 0.28466865, w: 0.893478}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_soc_mao
+      parentName: dimitri:esq_punho
+      position: {x: -0.093225054, y: -7.382983e-17, z: 4.1078252e-17}
+      rotation: {x: 0.0013186694, y: 0.16262013, z: 0.05189424, w: 0.9853223}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_medio_1
+      parentName: dimitri:esq_soc_mao
+      position: {x: -0.08169745, y: 1.63604e-16, z: 8.504874e-18}
+      rotation: {x: 0.046442375, y: -0.17265551, z: 0.047437683, w: 0.9827425}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_medio_2
+      parentName: dimitri:esq_medio_1
+      position: {x: -0.04406692, y: 1.2101431e-16, z: -8.916478e-17}
+      rotation: {x: 0.058878068, y: 0.013050809, z: 0.05591492, w: 0.99661255}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_medio_3
+      parentName: dimitri:esq_medio_2
+      position: {x: -0.03218155, y: 2.2204459e-17, z: -9.020562e-19}
+      rotation: {x: 0.059631273, y: 0.011693625, z: 0.017969862, w: 0.9979902}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_medio_4
+      parentName: dimitri:esq_medio_3
+      position: {x: -0.042675365, y: -4.063416e-16, z: -5.551115e-19}
+      rotation: {x: -0.31560805, y: 0.69410974, z: 0.5166532, w: -0.3894518}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_anel_1
+      parentName: dimitri:esq_soc_mao
+      position: {x: -0.070100576, y: 0.0016238224, z: -0.038000885}
+      rotation: {x: -0.015938291, y: -0.16859199, z: 0.033039674, w: 0.9850031}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_anel_2
+      parentName: dimitri:esq_anel_1
+      position: {x: -0.03972926, y: 2.8171908e-16, z: -1.3322676e-17}
+      rotation: {x: 0.0007176932, y: 0.0037658364, z: 0.060496632, w: 0.998161}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_anel_3
+      parentName: dimitri:esq_anel_2
+      position: {x: -0.036581036, y: 4.6254664e-16, z: 3.330669e-17}
+      rotation: {x: -0.0006573584, y: -0.002954425, z: -0.029917855, w: 0.99954784}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_anel_4
+      parentName: dimitri:esq_anel_3
+      position: {x: -0.026795574, y: 1.8554602e-16, z: -2.5535128e-17}
+      rotation: {x: 0.020991832, y: 0.16723603, z: -0.063180745, w: 0.9836664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_minin_1
+      parentName: dimitri:esq_soc_mao
+      position: {x: -0.05791089, y: 0.0022168728, z: -0.06945959}
+      rotation: {x: -0.02154482, y: -0.19355029, z: 0.049149677, w: 0.9796216}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_minin_2
+      parentName: dimitri:esq_minin_1
+      position: {x: -0.031240337, y: 2.8338443e-16, z: 1.3322676e-17}
+      rotation: {x: 0.005336546, y: 0.02318302, z: 0.06519845, w: 0.9975887}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_minin_3
+      parentName: dimitri:esq_minin_2
+      position: {x: -0.030766109, y: 2.6145752e-16, z: -5.5511148e-18}
+      rotation: {x: -0.0005892611, y: -0.0023018562, z: -0.04089049, w: 0.9991608}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_minin_4
+      parentName: dimitri:esq_minin_3
+      position: {x: -0.025101393, y: -4.045375e-17, z: 4.440892e-18}
+      rotation: {x: 0.023415599, y: 0.17211169, z: -0.07329113, w: 0.98206806}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_indic_1
+      parentName: dimitri:esq_soc_mao
+      position: {x: -0.08631437, y: -0.00036854876, z: 0.037496887}
+      rotation: {x: -0.014908129, y: -0.17094976, z: 0.025867736, w: 0.98482734}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_indic_2
+      parentName: dimitri:esq_indic_1
+      position: {x: -0.052351184, y: -2.7755574e-18, z: -2.6645352e-17}
+      rotation: {x: -0.0005367139, y: -0.0026714478, z: 0.08491749, w: 0.99638426}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_indic_3
+      parentName: dimitri:esq_indic_2
+      position: {x: -0.034217305, y: -4.4131363e-17, z: -1.3322676e-17}
+      rotation: {x: -0.0039217323, y: -0.012403855, z: 0.022933096, w: 0.9996524}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_indic_4
+      parentName: dimitri:esq_indic_3
+      position: {x: -0.030836841, y: -3.1308289e-16, z: -4.440892e-18}
+      rotation: {x: 0.036239244, y: 0.18353398, z: -0.13145238, w: 0.97351027}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_poleg1
+      parentName: dimitri:esq_soc_mao
+      position: {x: 0.0022561622, y: -0.010888185, z: 0.07637562}
+      rotation: {x: 0.029830733, y: 0.22331876, z: -0.04801025, w: 0.9731053}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_poleg2
+      parentName: dimitri:esq_poleg1
+      position: {x: -0.042943723, y: 2.8331502e-16, z: -3.7747583e-17}
+      rotation: {x: -0.0065480364, y: -0.15653287, z: 0.069228865, w: 0.9852218}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_poleg3
+      parentName: dimitri:esq_poleg2
+      position: {x: -0.040714283, y: -8.475859e-17, z: -2.1094237e-17}
+      rotation: {x: -0.013759218, y: -0.080129996, z: 0.057868607, w: 0.9950081}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_poleg4
+      parentName: dimitri:esq_poleg3
+      position: {x: -0.04462378, y: 3.7279206e-16, z: -5.2180482e-17}
+      rotation: {x: 0.0031105836, y: 0.021385973, z: -0.08359221, w: 0.9962657}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_clavic
+      parentName: dimitri:soc_peito
+      position: {x: -0.03259132, y: 0.0076051205, z: -0.21295601}
+      rotation: {x: 0.55778366, y: 0.5717261, z: -0.37185726, w: 0.473}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_ombro
+      parentName: dimitri:dir_clavic
+      position: {x: 0.1511422, y: 0.000008505168, z: 0.0000006228836}
+      rotation: {x: 0.15425855, y: -0.12870294, z: 0.5180253, w: 0.8314383}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_cotov
+      parentName: dimitri:dir_ombro
+      position: {x: 0.24382816, y: 0.052656814, z: -0.00000068566794}
+      rotation: {x: -0.0075005917, y: 0.38304335, z: -0.038375407, w: 0.92290246}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_punho
+      parentName: dimitri:dir_cotov
+      position: {x: 0.26013318, y: 0.000006426242, z: 0.00000059034494}
+      rotation: {x: -0.14034049, y: -0.29275003, z: 0.054280557, w: 0.94427514}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_soc_mao
+      parentName: dimitri:dir_punho
+      position: {x: 0.093224704, y: 0.0000017415172, z: 0.000000052687376}
+      rotation: {x: 0.0013186694, y: 0.16262013, z: 0.05189424, w: 0.9853223}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_medio_1
+      parentName: dimitri:dir_soc_mao
+      position: {x: 0.081699796, y: -0.000001931392, z: 0.0000009027317}
+      rotation: {x: -0.018526126, y: -0.18936798, z: 0.03611333, w: 0.981067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_medio_2
+      parentName: dimitri:dir_medio_1
+      position: {x: 0.044068832, y: 0.00000077719034, z: 0.000000041200725}
+      rotation: {x: 0.0004979137, y: 0.0025760767, z: 0.056584265, w: 0.9983944}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_medio_3
+      parentName: dimitri:dir_medio_2
+      position: {x: 0.032174125, y: 0.0000005986631, z: -0.000000112545926}
+      rotation: {x: 0.0015941022, y: 0.0058472217, z: 0.018611943, w: 0.99980843}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_medio_4
+      parentName: dimitri:dir_medio_3
+      position: {x: 0.04268345, y: 0.00000020382532, z: 0.00000027429866}
+      rotation: {x: -0.3611772, y: 0.6187026, z: 0.5068423, w: -0.4794466}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_anel_1
+      parentName: dimitri:dir_soc_mao
+      position: {x: 0.07010158, y: -0.001629629, z: 0.038001236}
+      rotation: {x: -0.015938291, y: -0.16859199, z: 0.033039674, w: 0.9850031}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_anel_2
+      parentName: dimitri:dir_anel_1
+      position: {x: 0.03972661, y: 0.0000008102079, z: -0.000000091172055}
+      rotation: {x: 0.0007176932, y: 0.0037658364, z: 0.060496632, w: 0.998161}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_anel_3
+      parentName: dimitri:dir_anel_2
+      position: {x: 0.036578562, y: -0.0000026270868, z: -0.00000022365113}
+      rotation: {x: -0.0006573584, y: -0.002954425, z: -0.029917855, w: 0.99954784}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_anel_4
+      parentName: dimitri:dir_anel_3
+      position: {x: 0.026795112, y: 0.0000029855557, z: 0.00000006246182}
+      rotation: {x: 0.020991832, y: 0.16723603, z: -0.063180745, w: 0.9836664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_minin_1
+      parentName: dimitri:dir_soc_mao
+      position: {x: 0.057914402, y: -0.0022214854, z: 0.06946125}
+      rotation: {x: -0.02154482, y: -0.19355029, z: 0.049149677, w: 0.9796216}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_minin_2
+      parentName: dimitri:dir_minin_1
+      position: {x: 0.031234682, y: 0.0000049975956, z: -0.00000013855183}
+      rotation: {x: 0.005336546, y: 0.02318302, z: 0.06519845, w: 0.9975887}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_minin_3
+      parentName: dimitri:dir_minin_2
+      position: {x: 0.030770127, y: -0.000004981289, z: -0.000000051787417}
+      rotation: {x: -0.0005892611, y: -0.0023018562, z: -0.04089049, w: 0.9991608}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_minin_4
+      parentName: dimitri:dir_minin_3
+      position: {x: 0.025103042, y: 0.000002717511, z: 0.00000033804523}
+      rotation: {x: 0.023415599, y: 0.17211169, z: -0.07329113, w: 0.98206806}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_indic_1
+      parentName: dimitri:dir_soc_mao
+      position: {x: 0.0863139, y: 0.0003677204, z: -0.037497114}
+      rotation: {x: -0.014908129, y: -0.17094976, z: 0.025867736, w: 0.98482734}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_indic_2
+      parentName: dimitri:dir_indic_1
+      position: {x: 0.05235282, y: -0.0000017914895, z: 0.000000039988272}
+      rotation: {x: -0.0005367139, y: -0.0026714478, z: 0.08491749, w: 0.99638426}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_indic_3
+      parentName: dimitri:dir_indic_2
+      position: {x: 0.034213584, y: 0.000005019095, z: -0.000000107195774}
+      rotation: {x: -0.0039217323, y: -0.012403855, z: 0.022933096, w: 0.9996524}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_indic_4
+      parentName: dimitri:dir_indic_3
+      position: {x: 0.030837948, y: -0.0000037018963, z: -0.000000044701}
+      rotation: {x: 0.036239244, y: 0.18353398, z: -0.13145238, w: 0.97351027}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_poleg1
+      parentName: dimitri:dir_soc_mao
+      position: {x: -0.0022564598, y: 0.010882874, z: -0.07637578}
+      rotation: {x: 0.5952063, y: 0.38251594, z: 0.019869499, w: 0.70641077}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_poleg2
+      parentName: dimitri:dir_poleg1
+      position: {x: 0.04294331, y: 0.00000200142, z: -0.00000029129345}
+      rotation: {x: -0.0065480364, y: -0.15653287, z: 0.069228865, w: 0.9852218}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_poleg3
+      parentName: dimitri:dir_poleg2
+      position: {x: 0.040714163, y: -0.0000020277896, z: -0.000000025452758}
+      rotation: {x: -0.013759218, y: -0.080129996, z: 0.057868607, w: 0.9950081}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_poleg4
+      parentName: dimitri:dir_poleg3
+      position: {x: 0.044626974, y: -0.0000011400017, z: 0.0000011729884}
+      rotation: {x: 0.0031105836, y: 0.021385973, z: -0.08359221, w: 0.9962657}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_femur
+      parentName: dimitri:bacia
+      position: {x: 0.07945564, y: 0.010803065, z: 0.27649486}
+      rotation: {x: -0.12166872, y: 0.92467123, z: -0.32859656, w: -0.14901058}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_joelho
+      parentName: dimitri:esq_femur
+      position: {x: -0.37725425, y: -7.105427e-17, z: 1.5099033e-16}
+      rotation: {x: 0.7662911, y: 0.38536486, z: -0.009078538, w: 0.5140132}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_calcanha
+      parentName: dimitri:esq_joelho
+      position: {x: -0.33913147, y: 1.427504e-16, z: 1.07969185e-16}
+      rotation: {x: 0.706239, y: 0.6958524, z: 0.057165682, w: -0.11725228}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_meio_pe
+      parentName: dimitri:esq_calcanha
+      position: {x: -0.14796588, y: -8.604228e-17, z: 1.1324275e-16}
+      rotation: {x: 0.016487177, y: 0.05595655, z: -0.24439459, w: 0.96791965}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:esq_ponta_pe
+      parentName: dimitri:esq_meio_pe
+      position: {x: -0.1537119, y: 1.3675812e-18, z: -3.7227164e-17}
+      rotation: {x: -0.5827914, y: 0.81262153, z: 0.00045580234, w: -0.0005856544}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_femur
+      parentName: dimitri:bacia
+      position: {x: 0.07945536, y: 0.010803139, z: -0.27649498}
+      rotation: {x: 0.9403007, y: 0.11538394, z: -0.116229065, w: -0.29834878}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_joelho
+      parentName: dimitri:dir_femur
+      position: {x: 0.37725502, y: -0.00000013451549, z: -0.00000014202048}
+      rotation: {x: 0.703688, y: 0.5720296, z: -0.02699178, w: 0.42056715}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_calcanha
+      parentName: dimitri:dir_joelho
+      position: {x: 0.33913156, y: -0.00000020074538, z: -0.0000002446648}
+      rotation: {x: 0.61962014, y: 0.75270516, z: 0.20400006, w: -0.088824615}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_meio_pe
+      parentName: dimitri:dir_calcanha
+      position: {x: 0.14796583, y: -0.00000048921174, z: 0.000000012648474}
+      rotation: {x: 0.016486546, y: 0.05595813, z: -0.2443903, w: 0.9679206}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dimitri:dir_ponta_pe
+      parentName: dimitri:dir_meio_pe
+      position: {x: 0.1537121, y: 0.000000029503605, z: 0.000000028680246}
+      rotation: {x: -0.5827914, y: 0.8126215, z: 0.0004558312, w: -0.0005856491}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
