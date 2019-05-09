@@ -16,6 +16,7 @@ TagManager:
   - Cartaz
   - Parede
   - AreaDimi
+  - Totem
   layers:
   - Default
   - TransparentFX
