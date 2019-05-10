@@ -4,7 +4,11 @@ using System.Collections.Generic;
 
 public class FieldOfView : MonoBehaviour {
 
-	public float viewRadius;
+
+	public float raioVisao;
+	public float drunkRadius;
+	public bool drunk;
+	private float viewRadius;
 	[Range(0,360)]
 	public float viewAngle;
 
@@ -28,6 +32,8 @@ public class FieldOfView : MonoBehaviour {
 		viewMesh.name = "View Mesh";
 		viewMeshFilter.mesh = viewMesh;
 
+		viewRadius = raioVisao;
+
 		StartCoroutine ("FindTargetsWithDelay", .2f);
 	}
 
@@ -40,6 +46,10 @@ public class FieldOfView : MonoBehaviour {
 	}
 
 	void LateUpdate() {
+		if (drunk)
+		{
+			viewRadius = raioVisao - drunkRadius;
+		}
 		DrawFieldOfView ();
 	}
 
@@ -54,6 +64,7 @@ public class FieldOfView : MonoBehaviour {
 				float dstToTarget = Vector3.Distance (transform.position, target.position);
 				if (!Physics.Raycast (transform.position, dirToTarget, dstToTarget, obstacleMask)) {
 					visibleTargets.Add (target);
+				
 				}
 			}
 		}
