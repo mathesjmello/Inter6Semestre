@@ -199,7 +199,7 @@ ModelImporter:
     400192: //RootNode
     2100000: new_soldado_phongE1
     4300000: new_soldado:Head1
-    7400000: Take 001
+    7400000: serguei_car_2
     9500000: //RootNode
     13700000: new_soldado:Head1
   externalObjects: {}
@@ -231,7 +231,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: serguei_car_2
       takeName: Take 001
       firstFrame: 1
       lastFrame: 60
@@ -293,7 +293,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 2
     human: []
@@ -309,7 +309,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 3fc3475d05e3b73418b66aa528186591,
+    type: 3}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0

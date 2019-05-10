@@ -62,12 +62,6 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public GameObject dimiCarregado;
 
-	public GameObject movel;
-
-	public GameObject esposa;
-
-	public Animator portaGrandeAnim;
-
 
 	public GameObject camUp;
 
@@ -75,7 +69,7 @@ public class TesteCharDrunk : MonoBehaviour
 	public GameObject PauseScreen;
 
 
-	public static int calca;
+	public  bool comCalca = false;
 
 
 	//variaveis som
@@ -92,6 +86,10 @@ public class TesteCharDrunk : MonoBehaviour
 	public Vector3 respawnPos;
 
 	public GameObject serguei;
+
+	public GameObject totem;
+
+	public bool holdTotem;
 
 	
 
@@ -112,6 +110,11 @@ public class TesteCharDrunk : MonoBehaviour
 	void FixedUpdate()
 	{	
 
+		if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
+		{
+			totem.transform.parent = null;
+		}
+
 
 		if (respawn == true)
 		{
@@ -131,12 +134,8 @@ public class TesteCharDrunk : MonoBehaviour
 			time += Time.deltaTime;
 		}
 
-		if (Input.GetKey(KeyCode.Z))
-		{
-			carregando = false;
-		}
 
-		if (Input.GetKey(KeyCode.Z))
+		if (Input.GetKey(KeyCode.Z) && carregando == false)
 		{
 			carregando = true;
 		}
@@ -171,6 +170,7 @@ public class TesteCharDrunk : MonoBehaviour
 		    dimiCarregado.SetActive(false);
 			drunkSpeed = 0;
 		}
+
 
 
 		RotateView();
@@ -341,33 +341,18 @@ public class TesteCharDrunk : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		
-		if (other.CompareTag("Calça"))
-		{
-			esposa.SetActive(true);
-			Destroy(other.gameObject);
-			portaGrandeAnim.SetInteger("ComCalça", 1);
-		}
 
-
-		if (other.CompareTag("Limites"))
+		/*if (other.CompareTag("Limites"))
 		{
 			movel.GetComponent<Movel>().ArrastaMov = false;
-		}
-
-		if (other.CompareTag("Calça"))
-		{
-			calca = 1;
-			Destroy(other.gameObject);
-		}
-
+		}*/
 
 	}
 
 
 	void OnTriggerStay(Collider other)
 	{
-		if (other.CompareTag("Armario") && Input.GetKey(KeyCode.E))
+		/*if (other.CompareTag("Armario") && Input.GetKey(KeyCode.E))
 		{
 			abriArm = true;
 			portaAnim = other.GetComponent<Animator>();
@@ -375,19 +360,10 @@ public class TesteCharDrunk : MonoBehaviour
 			portaAnim.ResetTrigger("AbriPorta");
 		}
 
-		if (other.CompareTag("Dimitri") && Input.GetKey(KeyCode.E))
-		{
-			if (calca == 1)
-			{
-				carregando = true;
-			}
-		}
-
-
 		if (other.CompareTag("Limites")) 
 		{ 
 			movel.GetComponent<Movel>().ArrastaMov = false; 
-		} 
+		} */
 
 		if (other.CompareTag("InsideArm"))
 		{
