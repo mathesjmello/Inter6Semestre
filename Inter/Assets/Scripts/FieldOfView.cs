@@ -4,7 +4,11 @@ using System.Collections.Generic;
 
 public class FieldOfView : MonoBehaviour {
 
-    public float viewRadius;
+    public float raioVisao;
+
+    public float drunkView;
+
+    private float viewRadius;
     [Range(0, 360)]
     public float viewAngle;
 
@@ -39,6 +43,7 @@ public class FieldOfView : MonoBehaviour {
     private void LateUpdate()
     {
         DrawFieldOfView();
+        viewRadius = raioVisao - drunkView;
     }
 
 
