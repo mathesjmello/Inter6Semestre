@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: abacd850d5b9b0a4f9816ead0da842c1
+guid: bce731f387eee714092944f6c7f05873
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -247,7 +247,7 @@ ModelImporter:
     400240: //RootNode
     2100000: dimitri_lambert2
     4300000: dimitri:Dimitri1
-    7400000: dimitri_car_2
+    7400000: dimitri_lev_3
     9500000: //RootNode
     13700000: dimitri:Dimitri1
   externalObjects: {}
@@ -279,7 +279,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: dimitri_car_2
+      name: dimitri_lev_3
       takeName: Take 001
       firstFrame: 1
       lastFrame: 60
@@ -306,7 +306,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
