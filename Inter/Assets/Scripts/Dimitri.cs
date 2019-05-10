@@ -9,6 +9,10 @@ public class Dimitri : MonoBehaviour
  
      public AudioClip[] audioSources;
 
+     public bool comCalca = false;
+
+     public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +28,18 @@ public class Dimitri : MonoBehaviour
          randomSound.clip = audioSources[Random.Range(0, audioSources.Length)];
          randomSound.Play ();
          CallSound ();
+    }
+
+
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
+		{
+			if (comCalca == true )
+			{
+				player.GetComponent<TesteCharDrunk>().carregando = true;
+			}
+		}
     }
 }

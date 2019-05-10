@@ -43,7 +43,6 @@ public class PlayerRay : MonoBehaviour
                     var cartaz = GameObject.Instantiate(cartazObj);
                     cartaz.transform.position = hit.point;
                     cartaz.transform.rotation = hit.transform.rotation;
-                    comCartazOn.comCartaz = false;
                     }
                 }
             }

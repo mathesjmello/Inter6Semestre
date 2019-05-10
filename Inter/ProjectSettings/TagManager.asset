@@ -16,6 +16,9 @@ TagManager:
   - Cartaz
   - Parede
   - AreaDimi
+  - Totem
+  - Change
+  - Reset
   layers:
   - Default
   - TransparentFX
@@ -35,7 +38,7 @@ TagManager:
   - Target
   - Obstacles
   - Unselectable
-  - 
+  - Ground
   - 
   - 
   - 

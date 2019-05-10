@@ -22,6 +22,10 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public Animator playerAnim;
 
+	public Animator playerDimiAnim;
+
+	public Animator dimiAnim;
+
 
 	Animator portaAnim;
 
@@ -50,29 +54,13 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public float changeTime;
 
-	//public bool jTrue = false;
-
-	//public bool hTrue = true;
-
-	//public int upTrue = 0;
 
 	public bool carregando = false;
 
-	//public bool levantaCaido = false;
-
-	//public float timeCaido = 0;
-
-	//public float maxTimeCaido = 15;
 
 	public GameObject dimiCaido;
 
 	public GameObject dimiCarregado;
-
-	public GameObject movel;
-
-	public GameObject esposa;
-
-	public Animator portaGrandeAnim;
 
 
 	public GameObject camUp;
@@ -81,7 +69,7 @@ public class TesteCharDrunk : MonoBehaviour
 	public GameObject PauseScreen;
 
 
-	public static int calca;
+	public  bool comCalca = false;
 
 
 	//variaveis som
@@ -97,11 +85,11 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public Vector3 respawnPos;
 
-	public GameObject cartaz;
+	public GameObject serguei;
 
-	public bool comCartaz;
+	public GameObject totem;
 
-	public GameObject rayPlayer;
+	public bool holdTotem;
 
 	
 
@@ -118,41 +106,14 @@ public class TesteCharDrunk : MonoBehaviour
 		
 	}
 
-	
-	
-	 /*/void ObjGrab()
-	 {
-		 Vector3 from = cam.transform.position;
-		 Vector3 direction = cam.transform.TransformDirection(Vector3.forward);
-		 Ray ray = new Ray(cam.transform.position, direction);
-
-		 RaycastHit hit;
-		 if (Physics.Raycast(ray, out hit, 1000))
-		 {
-			 if (hit.collider.CompareTag("Movel"))
-			 {
-				 GameObject hitObj = hit.collider.gameObject;
-				 hitObj.GetComponent<Renderer>().material.color = Color.red;
-
-				 if (Input.GetKeyDown(KeyCode.LeftShift))
-				 {
-					 hitObj.transform.SetParent(cam.transform);
-					 hitObj.GetComponent<Rigidbody>().isKinematic = true;
-				 }
-
-				 if (Input.GetKeyUp(KeyCode.LeftShift))
-				 {
-					 hitObj.transform.SetParent(null);
-					 hitObj.GetComponent<Rigidbody>().isKinematic = false;
-				 }
-			 }
-		 }
-		 Debug.DrawRay(from, direction * 100, Color.blue);
-	 }*/
-
 
 	void FixedUpdate()
 	{	
+
+		if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
+		{
+			totem.transform.parent = null;
+		}
 
 
 		if (respawn == true)
@@ -167,17 +128,14 @@ public class TesteCharDrunk : MonoBehaviour
 		// para dar efeito de andar bebado//	
 		if (carregando == true)
 		{	
+			serguei.SetActive(false);
 			dimiCaido.SetActive(false);
 			dimiCarregado.SetActive(true);
 			time += Time.deltaTime;
 		}
 
-		if (Input.GetKey(KeyCode.Z))
-		{
-			carregando = false;
-		}
 
-		if (Input.GetKey(KeyCode.Z))
+		if (Input.GetKey(KeyCode.Z) && carregando == false)
 		{
 			carregando = true;
 		}
@@ -189,21 +147,6 @@ public class TesteCharDrunk : MonoBehaviour
              SetRandomTime();
         }
 
-
-
-
-		if (comCartaz)
-		{
-			cartaz.SetActive(true);
-			rayPlayer.SetActive(true);
-		}
-		
-		else
-		{
-			cartaz.SetActive(false);
-			rayPlayer.SetActive(false);
-			
-		}
 
 
 
@@ -222,6 +165,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 		if (carregando == false)
 		{
+			serguei.SetActive(true);
 			dimiCaido.SetActive(true);
 		    dimiCarregado.SetActive(false);
 			drunkSpeed = 0;
@@ -229,42 +173,6 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 
-
-
-		//Levanta();
-
-
-
-		/* if (Input.GetKey(KeyCode.E))
-		 {
-			 levantaCaido = true;
-
-		 }
-
-		 if (levantaCaido == true)
-		 {
-			 timeCaido += Time.deltaTime;
-		 }
-
-		 if (timeCaido >= maxTimeCaido)
-		 {
-			 levantaCaido = false;
-			 timeCaido = 0;
-			 upTrue = 0;
-			 hTrue = true;
-			 jTrue = false;
-		 }
-
-
-		 if (vodka == 3)
-		 {
-			 carregando = false;
-		 }*/
-
-
-		
-
-		//  ObjGrab();			
 		RotateView();
 
 
@@ -330,38 +238,65 @@ public class TesteCharDrunk : MonoBehaviour
 
 		controller.Move(moveDirection * Time.deltaTime);
 
-		if (isWalkingBack)
+		if (isWalkingBack == true && carregando == false)
 		{
+
 			playerAnim.SetBool("isWalkingBack", true);
+		}
+
+			if (isWalkingBack == true && carregando == true )
+			{
+				playerDimiAnim.SetBool("isWalkingBack", true);
+				dimiAnim.SetBool("isWalkingBack", true);
+			}			
 
 			if (!playerSound.isPlaying)
 			{
 				playerSound.Play(0);	
 			}
-		}
 		
 
-		 if (isWalking)
+		 if (isWalking == true && carregando == false)
 		{
 			playerAnim.SetBool("isWalking", true);
+		}
+
+		 if (isWalking == true && carregando == true)
+			{
+				playerDimiAnim.SetBool("isWalking", true);
+				dimiAnim.SetBool("isWalking", true);
+			}
 
 			if (!playerSound.isPlaying)
 			{
 				playerSound.Play(0);	
 			}
 			
-		}
-		if (isWalking == false )
+		
+
+		if (isWalking == false && carregando == false )
 		{
 			playerAnim.SetBool("isWalking", false);
 			
 		}
 
+		if (isWalking == false && carregando == true)
+		{
+			playerDimiAnim.SetBool("isWalking", false);
+			dimiAnim.SetBool("isWalking", false);
+		}
 
-		if (isWalkingBack == false)
+
+		if (isWalkingBack == false == carregando == false)
 		{
 
 			playerAnim.SetBool("isWalkingBack", false);
+		}
+
+		if (isWalkingBack == false == carregando == true)
+		{
+			playerDimiAnim.SetBool("isWalkingBack", false);
+			dimiAnim.SetBool("isWalkingBack", false);
 		}
 
 		if (isWalking == false && isWalkingBack == false)
@@ -370,7 +305,8 @@ public class TesteCharDrunk : MonoBehaviour
 			isWalkPlaying = false;
 		}
 
-	}
+
+	
 
 
 
@@ -405,47 +341,18 @@ public class TesteCharDrunk : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		/*if (other.CompareTag("Vodka"))
-		{
-		// para aumentar o quao bebado//
-		vodka ++;	
-		minTime ++;
-		drunkMax ++;
-		drunkMin --;
-		Destroy(other.gameObject);
-		}
 
-		if (other.CompareTag("Obstaculo") && carregando == true)
-		{
-			carregando = false;
-		}*/
-
-		if (other.CompareTag("Calça"))
-		{
-			esposa.SetActive(true);
-			Destroy(other.gameObject);
-			portaGrandeAnim.SetInteger("ComCalça", 1);
-		}
-
-
-		if (other.CompareTag("Limites"))
+		/*if (other.CompareTag("Limites"))
 		{
 			movel.GetComponent<Movel>().ArrastaMov = false;
-		}
-
-		if (other.CompareTag("Calça"))
-		{
-			calca = 1;
-			Destroy(other.gameObject);
-		}
-
+		}*/
 
 	}
 
 
 	void OnTriggerStay(Collider other)
 	{
-		if (other.CompareTag("Armario") && Input.GetKey(KeyCode.E))
+		/*if (other.CompareTag("Armario") && Input.GetKey(KeyCode.E))
 		{
 			abriArm = true;
 			portaAnim = other.GetComponent<Animator>();
@@ -453,24 +360,10 @@ public class TesteCharDrunk : MonoBehaviour
 			portaAnim.ResetTrigger("AbriPorta");
 		}
 
-		if (other.CompareTag("Dimitri") && Input.GetKey(KeyCode.E))
-		{
-			if (calca == 1)
-			{
-				carregando = true;
-			}
-		}
-
-		if (other.CompareTag("Cartaz") && Input.GetKey(KeyCode.E))
-		{
-			comCartaz = true;
-			Destroy(other.gameObject);
-		}
-
 		if (other.CompareTag("Limites")) 
 		{ 
 			movel.GetComponent<Movel>().ArrastaMov = false; 
-		} 
+		} */
 
 		if (other.CompareTag("InsideArm"))
 		{
@@ -491,46 +384,6 @@ public class TesteCharDrunk : MonoBehaviour
 	}
 
 
-	/*void Levanta()
-	{
-		// tem que apertar J e o H alternadamente dentro do limite de tempo para conseguir levantar ele//
-		if (carregando == false && levantaCaido == true)
-		{
-			if (hTrue == true && jTrue == false)
-			{
-				if (Input.GetKeyUp(KeyCode.J))
-				{
-					hTrue = false;
-					jTrue = true;
-					upTrue +=1;
-				}
-			}
-
-			 if (jTrue == true && hTrue == false)
-			{
-				if (Input.GetKeyUp(KeyCode.H))
-				{
-					hTrue = true;
-					jTrue = false;
-					upTrue +=1;
-				}
-			}
-			
-			
-		}
-
-		if(upTrue == 40)
-		{
-			levantaCaido = false;
-			timeCaido = 0;
-			//dimiCaido.SetActive(false);
-			//dimiCarregado.SetActive(true);
-			vodka = 0;
-			carregando = true;
-		}
-
-	}*/
-
 
 
 	void Respawn(){
@@ -539,5 +392,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 	}
-
+	}
 }
+
+
