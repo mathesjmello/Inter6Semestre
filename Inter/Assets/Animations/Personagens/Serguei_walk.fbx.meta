@@ -197,9 +197,11 @@ ModelImporter:
     400188: new_soldado:Spline3
     400190: new_soldado:top_cabeca
     400192: //RootNode
+    2100000: new_soldado_phongE1
+    4300000: new_soldado:Head1
     7400000: Take 001
     9500000: //RootNode
-    2186277476908879412: ImportLogs
+    13700000: new_soldado:Head1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -220,7 +222,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -277,10 +279,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
