@@ -15,6 +15,13 @@ public class MenuPrincipal : MonoBehaviour
 		NewGameScreen.SetActive(true);
 
 	}
+
+    public void NewGame()
+    {
+        SceneManager.LoadScene(2);
+
+
+    }
 	public void Opções()
 	{
 		MainMenuScreen.SetActive(!MainMenuScreen.activeSelf);
