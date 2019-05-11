@@ -8,6 +8,31 @@ public class MenuPrincipal : MonoBehaviour
 	public GameObject MainMenuScreen;
 	public GameObject OptionScreen;
 	public GameObject NewGameScreen;
+	public GameObject PauseController;
+
+	public GameObject Player;
+	public GameObject PlayerCam;
+
+	private Behaviour PlayerScript;
+
+	public GameObject MenuCam;
+
+
+	private void Start()
+	{
+		PlayerScript = Player.GetComponent<TesteCharDrunk>();
+		PlayerScript.enabled = false;
+		PlayerCam.SetActive(false);
+
+		MenuCam.SetActive(true);
+
+		PauseController.SetActive(false);
+
+
+		Time.timeScale = 1.0f;
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+	}
 
 	public void Jogar()
 	{
@@ -18,10 +43,21 @@ public class MenuPrincipal : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene(2);
+		PlayerScript.enabled = true;
+		MenuCam.SetActive(false);
+		PlayerCam.SetActive(true);
+		PauseController.SetActive(true);
+
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 
 
-    }
+		NewGameScreen.SetActive(false);
+		OptionScreen.SetActive(false);
+		MainMenuScreen.SetActive(false);
+
+
+	}
 	public void Opções()
 	{
 		MainMenuScreen.SetActive(!MainMenuScreen.activeSelf);
@@ -40,7 +76,7 @@ public class MenuPrincipal : MonoBehaviour
 
 	public void Créditos()
 	{
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(0);
 
 	}
 
