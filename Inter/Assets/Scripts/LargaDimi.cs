@@ -7,6 +7,9 @@ public class LargaDimi : MonoBehaviour
 
     public GameObject player;
     public GameObject dimitri;
+    public Animator dimiAnim;
+
+    public Animator sergueiAnim;
     public bool comDimi;
 
     // Start is called before the first frame update
@@ -29,7 +32,7 @@ public class LargaDimi : MonoBehaviour
             StartCoroutine(LargaDimitri());
         }
 
-        else if (other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == true)
+        else if (other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == true  && player.GetComponent<TesteCharDrunk>().carregando == false)
         {
             StartCoroutine(LevantaDimitri());
         }
@@ -45,9 +48,11 @@ public class LargaDimi : MonoBehaviour
     }
 
     IEnumerator LevantaDimitri(){
-         player.GetComponent<TesteCharDrunk>().carregando = true;
-         dimitri.SetActive(false);
+        dimiAnim.SetTrigger("Levanta");
+        sergueiAnim.SetTrigger("LevantaDimi");
          yield return new WaitForSeconds(3.0f);
-         comDimi = false;
+        player.GetComponent<TesteCharDrunk>().carregando = true;
+         comDimi = false; 
+         dimitri.SetActive(false);
     }
 }
