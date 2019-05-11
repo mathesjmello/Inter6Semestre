@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainMenuScreen: {fileID: 2213911743580862548}
   OptionScreen: {fileID: 1412644898}
-  NewGameScreen: {fileID: 0}
+  NewGameScreen: {fileID: 636708149}
 --- !u!4 &275191833
 Transform:
   m_ObjectHideFlags: 0
@@ -1197,6 +1197,41 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8413909707072029126, guid: 505fcf721a7749f4d903779463d21deb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 275191832}
+    - target: {fileID: 8413909707072029126, guid: 505fcf721a7749f4d903779463d21deb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: "VoltaOp\xE7\xF5es"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413909706452885806, guid: 505fcf721a7749f4d903779463d21deb,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413909707051117315, guid: 505fcf721a7749f4d903779463d21deb,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413909707055202483, guid: 505fcf721a7749f4d903779463d21deb,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413909707797143896, guid: 505fcf721a7749f4d903779463d21deb,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413909708111134099, guid: 505fcf721a7749f4d903779463d21deb,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8413909707473288630, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -1236,11 +1271,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.36200002
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413909707797143896, guid: 505fcf721a7749f4d903779463d21deb,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8413909706381689424, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
@@ -1282,11 +1312,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0.36200002
       objectReference: {fileID: 0}
-    - target: {fileID: 8413909708111134099, guid: 505fcf721a7749f4d903779463d21deb,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8413909707269180408, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -1326,11 +1351,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.36200002
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413909707055202483, guid: 505fcf721a7749f4d903779463d21deb,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8413909708093745360, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
@@ -1372,11 +1392,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0.24624345
       objectReference: {fileID: 0}
-    - target: {fileID: 8413909707051117315, guid: 505fcf721a7749f4d903779463d21deb,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8413909707072029127, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1416,21 +1431,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.36200002
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413909707072029126, guid: 505fcf721a7749f4d903779463d21deb,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 275191832}
-    - target: {fileID: 8413909707072029126, guid: 505fcf721a7749f4d903779463d21deb,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: "VoltaOp\xE7\xF5es"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413909706452885806, guid: 505fcf721a7749f4d903779463d21deb,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 505fcf721a7749f4d903779463d21deb, type: 3}
@@ -2119,8 +2119,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: VaiPraMenuPrincipal
+      - m_Target: {fileID: 275191832}
+        m_MethodName: "Cr\xE9ditos"
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
