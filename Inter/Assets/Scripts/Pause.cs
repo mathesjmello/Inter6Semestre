@@ -10,6 +10,8 @@ public class Pause : MonoBehaviour
     public GameObject PauseScreen;
 	public GameObject OptionScreen;
 
+	
+
 	private float originalFixedTimeScale;
 
 
@@ -77,7 +79,7 @@ public class Pause : MonoBehaviour
 		Time.fixedDeltaTime = originalFixedTimeScale;
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(1);
 
 	}
 
