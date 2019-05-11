@@ -54,7 +54,7 @@ public class NPC01 : MonoBehaviour
          if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
             changeDirection *= -1;
-            npc.transform.Rotate(0, 180, 0);
+            
         }
     }
 }

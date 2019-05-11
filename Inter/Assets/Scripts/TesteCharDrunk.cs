@@ -26,11 +26,6 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public Animator dimiAnim;
 
-
-	Animator portaAnim;
-
-	public bool abriArm;
-
 	public GameObject canvas;
 
 
@@ -91,6 +86,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public bool holdTotem;
 
+
 	
 
 
@@ -146,18 +142,6 @@ public class TesteCharDrunk : MonoBehaviour
              Drunk();
              SetRandomTime();
         }
-
-
-
-
-
-		// abrir porta do armario//
-
-		if (abriArm == true)
-		{
-			portaAnim.SetTrigger("AbriPorta");
-			abriArm = false;
-		}
 
 
 
