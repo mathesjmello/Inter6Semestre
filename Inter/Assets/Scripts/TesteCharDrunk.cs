@@ -7,6 +7,8 @@ public class TesteCharDrunk : MonoBehaviour
 	public GameObject player;
 	public bool isWalking = false;
 
+
+	public Transform camClean;
 	public GameObject cam;
 	public GameObject mark;
 
@@ -21,9 +23,7 @@ public class TesteCharDrunk : MonoBehaviour
 	private Vector3 moveDirection = Vector3.zero;
 
 	public Animator playerAnim;
-
 	public Animator playerDimiAnim;
-
 	public Animator dimiAnim;
 
 	public GameObject canvas;
@@ -37,7 +37,6 @@ public class TesteCharDrunk : MonoBehaviour
 	public float drunkSpeed;
 
 	public float drunkMax = 1.2f;
-
 	public float drunkMin = -1.2f;
 
 	public bool vodka;
@@ -46,7 +45,6 @@ public class TesteCharDrunk : MonoBehaviour
 	public float maxTime = 5;
 
 	public float time = 0;
-
 	public float changeTime;
 
 
@@ -54,7 +52,6 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 	public GameObject dimiCaido;
-
 	public GameObject dimiCarregado;
 
 
@@ -163,11 +160,22 @@ public class TesteCharDrunk : MonoBehaviour
 
 		if (controller.isGrounded)
 		{
-
+			
 			moveDirection = Vector3.zero;
 
 
-			if (Input.GetKey(KeyCode.A))
+			Vector3 camF = camClean.forward;
+			Vector3 camR = camClean.right;
+
+			camF.y = 0;
+			camR.y = 0;
+
+			camF = camF.normalized;
+			camR = camR.normalized;
+
+
+
+			/*if (Input.GetKey(KeyCode.A))
 			{
 				//transform.Rotate(Vector3.down * mouseSensivity * 2 * Time.deltaTime);
 			   //moveDirection.x = -walkSpeed;  // + drunkSpeed;
@@ -198,16 +206,18 @@ public class TesteCharDrunk : MonoBehaviour
 				moveDirection.x = drunkSpeed;
 				isWalkingBack = true;
 
-			}
+			}*/
 
-			else
+			moveDirection = camF * Input.GetAxis("Vertical") + camR * Input.GetAxis("Horizontal");
+
+			/*else
 			{
 				isWalking = false;
 				isWalkingBack = false;
-			}
+			}*/
 
 
-			moveDirection = transform.TransformDirection(moveDirection);
+			//moveDirection = transform.TransformDirection(moveDirection);
 
 			if (Input.GetKey(KeyCode.Space))
 			{
