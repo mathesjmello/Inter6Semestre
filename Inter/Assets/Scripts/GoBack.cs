@@ -8,7 +8,7 @@ public class GoBack : StateMachineBehaviour
     
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(1);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
