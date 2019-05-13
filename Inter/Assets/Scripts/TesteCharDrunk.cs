@@ -24,6 +24,8 @@ public class TesteCharDrunk : MonoBehaviour
 	public  bool comCalca = false;
 	public bool isWalkPlaying;
 	public bool isWalkingBack;
+
+	public bool isRunning;
 	public bool feedPlay;
 
 
@@ -110,6 +112,15 @@ public class TesteCharDrunk : MonoBehaviour
 
 		}
 
+		if (isRunning)
+		{
+			playerSpeed = 5.0f;
+		}
+		else
+		{
+			playerSpeed = 1.5f;
+		}
+
 
 
 		RotateView();
@@ -166,9 +177,14 @@ public class TesteCharDrunk : MonoBehaviour
 
 			if (Input.GetKey(KeyCode.Space))
 			{
-				moveDirection.y = jumpSpeed;
+				isRunning = true;
 				
 				
+			}
+
+			else
+			{
+				isRunning = false;
 			}
 
 		}
