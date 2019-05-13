@@ -4,7 +4,14 @@ using System.Collections.Generic;
 
 public class FieldOfView : MonoBehaviour {
 
-    public float viewRadius;
+    public TesteCharDrunk com;
+
+    public bool drunk;
+    public float raioVisao;
+
+    public float drunkView;
+
+    private float viewRadius;
     [Range(0, 360)]
     public float viewAngle;
 
@@ -39,6 +46,11 @@ public class FieldOfView : MonoBehaviour {
     private void LateUpdate()
     {
         DrawFieldOfView();
+        if (drunk)
+        {
+            drunkView = 2;
+        }
+        viewRadius = raioVisao / drunkView;
     }
 
 
@@ -226,6 +238,15 @@ public class FieldOfView : MonoBehaviour {
         {
             pointA = _pointA;
             pointB = _pointB;
+        }
+    }
+
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player") && Input.GetKey(KeyCode.E) && com.vodka == true)
+        {
+            drunk = true;
         }
     }
 }
