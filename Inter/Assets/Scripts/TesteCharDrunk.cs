@@ -26,11 +26,6 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public Animator dimiAnim;
 
-
-	Animator portaAnim;
-
-	public bool abriArm;
-
 	public GameObject canvas;
 
 
@@ -45,7 +40,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public float drunkMin = -1.2f;
 
-	public float vodka = 0;
+	public bool vodka;
 
 	public float minTime = 2;
 	public float maxTime = 5;
@@ -90,6 +85,7 @@ public class TesteCharDrunk : MonoBehaviour
 	public GameObject totem;
 
 	public bool holdTotem;
+
 
 	
 
@@ -146,18 +142,6 @@ public class TesteCharDrunk : MonoBehaviour
              Drunk();
              SetRandomTime();
         }
-
-
-
-
-
-		// abrir porta do armario//
-
-		if (abriArm == true)
-		{
-			portaAnim.SetTrigger("AbriPorta");
-			abriArm = false;
-		}
 
 
 
@@ -352,18 +336,17 @@ public class TesteCharDrunk : MonoBehaviour
 
 	void OnTriggerStay(Collider other)
 	{
-		/*if (other.CompareTag("Armario") && Input.GetKey(KeyCode.E))
+
+		if (other.CompareTag("Segurança") && Input.GetKey(KeyCode.E) && vodka == true)
 		{
-			abriArm = true;
-			portaAnim = other.GetComponent<Animator>();
-			portaAnim.SetTrigger("AbriPorta");
-			portaAnim.ResetTrigger("AbriPorta");
+			other.GetComponent<FieldOfView>().drunk = true;
+			vodka = false;
 		}
 
-		if (other.CompareTag("Limites")) 
-		{ 
-			movel.GetComponent<Movel>().ArrastaMov = false; 
-		} */
+		if (other.CompareTag("Vodka"))
+		{
+			vodka =true;
+		}
 
 		if (other.CompareTag("InsideArm"))
 		{
