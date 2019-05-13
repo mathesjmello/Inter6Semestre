@@ -13,6 +13,7 @@ public class NPC01 : MonoBehaviour
 
     private Transform target;
 
+    public bool CanWalk;
 
     public GameObject point1;
 
@@ -35,26 +36,29 @@ public class NPC01 : MonoBehaviour
     void Update()
     {
 
-        if (changeDirection == 1)
+        if (CanWalk)
         {
-            target = point1.transform;
-            
-        }
+            if (changeDirection == 1)
+            {
+                target = point1.transform;
 
-        if (changeDirection == -1)
-        {
-            target = point2.transform;
-            
-        }
+            }
 
-        float step =  speed * Time.deltaTime; 
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step); 
-        npcAnim.SetBool("isWalking", true);
+            if (changeDirection == -1)
+            {
+                target = point2.transform;
 
-         if (Vector3.Distance(transform.position, target.position) < 0.1f)
-        {
-            changeDirection *= -1;
-            
+            }
+
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+            npcAnim.SetBool("isWalking", true);
+
+            if (Vector3.Distance(transform.position, target.position) < 0.1f)
+            {
+                changeDirection *= -1;
+
+            }
         }
     }
 }

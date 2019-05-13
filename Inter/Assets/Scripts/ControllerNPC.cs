@@ -11,6 +11,7 @@ public class ControllerNPC : MonoBehaviour
 
 
     //Pontos de Movimento
+    
     public GameObject targetGM_01;
     private Vector3 target_01;
 
@@ -41,8 +42,12 @@ public class ControllerNPC : MonoBehaviour
     void Start()
     {
         campoDeVisao = GetComponent<FieldOfView>();
-        targetGM_Reset.SetActive(false);
+        
         myAgent = GetComponent<NavMeshAgent>();
+        if (andando)
+        {
+            targetGM_Reset.SetActive(false);
+        }
     }
 
 
