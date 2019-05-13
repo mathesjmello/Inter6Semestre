@@ -1,0 +1,805 @@
+fileFormatVersion: 2
+guid: fdb37fa02e25e154782be3c37baf0f8e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: new_soldado:base_cabeca
+    100002: new_soldado:boca
+    100004: new_soldado:ctrl_esq_clavic1
+    100006: new_soldado:ctrl_esq_clavic3
+    100008: new_soldado:ctrl_esq_dedao
+    100010: new_soldado:ctrl_esq_mao
+    100012: new_soldado:ctrl_esq_mao1
+    100014: new_soldado:ctrl_esq_olho
+    100016: new_soldado:ctrl_esq_olho1
+    100018: new_soldado:ctrl_esq_olho3
+    100020: new_soldado:ctrl_esq_olho4
+    100022: new_soldado:dir_anel_1
+    100024: new_soldado:dir_anel_2
+    100026: new_soldado:dir_anel_3
+    100028: new_soldado:dir_anel_4
+    100030: new_soldado:dir_calcanha
+    100032: new_soldado:dir_clavic
+    100034: new_soldado:dir_cotov
+    100036: new_soldado:dir_femor
+    100038: new_soldado:dir_indc_1
+    100040: new_soldado:dir_indc_2
+    100042: new_soldado:dir_indc_3
+    100044: new_soldado:dir_indc_4
+    100046: new_soldado:dir_joelho
+    100048: new_soldado:dir_medio_1
+    100050: new_soldado:dir_medio_2
+    100052: new_soldado:dir_medio_3
+    100054: new_soldado:dir_medio_4
+    100056: new_soldado:dir_meio_pe
+    100058: new_soldado:dir_mini_1
+    100060: new_soldado:dir_mini_2
+    100062: new_soldado:dir_mini_3
+    100064: new_soldado:dir_mini_4
+    100066: new_soldado:dir_olho
+    100068: new_soldado:dir_ombro
+    100070: new_soldado:dir_poleg_1
+    100072: new_soldado:dir_poleg_2
+    100074: new_soldado:dir_poleg_3
+    100076: new_soldado:dir_poleg_4
+    100078: new_soldado:dir_ponta_pe
+    100080: new_soldado:dir_punho
+    100082: new_soldado:dir_soc_mao
+    100084: new_soldado:esq_anel_1
+    100086: new_soldado:esq_anel_2
+    100088: new_soldado:esq_anel_3
+    100090: new_soldado:esq_anel_4
+    100092: new_soldado:esq_calcanha
+    100094: new_soldado:esq_clavic
+    100096: new_soldado:esq_cotov
+    100098: new_soldado:esq_femor
+    100100: new_soldado:esq_indc_1
+    100102: new_soldado:esq_indc_2
+    100104: new_soldado:esq_indc_3
+    100106: new_soldado:esq_indc_4
+    100108: new_soldado:esq_joelho
+    100110: new_soldado:esq_medio_1
+    100112: new_soldado:esq_medio_2
+    100114: new_soldado:esq_medio_3
+    100116: new_soldado:esq_medio_4
+    100118: new_soldado:esq_meio_pe
+    100120: new_soldado:esq_mini_1
+    100122: new_soldado:esq_mini_2
+    100124: new_soldado:esq_mini_3
+    100126: new_soldado:esq_mini_4
+    100128: new_soldado:esq_olho
+    100130: new_soldado:esq_ombro
+    100132: new_soldado:esq_poleg_1
+    100134: new_soldado:esq_poleg_2
+    100136: new_soldado:esq_poleg_3
+    100138: new_soldado:esq_poleg_4
+    100140: new_soldado:esq_ponta_pe
+    100142: new_soldado:esq_punho
+    100144: new_soldado:esq_soc_mao
+    100146: new_soldado:Head1
+    100148: new_soldado:hips
+    100150: new_soldado:joint1
+    100152: new_soldado:meio_cabeca
+    100154: new_soldado:nurbsCircle10
+    100156: new_soldado:nurbsCircle11
+    100158: new_soldado:nurbsCircle12
+    100160: new_soldado:nurbsCircle13
+    100162: new_soldado:nurbsCircle14
+    100164: new_soldado:nurbsCircle15
+    100166: new_soldado:nurbsCircle16
+    100168: new_soldado:nurbsCircle17
+    100170: new_soldado:nurbsCircle18
+    100172: new_soldado:nurbsCircle19
+    100174: new_soldado:nurbsCircle9
+    100176: new_soldado:nurbsCircle9 1
+    100178: new_soldado:peito
+    100180: new_soldado:pesco
+    100182: new_soldado:Sergei
+    100184: new_soldado:Spline1
+    100186: new_soldado:Spline2
+    100188: new_soldado:Spline3
+    100190: new_soldado:top_cabeca
+    100192: //RootNode
+    400000: new_soldado:base_cabeca
+    400002: new_soldado:boca
+    400004: new_soldado:ctrl_esq_clavic1
+    400006: new_soldado:ctrl_esq_clavic3
+    400008: new_soldado:ctrl_esq_dedao
+    400010: new_soldado:ctrl_esq_mao
+    400012: new_soldado:ctrl_esq_mao1
+    400014: new_soldado:ctrl_esq_olho
+    400016: new_soldado:ctrl_esq_olho1
+    400018: new_soldado:ctrl_esq_olho3
+    400020: new_soldado:ctrl_esq_olho4
+    400022: new_soldado:dir_anel_1
+    400024: new_soldado:dir_anel_2
+    400026: new_soldado:dir_anel_3
+    400028: new_soldado:dir_anel_4
+    400030: new_soldado:dir_calcanha
+    400032: new_soldado:dir_clavic
+    400034: new_soldado:dir_cotov
+    400036: new_soldado:dir_femor
+    400038: new_soldado:dir_indc_1
+    400040: new_soldado:dir_indc_2
+    400042: new_soldado:dir_indc_3
+    400044: new_soldado:dir_indc_4
+    400046: new_soldado:dir_joelho
+    400048: new_soldado:dir_medio_1
+    400050: new_soldado:dir_medio_2
+    400052: new_soldado:dir_medio_3
+    400054: new_soldado:dir_medio_4
+    400056: new_soldado:dir_meio_pe
+    400058: new_soldado:dir_mini_1
+    400060: new_soldado:dir_mini_2
+    400062: new_soldado:dir_mini_3
+    400064: new_soldado:dir_mini_4
+    400066: new_soldado:dir_olho
+    400068: new_soldado:dir_ombro
+    400070: new_soldado:dir_poleg_1
+    400072: new_soldado:dir_poleg_2
+    400074: new_soldado:dir_poleg_3
+    400076: new_soldado:dir_poleg_4
+    400078: new_soldado:dir_ponta_pe
+    400080: new_soldado:dir_punho
+    400082: new_soldado:dir_soc_mao
+    400084: new_soldado:esq_anel_1
+    400086: new_soldado:esq_anel_2
+    400088: new_soldado:esq_anel_3
+    400090: new_soldado:esq_anel_4
+    400092: new_soldado:esq_calcanha
+    400094: new_soldado:esq_clavic
+    400096: new_soldado:esq_cotov
+    400098: new_soldado:esq_femor
+    400100: new_soldado:esq_indc_1
+    400102: new_soldado:esq_indc_2
+    400104: new_soldado:esq_indc_3
+    400106: new_soldado:esq_indc_4
+    400108: new_soldado:esq_joelho
+    400110: new_soldado:esq_medio_1
+    400112: new_soldado:esq_medio_2
+    400114: new_soldado:esq_medio_3
+    400116: new_soldado:esq_medio_4
+    400118: new_soldado:esq_meio_pe
+    400120: new_soldado:esq_mini_1
+    400122: new_soldado:esq_mini_2
+    400124: new_soldado:esq_mini_3
+    400126: new_soldado:esq_mini_4
+    400128: new_soldado:esq_olho
+    400130: new_soldado:esq_ombro
+    400132: new_soldado:esq_poleg_1
+    400134: new_soldado:esq_poleg_2
+    400136: new_soldado:esq_poleg_3
+    400138: new_soldado:esq_poleg_4
+    400140: new_soldado:esq_ponta_pe
+    400142: new_soldado:esq_punho
+    400144: new_soldado:esq_soc_mao
+    400146: new_soldado:Head1
+    400148: new_soldado:hips
+    400150: new_soldado:joint1
+    400152: new_soldado:meio_cabeca
+    400154: new_soldado:nurbsCircle10
+    400156: new_soldado:nurbsCircle11
+    400158: new_soldado:nurbsCircle12
+    400160: new_soldado:nurbsCircle13
+    400162: new_soldado:nurbsCircle14
+    400164: new_soldado:nurbsCircle15
+    400166: new_soldado:nurbsCircle16
+    400168: new_soldado:nurbsCircle17
+    400170: new_soldado:nurbsCircle18
+    400172: new_soldado:nurbsCircle19
+    400174: new_soldado:nurbsCircle9
+    400176: new_soldado:nurbsCircle9 1
+    400178: new_soldado:peito
+    400180: new_soldado:pesco
+    400182: new_soldado:Sergei
+    400184: new_soldado:Spline1
+    400186: new_soldado:Spline2
+    400188: new_soldado:Spline3
+    400190: new_soldado:top_cabeca
+    400192: //RootNode
+    2100000: new_soldado_phongE1
+    4300000: new_soldado:Head1
+    7400000: serguei_car_3
+    9500000: //RootNode
+    13700000: new_soldado:Head1
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: serguei_car_3
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton:
+    - name: serguei_3(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle10
+      parentName: serguei_3(Clone)
+      position: {x: -0, y: 0.0053740465, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:joint1
+      parentName: new_soldado:nurbsCircle10
+      position: {x: -0, y: -0.0053740465, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:hips
+      parentName: new_soldado:joint1
+      position: {x: 0.048463676, y: 0.827372, z: 0.03982263}
+      rotation: {x: -0.42684674, y: 0.5751587, z: -0.4931703, w: 0.4937382}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:Spline1
+      parentName: new_soldado:hips
+      position: {x: -0.12706867, y: 2.6645352e-17, z: 1.4107456e-17}
+      rotation: {x: 0.99958056, y: -0.027926939, z: 0.0076248115, w: 0.0008184134}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:Spline2
+      parentName: new_soldado:Spline1
+      position: {x: -0.13256529, y: 1.160183e-16, z: -9.840163e-18}
+      rotation: {x: 0.0054033287, y: -0.039795496, z: 0.013332652, w: 0.9991043}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:Spline3
+      parentName: new_soldado:Spline2
+      position: {x: -0.10274697, y: -1.110223e-16, z: -5.3416946e-18}
+      rotation: {x: 0, y: -0, z: -0.013420701, w: 0.99990994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:peito
+      parentName: new_soldado:Spline3
+      position: {x: -0.11585236, y: -0.004310863, z: 0.003983887}
+      rotation: {x: 0.9712866, y: -0.15954813, z: 0.02039795, w: 0.17530176}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:pesco
+      parentName: new_soldado:peito
+      position: {x: -0.09933364, y: 3.5527135e-16, z: 1.5987211e-16}
+      rotation: {x: 1.11022296e-16, y: 6.9388944e-16, z: 0.256908, w: 0.9664359}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:base_cabeca
+      parentName: new_soldado:pesco
+      position: {x: -0.09841409, y: 0.03136703, z: 6.88051e-18}
+      rotation: {x: 1.5438781e-16, y: 7.6217216e-16, z: -0.16342326, w: 0.98655605}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:meio_cabeca
+      parentName: new_soldado:base_cabeca
+      position: {x: -0.07697202, y: 0.03692976, z: 5.9744906e-18}
+      rotation: {x: 0.9736219, y: -0.22816752, z: -1.3971231e-17, w: 5.9617143e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:top_cabeca
+      parentName: new_soldado:meio_cabeca
+      position: {x: -0.08018338, y: 0.03879166, z: -1.8132421e-18}
+      rotation: {x: -0.4584669, y: 0.5383383, z: 0.4584669, w: 0.5383383}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_olho
+      parentName: new_soldado:meio_cabeca
+      position: {x: 0.0108975, y: 0.11471874, z: 0.043264184}
+      rotation: {x: 0, y: 1.4658413e-16, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_olho
+      parentName: new_soldado:meio_cabeca
+      position: {x: 0.011015302, y: 0.114704266, z: -0.04323492}
+      rotation: {x: 0.00051111483, y: 0.004708134, z: 0.9998908, w: 0.014001787}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:boca
+      parentName: new_soldado:base_cabeca
+      position: {x: 0.0143314265, y: -0.14026219, z: -1.2530066e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_clavic
+      parentName: new_soldado:peito
+      position: {x: -0.039665293, y: 0.0043468815, z: -0.12195772}
+      rotation: {x: 0.42891878, y: -0.2772315, z: 0.40290013, w: 0.7595017}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_ombro
+      parentName: new_soldado:esq_clavic
+      position: {x: -0.10318727, y: 2.2204459e-17, z: -1.3682265e-17}
+      rotation: {x: 0.12052893, y: 0.58522004, z: 0.37519097, w: 0.7086762}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_cotov
+      parentName: new_soldado:esq_ombro
+      position: {x: -0.26917946, y: 1.6431301e-16, z: 1.34847885e-17}
+      rotation: {x: 0.08335319, y: 0.43168083, z: -0.24003154, w: 0.86549914}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_punho
+      parentName: new_soldado:esq_cotov
+      position: {x: -0.26875874, y: 4.670911e-16, z: 2.6645352e-17}
+      rotation: {x: -0.6066674, y: -0.2593461, z: -0.14723423, w: 0.73689646}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_soc_mao
+      parentName: new_soldado:esq_punho
+      position: {x: -0.09150837, y: 1.7786779e-16, z: -9.992007e-18}
+      rotation: {x: -0.18678424, y: 0.057848975, z: 0.011018659, w: 0.9806344}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_medio_1
+      parentName: new_soldado:esq_soc_mao
+      position: {x: -0.061748803, y: -0.0004885867, z: -0.007568986}
+      rotation: {x: -0.024614925, y: -0.10130762, z: 0.11332827, w: 0.9880727}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_medio_2
+      parentName: new_soldado:esq_medio_1
+      position: {x: -0.042936344, y: -5.32907e-16, z: 3.6975877e-17}
+      rotation: {x: 0, y: 0, z: 0.019248847, w: 0.99981475}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_medio_3
+      parentName: new_soldado:esq_medio_2
+      position: {x: -0.031250138, y: 3.430589e-16, z: 3.2835712e-17}
+      rotation: {x: 0, y: 0, z: 0.10640047, w: 0.9943234}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_medio_4
+      parentName: new_soldado:esq_medio_3
+      position: {x: -0.022153482, y: 8.2156505e-17, z: -1.7978024e-17}
+      rotation: {x: -0.3160357, y: 0.63255155, z: -0.5943591, w: 0.38306302}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_anel_1
+      parentName: new_soldado:esq_soc_mao
+      position: {x: -0.055238552, y: -0.0051574884, z: -0.036124628}
+      rotation: {x: -0.019237736, y: -0.10179146, z: 0.061809886, w: 0.9926973}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_anel_2
+      parentName: new_soldado:esq_anel_1
+      position: {x: -0.036709033, y: -5.726669e-16, z: 2.3314683e-17}
+      rotation: {x: 0.0006742548, y: 0.0023236035, z: 0.10300252, w: 0.9946782}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_anel_3
+      parentName: new_soldado:esq_anel_2
+      position: {x: -0.026136227, y: -1.1574075e-16, z: 8.881784e-18}
+      rotation: {x: -0.003738803, y: -0.011015063, z: 0.052170567, w: 0.99857044}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_anel_4
+      parentName: new_soldado:esq_anel_3
+      position: {x: -0.018846037, y: 3.3736901e-16, z: 3.1641356e-17}
+      rotation: {x: 0.02031179, y: 0.105779454, z: -0.07858907, w: 0.9910711}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_mini_1
+      parentName: new_soldado:esq_soc_mao
+      position: {x: -0.04372175, y: -0.008657783, z: -0.06286571}
+      rotation: {x: -0.059879072, y: -0.14315325, z: 0.011643165, w: 0.9878189}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_mini_2
+      parentName: new_soldado:esq_mini_1
+      position: {x: -0.026295317, y: -2.85362e-16, z: 3.330669e-18}
+      rotation: {x: 0.004159009, y: 0.005831386, z: 0.10233645, w: 0.9947241}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_mini_3
+      parentName: new_soldado:esq_mini_2
+      position: {x: -0.024296977, y: 9.735268e-17, z: -2.8865798e-17}
+      rotation: {x: 0.018159779, y: 0.051442463, z: 0.062054582, w: 0.9965807}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_mini_4
+      parentName: new_soldado:esq_mini_3
+      position: {x: -0.018566893, y: 3.5711018e-16, z: 5.5511148e-18}
+      rotation: {x: 0.011161269, y: 0.060054563, z: -0.08739451, w: 0.9942993}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_indc_1
+      parentName: new_soldado:esq_soc_mao
+      position: {x: -0.061200354, y: -0.010125987, z: 0.024145296}
+      rotation: {x: -0.014013399, y: -0.08007761, z: 0.029223582, w: 0.99626166}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_indc_2
+      parentName: new_soldado:esq_indc_1
+      position: {x: -0.036802433, y: -2.7835371e-16, z: 1.8873792e-17}
+      rotation: {x: -0.0027240748, y: -0.01754434, z: 0.040180173, w: 0.9990347}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_indc_3
+      parentName: new_soldado:esq_indc_2
+      position: {x: -0.032056794, y: -2.1715269e-16, z: -1.4432899e-17}
+      rotation: {x: -0.004533462, y: -0.018523492, z: 0.045763493, w: 0.9987703}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_indc_4
+      parentName: new_soldado:esq_indc_3
+      position: {x: -0.025741782, y: 1.3114509e-17, z: 1.110223e-18}
+      rotation: {x: 0.016069138, y: 0.11167943, z: -0.14151014, w: 0.9834859}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_poleg_1
+      parentName: new_soldado:esq_soc_mao
+      position: {x: 0.02187493, y: -0.018938964, z: 0.051088408}
+      rotation: {x: 0.60346735, y: 0.21752945, z: 0.08767608, w: 0.76211613}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_poleg_2
+      parentName: new_soldado:esq_poleg_1
+      position: {x: -0.044577874, y: -2.8810288e-16, z: 1.4654943e-16}
+      rotation: {x: -0.06562807, y: -0.2955455, z: 0.03783611, w: 0.9523205}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_poleg_3
+      parentName: new_soldado:esq_poleg_2
+      position: {x: -0.035549365, y: 3.6234902e-16, z: 7.660539e-17}
+      rotation: {x: 0.011919306, y: 0.061979562, z: -0.068041824, w: 0.9956841}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_poleg_4
+      parentName: new_soldado:esq_poleg_3
+      position: {x: -0.031595338, y: -2.615963e-17, z: 2.220446e-18}
+      rotation: {x: -0.012326494, y: -0.20222165, z: -0.059580702, w: 0.97744805}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_clavic
+      parentName: new_soldado:peito
+      position: {x: -0.039663006, y: 0.004346561, z: 0.121957995}
+      rotation: {x: 0.5044947, y: 0.39924547, z: 0.6944206, w: -0.32228586}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_ombro
+      parentName: new_soldado:dir_clavic
+      position: {x: 0.10318947, y: -0.000005904527, z: 0.00000020594267}
+      rotation: {x: 0.3969842, y: -0.23980442, z: 0.16881739, w: 0.8697115}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_cotov
+      parentName: new_soldado:dir_ombro
+      position: {x: 0.26917964, y: 0.000007686961, z: -0.00000030974365}
+      rotation: {x: 0.07107907, y: 0.40577176, z: -0.22620253, w: 0.8826831}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_punho
+      parentName: new_soldado:dir_cotov
+      position: {x: 0.26875898, y: -0.000007652401, z: 0.00000031508068}
+      rotation: {x: 0.82551, y: -0.30064014, z: 0.091213584, w: -0.46885905}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_soc_mao
+      parentName: new_soldado:dir_punho
+      position: {x: 0.09150868, y: 0.0000009988154, z: 0.000000037035466}
+      rotation: {x: -0.1827114, y: 0.04751243, z: -0.013157666, w: 0.9819298}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_medio_1
+      parentName: new_soldado:dir_soc_mao
+      position: {x: 0.062261946, y: 0.00035071644, z: 0.0053629754}
+      rotation: {x: -0.02870072, y: -0.084297836, z: 0.29936916, w: 0.94997275}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_medio_2
+      parentName: new_soldado:dir_medio_1
+      position: {x: 0.042937875, y: 0.0000054130455, z: -0.00000021006582}
+      rotation: {x: 0, y: 0, z: 0.27680853, w: 0.9609251}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_medio_3
+      parentName: new_soldado:dir_medio_2
+      position: {x: 0.031249698, y: -0.0000015803673, z: 0.000000056053686}
+      rotation: {x: 0, y: 0, z: 0.35958537, w: 0.9331122}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_medio_4
+      parentName: new_soldado:dir_medio_3
+      position: {x: 0.02215456, y: 0.0000010199283, z: -0.000000046775902}
+      rotation: {x: -0.14195116, y: 0.69271195, z: -0.47526556, w: 0.5235672}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_anel_1
+      parentName: new_soldado:dir_soc_mao
+      position: {x: 0.05550377, y: 0.0067225085, z: 0.035397533}
+      rotation: {x: -0.020624796, y: -0.08841305, z: 0.2112335, w: 0.9732102}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_anel_2
+      parentName: new_soldado:dir_anel_1
+      position: {x: 0.036709223, y: -0.0000014681657, z: 0.00000012139897}
+      rotation: {x: 0.0010679106, y: 0.0021710177, z: 0.2743433, w: 0.9616288}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_anel_3
+      parentName: new_soldado:dir_anel_2
+      position: {x: 0.026136724, y: 0.000002465636, z: -0.0000001254488}
+      rotation: {x: -0.0055966736, y: -0.010197427, z: 0.22496188, w: 0.9742981}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_anel_4
+      parentName: new_soldado:dir_anel_3
+      position: {x: 0.018845562, y: 0.0000002719463, z: 0.000000018789429}
+      rotation: {x: 0.03839062, y: 0.100638084, z: 0.09488942, w: 0.98964345}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_mini_1
+      parentName: new_soldado:dir_soc_mao
+      position: {x: 0.04369471, y: 0.008690844, z: 0.063212946}
+      rotation: {x: -0.0070132236, y: -0.15039931, z: 0.04604908, w: 0.98752743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_mini_2
+      parentName: new_soldado:dir_mini_1
+      position: {x: 0.026294678, y: -0.0000069593275, z: 0.0000002503624}
+      rotation: {x: 0.00355736, y: 0.015710186, z: 0.12910919, w: 0.9914996}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_mini_3
+      parentName: new_soldado:dir_mini_2
+      position: {x: 0.024297843, y: 0.0000070397914, z: -0.00000022628397}
+      rotation: {x: 0.019184124, y: 0.060933318, z: 0.08902187, w: 0.993979}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_mini_4
+      parentName: new_soldado:dir_mini_3
+      position: {x: 0.018567724, y: -0.0000003269485, z: 0.00000009747316}
+      rotation: {x: 0.013916935, y: 0.06966706, z: -0.06049941, w: 0.9956368}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_indc_1
+      parentName: new_soldado:dir_soc_mao
+      position: {x: 0.06014065, y: 0.011827056, z: -0.02529478}
+      rotation: {x: -0.035324156, y: -0.05516791, z: 0.31106865, w: 0.9481271}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_indc_2
+      parentName: new_soldado:dir_indc_1
+      position: {x: 0.03680273, y: 0.0000023315988, z: -0.00000011212054}
+      rotation: {x: -0.004894782, y: -0.017066503, z: 0.16468832, w: 0.98618585}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_indc_3
+      parentName: new_soldado:dir_indc_2
+      position: {x: 0.032056578, y: 0.0000008261998, z: -0.000000054052936}
+      rotation: {x: -0.006812329, y: -0.017811913, z: 0.17019486, w: 0.9852259}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_indc_4
+      parentName: new_soldado:dir_indc_3
+      position: {x: 0.02574208, y: 0.0000005610201, z: 0.000000059227222}
+      rotation: {x: 0.029896848, y: 0.10879655, z: -0.017520957, w: 0.9934599}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_poleg_1
+      parentName: new_soldado:dir_soc_mao
+      position: {x: -0.021875093, y: 0.018941496, z: -0.051088557}
+      rotation: {x: 0.6470114, y: 0.34032992, z: -0.2640121, w: 0.62916565}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_poleg_2
+      parentName: new_soldado:dir_poleg_1
+      position: {x: 0.044577725, y: -0.0000007026572, z: 0.00000006298598}
+      rotation: {x: -0.71582496, y: -0.18424283, z: 0.23398578, w: 0.63158524}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_poleg_3
+      parentName: new_soldado:dir_poleg_2
+      position: {x: 0.03554833, y: -0.0000034018874, z: 0.0000000981668}
+      rotation: {x: 0.011919306, y: 0.061979562, z: -0.068041824, w: 0.9956841}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_poleg_4
+      parentName: new_soldado:dir_poleg_3
+      position: {x: 0.031595897, y: 0.0000046775363, z: -0.00000021569163}
+      rotation: {x: -0.012326494, y: -0.20222165, z: -0.059580702, w: 0.97744805}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_femor
+      parentName: new_soldado:hips
+      position: {x: 0.04136196, y: 0.008044482, z: -0.15350981}
+      rotation: {x: 0.10812039, y: 0.09313236, z: 0.94009227, w: 0.30961752}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_joelho
+      parentName: new_soldado:esq_femor
+      position: {x: -0.44071347, y: 2.264855e-16, z: -6.217249e-17}
+      rotation: {x: 0.76766306, y: 0.59157425, z: -0.012742484, w: 0.24611175}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_calcanha
+      parentName: new_soldado:esq_joelho
+      position: {x: -0.46200025, y: -1.0401402e-16, z: -2.3869794e-17}
+      rotation: {x: 0.6451512, y: 0.7246191, z: 0.2231306, w: -0.094445154}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_meio_pe
+      parentName: new_soldado:esq_calcanha
+      position: {x: -0.12608467, y: -1.4183098e-16, z: 3.8857805e-17}
+      rotation: {x: 0.017672222, y: 0.042697325, z: -0.19567056, w: 0.9795804}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:esq_ponta_pe
+      parentName: new_soldado:esq_meio_pe
+      position: {x: -0.13653289, y: 8.3198116e-18, z: -1.4259427e-17}
+      rotation: {x: -0.00039882655, y: 0.0006008567, z: -0.7040949, w: 0.71010554}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_femor
+      parentName: new_soldado:hips
+      position: {x: 0.04437687, y: -0.0004580557, z: 0.15267745}
+      rotation: {x: 0.18223391, y: -0.12551217, z: -0.37130022, w: 0.9017614}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_joelho
+      parentName: new_soldado:dir_femor
+      position: {x: 0.440714, y: 0.00000016219813, z: 0.00000009005539}
+      rotation: {x: 0.70105606, y: 0.69411963, z: -0.031175412, w: 0.16045733}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_calcanha
+      parentName: new_soldado:dir_joelho
+      position: {x: 0.46200052, y: 0.000000036272457, z: -0.000000063988246}
+      rotation: {x: 0.6482146, y: 0.75690037, z: 0.08159047, w: 0.01620936}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_meio_pe
+      parentName: new_soldado:dir_calcanha
+      position: {x: 0.12608433, y: -0.00000030969952, z: -0.00000046824647}
+      rotation: {x: 0.01963475, y: 0.04500416, z: -0.2572693, w: 0.9650915}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:dir_ponta_pe
+      parentName: new_soldado:dir_meio_pe
+      position: {x: 0.13653325, y: -0.00000011547796, z: 0.0000004533473}
+      rotation: {x: -0.00039882655, y: 0.0006008567, z: -0.7040949, w: 0.71010554}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle11
+      parentName: new_soldado:nurbsCircle10
+      position: {x: 0.048098173, y: 0.82035804, z: 0.07460471}
+      rotation: {x: 0, y: -0, z: -0.08000922, w: 0.99679416}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle13
+      parentName: new_soldado:nurbsCircle11
+      position: {x: -8.0406455e-17, y: 0.35900927, z: 0.0017896818}
+      rotation: {x: 0.13675232, y: 0.18339206, z: -0.025771506, w: 0.9731403}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:ctrl_esq_mao
+      parentName: new_soldado:nurbsCircle13
+      position: {x: 0.044108808, y: -0.02141302, z: 0.3509402}
+      rotation: {x: -0.26372752, y: 0.47758967, z: 0.6983477, w: 0.46332106}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle9
+      parentName: new_soldado:ctrl_esq_mao
+      position: {x: -0.14672568, y: -0.005762024, z: -0.045368984}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle17
+      parentName: new_soldado:ctrl_esq_mao
+      position: {x: -0.15270011, y: -0.0032806136, z: -0.0167076}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle18
+      parentName: new_soldado:ctrl_esq_mao
+      position: {x: -0.153245, y: 0.00036193847, z: 0.012685529}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle19
+      parentName: new_soldado:ctrl_esq_mao
+      position: {x: -0.14649783, y: -0.010569833, z: 0.043316636}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:ctrl_esq_mao1
+      parentName: new_soldado:nurbsCircle13
+      position: {x: 0.69565445, y: 0.15977305, z: 0.014190848}
+      rotation: {x: 0.7318502, y: 0.3922634, z: 0.32738954, w: -0.45093322}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle9 1
+      parentName: new_soldado:ctrl_esq_mao1
+      position: {x: 0.14509758, y: -0.012256927, z: 0.050004553}
+      rotation: {x: 0, y: -0, z: -0.25915718, w: 0.96583515}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle14
+      parentName: new_soldado:ctrl_esq_mao1
+      position: {x: 0.153245, y: 0.00036193847, z: 0.02043823}
+      rotation: {x: 0, y: -0, z: -0.16345188, w: 0.98655134}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle15
+      parentName: new_soldado:ctrl_esq_mao1
+      position: {x: 0.15270011, y: -0.004885101, z: -0.0114830015}
+      rotation: {x: 0, y: -0, z: -0.12418418, w: 0.9922592}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:nurbsCircle16
+      parentName: new_soldado:ctrl_esq_mao1
+      position: {x: 0.14672568, y: -0.005762024, z: -0.04010928}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:ctrl_esq_dedao
+      parentName: new_soldado:ctrl_esq_mao1
+      position: {x: 0.07963875, y: -0.029707184, z: 0.091385245}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:ctrl_esq_clavic1
+      parentName: new_soldado:nurbsCircle13
+      position: {x: -0, y: 0.21427871, z: -0.010864579}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:ctrl_esq_clavic3
+      parentName: new_soldado:ctrl_esq_clavic1
+      position: {x: -0, y: 0.09674438, z: 0.03619053}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:ctrl_esq_olho3
+      parentName: new_soldado:ctrl_esq_clavic3
+      position: {x: -0.0009925123, y: 0.048655167, z: 0.24830793}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:ctrl_esq_olho1
+      parentName: new_soldado:ctrl_esq_olho3
+      position: {x: -0, y: 0.03527092, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.8485072, y: 0.47147763, z: 1}
+    - name: new_soldado:ctrl_esq_olho
+      parentName: new_soldado:ctrl_esq_olho1
+      position: {x: -0.04359135, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.35151657, y: 0.6499813, z: 1}
+    - name: new_soldado:ctrl_esq_olho4
+      parentName: new_soldado:ctrl_esq_olho1
+      position: {x: 0.045576375, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.35151657, y: 0.6499813, z: 1}
+    - name: new_soldado:nurbsCircle12
+      parentName: new_soldado:nurbsCircle11
+      position: {x: -0, y: 0.0022914812, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:Sergei
+      parentName: serguei_3(Clone)
+      position: {x: -0.000000005662441, y: 0.9435114, z: 0.00005478501}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: new_soldado:Head1
+      parentName: new_soldado:Sergei
+      position: {x: 0.000000005662441, y: -0.9435114, z: -0.00005478501}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.05, y: 1.05, z: 1.05}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 3fc3475d05e3b73418b66aa528186591,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
