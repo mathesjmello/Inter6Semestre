@@ -22,10 +22,13 @@ public class Respawn : MonoBehaviour
     public GameObject checkpoint03;
 
 
+	private CharacterController playerController;
+
     // Start is called before the first frame update
     void Start()
     {
         respawnPos = checkpoint01.transform.position;
+		playerController = player.GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -33,6 +36,7 @@ public class Respawn : MonoBehaviour
     {
         if (fase == 1)
         {
+			
             respawnPos = checkpoint02.transform.position;
         }
 
@@ -44,13 +48,19 @@ public class Respawn : MonoBehaviour
         if (ativaRespawn == true)
         {
             RespawnOn();
+		
         }
 
+
+		if (Input.GetKeyDown(KeyCode.K)) ativaRespawn = true;
         
     }
 
     void RespawnOn(){
+		playerController.enabled = false;
         player.transform.position = respawnPos;
         spawn.deuSpawn = true;
+		playerController.enabled = true;
+		ativaRespawn = false;
     }
 }
