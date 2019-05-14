@@ -91,7 +91,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 112000000, guid: 91ef97335881f5745b2613ddb277e937,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -16549,6 +16549,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 59a47a774d6183d42aedba9805be1fb1, type: 3}
+--- !u!1 &778201578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1369521793408666, guid: c56269668c24c7440a51d06d7f31926c,
+    type: 3}
+  m_PrefabInstance: {fileID: 778201573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &778201579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1911464436611866, guid: c56269668c24c7440a51d06d7f31926c,
+    type: 3}
+  m_PrefabInstance: {fileID: 778201573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &782360824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 18b1183bf097c9142b863202ab570b69,
@@ -26169,6 +26181,8 @@ MonoBehaviour:
   portaGrandeAnim: {fileID: 1778055129}
   tutoriais: {fileID: 1578790855}
   tutoriais2: {fileID: 1194702317}
+  porta01: {fileID: 778201579}
+  porta02: {fileID: 778201578}
 --- !u!1 &1428901302
 GameObject:
   m_ObjectHideFlags: 0
@@ -38955,7 +38969,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424324585677989983}
-  m_LocalRotation: {x: -0.093436845, y: -0.21199518, z: -0.020366777, w: 0.97258043}
+  m_LocalRotation: {x: -0.09343646, y: -0.21199526, z: -0.020366691, w: 0.9725806}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -39423,7 +39437,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424324587216709475}
-  m_LocalRotation: {x: -0.058045827, y: -0.2125948, z: -0.012652223, w: 0.9753328}
+  m_LocalRotation: {x: -0.05804583, y: -0.21259484, z: -0.012652225, w: 0.97533286}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
