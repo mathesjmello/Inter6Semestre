@@ -9,6 +9,8 @@ public class Vodka : MonoBehaviour
 
     public TesteCharDrunk shots;
 
+	public GameObject tutorial;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,10 @@ public class Vodka : MonoBehaviour
             player.GetComponent<TesteCharDrunk>().vodka = true;
             shots.doses = 3;
             Destroy(this.gameObject);
+			if (tutorial)
+			{
+				tutorial.SetActive(false);
+			}
         }
     }
 }
