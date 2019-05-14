@@ -52,7 +52,7 @@ public class Respawn : MonoBehaviour
         }
 
 
-		if (Input.GetKeyDown(KeyCode.K)) ativaRespawn = true;
+		
         
     }
 
