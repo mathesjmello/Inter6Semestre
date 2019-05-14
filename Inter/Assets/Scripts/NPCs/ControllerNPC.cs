@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -39,6 +39,8 @@ public class ControllerNPC : MonoBehaviour
     public bool encontrou = false;
     public bool buscandoTotem = true;
 
+    public bool fazRota;
+
     void Start()
     {
         campoDeVisao = GetComponent<FieldOfView>();
@@ -54,7 +56,12 @@ public class ControllerNPC : MonoBehaviour
 
     private void Update()
     {
-        if (andando == true)
+        if (fazRota == false)
+        {
+            andando = false;
+        }
+
+        if (andando == true && fazRota == true)
         {
             MovimentoBasico();
         }
@@ -93,15 +100,15 @@ public class ControllerNPC : MonoBehaviour
                 switchBettween = true;
             }
         }
-        /*
-        if (other.CompareTag("PosterHitbox"))
+        
+        if (other.CompareTag("Totem"))
         {
             buscandoTotem = false;
             myAgent.isStopped = true;
             StartCoroutine(ColidiuComPoster());
 
         }
-        */
+        
         if (other.CompareTag("Reset"))
         { 
             targetGM_Reset.SetActive(false);
@@ -123,6 +130,7 @@ public class ControllerNPC : MonoBehaviour
     IEnumerator ColidiuComPoster()
     {
         //Roda Animação de Confusão
+        Debug.Log("Poster");
         yield return new WaitForSeconds(tempoDeConfusao);
         myAgent.isStopped = false;
         targetGM_Reset.SetActive(true);

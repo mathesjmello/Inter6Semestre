@@ -4,13 +4,39 @@ using UnityEngine;
 
 public class TesteCharDrunk : MonoBehaviour
 {
-	public GameObject player;
-	public bool isWalking = false;
+	private CharacterController controller;
 
+	public GameObject player;
+	public GameObject serguei;
 	public GameObject cam;
 	public GameObject mark;
+	public GameObject canvas;
+	public GameObject dimiCaido;
+	public GameObject dimiCarregado;
+	public GameObject totem;
+	public GameObject camUp;
+	public GameObject PauseScreen;
 
-	private CharacterController controller;
+	public GameObject garrafa;
+
+
+	public bool isWalking = false;
+	public bool vodka;
+	public bool carregando = false;
+	public  bool comCalca = false;
+	public bool isWalkPlaying;
+	public bool isWalkingBack;
+
+	public bool isRunning;
+	public bool feedPlay;
+
+	public bool deuSpawn;
+
+
+	[Range(0, 3)]
+	public int doses = 0;
+
+
 	private float AngularSpeed = 100;
 	public float walkSpeed ;
 	public float playerSpeed = 1.5f;
@@ -18,76 +44,27 @@ public class TesteCharDrunk : MonoBehaviour
 	public float jumpSpeed = 5;
 	public float mouseSensivity = 30;
 	private float rotationX = 0;
-	private Vector3 moveDirection = Vector3.zero;
-
-	public Animator playerAnim;
-
-	public Animator playerDimiAnim;
-
-	public Animator dimiAnim;
-
-	public GameObject canvas;
-
-
-
-
-
-
-	// Variaveis para as mecanicas de bebado//
 	public float drunkSpeed;
-
 	public float drunkMax = 1.2f;
-
 	public float drunkMin = -1.2f;
-
-	public bool vodka;
-
 	public float minTime = 2;
 	public float maxTime = 5;
-
 	public float time = 0;
-
 	public float changeTime;
 
+	public Animator playerAnim;
+	public Animator playerDimiAnim;
+	public Animator dimiAnim;
 
-	public bool carregando = false;
+	private Vector3 moveDirection = Vector3.zero;
 
-
-	public GameObject dimiCaido;
-
-	public GameObject dimiCarregado;
-
-
-	public GameObject camUp;
-
-
-	public GameObject PauseScreen;
-
-
-	public  bool comCalca = false;
-
-
-	//variaveis som
-	public AudioClip walkSound;
 
 	public AudioSource playerSound;
 
-	public bool isWalkPlaying;
+	public AudioSource garrafaSound;
 
-	public bool isWalkingBack;
+ 
 
-	public bool respawn;
-
-	public Vector3 respawnPos;
-
-	public GameObject serguei;
-
-	public GameObject totem;
-
-	public bool holdTotem;
-
-
-	
 
 
 
@@ -97,31 +74,31 @@ public class TesteCharDrunk : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 
-
-		respawnPos = transform.position;
-		
 	}
 
 
 	void FixedUpdate()
 	{	
 
-		if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
+
+		if (vodka == true && doses >= 1)
+		{
+			garrafa.SetActive(true);
+			garrafaSound.Play(0);
+		}
+		if (doses <=0)
+		{
+			garrafa.SetActive(false);
+			vodka = false;
+		}
+
+
+		/*if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
 		{
 			totem.transform.parent = null;
-		}
+		}*/
 
-
-		if (respawn == true)
-		{
-				
-		Respawn();
-			
-		}
-
-
-
-		// para dar efeito de andar bebado//	
+	
 		if (carregando == true)
 		{	
 			serguei.SetActive(false);
@@ -145,14 +122,22 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 
-		// para levantar o bebado//
-
 		if (carregando == false)
 		{
 			serguei.SetActive(true);
 			dimiCaido.SetActive(true);
 		    dimiCarregado.SetActive(false);
 			drunkSpeed = 0;
+
+		}
+
+		if (isRunning)
+		{
+			playerSpeed = 5.0f;
+		}
+		else
+		{
+			playerSpeed = 1.5f;
 		}
 
 
@@ -211,13 +196,19 @@ public class TesteCharDrunk : MonoBehaviour
 
 			if (Input.GetKey(KeyCode.Space))
 			{
-				moveDirection.y = jumpSpeed;
+				isRunning = true;
 				
 				
 			}
 
+			else
+			{
+				isRunning = false;
+			}
+
 		}
 
+		
 		moveDirection.y -= gravity;
 
 		controller.Move(moveDirection * Time.deltaTime);
@@ -305,9 +296,8 @@ public class TesteCharDrunk : MonoBehaviour
 		rotationX += Input.GetAxis("Mouse Y") * mouseSensivity * Time.deltaTime * -1;
 		rotationX = Mathf.Clamp(rotationX, -45, 45);
 
-		cam.transform.localEulerAngles = new Vector3(-rotationX,
-													 cam.transform.localEulerAngles.y,
-													 cam.transform.localEulerAngles.z);
+		cam.transform.localEulerAngles = new Vector3(-rotationX,cam.transform.localEulerAngles.y,cam.transform.localEulerAngles.z);
+
 	}
 
 
@@ -323,59 +313,10 @@ public class TesteCharDrunk : MonoBehaviour
 		 
 	}
 
-	void OnTriggerEnter(Collider other)
-	{
-
-		/*if (other.CompareTag("Limites"))
-		{
-			movel.GetComponent<Movel>().ArrastaMov = false;
-		}*/
-
-	}
-
-
-	void OnTriggerStay(Collider other)
-	{
-
-		if (other.CompareTag("Segurança") && Input.GetKey(KeyCode.E) && vodka == true)
-		{
-			other.GetComponent<FieldOfView>().drunk = true;
-			vodka = false;
-		}
-
-		if (other.CompareTag("Vodka"))
-		{
-			vodka =true;
-		}
-
-		if (other.CompareTag("InsideArm"))
-		{
-			cam.SetActive(false);
-			camUp.SetActive(true);
-		}
-	}
-
-	 void OnTriggerExit(Collider other) 
-	 {
-		 
-		if (other.CompareTag("InsideArm"))
-		{
-			cam.SetActive(true);
-			camUp.SetActive(false);
-		}
-		
-	}
 
 
 
-
-	void Respawn(){
-
-		transform.position = respawnPos;
-
-
-	}
-	}
+}
 }
 
 
