@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -101,7 +101,7 @@ public class ControllerNPC : MonoBehaviour
             }
         }
         
-        if (other.CompareTag("PosterHitBox"))
+        if (other.CompareTag("Totem"))
         {
             buscandoTotem = false;
             myAgent.isStopped = true;
