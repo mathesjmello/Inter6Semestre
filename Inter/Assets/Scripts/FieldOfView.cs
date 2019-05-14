@@ -4,7 +4,12 @@ using System.Collections.Generic;
 
 public class FieldOfView : MonoBehaviour {
 
+    public Animator anim;
     public TesteCharDrunk com;
+
+    public TesteCharDrunk shot;
+
+    public int copo = 1;
 
     public bool drunk;
     public float raioVisao;
@@ -247,9 +252,15 @@ public class FieldOfView : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && Input.GetKey(KeyCode.E) && com.vodka == true)
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E) && com.vodka == true && drunk == false)
         {
             drunk = true;
+            TomouVodka();
         }
+    }
+
+    void TomouVodka(){
+        shot.doses -= copo;
+        anim.SetTrigger("Bebeu");
     }
 }

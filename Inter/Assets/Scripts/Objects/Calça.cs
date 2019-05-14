@@ -31,7 +31,7 @@ public class Calça : MonoBehaviour
         {
             esposa.SetActive(true);
 			Destroy(this.gameObject);
-			portaGrandeAnim.SetInteger("ComCalça", 1);
+			portaGrandeAnim.SetBool("Aberto", true);
             texto_03.SetActive(true);
             texto_04.SetActive(true);
             dimitri.GetComponent<Dimitri>().comCalca = true;

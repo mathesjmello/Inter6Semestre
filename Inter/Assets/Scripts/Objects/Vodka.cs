@@ -7,6 +7,8 @@ public class Vodka : MonoBehaviour
 
     public GameObject player;
 
+    public TesteCharDrunk shots;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class Vodka : MonoBehaviour
         if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
             player.GetComponent<TesteCharDrunk>().vodka = true;
+            shots.doses = 3;
             Destroy(this.gameObject);
         }
     }

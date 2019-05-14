@@ -31,7 +31,8 @@ public class TesteCharDrunk : MonoBehaviour
 	public bool feedPlay;
 
 
-	public int doses = 3;
+	[Range(0, 3)]
+	public int doses = 0;
 
 
 	private float AngularSpeed = 100;
@@ -83,10 +84,12 @@ public class TesteCharDrunk : MonoBehaviour
 		{
 			garrafa.SetActive(true);
 		}
-		else
+		if (doses <=0)
 		{
 			garrafa.SetActive(false);
+			vodka = false;
 		}
+
 
 		if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
 		{
