@@ -17,6 +17,8 @@ public class TesteCharDrunk : MonoBehaviour
 	public GameObject camUp;
 	public GameObject PauseScreen;
 
+	public GameObject garrafa;
+
 
 	public bool isWalking = false;
 	public bool vodka;
@@ -27,6 +29,9 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public bool isRunning;
 	public bool feedPlay;
+
+
+	public int doses = 3;
 
 
 	private float AngularSpeed = 100;
@@ -73,6 +78,15 @@ public class TesteCharDrunk : MonoBehaviour
 
 	void FixedUpdate()
 	{	
+
+		if (vodka == true && doses >= 1)
+		{
+			garrafa.SetActive(true);
+		}
+		else
+		{
+			garrafa.SetActive(false);
+		}
 
 		if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
 		{

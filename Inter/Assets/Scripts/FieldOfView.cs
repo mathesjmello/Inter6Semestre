@@ -90,7 +90,7 @@ public class FieldOfView : MonoBehaviour {
                     Debug.Log("Encontrei o Player");
                     //Adicionar a forma que foi decidida para acabar o jogo
                     //precisa mudar a Tag para o nome correto, no lugar de player ser dimitri ou o nome que for decidido
-                    fadeOut.SetActive(true);
+                   // fadeOut.SetActive(true);
                 }
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Totem") && controladorNPC.buscandoTotem == true)
                 {
