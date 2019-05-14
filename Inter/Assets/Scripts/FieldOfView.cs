@@ -16,6 +16,8 @@ public class FieldOfView : MonoBehaviour {
 
     public float drunkView;
 
+    private float divView = 1;
+
     private float viewRadius;
     [Range(0, 360)]
     public float viewAngle;
@@ -55,9 +57,9 @@ public class FieldOfView : MonoBehaviour {
         DrawFieldOfView();
         if (drunk)
         {
-            drunkView = 2;
+            divView = drunkView;
         }
-        viewRadius = raioVisao / drunkView;
+        viewRadius = raioVisao / divView;
     }
 
 
@@ -88,14 +90,14 @@ public class FieldOfView : MonoBehaviour {
             if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
             {
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
-                if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Player"))
+                if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Dimitri"))
                 {
                     //Aqui é aonde acontece a detecção do player
                     visibleTargets.Add(target);
                     Debug.Log("Encontrei o Player");
                     //Adicionar a forma que foi decidida para acabar o jogo
                     //precisa mudar a Tag para o nome correto, no lugar de player ser dimitri ou o nome que for decidido
-                   // fadeOut.SetActive(true);
+                    fadeOut.SetActive(true);
                 }
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Totem") && controladorNPC.buscandoTotem == true)
                 {

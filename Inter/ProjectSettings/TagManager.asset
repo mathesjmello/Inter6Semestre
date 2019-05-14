@@ -20,6 +20,7 @@ TagManager:
   - Change
   - Reset
   - "Seguran\xE7a"
+  - PosterHitBox
   layers:
   - Default
   - TransparentFX
