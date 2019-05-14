@@ -30,6 +30,8 @@ public class TesteCharDrunk : MonoBehaviour
 	public bool isRunning;
 	public bool feedPlay;
 
+	public bool deuSpawn;
+
 
 	[Range(0, 3)]
 	public int doses = 0;
@@ -59,10 +61,6 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public AudioClip walkSound;
 	public AudioSource playerSound;
-	public AudioSource feedback;
-
-
-
 
 
 
@@ -74,11 +72,13 @@ public class TesteCharDrunk : MonoBehaviour
 		controller = GetComponent<CharacterController>();
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
+
 	}
 
 
 	void FixedUpdate()
 	{	
+
 
 		if (vodka == true && doses >= 1)
 		{
@@ -91,10 +91,10 @@ public class TesteCharDrunk : MonoBehaviour
 		}
 
 
-		if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
+		/*if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
 		{
 			totem.transform.parent = null;
-		}
+		}*/
 
 	
 		if (carregando == true)
@@ -310,6 +310,7 @@ public class TesteCharDrunk : MonoBehaviour
 		drunkSpeed = Random.Range (drunkMin,drunkMax);
 		 
 	}
+
 
 
 

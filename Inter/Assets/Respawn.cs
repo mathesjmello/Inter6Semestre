@@ -4,15 +4,53 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
+    public bool ativaRespawn;
+
+    public GameObject player;
+
+    public TesteCharDrunk spawn;
+
+    [Range(0,2)]
+    public int fase;
+
+    public Vector3 respawnPos;
+
+    public GameObject checkpoint01;
+
+    public GameObject checkpoint02;
+
+    public GameObject checkpoint03;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        respawnPos = checkpoint01.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (fase == 1)
+        {
+            respawnPos = checkpoint02.transform.position;
+        }
+
+        if (fase == 2)
+        {
+            respawnPos = checkpoint03.transform.position;
+        }
+
+        if (ativaRespawn == true)
+        {
+            RespawnOn();
+        }
+
         
+    }
+
+    void RespawnOn(){
+        player.transform.position = respawnPos;
+        spawn.deuSpawn = true;
     }
 }
