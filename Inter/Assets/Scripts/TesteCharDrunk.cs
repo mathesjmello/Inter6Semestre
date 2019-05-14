@@ -59,10 +59,11 @@ public class TesteCharDrunk : MonoBehaviour
 	private Vector3 moveDirection = Vector3.zero;
 
 
-	public AudioClip walkSound;
 	public AudioSource playerSound;
 
+	public AudioSource garrafaSound;
 
+ 
 
 
 
@@ -83,6 +84,7 @@ public class TesteCharDrunk : MonoBehaviour
 		if (vodka == true && doses >= 1)
 		{
 			garrafa.SetActive(true);
+			garrafaSound.Play(0);
 		}
 		if (doses <=0)
 		{

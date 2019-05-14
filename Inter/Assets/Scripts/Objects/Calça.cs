@@ -11,6 +11,10 @@ public class Calça : MonoBehaviour
     public GameObject dimitri;
     public GameObject esposa;
 
+    public GameObject parte02;
+
+    public GameObject bomba;
+
     public Animator portaGrandeAnim;
 
     // Start is called before the first frame update
@@ -34,6 +38,8 @@ public class Calça : MonoBehaviour
 			portaGrandeAnim.SetBool("Aberto", true);
             texto_03.SetActive(true);
             texto_04.SetActive(true);
+            parte02.SetActive(true);
+            bomba.SetActive(true);
             dimitri.GetComponent<Dimitri>().comCalca = true;
         }
     }
