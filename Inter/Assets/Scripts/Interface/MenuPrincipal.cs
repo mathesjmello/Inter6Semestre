@@ -36,6 +36,8 @@ public class MenuPrincipal : MonoBehaviour
 	static private float sensibilidade = 30;
 	static private float volume = 1;
 
+    public GameObject tutorial;
+
 
 	private void Start()
 	{
@@ -55,6 +57,7 @@ public class MenuPrincipal : MonoBehaviour
 			Time.timeScale = 1.0f;
 			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
+            tutorial.SetActive(false);
 		}
 		MasterVolume = brilhoEAudioObject.GetComponent<MasterVolume>();
 		TesteCharDrunk = sensibilObject.GetComponent<TesteCharDrunk>();
@@ -89,6 +92,7 @@ public class MenuPrincipal : MonoBehaviour
 
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
+        tutorial.SetActive(true);
 
 
 		NewGameScreen.SetActive(false);
