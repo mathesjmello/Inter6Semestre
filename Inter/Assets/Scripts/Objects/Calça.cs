@@ -20,16 +20,16 @@ public class Calça : MonoBehaviour
 	public GameObject tutoriais;
 	public GameObject tutoriais2;
 
-    public Transform porta01;
-    public Transform porta02;
+  //  public Transform porta01;
+   // public Transform porta02;
     
 
      private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            porta01.transform.position = new Vector3(3.757956f, -3.493032f, 14.5f);
-            porta02.transform.position = new Vector3(3.757956f, -3.493032f, 13.75f);
+           // porta01.transform.position = new Vector3(3.757956f, -3.493032f, 14.5f);
+          //  porta02.transform.position = new Vector3(3.757956f, -3.493032f, 13.75f);
             esposa.SetActive(true);
 			Destroy(this.gameObject);
 			portaGrandeAnim.SetBool("Aberto", true);
