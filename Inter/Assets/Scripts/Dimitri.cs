@@ -35,7 +35,7 @@ public class Dimitri : MonoBehaviour
 void OnTriggerEnter(Collider other){
     if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
     {
-        if (comCalca == true)
+        if (comCalça == true)
         {
             player.GetComponent<TesteCharDrunk>().carregando =true;
         }
