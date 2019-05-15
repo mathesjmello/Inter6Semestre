@@ -9,7 +9,8 @@ public class Calça : MonoBehaviour
     public GameObject texto_04;
 
     public GameObject dimitri;
-    public GameObject esposa;
+    public GameObject esposaPorta;
+    public GameObject esposaFala;
 
     public GameObject parte02;
 
@@ -22,6 +23,8 @@ public class Calça : MonoBehaviour
 
     public Transform porta01;
     public Transform porta02;
+
+    public GameObject song;
     
 
      private void OnTriggerEnter(Collider other)
@@ -30,7 +33,9 @@ public class Calça : MonoBehaviour
         {
             porta01.transform.position = new Vector3(3.757956f, -3.493032f, 14.5f);
             porta02.transform.position = new Vector3(3.757956f, -3.493032f, 13.75f);
-            esposa.SetActive(true);
+            esposaPorta.SetActive(true);
+            esposaFala.SetActive(false);
+            song.SetActive(true);
 			Destroy(this.gameObject);
 			portaGrandeAnim.SetBool("Aberto", true);
             texto_03.SetActive(true);
