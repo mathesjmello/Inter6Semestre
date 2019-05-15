@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.PostProcessing;
+
 
 public class MenuPrincipal : MonoBehaviour
 {
+	public bool menuInicial;
+
 	public GameObject MainMenuScreen;
 	public GameObject OptionScreen;
 	public GameObject NewGameScreen;
@@ -18,20 +22,55 @@ public class MenuPrincipal : MonoBehaviour
 	public GameObject MenuCam;
 
 
+	public GameObject brilhoEAudioObject;
+	public GameObject sensibilObject;
+
+	public PostProcessProfile PostProcessProfile;
+	private ColorGrading colorGrading;
+	private MasterVolume MasterVolume;
+	private TesteCharDrunk TesteCharDrunk;
+
+
+
+	static private float brilho = 0;
+	static private float sensibilidade = 30;
+	static private float volume = 1;
+
+
 	private void Start()
 	{
-		PlayerScript = Player.GetComponent<TesteCharDrunk>();
-		PlayerScript.enabled = false;
-		PlayerCam.SetActive(false);
+		if (menuInicial)
+		{
+			PlayerScript = Player.GetComponent<TesteCharDrunk>();
+			PlayerScript.enabled = false;
+			PlayerCam.SetActive(false);
 
-		MenuCam.SetActive(true);
+			MainMenuScreen.SetActive(true);
 
-		PauseController.SetActive(false);
+			MenuCam.SetActive(true);
+
+			PauseController.SetActive(false);
 
 
-		Time.timeScale = 1.0f;
-		Cursor.lockState = CursorLockMode.None;
-		Cursor.visible = true;
+			Time.timeScale = 1.0f;
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
+		}
+		MasterVolume = brilhoEAudioObject.GetComponent<MasterVolume>();
+		TesteCharDrunk = sensibilObject.GetComponent<TesteCharDrunk>();
+
+
+	}
+
+	private void Update()
+	{
+		PostProcessProfile.TryGetSettings(out colorGrading);
+		colorGrading.postExposure.value = brilho;
+
+		MasterVolume.masterVolume = volume;
+
+		if(TesteCharDrunk)
+		TesteCharDrunk.mouseSensivity = sensibilidade;
 	}
 
 	public void Jogar()
@@ -66,11 +105,28 @@ public class MenuPrincipal : MonoBehaviour
 
 	}
 
+	public void Brilho(float valor)
+	{
+		brilho = valor;
+	}
+
+	public void Sensibilidade(float valor)
+	{
+		sensibilidade = valor;
+	}
+
+	public void Volume(float valor)
+	{
+		volume = valor;
+	}
+
 	public void VoltaOpções()
 	{
 		NewGameScreen.SetActive(false);
 		OptionScreen.SetActive(false);
 		MainMenuScreen.SetActive(true);
+
+		
 
 	}
 
