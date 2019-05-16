@@ -8823,7 +8823,7 @@ PrefabInstance:
     - target: {fileID: 1369363328636938538, guid: 46b5f124b07f33646b2a6e1169fd08fa,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -57
+      value: -57.00006
       objectReference: {fileID: 0}
     - target: {fileID: 7477315675571374022, guid: 46b5f124b07f33646b2a6e1169fd08fa,
         type: 3}
@@ -11180,7 +11180,7 @@ PrefabInstance:
     - target: {fileID: 8413909707269180408, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -57
+      value: -57.00006
       objectReference: {fileID: 0}
     - target: {fileID: 8413909707269180408, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
@@ -33027,6 +33027,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6818095598568735374, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
+        type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 5511d89a356801c4683f972bed9b4cf8,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d696e8bc5e3ccfa4a93a9ebec7af519a, type: 3}
 --- !u!4 &1964059420 stripped
@@ -53887,6 +53893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315403407894288189, guid: 117f6edb9a854e646b2dda82217e8aa8,
+        type: 3}
+      propertyPath: m_Mode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 117f6edb9a854e646b2dda82217e8aa8, type: 3}
