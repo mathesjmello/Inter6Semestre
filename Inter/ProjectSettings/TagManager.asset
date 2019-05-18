@@ -21,6 +21,7 @@ TagManager:
   - Reset
   - "Seguran\xE7a"
   - PosterHitBox
+  - Parede2D
   layers:
   - Default
   - TransparentFX
