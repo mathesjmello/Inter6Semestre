@@ -9,7 +9,7 @@ public class Dimitri : MonoBehaviour
  
      public AudioClip[] audioSources;
 
-     public bool comCalça;
+     public bool comCalca;
 
      public GameObject player;
 
@@ -35,7 +35,7 @@ public class Dimitri : MonoBehaviour
 void OnTriggerEnter(Collider other){
     if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
     {
-        if (comCalça == true)
+        if (comCalca == true)
         {
             player.GetComponent<TesteCharDrunk>().carregando =true;
         }
