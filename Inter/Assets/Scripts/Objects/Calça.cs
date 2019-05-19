@@ -31,8 +31,8 @@ public class Calça : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            porta01.transform.position = new Vector3(3.757956f, -3.493032f, 14.5f);
-            porta02.transform.position = new Vector3(3.757956f, -3.493032f, 13.75f);
+           // porta01.transform.position = new Vector3(3.757956f, -3.493032f, 14.5f);
+           // porta02.transform.position = new Vector3(3.757956f, -3.493032f, 13.75f);
             esposaPorta.SetActive(true);
             esposaFala.SetActive(false);
             song.SetActive(true);

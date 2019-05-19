@@ -39,7 +39,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 	private float AngularSpeed = 100;
 	public float walkSpeed ;
-	public float playerSpeed = 1.5f;
+	public float playerSpeed = 3.0f;
 	private float gravity = 0.5f;
 	public float jumpSpeed = 5;
 	public float mouseSensivity = 30;
@@ -137,7 +137,7 @@ public class TesteCharDrunk : MonoBehaviour
 		}
 		else
 		{
-			playerSpeed = 1.5f;
+			playerSpeed = 3.0f;
 		}
 
 
