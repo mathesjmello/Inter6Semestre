@@ -69,4 +69,10 @@ public class LargaDimi : MonoBehaviour
          comDimi = false; 
          dimitri.SetActive(false);
     }
+
+        void RandomSound(){
+         randomSound.clip = audioSources[Random.Range(0, audioSources.Length)];
+         randomSound.Play ();
+         CallSound ();
+    }
 }
