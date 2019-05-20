@@ -39,7 +39,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 	private float AngularSpeed = 100;
 	public float walkSpeed ;
-	public float playerSpeed = 1.5f;
+	public float playerSpeed = 3.0f;
 	private float gravity = 0.5f;
 	public float jumpSpeed = 5;
 	public float mouseSensivity = 30;
@@ -131,13 +131,15 @@ public class TesteCharDrunk : MonoBehaviour
 
 		}
 
-		if (isRunning)
+		if (isRunning == true && carregando == false)
 		{
 			playerSpeed = 5.0f;
+			playerAnim.SetBool("isRunning", true);
 		}
 		else
 		{
-			playerSpeed = 1.5f;
+			playerSpeed = 3.0f;
+			playerAnim.SetBool("isRunning", false);
 		}
 
 
@@ -213,7 +215,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 		controller.Move(moveDirection * Time.deltaTime);
 
-		if (isWalkingBack == true && carregando == false)
+		if (isWalkingBack == true && carregando == false && isRunning == false)
 		{
 
 			playerAnim.SetBool("isWalkingBack", true);
@@ -231,7 +233,7 @@ public class TesteCharDrunk : MonoBehaviour
 			}
 		
 
-		 if (isWalking == true && carregando == false)
+		 if (isWalking == true && carregando == false && isRunning == false)
 		{
 			playerAnim.SetBool("isWalking", true);
 		}

@@ -21,6 +21,8 @@ public class Respawn : MonoBehaviour
 
     public GameObject checkpoint03;
 
+    public GameObject fadeOut;
+
 
 	private CharacterController playerController;
 
@@ -47,7 +49,7 @@ public class Respawn : MonoBehaviour
 
         if (ativaRespawn == true)
         {
-            RespawnOn();
+            ChamouRespawn();
 		
         }
 
@@ -56,11 +58,22 @@ public class Respawn : MonoBehaviour
         
     }
 
-    void RespawnOn(){
+    void RespawnOn (){
+        ativaRespawn = true;
+    }
+
+    void ChamouRespawn(){
 		playerController.enabled = false;
         player.transform.position = respawnPos;
         spawn.deuSpawn = true;
-		playerController.enabled = true;
-		ativaRespawn = false;
+
+
+    }
+
+    void AcabouFadeOut(){
+
+    fadeOut.SetActive(false);
+    playerController.enabled = true;
+	ativaRespawn = false;
     }
 }
