@@ -134,6 +134,8 @@ public class TesteCharDrunk : MonoBehaviour
 		if (isRunning == true && carregando == false)
 		{
 			playerSpeed = 5.0f;
+			isWalking = false;
+			isWalkingBack = false;
 			playerAnim.SetBool("isRunning", true);
 		}
 		else
@@ -174,7 +176,11 @@ public class TesteCharDrunk : MonoBehaviour
 				walkSpeed = playerSpeed + drunkSpeed;
 				moveDirection.z = walkSpeed ;
 				moveDirection.x = drunkSpeed;
-				isWalking = true;
+				if (!isRunning)
+				{
+					isWalking = true;
+				}
+				
 
 
 			}
@@ -183,7 +189,10 @@ public class TesteCharDrunk : MonoBehaviour
 				walkSpeed = -playerSpeed + drunkSpeed;
 				moveDirection.z = walkSpeed;
 				moveDirection.x = drunkSpeed;
-				isWalkingBack = true;
+				if (!isRunning)
+				{
+					isWalkingBack = true;
+				}
 
 			}
 
@@ -219,6 +228,7 @@ public class TesteCharDrunk : MonoBehaviour
 		{
 
 			playerAnim.SetBool("isWalkingBack", true);
+			playerAnim.SetBool("isRunning", false);
 		}
 
 			if (isWalkingBack == true && carregando == true )
@@ -236,6 +246,7 @@ public class TesteCharDrunk : MonoBehaviour
 		 if (isWalking == true && carregando == false && isRunning == false)
 		{
 			playerAnim.SetBool("isWalking", true);
+			playerAnim.SetBool("isRunning", false);
 		}
 
 		 if (isWalking == true && carregando == true)
