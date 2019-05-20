@@ -9,9 +9,11 @@ public class Dimitri : MonoBehaviour
  
      public AudioClip[] audioSources;
 
-     public bool comCalca = false;
+     public bool comCalca;
 
      public GameObject player;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,16 +32,14 @@ public class Dimitri : MonoBehaviour
          CallSound ();
     }
 
-
-
-    void OnTriggerStay(Collider other)
+void OnTriggerEnter(Collider other){
+    if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
     {
-        if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
-		{
-			if (comCalca == true )
-			{
-				player.GetComponent<TesteCharDrunk>().carregando = true;
-			}
-		}
+        if (comCalca == true)
+        {
+            player.GetComponent<TesteCharDrunk>().carregando =true;
+        }
     }
+}
+
 }

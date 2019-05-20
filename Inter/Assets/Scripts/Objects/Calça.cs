@@ -9,7 +9,8 @@ public class Calça : MonoBehaviour
     public GameObject texto_04;
 
     public GameObject dimitri;
-    public GameObject esposa;
+    public GameObject esposaPorta;
+    public GameObject esposaFala;
 
     public GameObject parte02;
 
@@ -17,30 +18,33 @@ public class Calça : MonoBehaviour
 
     public Animator portaGrandeAnim;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public GameObject tutoriais;
+	public GameObject tutoriais2;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Transform porta01;
+    public Transform porta02;
+
+    public GameObject song;
+    
 
      private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            esposa.SetActive(true);
+           // porta01.transform.position = new Vector3(3.757956f, -3.493032f, 14.5f);
+           // porta02.transform.position = new Vector3(3.757956f, -3.493032f, 13.75f);
+            esposaPorta.SetActive(true);
+            esposaFala.SetActive(false);
+            song.SetActive(true);
 			Destroy(this.gameObject);
 			portaGrandeAnim.SetBool("Aberto", true);
             texto_03.SetActive(true);
             texto_04.SetActive(true);
             parte02.SetActive(true);
             bomba.SetActive(true);
-            dimitri.GetComponent<Dimitri>().comCalca = true;
+            dimitri.GetComponent<LargaDimi>().comCalca = true;
+			tutoriais.SetActive(false);
+			tutoriais2.SetActive(true);
         }
     }
 }
