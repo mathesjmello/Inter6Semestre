@@ -49,7 +49,7 @@ public class Respawn : MonoBehaviour
 
         if (ativaRespawn == true)
         {
-            RespawnOn();
+            ChamouRespawn();
 		
         }
 
@@ -58,12 +58,22 @@ public class Respawn : MonoBehaviour
         
     }
 
-    void RespawnOn(){
+    void RespawnOn (){
+        ativaRespawn = true;
+    }
+
+    void ChamouRespawn(){
 		playerController.enabled = false;
         player.transform.position = respawnPos;
         spawn.deuSpawn = true;
-		playerController.enabled = true;
-		ativaRespawn = false;
-        fadeOut.SetActive(false);
+
+
+    }
+
+    void AcabouFadeOut(){
+
+    fadeOut.SetActive(false);
+    playerController.enabled = true;
+	ativaRespawn = false;
     }
 }
