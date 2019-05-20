@@ -21,6 +21,8 @@ public class Respawn : MonoBehaviour
 
     public GameObject checkpoint03;
 
+    public GameObject fadeOut;
+
 
 	private CharacterController playerController;
 
@@ -62,5 +64,6 @@ public class Respawn : MonoBehaviour
         spawn.deuSpawn = true;
 		playerController.enabled = true;
 		ativaRespawn = false;
+        fadeOut.SetActive(false);
     }
 }
