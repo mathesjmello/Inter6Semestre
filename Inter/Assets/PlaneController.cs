@@ -48,7 +48,7 @@ public class PlaneController : MonoBehaviour
 		rb.velocity = movement * Time.deltaTime;
 		
 		
-		movement = new Vector3(0, 0, 0);
+		movement /= 2;
 			
 
     }
