@@ -27,6 +27,16 @@ public class Respawn : MonoBehaviour
 
     public GameObject fadeOut;
 
+    public GameObject npc01;
+
+    public GameObject npc02;
+
+    public GameObject npc03;
+
+    public GameObject npc04;
+
+    public NPCAtivos check;
+
 
 	private CharacterController playerController;
 
@@ -45,24 +55,28 @@ public class Respawn : MonoBehaviour
         {
 			//Antes da Sra Dimitri
             respawnPos = checkpoint02.transform.position;
+            check.disable = 1;
         }
 
         if (fase == 2)
         {
             //No bar, Antes do guarda do corredor
             respawnPos = checkpoint03.transform.position;
+            check.disable = 2;
         }
 
         if (fase == 3)
         {
             //Antes da bomba
             respawnPos = checkpoint04.transform.position;
+            check.disable = 3;
         }
 
         if (fase == 4)
         {
             //Antes do Salão
             respawnPos = checkpoint05.transform.position;
+            check.disable = 4;
         }
 
         if (ativaRespawn == true)

@@ -9,10 +9,7 @@ public class Calça : MonoBehaviour
     public GameObject texto_04;
 
     public GameObject dimitri;
-    public GameObject esposaPorta;
     public GameObject esposaFala;
-
-    public GameObject parte02;
 
     public GameObject bomba;
 
@@ -37,14 +34,12 @@ public class Calça : MonoBehaviour
         {
            // porta01.transform.position = new Vector3(3.757956f, -3.493032f, 14.5f);
            // porta02.transform.position = new Vector3(3.757956f, -3.493032f, 13.75f);
-            esposaPorta.SetActive(true);
             esposaFala.SetActive(false);
             song.SetActive(true);
 			Destroy(this.gameObject);
 			portaGrandeAnim.SetBool("Aberto", true);
             texto_03.SetActive(true);
             texto_04.SetActive(true);
-            parte02.SetActive(true);
             bomba.SetActive(true);
             dimitri.GetComponent<LargaDimi>().comCalca = true;
 			tutoriais.SetActive(false);
