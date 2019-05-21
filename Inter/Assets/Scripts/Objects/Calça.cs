@@ -1,4 +1,4 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,6 +25,10 @@ public class Calça : MonoBehaviour
     public Transform porta02;
 
     public GameObject song;
+
+    public Respawn check;
+
+    public GameObject checkPoints;
     
 
      private void OnTriggerEnter(Collider other)
@@ -45,6 +49,8 @@ public class Calça : MonoBehaviour
             dimitri.GetComponent<LargaDimi>().comCalca = true;
 			tutoriais.SetActive(false);
 			tutoriais2.SetActive(true);
+            check.fase = 1;
+            checkPoints.SetActive(true);
         }
     }
 }
