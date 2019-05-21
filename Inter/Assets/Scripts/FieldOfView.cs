@@ -51,6 +51,8 @@ public class FieldOfView : MonoBehaviour {
 
     public bool parte02;
 
+    public int animMulher;
+
     private void Start()
     {
         controladorNPC = GetComponent<ControllerNPC>();
@@ -305,6 +307,7 @@ public class FieldOfView : MonoBehaviour {
         {
             feedDetecta.Play(0);
             ativouDetecta = true;
+            animMulher ++;
         }
 
         fadeOut.SetActive(true);
