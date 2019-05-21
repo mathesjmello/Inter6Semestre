@@ -13,6 +13,10 @@ public class NPCAtivos : MonoBehaviour
 
     public GameObject npc03;
 
+    public GameObject npc03B;
+
+    public GameObject npc03C;
+
     public GameObject npc04;
 
     // Start is called before the first frame update
@@ -48,6 +52,9 @@ public class NPCAtivos : MonoBehaviour
             npc01.SetActive(true);
             npc03.SetActive(false);
             npc04.SetActive(false);
+
+            npc02 = GameObject.FindWithTag("NPC02");
+            npc02.GetComponent<FieldOfView>().enabled = false;
         }
 
         if (disable == 3)
@@ -62,6 +69,14 @@ public class NPCAtivos : MonoBehaviour
         {
             //Antes do Salão
             npc04.SetActive(true);
+
+            npc03 = GameObject.FindWithTag("NPC03");
+            npc03.GetComponent<FieldOfView>().enabled = false;
+
+            npc03B.GetComponent<FieldOfView>().enabled = false;
+
+            npc03C.GetComponent<FieldOfView>().enabled = false;
+
         }        
         
     }
