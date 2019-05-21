@@ -10,7 +10,7 @@ public class Respawn : MonoBehaviour
 
     public TesteCharDrunk spawn;
 
-    [Range(0,2)]
+    [Range(0,4)]
     public int fase;
 
     public Vector3 respawnPos;
@@ -21,7 +21,21 @@ public class Respawn : MonoBehaviour
 
     public GameObject checkpoint03;
 
+    public GameObject checkpoint04;
+
+    public GameObject checkpoint05;
+
     public GameObject fadeOut;
+
+    public GameObject npc01;
+
+    public GameObject npc02;
+
+    public GameObject npc03;
+
+    public GameObject npc04;
+
+    public NPCAtivos check;
 
 
 	private CharacterController playerController;
@@ -29,6 +43,7 @@ public class Respawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Antes do guarda do correrdor pela 1° vez
         respawnPos = checkpoint01.transform.position;
 		playerController = player.GetComponent<CharacterController>();
     }
@@ -38,13 +53,30 @@ public class Respawn : MonoBehaviour
     {
         if (fase == 1)
         {
-			
+			//Antes da Sra Dimitri
             respawnPos = checkpoint02.transform.position;
+            check.disable = 1;
         }
 
         if (fase == 2)
         {
+            //No bar, Antes do guarda do corredor
             respawnPos = checkpoint03.transform.position;
+            check.disable = 2;
+        }
+
+        if (fase == 3)
+        {
+            //Antes da bomba
+            respawnPos = checkpoint04.transform.position;
+            check.disable = 3;
+        }
+
+        if (fase == 4)
+        {
+            //Antes do Salão
+            respawnPos = checkpoint05.transform.position;
+            check.disable = 4;
         }
 
         if (ativaRespawn == true)

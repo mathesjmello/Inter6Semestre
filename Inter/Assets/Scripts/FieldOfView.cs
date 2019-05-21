@@ -39,7 +39,7 @@ public class FieldOfView : MonoBehaviour {
 
     ControllerNPC controladorNPC;
 
-    public GameObject fadeOut;
+    public Animator fadeOutAnim;
 
     public AudioSource dandoVodka;
 
@@ -50,6 +50,8 @@ public class FieldOfView : MonoBehaviour {
     public bool parte01;
 
     public bool parte02;
+
+    public int animMulher;
 
     private void Start()
     {
@@ -305,9 +307,10 @@ public class FieldOfView : MonoBehaviour {
         {
             feedDetecta.Play(0);
             ativouDetecta = true;
+            animMulher ++;
         }
 
-        fadeOut.SetActive(true);
+        fadeOutAnim.SetTrigger("FadeOut");
         ativouDetecta = false;
     }
 
@@ -317,7 +320,7 @@ public class FieldOfView : MonoBehaviour {
             feedDetecta.Play(0);
             ativouDetecta = true;
         }
-        fadeOut.SetActive(true);
+        fadeOutAnim.SetTrigger("FadeOut");
         ativouDetecta = false;
     }
 }

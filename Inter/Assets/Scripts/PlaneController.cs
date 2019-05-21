@@ -8,7 +8,7 @@ public class PlaneController : MonoBehaviour
 
 	private Vector3 movement;
 	private Rigidbody rb;
-
+	private GameObject tiros;
 
 	private Vector3 positionOld;
 
@@ -21,6 +21,8 @@ public class PlaneController : MonoBehaviour
     {
 		Time.timeScale = 1;
 		rb = GetComponent<Rigidbody>();
+		tiros = GameObject.FindGameObjectWithTag("Tiro2D");
+		tiros.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,12 +48,22 @@ public class PlaneController : MonoBehaviour
 
 	
 		rb.velocity = movement * Time.deltaTime;
-		
-		
 		movement /= 2;
-			
 
-    }
+
+		if (Input.GetKey(KeyCode.Space))
+		{
+			tiros.SetActive(true);
+			tiros.transform.localScale = new Vector3(tiros.transform.localScale.x * - 1, tiros.transform.localScale.y, tiros.transform.localScale.z);
+		}
+
+		if (Input.GetKeyUp(KeyCode.Space))
+		{
+			tiros.SetActive(false);
+		}
+
+
+	}
 
 
 	private void OnCollisionStay(Collision collision)
