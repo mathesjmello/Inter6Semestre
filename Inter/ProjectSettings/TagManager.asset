@@ -22,6 +22,7 @@ TagManager:
   - "Seguran\xE7a"
   - PosterHitBox
   - Parede2D
+  - Tiro2D
   layers:
   - Default
   - TransparentFX
