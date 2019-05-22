@@ -26,6 +26,8 @@ public class Calça : MonoBehaviour
     public Respawn check;
 
     public GameObject checkPoints;
+
+    public AudioSource canto;
     
 
      private void OnTriggerEnter(Collider other)
@@ -46,6 +48,7 @@ public class Calça : MonoBehaviour
 			tutoriais2.SetActive(true);
             check.fase = 1;
             checkPoints.SetActive(true);
+            canto.Stop();
         }
     }
 }
