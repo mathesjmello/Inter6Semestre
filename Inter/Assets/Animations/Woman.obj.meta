@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: 9a7cec6881b13aa479719b0937e4ae5c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: new_soldado:curve2_polySurface12
+    100002: new_soldado:curve2_polySurface15
+    100004: new_soldado:curve2_polySurface23
+    100006: new_soldado:curve2_polySurface3
+    100008: new_soldado:curve2_polySurface4
+    100010: new_soldado:curve2_polySurface6
+    100012: new_soldado:curve3_polySurface24
+    100014: new_soldado:curve3_polySurface26
+    100016: new_soldado:curve3_polySurface35
+    100018: new_soldado:curve3_polySurface36
+    100020: new_soldado:curve3_polySurface38
+    100022: new_soldado:curve3_polySurface41
+    100024: polySurface22_new_soldado:curve2
+    100026: polySurface37_new_soldado:curve3
+    100028: polySurface39
+    100030: //RootNode
+    400000: new_soldado:curve2_polySurface12
+    400002: new_soldado:curve2_polySurface15
+    400004: new_soldado:curve2_polySurface23
+    400006: new_soldado:curve2_polySurface3
+    400008: new_soldado:curve2_polySurface4
+    400010: new_soldado:curve2_polySurface6
+    400012: new_soldado:curve3_polySurface24
+    400014: new_soldado:curve3_polySurface26
+    400016: new_soldado:curve3_polySurface35
+    400018: new_soldado:curve3_polySurface36
+    400020: new_soldado:curve3_polySurface38
+    400022: new_soldado:curve3_polySurface41
+    400024: polySurface22_new_soldado:curve2
+    400026: polySurface37_new_soldado:curve3
+    400028: polySurface39
+    400030: //RootNode
+    2100000: new_soldado_curve2_polySurface12Mat
+    2100002: new_soldado_curve2_polySurface15Mat
+    2100004: new_soldado_curve2_polySurface23Mat
+    2100006: new_soldado_curve2_polySurface3Mat
+    2100008: new_soldado_curve2_polySurface4Mat
+    2100010: new_soldado_curve2_polySurface6Mat
+    2100012: new_soldado_curve3_polySurface24Mat
+    2100014: new_soldado_curve3_polySurface26Mat
+    2100016: new_soldado_curve3_polySurface35Mat
+    2100018: new_soldado_curve3_polySurface36Mat
+    2100020: new_soldado_curve3_polySurface38Mat
+    2100022: new_soldado_curve3_polySurface41Mat
+    2100024: polySurface22_new_soldado_curve2Mat
+    2100026: polySurface37_new_soldado_curve3Mat
+    2100028: polySurface39Mat
+    2300000: new_soldado:curve2_polySurface12
+    2300002: new_soldado:curve2_polySurface15
+    2300004: new_soldado:curve2_polySurface23
+    2300006: new_soldado:curve2_polySurface3
+    2300008: new_soldado:curve2_polySurface4
+    2300010: new_soldado:curve2_polySurface6
+    2300012: new_soldado:curve3_polySurface24
+    2300014: new_soldado:curve3_polySurface26
+    2300016: new_soldado:curve3_polySurface35
+    2300018: new_soldado:curve3_polySurface36
+    2300020: new_soldado:curve3_polySurface38
+    2300022: new_soldado:curve3_polySurface41
+    2300024: polySurface22_new_soldado:curve2
+    2300026: polySurface37_new_soldado:curve3
+    2300028: polySurface39
+    3300000: new_soldado:curve2_polySurface12
+    3300002: new_soldado:curve2_polySurface15
+    3300004: new_soldado:curve2_polySurface23
+    3300006: new_soldado:curve2_polySurface3
+    3300008: new_soldado:curve2_polySurface4
+    3300010: new_soldado:curve2_polySurface6
+    3300012: new_soldado:curve3_polySurface24
+    3300014: new_soldado:curve3_polySurface26
+    3300016: new_soldado:curve3_polySurface35
+    3300018: new_soldado:curve3_polySurface36
+    3300020: new_soldado:curve3_polySurface38
+    3300022: new_soldado:curve3_polySurface41
+    3300024: polySurface22_new_soldado:curve2
+    3300026: polySurface37_new_soldado:curve3
+    3300028: polySurface39
+    4300000: new_soldado:curve2_polySurface12
+    4300002: new_soldado:curve2_polySurface15
+    4300004: new_soldado:curve2_polySurface23
+    4300006: new_soldado:curve2_polySurface3
+    4300008: new_soldado:curve2_polySurface4
+    4300010: new_soldado:curve2_polySurface6
+    4300012: new_soldado:curve3_polySurface24
+    4300014: new_soldado:curve3_polySurface26
+    4300016: new_soldado:curve3_polySurface35
+    4300018: new_soldado:curve3_polySurface36
+    4300020: new_soldado:curve3_polySurface38
+    4300022: new_soldado:curve3_polySurface41
+    4300024: polySurface22_new_soldado:curve2
+    4300026: polySurface37_new_soldado:curve3
+    4300028: polySurface39
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

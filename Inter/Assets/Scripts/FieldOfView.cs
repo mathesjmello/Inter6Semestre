@@ -39,13 +39,19 @@ public class FieldOfView : MonoBehaviour {
 
     ControllerNPC controladorNPC;
 
-    public GameObject fadeOut;
+    public Animator fadeOutAnim;
 
     public AudioSource dandoVodka;
+
+    public AudioSource feedDetecta;
+
+    public bool ativouDetecta;
 
     public bool parte01;
 
     public bool parte02;
+
+    public int animMulher;
 
     private void Start()
     {
@@ -102,11 +108,13 @@ public class FieldOfView : MonoBehaviour {
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Player"))
                 {
                     //Aqui é aonde acontece a detecção do player
+                    //feedDetecta.Play(0);
                     visibleTargets.Add(target);
                     Debug.Log("Encontrei o Player");
+                    DetectouPlayer();                    
                     //Adicionar a forma que foi decidida para acabar o jogo
                     //precisa mudar a Tag para o nome correto, no lugar de player ser dimitri ou o nome que for decidido
-                    fadeOut.SetActive(true);
+                    //fadeOut.SetActive(true);
                 }
                 }
                 if (parte02)
@@ -115,16 +123,23 @@ public class FieldOfView : MonoBehaviour {
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Dimitri"))
                 {
                     //Aqui é aonde acontece a detecção do player
+                   // feedDetecta.Play(0);
                     visibleTargets.Add(target);
                     Debug.Log("Encontrei o Player");
+                    DetectouDimitri();
+                    
+                    
                     //Adicionar a forma que foi decidida para acabar o jogo
                     //precisa mudar a Tag para o nome correto, no lugar de player ser dimitri ou o nome que for decidido
-                    fadeOut.SetActive(true);
+                    //fadeOut.SetActive(true);
                 }
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Totem") && controladorNPC.buscandoTotem == true)
                 {
                     //Aqui é aonde acontece a detecção do totem
                     visibleTargets.Add(target);
+                    controladorNPC.myAgent.isStopped = false;
+                    anim.SetBool("isWalking", true);
+                    anim.SetBool("isWalkingDrunk", true);
                     Debug.Log("Encontrei o Totem");
                     localizacaoDoPoster = target.transform.position;
                     controladorNPC.encontrou = true;
@@ -288,5 +303,27 @@ public class FieldOfView : MonoBehaviour {
         dandoVodka.Play(0);
         shot.doses -= copo;
         anim.SetTrigger("Bebeu");
+    }
+
+    void DetectouPlayer(){
+        if (!feedDetecta.isPlaying)
+        {
+            feedDetecta.Play(0);
+            ativouDetecta = true;
+            animMulher ++;
+        }
+
+        fadeOutAnim.SetTrigger("FadeOut");
+        ativouDetecta = false;
+    }
+
+    void DetectouDimitri(){
+        if (!feedDetecta.isPlaying)
+        {
+            feedDetecta.Play(0);
+            ativouDetecta = true;
+        }
+        fadeOutAnim.SetTrigger("FadeOut");
+        ativouDetecta = false;
     }
 }
