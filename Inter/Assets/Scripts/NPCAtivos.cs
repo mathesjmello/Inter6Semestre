@@ -56,7 +56,7 @@ public class NPCAtivos : MonoBehaviour
             npc03.SetActive(false);
             npc04.SetActive(false);
 
-            sraDimi = GameObject.FindWithTag("NPC02");
+
             sraDimi.GetComponent<FieldOfView>().enabled = false;
         }
 
@@ -73,7 +73,7 @@ public class NPCAtivos : MonoBehaviour
             //Antes do Salão
             npc04.SetActive(true);
 
-            npc03A = GameObject.FindWithTag("NPC03");
+    
             npc03A.GetComponent<FieldOfView>().enabled = false;
 
             npc03B.GetComponent<FieldOfView>().enabled = false;
