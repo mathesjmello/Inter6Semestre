@@ -50,7 +50,12 @@ public class ControllerNPC : MonoBehaviour
     void Start()
     {
         campoDeVisao = GetComponent<FieldOfView>();
-        
+
+        if(targetGM_PosicaoParadoSemRota != null)
+        {
+            targetGM_PosicaoParadoSemRota.SetActive(false);
+        }
+
         myAgent = GetComponent<NavMeshAgent>();
         if(fazRota == true)
         {
@@ -118,6 +123,8 @@ public class ControllerNPC : MonoBehaviour
         {
             buscandoTotem = false;
             myAgent.isStopped = true;
+            campoDeVisao.anim.SetBool("isWalking", false);
+            campoDeVisao.anim.SetBool("isWalkingDrunk", false);
             StartCoroutine(ColidiuComPoster());
         }
         
@@ -133,6 +140,14 @@ public class ControllerNPC : MonoBehaviour
             buscandoTotem = true;
             target_Reset = targetGM_PosicaoParadoSemRota.transform.position;
             myAgent.SetDestination(target_Reset);
+            targetGM_PosicaoParadoSemRota.SetActive(true);
+        }
+        if (other.CompareTag("PosOriginal") && fazRota == false)
+        {
+            targetGM_PosicaoParadoSemRota.SetActive(false);
+            myAgent.isStopped = true;
+            campoDeVisao.anim.SetBool("isWalking", false);
+            campoDeVisao.anim.SetBool("isWalkingDrunk", false);
         }
     }
 
@@ -152,6 +167,8 @@ public class ControllerNPC : MonoBehaviour
         Debug.Log("Poster");
         yield return new WaitForSeconds(tempoDeConfusao);
         myAgent.isStopped = false;
+        campoDeVisao.anim.SetBool("isWalking", true);
+        campoDeVisao.anim.SetBool("isWalkingDrunk", true);
         if (fazRota == true)
         { 
             targetGM_Reset.SetActive(true);
