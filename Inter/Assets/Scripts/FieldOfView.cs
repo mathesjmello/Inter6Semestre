@@ -137,6 +137,9 @@ public class FieldOfView : MonoBehaviour {
                 {
                     //Aqui é aonde acontece a detecção do totem
                     visibleTargets.Add(target);
+                    controladorNPC.myAgent.isStopped = false;
+                    anim.SetBool("isWalking", true);
+                    anim.SetBool("isWalkingDrunk", true);
                     Debug.Log("Encontrei o Totem");
                     localizacaoDoPoster = target.transform.position;
                     controladorNPC.encontrou = true;
