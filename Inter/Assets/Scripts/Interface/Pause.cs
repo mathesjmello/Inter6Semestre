@@ -10,9 +10,12 @@ public class Pause : MonoBehaviour
     public GameObject PauseScreen;
 	public GameObject OptionScreen;
 
+
 	
 
 	private float originalFixedTimeScale;
+
+	public AudioSource menuSound;
 
 
 	private void Start()
@@ -40,11 +43,17 @@ public class Pause : MonoBehaviour
         {
             Time.timeScale = 0f;
 			Time.fixedDeltaTime = 0;
+			AudioListener.pause = true;
+			menuSound.Play();
+			menuSound.ignoreListenerPause = true;
         }
         else
         {
             Time.timeScale = 1.0f;
 			Time.fixedDeltaTime = originalFixedTimeScale;
+			AudioListener.pause = false;
+			menuSound.Stop();
+			menuSound.ignoreListenerPause = false;
 		}
     }
 
