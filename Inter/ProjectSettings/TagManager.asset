@@ -20,6 +20,11 @@ TagManager:
   - Change
   - Reset
   - "Seguran\xE7a"
+  - PosterHitBox
+  - Parede2D
+  - NPC02
+  - NPC03
+  - PosOriginal
   layers:
   - Default
   - TransparentFX

@@ -12,16 +12,48 @@ public class LargaDimi : MonoBehaviour
     public Animator sergueiAnim;
     public bool comDimi;
 
+
+    public AudioSource randomSound;
+ 
+     public AudioClip[] audioSources;
+
+     public bool comCalca = false;
+
+     public GameObject somDimitri;
+
+     public LargaDimi areaDimi02;
+
+    public LargaDimi areaDimi03;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        CallSound();
     }
 
     // Update is called once per frame
     void Update()
     {
+       if (comDimi)
+        {
+            somDimitri.SetActive(true);
+        }
+        else
+        {
+            somDimitri.SetActive(false);
+        }
+
+        if (comCalca)
+        {
+            areaDimi02.comCalca = true;
+            areaDimi03.comCalca = true;
+        }
         
+    }
+
+        void CallSound(){
+        Invoke("RandomSound",10);
     }
 
 
@@ -32,7 +64,7 @@ public class LargaDimi : MonoBehaviour
             StartCoroutine(LargaDimitri());
         }
 
-        else if (other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == true  && player.GetComponent<TesteCharDrunk>().carregando == false)
+        else if (other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == true  && player.GetComponent<TesteCharDrunk>().carregando == false && comCalca == true)
         {
             StartCoroutine(LevantaDimitri());
         }
@@ -54,5 +86,11 @@ public class LargaDimi : MonoBehaviour
         player.GetComponent<TesteCharDrunk>().carregando = true;
          comDimi = false; 
          dimitri.SetActive(false);
+    }
+
+        void RandomSound(){
+         randomSound.clip = audioSources[Random.Range(0, audioSources.Length)];
+         randomSound.Play ();
+         CallSound ();
     }
 }
