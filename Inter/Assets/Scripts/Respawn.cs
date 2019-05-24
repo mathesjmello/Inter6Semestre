@@ -10,6 +10,8 @@ public class Respawn : MonoBehaviour
 
     public TesteCharDrunk spawn;
 
+    public TesteCharDrunk dimi;
+
     [Range(0,4)]
     public int fase;
 
@@ -37,8 +39,14 @@ public class Respawn : MonoBehaviour
 
     public NPCAtivos check;
 
+    public Calça save;
+
 
 	private CharacterController playerController;
+
+    public GameObject fala03;
+
+    public GameObject fala04;
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +64,8 @@ public class Respawn : MonoBehaviour
 			//Antes da Sra Dimitri
             respawnPos = checkpoint02.transform.position;
             check.disable = 1;
+            dimi.carregando = false;
+            save.saveGame = false;
         }
 
         if (fase == 2)
@@ -63,6 +73,8 @@ public class Respawn : MonoBehaviour
             //No bar, Antes do guarda do corredor
             respawnPos = checkpoint03.transform.position;
             check.disable = 2;
+            dimi.carregando = true;
+            save.saveGame = true;
         }
 
         if (fase == 3)
@@ -70,6 +82,8 @@ public class Respawn : MonoBehaviour
             //Antes da bomba
             respawnPos = checkpoint04.transform.position;
             check.disable = 3;
+            dimi.carregando = true;
+            save.saveGame = true;
         }
 
         if (fase == 4)
@@ -77,6 +91,9 @@ public class Respawn : MonoBehaviour
             //Antes do Salão
             respawnPos = checkpoint05.transform.position;
             check.disable = 4;
+            dimi.carregando = true;
+            save.saveGame = true;
+            fala03.SetActive(false);
         }
 
         if (ativaRespawn == true)

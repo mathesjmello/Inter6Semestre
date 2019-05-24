@@ -28,7 +28,16 @@ public class Calça : MonoBehaviour
     public GameObject checkPoints;
 
     public AudioSource canto;
+
+    public bool saveGame = false;
     
+
+    public void Update(){
+        if (saveGame)
+        {
+            PegouCalca();
+        }
+    }
 
      private void OnTriggerEnter(Collider other)
     {
@@ -36,6 +45,12 @@ public class Calça : MonoBehaviour
         {
            // porta01.transform.position = new Vector3(3.757956f, -3.493032f, 14.5f);
            // porta02.transform.position = new Vector3(3.757956f, -3.493032f, 13.75f);
+            PegouCalca();
+        }
+    }
+
+    public void PegouCalca()
+    {
             esposaFala.SetActive(false);
             song.SetActive(true);
 			Destroy(this.gameObject);
@@ -49,6 +64,5 @@ public class Calça : MonoBehaviour
             check.fase = 1;
             checkPoints.SetActive(true);
             canto.Stop();
-        }
     }
 }
