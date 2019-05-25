@@ -36,7 +36,7 @@ public class SaveControl : MonoBehaviour
     }
 
     static void SaveGame (Respawn data, int charSlot){
-        PlayerPrefs.SetInt("level_CharacterSlot" +charSlot, data.fase);
+        PlayerPrefs.SetInt("level_CharacterSlot" + charSlot, data.fase);
         PlayerPrefs.Save();
     }
 
@@ -45,5 +45,9 @@ public class SaveControl : MonoBehaviour
         loadedGame.fase = PlayerPrefs.GetInt("level_CharacterSlot" + charSlot);
 
         return loadedGame;
+    }
+
+    public void Carregar(){
+        load = true;
     }
 }

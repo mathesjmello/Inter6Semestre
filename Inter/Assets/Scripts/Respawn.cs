@@ -48,6 +48,8 @@ public class Respawn : MonoBehaviour
 
     public GameObject fala04;
 
+    public SaveControl autoSave;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +68,7 @@ public class Respawn : MonoBehaviour
             check.disable = 1;
             dimi.carregando = false;
             save.saveGame = false;
+            autoSave.salvar = true;
         }
 
         if (fase == 2)
@@ -75,6 +78,7 @@ public class Respawn : MonoBehaviour
             check.disable = 2;
             dimi.carregando = true;
             save.saveGame = true;
+            autoSave.salvar = true;
         }
 
         if (fase == 3)
@@ -84,6 +88,7 @@ public class Respawn : MonoBehaviour
             check.disable = 3;
             dimi.carregando = true;
             save.saveGame = true;
+            autoSave.salvar = true;
         }
 
         if (fase == 4)
@@ -94,6 +99,7 @@ public class Respawn : MonoBehaviour
             dimi.carregando = true;
             save.saveGame = true;
             fala03.SetActive(false);
+            autoSave.salvar = true;
         }
 
         if (ativaRespawn == true)
