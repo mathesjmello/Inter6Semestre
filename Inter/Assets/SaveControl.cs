@@ -23,6 +23,7 @@ public class SaveControl : MonoBehaviour
 
         if (salvar)
         {
+            Debug.Log("AutoSave");
             SaveGame(checkSave,0);
             salvar = false;
         }

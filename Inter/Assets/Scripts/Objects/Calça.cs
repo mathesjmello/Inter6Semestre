@@ -30,6 +30,8 @@ public class Calça : MonoBehaviour
     public AudioSource canto;
 
     public bool saveGame = false;
+
+    public GameObject calca;
     
 
     public void Update(){
@@ -53,7 +55,8 @@ public class Calça : MonoBehaviour
     {
             esposaFala.SetActive(false);
             song.SetActive(true);
-			Destroy(this.gameObject);
+			//Destroy(this.gameObject);
+            calca.SetActive(false);
 			portaGrandeAnim.SetBool("Aberto", true);
             texto_03.SetActive(true);
             texto_04.SetActive(true);

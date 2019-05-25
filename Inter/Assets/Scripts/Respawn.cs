@@ -50,6 +50,8 @@ public class Respawn : MonoBehaviour
 
     public SaveControl autoSave;
 
+    public MenuPrincipal spawnSave;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -108,6 +110,12 @@ public class Respawn : MonoBehaviour
 		
         }
 
+        if (spawnSave.spawn)
+        {
+            player.transform.position = respawnPos;
+            playerController.enabled = true;
+        }
+
 
 		
         
@@ -127,7 +135,7 @@ public class Respawn : MonoBehaviour
 
     void AcabouFadeOut(){
 
-    fadeOut.SetActive(false);
+    //fadeOut.SetActive(false);
     playerController.enabled = true;
 	ativaRespawn = false;
     }
