@@ -110,6 +110,8 @@ public class MenuPrincipal : MonoBehaviour
 		menuSound.Stop();
 		novo.fase = 0;
 
+		PlayerPrefs.SetInt("Level",0);
+
 
 	}
 
