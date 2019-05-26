@@ -15,21 +15,39 @@ public class LargaDimi : MonoBehaviour
 
     public AudioSource randomSound;
  
-     public AudioClip[] audioSources;
+    public AudioClip[] audioSources;
 
-     public bool comCalca = false;
+    public bool comCalca = false;
+
+    public GameObject somDimitri;
+
+    public LargaDimi areaDimi02;
+
+    public LargaDimi areaDimi03;
+
+
     // Start is called before the first frame update
     void Start()
     {
-
+        CallSound();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (comDimi)
+       if (comDimi)
         {
-            CallSound();
+            somDimitri.SetActive(true);
+        }
+        else
+        {
+            somDimitri.SetActive(false);
+        }
+
+        if (comCalca)
+        {
+            areaDimi02.comCalca = true;
+            areaDimi03.comCalca = true;
         }
         
     }

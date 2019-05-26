@@ -39,7 +39,7 @@ public class FieldOfView : MonoBehaviour {
 
     ControllerNPC controladorNPC;
 
-    public GameObject fadeOut;
+    public Animator fadeOutAnim;
 
     public AudioSource dandoVodka;
 
@@ -50,6 +50,8 @@ public class FieldOfView : MonoBehaviour {
     public bool parte01;
 
     public bool parte02;
+
+    public int animMulher;
 
     private void Start()
     {
@@ -135,6 +137,9 @@ public class FieldOfView : MonoBehaviour {
                 {
                     //Aqui é aonde acontece a detecção do totem
                     visibleTargets.Add(target);
+                    controladorNPC.myAgent.isStopped = false;
+                    anim.SetBool("isWalking", true);
+                    anim.SetBool("isWalkingDrunk", true);
                     Debug.Log("Encontrei o Totem");
                     localizacaoDoPoster = target.transform.position;
                     controladorNPC.encontrou = true;
@@ -305,9 +310,10 @@ public class FieldOfView : MonoBehaviour {
         {
             feedDetecta.Play(0);
             ativouDetecta = true;
+            animMulher ++;
         }
 
-        fadeOut.SetActive(true);
+        fadeOutAnim.SetTrigger("FadeOut");
         ativouDetecta = false;
     }
 
@@ -317,7 +323,7 @@ public class FieldOfView : MonoBehaviour {
             feedDetecta.Play(0);
             ativouDetecta = true;
         }
-        fadeOut.SetActive(true);
+        fadeOutAnim.SetTrigger("FadeOut");
         ativouDetecta = false;
     }
 }

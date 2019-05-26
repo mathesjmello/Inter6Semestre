@@ -234,8 +234,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk_Seguei
       takeName: Take 001
-      firstFrame: 1
-      lastFrame: 60
+      firstFrame: 0
+      lastFrame: 55
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -283,7 +283,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
+    previousCalculatedGlobalScale: 0.009
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60

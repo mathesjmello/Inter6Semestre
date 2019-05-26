@@ -23,6 +23,9 @@ TagManager:
   - PosterHitBox
   - Parede2D
   - Tiro2D
+  - NPC02
+  - NPC03
+  - PosOriginal
   layers:
   - Default
   - TransparentFX
