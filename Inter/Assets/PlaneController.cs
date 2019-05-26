@@ -9,6 +9,8 @@ public class PlaneController : MonoBehaviour
 	private Vector3 movement;
 	private Rigidbody rb;
 	private GameObject tiros;
+	public GameObject player;
+	public bool freeze = true;
 
 	private Vector3 positionOld;
 
@@ -28,6 +30,8 @@ public class PlaneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+		if (freeze) return;
 
 		if (Input.GetKey(KeyCode.A))
 		{
@@ -65,13 +69,12 @@ public class PlaneController : MonoBehaviour
 
 	}
 
-
+	
 	private void OnCollisionStay(Collision collision)
 	{
 		
 		if (collision.gameObject.tag == "Parede2D") parede = true;
 		Debug.Log("colidiu");
-
 
 	}
 }
