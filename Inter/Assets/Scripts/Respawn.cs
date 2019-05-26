@@ -129,6 +129,7 @@ public class Respawn : MonoBehaviour
         if (spawnSave.spawn)
         {
             SpawnSave();
+            spawnSave.spawn = false;
         }
 
 
