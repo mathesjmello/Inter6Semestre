@@ -23,7 +23,7 @@ public class LoadScreen : MonoBehaviour {
 
         while (!operaçao.isDone)
         {
-            float processo = Mathf.Clamp01(operaçao.progress / .5f);
+            float processo = Mathf.Clamp01(operaçao.progress / .9f);
             barraDeLoading.value = 1 - processo;
             yield return null;
         }
