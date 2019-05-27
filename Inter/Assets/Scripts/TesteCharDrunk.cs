@@ -21,6 +21,8 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public GameObject garrafa;
 
+    public bool freeze = false;
+
 
 	public bool isWalking = false;
 	public bool vodka;
@@ -66,7 +68,7 @@ public class TesteCharDrunk : MonoBehaviour
 	public AudioSource garrafaSound;
 
  
-
+    
 
 
 
@@ -75,126 +77,125 @@ public class TesteCharDrunk : MonoBehaviour
 		controller = GetComponent<CharacterController>();
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
-
 	}
 
 
-	void FixedUpdate()
-	{	
+    void FixedUpdate()
+    {
+        if (freeze == true) return;
+
+        if (vodka == true && doses >= 1)
+        {
+            garrafa.SetActive(true);
+            garrafaSound.Play(0);
+        }
+        if (doses <= 0)
+        {
+            garrafa.SetActive(false);
+            vodka = false;
+        }
 
 
-		if (vodka == true && doses >= 1)
-		{
-			garrafa.SetActive(true);
-			garrafaSound.Play(0);
-		}
-		if (doses <=0)
-		{
-			garrafa.SetActive(false);
-			vodka = false;
-		}
-
-
-		/*if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
+        /*if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
 		{
 			totem.transform.parent = null;
 		}*/
 
-	
-		if (carregando == true)
-		{	
-			serguei.SetActive(false);
-			dimiCaido.SetActive(false);
-			dimiCarregado.SetActive(true);
-			time += Time.deltaTime;
-		}
+
+        if (carregando == true)
+        {
+            serguei.SetActive(false);
+            dimiCaido.SetActive(false);
+            dimiCarregado.SetActive(true);
+            time += Time.deltaTime;
+        }
 
 
-		if (Input.GetKey(KeyCode.Z) && carregando == false)
-		{
-			carregando = true;
-		}
+        if (Input.GetKey(KeyCode.Z) && carregando == false)
+        {
+            carregando = true;
+        }
 
-		if(time >= changeTime)
-		{
+        if (time >= changeTime)
+        {
 
-             Drunk();
-             SetRandomTime();
+            Drunk();
+            SetRandomTime();
         }
 
 
 
-		if (carregando == false)
-		{
-			serguei.SetActive(true);
-			dimiCaido.SetActive(true);
-		    dimiCarregado.SetActive(false);
-			drunkSpeed = 0;
+        if (carregando == false)
+        {
+            serguei.SetActive(true);
+            dimiCaido.SetActive(true);
+            dimiCarregado.SetActive(false);
+            drunkSpeed = 0;
 
-		}
+        }
 
-		if (isRunning == true && carregando == false)
-		{
-			playerSpeed = 5.0f;
-			isWalking = false;
-			isWalkingBack = false;
-			playerAnim.SetBool("isRunning", true);
-		}
-		else
-		{
-			playerSpeed = 3.0f;
-			playerAnim.SetBool("isRunning", false);
-		}
-
-
-
-		RotateView();
+        if (isRunning == true && carregando == false)
+        {
+            playerSpeed = 5.0f;
+            isWalking = false;
+            isWalkingBack = false;
+            playerAnim.SetBool("isRunning", true);
+        }
+        else
+        {
+            playerSpeed = 3.0f;
+            playerAnim.SetBool("isRunning", false);
+        }
 
 
 
-		if (controller.isGrounded)
-		{
-
-			moveDirection = Vector3.zero;
+        RotateView();
 
 
-			Vector3 camF = camClean.forward;
-			Vector3 camR = camClean.right;
 
-			camF.y = 0;
-			camR.y = 0;
+        if (controller.isGrounded)
+        {
 
-			camF = camF.normalized;
-			camR = camR.normalized;
-
-			if (Input.GetKey(KeyCode.D))
-			{
-				isWalking = true;
-			}
+            moveDirection = Vector3.zero;
 
 
-			else if (Input.GetKey(KeyCode.A))
-			{
-				isWalking = true;
-			}
+            Vector3 camF = camClean.forward;
+            Vector3 camR = camClean.right;
 
-			else if (Input.GetKey(KeyCode.W))
-			{
-				isWalking = true;
-			}
+            camF.y = 0;
+            camR.y = 0;
 
-			else if (Input.GetKey(KeyCode.S))
-			{
-				isWalkingBack = true;
-			}
+            camF = camF.normalized;
+            camR = camR.normalized;
 
-			else
-			{
-				isWalking = false;
-				isWalkingBack = false;
-			}
+            if (Input.GetKey(KeyCode.D))
+            {
+                isWalking = true;
+            }
 
-			/*
+
+            else if (Input.GetKey(KeyCode.A))
+            {
+                isWalking = true;
+            }
+
+            else if (Input.GetKey(KeyCode.W))
+            {
+                isWalking = true;
+            }
+
+            else if (Input.GetKey(KeyCode.S))
+            {
+                isWalkingBack = true;
+            }
+
+            else
+            {
+                isWalking = false;
+                isWalkingBack = false;
+            }
+
+            /*
 
 
 			if (Input.GetKey(KeyCode.A))
@@ -237,9 +238,9 @@ public class TesteCharDrunk : MonoBehaviour
 
 			}*/
 
-			moveDirection = camF * Input.GetAxis("Vertical") + camR * Input.GetAxis("Horizontal");
+            moveDirection = camF * Input.GetAxis("Vertical") + camR * Input.GetAxis("Horizontal");
 
-			/*else
+            /*else
 			{
 				isWalking = false;
 				isWalkingBack = false;
@@ -249,93 +250,94 @@ public class TesteCharDrunk : MonoBehaviour
 			moveDirection = transform.TransformDirection(moveDirection);
 			*/
 
-			if (Input.GetKey(KeyCode.Space))
-			{
-				isRunning = true;
-				
-				
-			}
-
-			else
-			{
-				isRunning = false;
-			}
-
-		}
-
-		
-		moveDirection.y -= gravity;
-
-		controller.Move(moveDirection * Time.deltaTime * playerSpeed);
-
-		if (isWalkingBack == true && carregando == false && isRunning == false)
-		{
-
-			playerAnim.SetBool("isWalkingBack", true);
-			playerAnim.SetBool("isRunning", false);
-		}
-
-			if (isWalkingBack == true && carregando == true )
-			{
-				playerDimiAnim.SetBool("isWalkingBack", true);
-				dimiAnim.SetBool("isWalkingBack", true);
-			}			
-
-			if (!playerSound.isPlaying)
-			{
-				playerSound.Play(0);	
-			}
-		
-
-		 if (isWalking == true && carregando == false && isRunning == false)
-		{
-			playerAnim.SetBool("isWalking", true);
-			playerAnim.SetBool("isRunning", false);
-		}
-
-		 if (isWalking == true && carregando == true)
-			{
-				playerDimiAnim.SetBool("isWalking", true);
-				dimiAnim.SetBool("isWalking", true);
-			}
-
-			if (!playerSound.isPlaying)
-			{
-				playerSound.Play(0);	
-			}
-			
-		
-
-		if (isWalking == false && carregando == false )
-		{
-			playerAnim.SetBool("isWalking", false);
-			
-		}
-
-		if (isWalking == false && carregando == true)
-		{
-			playerDimiAnim.SetBool("isWalking", false);
-			dimiAnim.SetBool("isWalking", false);
-		}
+            if (Input.GetKey(KeyCode.Space))
+            {
+                isRunning = true;
 
 
-		if (isWalkingBack == false == carregando == false)
-		{
+            }
 
-			playerAnim.SetBool("isWalkingBack", false);
-		}
+            else
+            {
+                isRunning = false;
+            }
 
-		if (isWalkingBack == false == carregando == true)
-		{
-			playerDimiAnim.SetBool("isWalkingBack", false);
-			dimiAnim.SetBool("isWalkingBack", false);
-		}
+        }
 
-		if (isWalking == false && isWalkingBack == false)
-		{
-			playerSound.Stop();
-			isWalkPlaying = false;
-		}
+
+        moveDirection.y -= gravity;
+
+        controller.Move(moveDirection * Time.deltaTime * playerSpeed);
+
+        if (isWalkingBack == true && carregando == false && isRunning == false)
+        {
+
+            playerAnim.SetBool("isWalkingBack", true);
+            playerAnim.SetBool("isRunning", false);
+        }
+
+        if (isWalkingBack == true && carregando == true)
+        {
+            playerDimiAnim.SetBool("isWalkingBack", true);
+            dimiAnim.SetBool("isWalkingBack", true);
+        }
+
+        if (!playerSound.isPlaying)
+        {
+            playerSound.Play(0);
+        }
+
+
+        if (isWalking == true && carregando == false && isRunning == false)
+        {
+            playerAnim.SetBool("isWalking", true);
+            playerAnim.SetBool("isRunning", false);
+        }
+
+        if (isWalking == true && carregando == true)
+        {
+            playerDimiAnim.SetBool("isWalking", true);
+            dimiAnim.SetBool("isWalking", true);
+        }
+
+        if (!playerSound.isPlaying)
+        {
+            playerSound.Play(0);
+        }
+
+
+
+        if (isWalking == false && carregando == false)
+        {
+            playerAnim.SetBool("isWalking", false);
+
+        }
+
+        if (isWalking == false && carregando == true)
+        {
+            playerDimiAnim.SetBool("isWalking", false);
+            dimiAnim.SetBool("isWalking", false);
+        }
+
+
+        if (isWalkingBack == false == carregando == false)
+        {
+
+            playerAnim.SetBool("isWalkingBack", false);
+        }
+
+        if (isWalkingBack == false == carregando == true)
+        {
+            playerDimiAnim.SetBool("isWalkingBack", false);
+            dimiAnim.SetBool("isWalkingBack", false);
+        }
+
+        if (isWalking == false && isWalkingBack == false)
+        {
+            playerSound.Stop();
+            isWalkPlaying = false;
+        }
+    }
 
 
 	
@@ -354,26 +356,18 @@ public class TesteCharDrunk : MonoBehaviour
 		rotationX = Mathf.Clamp(rotationX, -45, 45);
 
 		cam.transform.localEulerAngles = new Vector3(-rotationX,cam.transform.localEulerAngles.y,cam.transform.localEulerAngles.z);
-
 	}
 
-
-	void SetRandomTime()
-	{
-         changeTime = Random.Range(minTime, maxTime);
+    void SetRandomTime()
+    {
+        changeTime = Random.Range(minTime, maxTime);
     }
 
-	void Drunk()
-	{	
-		time = 0;	
-		drunkSpeed = Random.Range (drunkMin,drunkMax);
-		 
-	}
-
-
-
-
-}
+    void Drunk()
+    {
+        time = 0;
+        drunkSpeed = Random.Range (drunkMin,drunkMax);
+    }    
 }
 
 
