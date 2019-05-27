@@ -77,7 +77,7 @@ public class Respawn : MonoBehaviour
             autoSave.salvar = true;
             respawnPos = checkpoint02.transform.position;
             check.disable = 1;
-            dimi.carregando = false;
+            //dimi.carregando = false;
             save.saveGame = false;
             //autoSave.salvar = false;
             
@@ -89,7 +89,7 @@ public class Respawn : MonoBehaviour
             autoSave.salvar = true;
             respawnPos = checkpoint03.transform.position;
             check.disable = 2;
-            dimi.carregando = true;
+            //dimi.carregando = true;
             save.saveGame = true;
             //autoSave.salvar = false;
             
@@ -101,7 +101,7 @@ public class Respawn : MonoBehaviour
             autoSave.salvar = true;
             respawnPos = checkpoint04.transform.position;
             check.disable = 3;
-            dimi.carregando = true;
+            //dimi.carregando = true;
             save.saveGame = true;
             //autoSave.salvar = false;
             
@@ -113,7 +113,7 @@ public class Respawn : MonoBehaviour
             autoSave.salvar = true;
             respawnPos = checkpoint05.transform.position;
             check.disable = 4;
-            dimi.carregando = true;
+            //dimi.carregando = true;
             save.saveGame = true;
             fala03.SetActive(false);
             //autoSave.salvar = false;    
@@ -161,5 +161,9 @@ public class Respawn : MonoBehaviour
         playerController.enabled = false;
         player.transform.position = respawnPos;
         playerController.enabled = true;
+        if (fase >= 2)
+        {
+            dimi.carregando = true;
+        }
     }
 }
