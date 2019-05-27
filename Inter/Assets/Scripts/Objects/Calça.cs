@@ -32,6 +32,10 @@ public class Calça : MonoBehaviour
     public bool saveGame = false;
 
     public GameObject calca;
+
+    public GameObject carrinhos;
+
+    public GameObject mesaSalao;
     
 
     public void Update(){
@@ -53,6 +57,8 @@ public class Calça : MonoBehaviour
 
     public void PegouCalca()
     {
+            mesaSalao.SetActive(false);
+            carrinhos.SetActive(false);
             esposaFala.SetActive(false);
             song.SetActive(true);
 			//Destroy(this.gameObject);
