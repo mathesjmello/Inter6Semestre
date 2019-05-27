@@ -21,7 +21,7 @@ public class StartGame2D : MonoBehaviour
         
     }
 
-	private void OnTriggerEnter(Collider other)
+	private void OnTriggerStay(Collider other)
 	{
 		if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
 		{
