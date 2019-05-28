@@ -5,9 +5,10 @@ using UnityEngine;
 public class Calça : MonoBehaviour
 {
 
-    public GameObject texto_03;
-    public GameObject texto_04;
-
+    public GameObject fala_04;
+    public GameObject fala_05;
+    public GameObject fala_06;
+    
     public GameObject dimitri;
     public GameObject esposaFala;
 
@@ -36,7 +37,14 @@ public class Calça : MonoBehaviour
     public GameObject carrinhos;
 
     public GameObject mesaSalao;
-    
+
+    public void Start()
+    {
+        fala_04.SetActive(false);
+        fala_05.SetActive(false);
+        fala_06.SetActive(false);
+    }
+
 
     public void Update(){
         if (saveGame)
@@ -64,8 +72,9 @@ public class Calça : MonoBehaviour
 			//Destroy(this.gameObject);
             calca.SetActive(false);
 			portaGrandeAnim.SetBool("Aberto", true);
-            texto_03.SetActive(true);
-            texto_04.SetActive(true);
+            fala_04.SetActive(true);
+            fala_05.SetActive(true);
+            fala_06.SetActive(true);
             bomba.SetActive(true);
             dimitri.GetComponent<LargaDimi>().comCalca = true;
 			tutoriais.SetActive(false);
