@@ -21,6 +21,7 @@ public class MenuPrincipal : MonoBehaviour
 
 	public GameObject MenuCam;
 
+    public GameObject primeiraFala;
 
 	public GameObject brilhoEAudioObject;
 	public GameObject sensibilObject;
@@ -49,7 +50,9 @@ public class MenuPrincipal : MonoBehaviour
 
 	private void Start()
 	{
-		if (menuInicial)
+        primeiraFala.SetActive(false);
+
+        if (menuInicial)
 		{
 			PlayerScript = Player.GetComponent<TesteCharDrunk>();
 			PlayerScript.enabled = false;
@@ -93,6 +96,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void NewGame()
     {
+        primeiraFala.SetActive(true);
 		PlayerScript.enabled = true;
 		MenuCam.SetActive(false);
 		PlayerCam.SetActive(true);
@@ -100,7 +104,6 @@ public class MenuPrincipal : MonoBehaviour
 
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
-        tutorial.SetActive(true);
 
 
 		NewGameScreen.SetActive(false);
