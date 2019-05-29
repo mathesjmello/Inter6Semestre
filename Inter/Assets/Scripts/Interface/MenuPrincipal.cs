@@ -69,7 +69,7 @@ public class MenuPrincipal : MonoBehaviour
 
 		if (saveGameOver >= 1)
 		{
-			menu.SetActive(false);
+			LoadGame();
 		}
         primeiraFala.SetActive(false);
 
