@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 42b415928851dff4683a9502cadc3e5e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Grade
+    100002: Grade1
+    100004: Grade10
+    100006: Grade11
+    100008: Grade12
+    100010: Grade13
+    100012: Grade14
+    100014: Grade15
+    100016: Grade16
+    100018: Grade17
+    100020: Grade2
+    100022: Grade3
+    100024: Grade4
+    100026: Grade5
+    100028: Grade6
+    100030: Grade7
+    100032: Grade8
+    100034: Grade9
+    100036: //RootNode
+    400000: Grade
+    400002: Grade1
+    400004: Grade10
+    400006: Grade11
+    400008: Grade12
+    400010: Grade13
+    400012: Grade14
+    400014: Grade15
+    400016: Grade16
+    400018: Grade17
+    400020: Grade2
+    400022: Grade3
+    400024: Grade4
+    400026: Grade5
+    400028: Grade6
+    400030: Grade7
+    400032: Grade8
+    400034: Grade9
+    400036: //RootNode
+    2100000: lambert1
+    2300000: Grade
+    2300002: Grade1
+    2300004: Grade10
+    2300006: Grade11
+    2300008: Grade12
+    2300010: Grade13
+    2300012: Grade14
+    2300014: Grade15
+    2300016: Grade16
+    2300018: Grade17
+    2300020: Grade2
+    2300022: Grade3
+    2300024: Grade4
+    2300026: Grade5
+    2300028: Grade6
+    2300030: Grade7
+    2300032: Grade8
+    2300034: Grade9
+    3300000: Grade
+    3300002: Grade1
+    3300004: Grade10
+    3300006: Grade11
+    3300008: Grade12
+    3300010: Grade13
+    3300012: Grade14
+    3300014: Grade15
+    3300016: Grade16
+    3300018: Grade17
+    3300020: Grade2
+    3300022: Grade3
+    3300024: Grade4
+    3300026: Grade5
+    3300028: Grade6
+    3300030: Grade7
+    3300032: Grade8
+    3300034: Grade9
+    4300000: Grade17
+    4300002: Grade16
+    4300004: Grade15
+    4300006: Grade14
+    4300008: Grade13
+    4300010: Grade12
+    4300012: Grade11
+    4300014: Grade10
+    4300016: Grade9
+    4300018: Grade8
+    4300020: Grade7
+    4300022: Grade6
+    4300024: Grade5
+    4300026: Grade4
+    4300028: Grade3
+    4300030: Grade2
+    4300032: Grade1
+    4300034: Grade
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

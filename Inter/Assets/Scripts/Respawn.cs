@@ -27,15 +27,15 @@ public class Respawn : MonoBehaviour
 
     public GameObject checkpoint05;
 
-    public GameObject fadeOut;
+    //public GameObject fadeOut;
 
-    public GameObject npc01;
+    //public GameObject npc01;
 
-    public GameObject npc02;
+    //public GameObject npc02;
 
-    public GameObject npc03;
+    //public GameObject npc03;
 
-    public GameObject npc04;
+    //public GameObject npc04;
 
     public NPCAtivos check;
 
@@ -44,17 +44,19 @@ public class Respawn : MonoBehaviour
 
 	private CharacterController playerController;
 
-    public GameObject fala03;
+    //public GameObject fala03;
 
-    public GameObject fala04;
+    //public GameObject fala04;
 
     public SaveControl autoSave; 
 
     public MenuPrincipal spawnSave;
 
-    public SaveData on;
+    //public SaveData on;
 
     public int saveMemory;
+
+    public bool acabouRespawn;
 
 
 
@@ -64,13 +66,19 @@ public class Respawn : MonoBehaviour
         //Antes do guarda do correrdor pela 1° vez
         respawnPos = checkpoint01.transform.position;
 		playerController = player.GetComponent<CharacterController>();
-        saveMemory = autoSave.myVar;
+        saveMemory = PlayerPrefs.GetInt("VoltouDoGameOver");
         
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (saveMemory >= 1)
+        {
+            SpawnSave();
+        }
+
         if (fase == 1)
         {
 			//Antes da Sra Dimitri
@@ -79,7 +87,7 @@ public class Respawn : MonoBehaviour
             check.disable = 1;
             //dimi.carregando = false;
             save.saveGame = false;
-            autoSave.salvar = false;
+            
             
         }
 
@@ -131,6 +139,12 @@ public class Respawn : MonoBehaviour
             SpawnSave();
             spawnSave.spawn = false;
         }
+
+        if (acabouRespawn == true)
+        {
+            AcabouFadeOut();
+        }
+
 
 
 		

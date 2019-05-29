@@ -10,6 +10,8 @@ public class MenuPrincipal : MonoBehaviour
 {
 	public bool menuInicial;
 
+	public GameObject menu;
+
 	public GameObject MainMenuScreen;
 	public GameObject OptionScreen;
 	public GameObject NewGameScreen;
@@ -55,16 +57,20 @@ public class MenuPrincipal : MonoBehaviour
 
 	public GameObject loadButtonOff;
 
+	public int saveGameOver;
+
 	
 
 
 	private void Start()
 	{
-        primeiraFala.SetActive(false);
+		PlayerScript = Player.GetComponent<TesteCharDrunk>();
+
+		saveGameOver = PlayerPrefs.GetInt("VoltouDoGameOver");
+
 
         if (menuInicial)
 		{
-			PlayerScript = Player.GetComponent<TesteCharDrunk>();
 			PlayerScript.enabled = false;
 			PlayerCam.SetActive(false);
 
@@ -83,6 +89,14 @@ public class MenuPrincipal : MonoBehaviour
 		MasterVolume = brilhoEAudioObject.GetComponent<MasterVolume>();
 		TesteCharDrunk = sensibilObject.GetComponent<TesteCharDrunk>();
 
+		if (saveGameOver >= 1)
+		{
+			menuInicial = false;
+			LoadDoGameOver();
+
+		}
+
+
 
 	}
 
@@ -91,7 +105,7 @@ public class MenuPrincipal : MonoBehaviour
 		PostProcessProfile.TryGetSettings(out colorGrading);
 		colorGrading.postExposure.value = brilho;
 
-		MasterVolume.masterVolume = volume;
+//		MasterVolume.masterVolume = volume;
 
 		if(TesteCharDrunk)
 		TesteCharDrunk.mouseSensivity = sensibilidade;
@@ -142,7 +156,26 @@ public class MenuPrincipal : MonoBehaviour
 
 	}
 
-	public void LoadGame(){
+	public void LoadDoGameOver(){
+
+		PlayerScript.enabled = true;
+		MenuCam.SetActive(false);
+		PlayerCam.SetActive(true);
+		PauseController.SetActive(true);
+
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+
+		NewGameScreen.SetActive(false);
+		OptionScreen.SetActive(false);
+		MainMenuScreen.SetActive(false);
+
+		menuSound.Stop();
+		spawn = true;
+	}
+
+	public void LoadGame()
+    {
 		PlayerScript.enabled = true;
 		MenuCam.SetActive(false);
 		PlayerCam.SetActive(true);
@@ -209,6 +242,7 @@ public class MenuPrincipal : MonoBehaviour
 #endif
 
 		Application.Quit();
+		PlayerPrefs.SetInt("VoltouDoGameOver",0);
 
 
 	}

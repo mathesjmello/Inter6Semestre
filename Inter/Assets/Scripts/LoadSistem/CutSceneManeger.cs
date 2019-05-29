@@ -13,6 +13,7 @@ public class CutSceneManeger : MonoBehaviour
     void Start()
     {
         VideoClip.loopPointReached += EndReached;
+        PlayerPrefs.SetInt("VoltouDoGameOver",0);
     }
 
     // Update is called once per frame

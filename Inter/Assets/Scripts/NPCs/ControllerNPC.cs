@@ -59,6 +59,7 @@ public class ControllerNPC : MonoBehaviour
         myAgent = GetComponent<NavMeshAgent>();
         if(fazRota == true)
         {
+            campoDeVisao.anim.SetBool("isWalking", true);
             targetGM_Reset.SetActive(false);
         }
         else

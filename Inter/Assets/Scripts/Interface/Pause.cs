@@ -89,6 +89,7 @@ public class Pause : MonoBehaviour
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
 		SceneManager.LoadScene(1);
+		PlayerPrefs.SetInt("VoltouDoGameOver",0);
 
 	}
 
