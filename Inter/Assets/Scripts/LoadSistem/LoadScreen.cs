@@ -20,11 +20,17 @@ public class LoadScreen : MonoBehaviour {
     IEnumerator LevelLoad()
     {
         operaçao = SceneManager.LoadSceneAsync("Fase01");
+        operaçao.allowSceneActivation = false;
 
         while (!operaçao.isDone)
         {
-            float processo = Mathf.Clamp01(operaçao.progress / .9f);
-            barraDeLoading.value = 1 - processo;
+            barraDeLoading.value = 1 - operaçao.progress;
+            if (operaçao.progress <= 0.9f)
+            {
+                barraDeLoading.value = 0;
+                operaçao.allowSceneActivation = true;
+            }
+            
             yield return null;
         }
     }
