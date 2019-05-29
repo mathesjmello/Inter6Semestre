@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SaveControl : MonoBehaviour
 {
@@ -17,6 +18,12 @@ public class SaveControl : MonoBehaviour
 
     public int myVar;
 
+    public bool salvou =  false;
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +33,7 @@ public class SaveControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         saveLevel = level.fase;
 
@@ -35,12 +43,19 @@ public class SaveControl : MonoBehaviour
            // SaveGame(saveData,saveLevel);
            SaveGame();
             Debug.Log("AutoSave02");
+            salvou = true;
         }
 
         if (load)
         {
             //saveData = LoadGame(saveLevel);
             load = false;
+        }
+
+        if (salvou = true)
+        {
+            salvar = false;
+            salvou = false;
         }
         
 
@@ -62,9 +77,9 @@ public class SaveControl : MonoBehaviour
         PlayerPrefs.SetInt("Level",saveLevel);
         saveData.savePoint = saveLevel;
         PlayerPrefs.Save();
-        Debug.Log("AutoSave"); 
+        //Debug.Log("AutoSave"); 
         myVar = PlayerPrefs.GetInt("Level");
-        Debug.Log(myVar);
+        Debug.Log(myVar + "numeroGravado");
     }
 
     public void Carregar(){

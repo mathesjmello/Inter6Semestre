@@ -79,7 +79,7 @@ public class Respawn : MonoBehaviour
             check.disable = 1;
             //dimi.carregando = false;
             save.saveGame = false;
-            //autoSave.salvar = false;
+            autoSave.salvar = false;
             
         }
 
