@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class MenuPrincipal : MonoBehaviour
 {
+    public QuestLog questManager;
+
 	public bool menuInicial;
 
 	public GameObject menu;
@@ -71,6 +73,7 @@ public class MenuPrincipal : MonoBehaviour
 
         if (menuInicial)
 		{
+            QuestLog.currentLine = 0;
 			PlayerScript.enabled = false;
 			PlayerCam.SetActive(false);
 
