@@ -144,6 +144,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isRunning
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102347019962352678}
   m_Solo: 0
@@ -500,7 +503,7 @@ AnimatorStateMachine:
     m_Position: {x: 528, y: 264, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102086926824292614}
-    m_Position: {x: 864, y: 120, z: 0}
+    m_Position: {x: 888, y: 48, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

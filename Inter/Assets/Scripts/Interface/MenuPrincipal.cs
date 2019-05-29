@@ -137,7 +137,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void NewGame()
     {
-        primeiraFala.SetActive(true);
+        //primeiraFala.SetActive(true);
 		PlayerScript.enabled = true;
 		MenuCam.SetActive(false);
 		PlayerCam.SetActive(true);
