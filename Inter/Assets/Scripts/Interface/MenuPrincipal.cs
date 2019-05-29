@@ -142,30 +142,8 @@ public class MenuPrincipal : MonoBehaviour
 
 	}
 
-	public void LoadGame(){
-		PlayerScript.enabled = true;
-		MenuCam.SetActive(false);
-		PlayerCam.SetActive(true);
-		PauseController.SetActive(true);
-
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
-        tutorial.SetActive(true);
-
-
-		NewGameScreen.SetActive(false);
-		OptionScreen.SetActive(false);
-		MainMenuScreen.SetActive(false);
-
-		menuSound.Stop();
-		spawn = true;
-
-		PlayerPrefs.SetInt("Level",0);
-
-
-	}
-
-	public void LoadGame(){
+	public void LoadGame()
+    {
 		PlayerScript.enabled = true;
 		MenuCam.SetActive(false);
 		PlayerCam.SetActive(true);
