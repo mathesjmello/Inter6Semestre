@@ -8,6 +8,8 @@ public class Elevador : MonoBehaviour
 
     public Respawn acabou;
 
+    public AudioSource bell;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class Elevador : MonoBehaviour
     void OnTriggerEnter(Collider other){
         if(other.CompareTag("Player") && acabou.fase >= 4){
             SceneManager.LoadScene("Fase02");
+            bell.Play(0);
         }
     }
 }

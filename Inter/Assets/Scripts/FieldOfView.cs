@@ -53,6 +53,8 @@ public class FieldOfView : MonoBehaviour {
 
     public int animMulher;
 
+    public GameObject gameOver;
+
     private void Start()
     {
         controladorNPC = GetComponent<ControllerNPC>();
@@ -310,10 +312,11 @@ public class FieldOfView : MonoBehaviour {
         {
             feedDetecta.Play(0);
             ativouDetecta = true;
-            animMulher ++;
+           // animMulher ++;
         }
 
         fadeOutAnim.SetTrigger("FadeOut");
+        gameOver.SetActive(true);
         ativouDetecta = false;
     }
 
