@@ -248,7 +248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -108.8, y: 71.1}
+  m_AnchoredPosition: {x: -108.79999, y: 71.100006}
   m_SizeDelta: {x: 183.90002, y: 101.29001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &787495815
@@ -565,7 +565,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skip
+  m_Text: 'Pular
+
+'
 --- !u!222 &1073555642
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -613,7 +615,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147363454}
   m_Enabled: 1
-  m_VideoClip: {fileID: 0}
+  m_VideoClip: {fileID: 32900000, guid: 6233c2a4e083b93489c5da0088a41a9f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 1417944296}
