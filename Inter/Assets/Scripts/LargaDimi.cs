@@ -15,13 +15,13 @@ public class LargaDimi : MonoBehaviour
 
     public AudioSource randomSound;
  
-     public AudioClip[] audioSources;
+    public AudioClip[] audioSources;
 
-     public bool comCalca = false;
+    public bool comCalca = false;
 
-     public GameObject somDimitri;
+    public GameObject somDimitri;
 
-     public LargaDimi areaDimi02;
+    public LargaDimi areaDimi02;
 
     public LargaDimi areaDimi03;
 

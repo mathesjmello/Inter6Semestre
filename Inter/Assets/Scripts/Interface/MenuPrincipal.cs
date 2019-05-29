@@ -38,6 +38,14 @@ public class MenuPrincipal : MonoBehaviour
 
     public GameObject tutorial;
 
+	public AudioSource menuSound;
+
+	public bool spawn;
+
+	public Respawn novo;
+
+	
+
 
 	private void Start()
 	{
@@ -99,6 +107,31 @@ public class MenuPrincipal : MonoBehaviour
 		OptionScreen.SetActive(false);
 		MainMenuScreen.SetActive(false);
 
+		menuSound.Stop();
+		novo.fase = 0;
+
+		PlayerPrefs.SetInt("Level",0);
+
+
+	}
+
+	public void LoadGame(){
+		PlayerScript.enabled = true;
+		MenuCam.SetActive(false);
+		PlayerCam.SetActive(true);
+		PauseController.SetActive(true);
+
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+        tutorial.SetActive(true);
+
+
+		NewGameScreen.SetActive(false);
+		OptionScreen.SetActive(false);
+		MainMenuScreen.SetActive(false);
+
+		menuSound.Stop();
+		spawn = true;
 
 	}
 	public void Opções()

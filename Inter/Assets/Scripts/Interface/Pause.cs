@@ -25,7 +25,7 @@ public class Pause : MonoBehaviour
 	}
 	void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)&& !OptionScreen.activeSelf)
         {
             PauseScreen.SetActive(!PauseScreen.activeSelf);
             Cursor.lockState = PauseScreen.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;

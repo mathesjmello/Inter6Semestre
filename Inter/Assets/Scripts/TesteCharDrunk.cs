@@ -6,6 +6,8 @@ public class TesteCharDrunk : MonoBehaviour
 {
 	private CharacterController controller;
 
+	public Transform camClean;
+
 	public GameObject player;
 	public GameObject serguei;
 	public GameObject cam;
@@ -156,6 +158,45 @@ public class TesteCharDrunk : MonoBehaviour
 			moveDirection = Vector3.zero;
 
 
+			Vector3 camF = camClean.forward;
+			Vector3 camR = camClean.right;
+
+			camF.y = 0;
+			camR.y = 0;
+
+			camF = camF.normalized;
+			camR = camR.normalized;
+
+			if (Input.GetKey(KeyCode.D))
+			{
+				isWalking = true;
+			}
+
+
+			else if (Input.GetKey(KeyCode.A))
+			{
+				isWalking = true;
+			}
+
+			else if (Input.GetKey(KeyCode.W))
+			{
+				isWalking = true;
+			}
+
+			else if (Input.GetKey(KeyCode.S))
+			{
+				isWalkingBack = true;
+			}
+
+			else
+			{
+				isWalking = false;
+				isWalkingBack = false;
+			}
+
+			/*
+
+
 			if (Input.GetKey(KeyCode.A))
 			{
 				//transform.Rotate(Vector3.down * mouseSensivity * 2 * Time.deltaTime);
@@ -194,9 +235,11 @@ public class TesteCharDrunk : MonoBehaviour
 					isWalkingBack = true;
 				}
 
-			}
+			}*/
 
-			else
+			moveDirection = camF * Input.GetAxis("Vertical") + camR * Input.GetAxis("Horizontal");
+
+			/*else
 			{
 				isWalking = false;
 				isWalkingBack = false;
@@ -204,6 +247,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 			moveDirection = transform.TransformDirection(moveDirection);
+			*/
 
 			if (Input.GetKey(KeyCode.Space))
 			{
@@ -222,7 +266,7 @@ public class TesteCharDrunk : MonoBehaviour
 		
 		moveDirection.y -= gravity;
 
-		controller.Move(moveDirection * Time.deltaTime);
+		controller.Move(moveDirection * Time.deltaTime * playerSpeed);
 
 		if (isWalkingBack == true && carregando == false && isRunning == false)
 		{
