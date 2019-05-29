@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.UI;
 
 
 public class MenuPrincipal : MonoBehaviour
@@ -45,6 +46,15 @@ public class MenuPrincipal : MonoBehaviour
 
 	public Respawn novo;
 
+	public bool loadGameTrue;
+
+	public int loadGameFase;
+
+
+	public GameObject loadButtonOn;
+
+	public GameObject loadButtonOff;
+
 	
 
 
@@ -85,12 +95,26 @@ public class MenuPrincipal : MonoBehaviour
 
 		if(TesteCharDrunk)
 		TesteCharDrunk.mouseSensivity = sensibilidade;
+
+
+		if (loadGameFase == 0)
+		{
+			loadButtonOn.SetActive(false);
+			loadButtonOff.SetActive(true);
+		}
+
+		if (loadGameFase >= 1)
+		{
+			loadButtonOn.SetActive(true);
+			loadButtonOff.SetActive(false);
+		}
 	}
 
 	public void Jogar()
 	{
 		MainMenuScreen.SetActive(!MainMenuScreen.activeSelf);
 		NewGameScreen.SetActive(true);
+		loadGameFase = PlayerPrefs.GetInt("Level");
 
 	}
 
