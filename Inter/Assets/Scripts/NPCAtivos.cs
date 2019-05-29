@@ -57,7 +57,7 @@ public class NPCAtivos : MonoBehaviour
             npc04.SetActive(false);
 
 
-            sraDimi.GetComponent<FieldOfView>().enabled = false;
+            //sraDimi.GetComponent<FieldOfView>().enabled = false;
         }
 
         if (disable == 3)
@@ -74,13 +74,14 @@ public class NPCAtivos : MonoBehaviour
             npc04.SetActive(true);
 
     
-            npc03A.GetComponent<FieldOfView>().enabled = false;
+           /*npc03A.GetComponent<FieldOfView>().enabled = false;
 
             npc03B.GetComponent<FieldOfView>().enabled = false;
 
-            npc03C.GetComponent<FieldOfView>().enabled = false;
+            npc03C.GetComponent<FieldOfView>().enabled = false;*/
 
         }        
         
     }
+    
 }

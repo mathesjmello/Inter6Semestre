@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using UnityEngine.Experimental.Video;
+using UnityEngine.Experimental.Audio;
 
 public class GameOverVideo : MonoBehaviour
 {
@@ -20,8 +22,7 @@ public class GameOverVideo : MonoBehaviour
         VideoClip.loopPointReached += EndReached;
         ativa.ativaRespawn = true;
         AudioListener.pause = true;
-        VideoClip.EnableAudioTrack(0, false);
-        
+        Debug.Log("Video01");
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class GameOverVideo : MonoBehaviour
         gameOver.SetActive(false);
         ativa.acabouRespawn = true;
         AudioListener.pause = false;
+        Debug.Log("Video02");
 
     }
 
@@ -41,5 +43,7 @@ public class GameOverVideo : MonoBehaviour
         gameOver.SetActive(false);
         ativa.acabouRespawn = true;
         AudioListener.pause = false;
+        Debug.Log("Video03");
     }
+
 }

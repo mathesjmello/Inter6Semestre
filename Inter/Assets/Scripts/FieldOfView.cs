@@ -53,7 +53,8 @@ public class FieldOfView : MonoBehaviour {
 
     public int animMulher;
 
-    public GameObject gameOver;
+    public GameOver ativa;
+
 
     private void Start()
     {
@@ -315,9 +316,11 @@ public class FieldOfView : MonoBehaviour {
            // animMulher ++;
         }
 
-        fadeOutAnim.SetTrigger("FadeOut");
-        gameOver.SetActive(true);
+        //fadeOutAnim.SetTrigger("FadeOut");
+        //gameOver.SetActive(true);
         ativouDetecta = false;
+        ativa.detectado = true;
+
     }
 
     void DetectouDimitri(){
@@ -326,7 +329,9 @@ public class FieldOfView : MonoBehaviour {
             feedDetecta.Play(0);
             ativouDetecta = true;
         }
-        fadeOutAnim.SetTrigger("FadeOut");
+        //fadeOutAnim.SetTrigger("FadeOut");
         ativouDetecta = false;
+
+        ativa.detectado = true;
     }
 }

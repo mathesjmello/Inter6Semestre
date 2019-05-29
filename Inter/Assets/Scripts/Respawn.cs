@@ -66,13 +66,19 @@ public class Respawn : MonoBehaviour
         //Antes do guarda do correrdor pela 1° vez
         respawnPos = checkpoint01.transform.position;
 		playerController = player.GetComponent<CharacterController>();
-        saveMemory = autoSave.myVar;
+        saveMemory = PlayerPrefs.GetInt("VoltouDoGameOver");
         
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (saveMemory >= 1)
+        {
+            SpawnSave();
+        }
+
         if (fase == 1)
         {
 			//Antes da Sra Dimitri

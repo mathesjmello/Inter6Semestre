@@ -10,6 +10,8 @@ public class MenuPrincipal : MonoBehaviour
 {
 	public bool menuInicial;
 
+	public GameObject menu;
+
 	public GameObject MainMenuScreen;
 	public GameObject OptionScreen;
 	public GameObject NewGameScreen;
@@ -55,11 +57,20 @@ public class MenuPrincipal : MonoBehaviour
 
 	public GameObject loadButtonOff;
 
+	public int saveGameOver;
+
 	
 
 
 	private void Start()
 	{
+
+		saveGameOver = PlayerPrefs.GetInt("VoltouDoGameOver");
+
+		if (saveGameOver >= 1)
+		{
+			menu.SetActive(false);
+		}
         primeiraFala.SetActive(false);
 
         if (menuInicial)
