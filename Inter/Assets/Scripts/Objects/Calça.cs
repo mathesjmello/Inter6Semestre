@@ -5,9 +5,12 @@ using UnityEngine;
 public class Calça : MonoBehaviour
 {
 
-    public GameObject texto_03;
-    public GameObject texto_04;
+    public GameObject fala_04;
+    public GameObject fala_05;
+    public GameObject fala_06;
 
+    public GameObject cameraMulher;
+    
     public GameObject dimitri;
     public GameObject esposaFala;
 
@@ -32,16 +35,29 @@ public class Calça : MonoBehaviour
     public bool saveGame = false;
 
     public GameObject calca;
-    
 
-    public void Update(){
+    public GameObject carrinhos;
+
+    public GameObject mesaSalao;
+
+    public void Start()
+    {
+        fala_04.SetActive(false);
+        fala_05.SetActive(false);
+        fala_06.SetActive(false);
+        cameraMulher.SetActive(false);
+    }
+
+
+    public void Update()
+    {
         if (saveGame)
         {
             PegouCalca();
         }
     }
 
-     private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -53,19 +69,23 @@ public class Calça : MonoBehaviour
 
     public void PegouCalca()
     {
-            esposaFala.SetActive(false);
-            song.SetActive(true);
-			//Destroy(this.gameObject);
-            calca.SetActive(false);
-			portaGrandeAnim.SetBool("Aberto", true);
-            texto_03.SetActive(true);
-            texto_04.SetActive(true);
-            bomba.SetActive(true);
-            dimitri.GetComponent<LargaDimi>().comCalca = true;
-			tutoriais.SetActive(false);
-			tutoriais2.SetActive(true);
-            check.fase = 1;
-            checkPoints.SetActive(true);
-            canto.Stop();
+        cameraMulher.SetActive(true);
+        mesaSalao.SetActive(false);
+        carrinhos.SetActive(false);
+        esposaFala.SetActive(false);
+        song.SetActive(true);
+        //Destroy(this.gameObject);
+        calca.SetActive(false);
+        portaGrandeAnim.SetBool("Aberto", true);
+        fala_04.SetActive(true);
+        fala_05.SetActive(true);
+        fala_06.SetActive(true);
+        bomba.SetActive(true);
+        dimitri.GetComponent<LargaDimi>().comCalca = true;
+        tutoriais.SetActive(false);
+        tutoriais2.SetActive(true);
+        check.fase = 1;
+        checkPoints.SetActive(true);
+        canto.Stop();
     }
 }

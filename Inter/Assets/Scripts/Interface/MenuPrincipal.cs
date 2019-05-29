@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.UI;
 
 
 public class MenuPrincipal : MonoBehaviour
@@ -21,6 +22,7 @@ public class MenuPrincipal : MonoBehaviour
 
 	public GameObject MenuCam;
 
+    public GameObject primeiraFala;
 
 	public GameObject brilhoEAudioObject;
 	public GameObject sensibilObject;
@@ -44,12 +46,23 @@ public class MenuPrincipal : MonoBehaviour
 
 	public Respawn novo;
 
+	public bool loadGameTrue;
+
+	public int loadGameFase;
+
+
+	public GameObject loadButtonOn;
+
+	public GameObject loadButtonOff;
+
 	
 
 
 	private void Start()
 	{
-		if (menuInicial)
+        primeiraFala.SetActive(false);
+
+        if (menuInicial)
 		{
 			PlayerScript = Player.GetComponent<TesteCharDrunk>();
 			PlayerScript.enabled = false;
@@ -82,17 +95,54 @@ public class MenuPrincipal : MonoBehaviour
 
 		if(TesteCharDrunk)
 		TesteCharDrunk.mouseSensivity = sensibilidade;
+
+
+		if (loadGameFase == 0)
+		{
+			loadButtonOn.SetActive(false);
+			loadButtonOff.SetActive(true);
+		}
+
+		if (loadGameFase >= 1)
+		{
+			loadButtonOn.SetActive(true);
+			loadButtonOff.SetActive(false);
+		}
 	}
 
 	public void Jogar()
 	{
 		MainMenuScreen.SetActive(!MainMenuScreen.activeSelf);
 		NewGameScreen.SetActive(true);
+		loadGameFase = PlayerPrefs.GetInt("Level");
 
 	}
 
     public void NewGame()
     {
+        primeiraFala.SetActive(true);
+		PlayerScript.enabled = true;
+		MenuCam.SetActive(false);
+		PlayerCam.SetActive(true);
+		PauseController.SetActive(true);
+
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+
+
+		NewGameScreen.SetActive(false);
+		OptionScreen.SetActive(false);
+		MainMenuScreen.SetActive(false);
+
+		menuSound.Stop();
+		novo.fase = 0;
+
+		PlayerPrefs.SetInt("Level",0);
+
+
+	}
+
+	public void LoadGame(){
 		PlayerScript.enabled = true;
 		MenuCam.SetActive(false);
 		PlayerCam.SetActive(true);
@@ -108,7 +158,7 @@ public class MenuPrincipal : MonoBehaviour
 		MainMenuScreen.SetActive(false);
 
 		menuSound.Stop();
-		novo.fase = 0;
+		spawn = true;
 
 		PlayerPrefs.SetInt("Level",0);
 
