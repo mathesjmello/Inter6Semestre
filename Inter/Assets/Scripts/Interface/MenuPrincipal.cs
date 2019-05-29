@@ -221,6 +221,7 @@ public class MenuPrincipal : MonoBehaviour
 #endif
 
 		Application.Quit();
+		PlayerPrefs.SetInt("VoltouDoGameOver",0);
 
 
 	}
