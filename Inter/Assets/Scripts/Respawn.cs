@@ -115,7 +115,7 @@ public class Respawn : MonoBehaviour
             check.disable = 4;
             //dimi.carregando = true;
             save.saveGame = true;
-            fala03.SetActive(false);
+            //fala03.SetActive(false);
             //autoSave.salvar = false;    
             
         }

@@ -67,6 +67,8 @@ public class TesteCharDrunk : MonoBehaviour
 
 	public AudioSource garrafaSound;
 
+
+    public GameObject hud;
  
     
 
@@ -87,12 +89,19 @@ public class TesteCharDrunk : MonoBehaviour
         if (vodka == true && doses >= 1)
         {
             garrafa.SetActive(true);
+            hud.SetActive(true);
             garrafaSound.Play(0);
         }
         if (doses <= 0)
         {
             garrafa.SetActive(false);
-            vodka = false;
+            hud.SetActive(false);
+            //vodka = false;
+        }
+
+        if (vodka == false)
+        {
+            hud.SetActive(false);
         }
 
 
