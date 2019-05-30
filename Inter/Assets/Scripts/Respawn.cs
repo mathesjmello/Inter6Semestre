@@ -74,10 +74,10 @@ public class Respawn : MonoBehaviour
     void Update()
     {
 
-        if (saveMemory >= 1)
+        /*if (saveMemory >= 1)
         {
             SpawnSave();
-        }
+        }*/
 
         if (fase == 1)
         {
