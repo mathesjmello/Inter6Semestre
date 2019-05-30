@@ -22,9 +22,13 @@ public class VideoFinal : MonoBehaviour
         VideoClip.loopPointReached += EndReached;
     }
 
-        public void NextScene()
+        public void Update()
     {
-        SceneManager.LoadScene("Fase01");
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Fase01");
+        }
+        
     }
     void EndReached(UnityEngine.Video.VideoPlayer vp)
     {

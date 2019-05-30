@@ -95,7 +95,7 @@ public class Respawn : MonoBehaviour
         if (fase == 1)
         {
 			//Antes da Sra Dimitri
-            autoSave.salvar = true;
+            //autoSave.salvar = true;
             respawnPos = checkpoint02.transform.position;
             check.disable = 1;
             //dimi.carregando = false;
@@ -103,20 +103,20 @@ public class Respawn : MonoBehaviour
             fala05.SetActive(true);
             fala06.SetActive(true);
             fala07.SetActive(true);
-            save.saveGame = false;            
+            //save.saveGame = false;            
         }
 
         if (fase == 2)
         {
             //No bar, Antes do guarda do corredor
-            autoSave.salvar = true;
+            //autoSave.salvar = true;
             respawnPos = checkpoint03.transform.position;
             check.disable = 2;
             //dimi.carregando = true;
             fala05.SetActive(true);
             fala06.SetActive(true);
             fala07.SetActive(true);
-            save.saveGame = true;
+            //save.saveGame = true;
             //autoSave.salvar = false;
             
         }
@@ -124,14 +124,14 @@ public class Respawn : MonoBehaviour
         if (fase == 3)
         {
             //Antes da bomba
-            autoSave.salvar = true;
+            //autoSave.salvar = true;
             respawnPos = checkpoint04.transform.position;
             check.disable = 3;
             //dimi.carregando = true;
             fala05.SetActive(true);
             fala06.SetActive(true);
             fala07.SetActive(true);
-            save.saveGame = true;
+            //save.saveGame = true;
             //autoSave.salvar = false;
             
         }
@@ -139,19 +139,19 @@ public class Respawn : MonoBehaviour
         if (fase == 4)
         {
             //Antes do Salão
-            autoSave.salvar = true;
+            //autoSave.salvar = true;
             respawnPos = checkpoint05.transform.position;
             check.disable = 4;
             //dimi.carregando = true;
             fala06.SetActive(true);
             fala07.SetActive(true);
-            save.saveGame = true;
+            //save.saveGame = true;
             //fala03.SetActive(false);
             //autoSave.salvar = false;    
             
         }
 
-        if (ativaRespawn == true)
+        /*if (ativaRespawn == true)
         {
             ChamouRespawn();
 		
@@ -166,10 +166,10 @@ public class Respawn : MonoBehaviour
         if (acabouRespawn == true)
         {
             AcabouFadeOut();
-        }        
+        } */       
     }
 
-    void RespawnOn (){
+    /*void RespawnOn (){
         ativaRespawn = true;
     }
 
@@ -195,5 +195,5 @@ public class Respawn : MonoBehaviour
         {
             dimi.carregando = true;
         }
-    }
+    }*/
 }
