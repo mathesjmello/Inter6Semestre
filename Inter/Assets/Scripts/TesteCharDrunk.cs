@@ -84,8 +84,7 @@ public class TesteCharDrunk : MonoBehaviour
 
     void FixedUpdate()
     {
-        print(freeze);
-        //if (freeze == true) return;
+        if (freeze == true) return;
 
         if (vodka == true && doses >= 1)
         {
@@ -118,8 +117,6 @@ public class TesteCharDrunk : MonoBehaviour
             dimiCaido.SetActive(false);
             dimiCarregado.SetActive(true);
             time += Time.deltaTime;
-            controller.center = new Vector3(0.250221f, 0.6291363f, -0.05175333f);
-            controller.radius = 0.5f;
         }
 
 
@@ -143,8 +140,6 @@ public class TesteCharDrunk : MonoBehaviour
             dimiCaido.SetActive(true);
             dimiCarregado.SetActive(false);
             drunkSpeed = 0;
-            controller.center = new Vector3(0, 0.93f, 0);
-            controller.radius = 0.3f;
 
         }
 
@@ -280,7 +275,6 @@ public class TesteCharDrunk : MonoBehaviour
 
 
         moveDirection.y -= gravity;
-        print(controller.isGrounded);
 
         controller.Move(moveDirection * Time.deltaTime * playerSpeed);
 
