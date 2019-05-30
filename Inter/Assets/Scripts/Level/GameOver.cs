@@ -8,10 +8,15 @@ public class GameOver : MonoBehaviour
 
     public bool detectado;
 
+    private Behaviour PlayerScript; 
+
+    public GameObject Player;
+
     // Start is called before the first frame update
     void Start()
     {
     //PlayerPrefs.SetInt("VoltouDoGameOver",1);
+    PlayerScript = Player.GetComponent<TesteCharDrunk>();
     }
 
     // Update is called once per frame
@@ -19,7 +24,16 @@ public class GameOver : MonoBehaviour
     {
         if (detectado)
         {
-            SceneManager.LoadScene("GameOverScene");
+        StartCoroutine(FeedBack());
         }
+    }
+
+    IEnumerator FeedBack(){
+
+    PlayerScript.enabled = false;
+
+    yield return new WaitForSeconds(3.0f);  
+     SceneManager.LoadScene("GameOverScene");
+
     }
 }
