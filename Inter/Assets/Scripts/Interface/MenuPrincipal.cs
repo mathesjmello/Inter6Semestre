@@ -95,7 +95,7 @@ public class MenuPrincipal : MonoBehaviour
 		if (saveGameOver >= 1)
 		{
 			menuInicial = false;
-			LoadDoGameOver();
+			LoadGame();
 
 		}
 
@@ -159,7 +159,7 @@ public class MenuPrincipal : MonoBehaviour
 
 	}
 
-	public void LoadDoGameOver(){
+	/*public void LoadDoGameOver(){
 
 		PlayerScript.enabled = true;
 		MenuCam.SetActive(false);
@@ -175,7 +175,7 @@ public class MenuPrincipal : MonoBehaviour
 
 		menuSound.Stop();
 		spawn = true;
-	}
+	}*/
 
 	public void LoadGame()
     {
