@@ -20,7 +20,7 @@ public class GameOverVideo : MonoBehaviour
     void Start()
     {
         VideoClip.loopPointReached += EndReached;
-        //ativa.ativaRespawn = true;
+        ativa.ativaRespawn = true;
         AudioListener.pause = true;
         Debug.Log("Video01");
     }

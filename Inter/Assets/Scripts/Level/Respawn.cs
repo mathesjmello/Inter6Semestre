@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
-    public bool ativouRespawn;
+    public bool ativaRespawn;
 
     public GameObject player;
 
@@ -64,8 +64,6 @@ public class Respawn : MonoBehaviour
     public GameObject fala05;
     public GameObject fala06;
     public GameObject fala07;
-
-    
 
 
     // Start is called before the first frame update
