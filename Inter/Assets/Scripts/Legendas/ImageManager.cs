@@ -71,16 +71,16 @@ public class ImageManager : MonoBehaviour
 
     IEnumerator Teste()
     { 
-        theImage.sprite = textSprites[currentImage];
         for (int i = 0; i < endAtImage; i++)
         {
+            theImage.sprite = textSprites[currentImage];
             if (textBoxLigada == false)
             {
                 textBox.SetActive(true);
                 textBoxLigada = true;
             }
             yield return new WaitForSeconds(tempoParaProxima);
-            currentImage++;            
+            currentImage++;
         }
         textBox.SetActive(false);
         player.freeze = false;
