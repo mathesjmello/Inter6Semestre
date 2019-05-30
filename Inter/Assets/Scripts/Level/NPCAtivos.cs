@@ -71,6 +71,8 @@ public class NPCAtivos : MonoBehaviour
         if (disable == 4)
         {
             //Antes do Salão
+            npc01.SetActive(false);
+            npc03.SetActive(true);
             npc04.SetActive(true);
 
     
