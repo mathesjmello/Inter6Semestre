@@ -18,6 +18,7 @@ public class MenuPrincipal : MonoBehaviour
 	public GameObject OptionScreen;
 	public GameObject NewGameScreen;
 	public GameObject PauseController;
+    public GameObject ConfirmNewGameScreen;
 
 	public GameObject Player;
 	public GameObject PlayerCam;
@@ -135,26 +136,34 @@ public class MenuPrincipal : MonoBehaviour
 
 	}
 
-    public void NewGame()
+    public void NewGame(bool forceStart)
     {
-        //primeiraFala.SetActive(true);
-		PlayerScript.enabled = true;
-		MenuCam.SetActive(false);
-		PlayerCam.SetActive(true);
-		PauseController.SetActive(true);
+        if (PlayerPrefs.GetInt("Level") >= 1 && !forceStart)
+        {
+            ConfirmNewGameScreen.SetActive(true);
 
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+        }
+        else
+        {
+            //primeiraFala.SetActive(true);
+            PlayerScript.enabled = true;
+            MenuCam.SetActive(false);
+            PlayerCam.SetActive(true);
+            PauseController.SetActive(true);
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
 
 
-		NewGameScreen.SetActive(false);
-		OptionScreen.SetActive(false);
-		MainMenuScreen.SetActive(false);
+            NewGameScreen.SetActive(false);
+            OptionScreen.SetActive(false);
+            MainMenuScreen.SetActive(false);
 
-		menuSound.Stop();
-		novo.fase = 0;
+            menuSound.Stop();
+            novo.fase = 0;
 
-		PlayerPrefs.SetInt("Level",0);
+            PlayerPrefs.SetInt("Level", 0);
+        }
 
 
 	}
