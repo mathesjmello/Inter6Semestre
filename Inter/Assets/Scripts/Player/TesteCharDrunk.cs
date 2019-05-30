@@ -100,6 +100,7 @@ public class TesteCharDrunk : MonoBehaviour
             playerAnim.SetBool("isWalkingBack",false);
             playerDimiAnim.SetBool("isWalkingBack", false);
             dimiAnim.SetBool("isWalkingBack", false);
+            playerAnim.SetBool("isRunning",false);
             //return;
         }
 
