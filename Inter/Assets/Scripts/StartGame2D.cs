@@ -8,6 +8,8 @@ public class StartGame2D : MonoBehaviour
 	public GameObject player3D;
 	public GameObject inimigos;
 
+	public AudioSource jogoSom;
+
 	
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,8 @@ public class StartGame2D : MonoBehaviour
 			player2D.freeze = false;
 			player3D.SetActive(false);
 			inimigos.SetActive(true);
+
+			jogoSom.Play(0);
 		}
 	}
 }
