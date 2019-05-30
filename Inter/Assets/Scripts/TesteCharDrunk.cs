@@ -136,6 +136,8 @@ public class TesteCharDrunk : MonoBehaviour
             dimiCaido.SetActive(false);
             dimiCarregado.SetActive(true);
             time += Time.deltaTime;
+                controller.radius = 0.5f;
+                controller.center = new Vector3(0.250221f, 0.6291363f, -0.05175333f);
         }
 
 
@@ -159,8 +161,10 @@ public class TesteCharDrunk : MonoBehaviour
             dimiCaido.SetActive(true);
             dimiCarregado.SetActive(false);
             drunkSpeed = 0;
+                controller.radius = 0.3f;
+                controller.center = new Vector3(0, 0.9f, 0);
 
-        }
+            }
 
         if (isRunning == true && carregando == false)
         {
