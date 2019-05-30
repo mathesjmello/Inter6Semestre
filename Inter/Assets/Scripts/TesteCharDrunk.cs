@@ -84,7 +84,26 @@ public class TesteCharDrunk : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (freeze == true) return;
+        if (freeze == true) {
+
+            playerAnim.SetBool("Idle",true);
+            playerDimiAnim.SetBool("Idle", true);
+            dimiAnim.SetBool("Idle", true);
+            playerAnim.SetBool("isWalking",false);
+            playerDimiAnim.SetBool("isWalking", false);
+            dimiAnim.SetBool("isWalking", false);
+            playerAnim.SetBool("isWalkingBack",false);
+            playerDimiAnim.SetBool("isWalkingBack", false);
+            dimiAnim.SetBool("isWalkingBack", false);
+            //return;
+        }
+
+        if (freeze == false)
+        {
+            playerAnim.SetBool("Idle",false);
+            playerDimiAnim.SetBool("Idle", false);
+            dimiAnim.SetBool("Idle", false);
+        
 
         if (vodka == true && doses >= 1)
         {
@@ -162,7 +181,7 @@ public class TesteCharDrunk : MonoBehaviour
 
 
 
-        if (controller.isGrounded)
+        if (controller.isGrounded && freeze == false)
         {
 
             moveDirection = Vector3.zero;
@@ -180,28 +199,44 @@ public class TesteCharDrunk : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 isWalking = true;
+                playerAnim.SetBool("Idle", false);
+                playerDimiAnim.SetBool("Idle", false);
+                dimiAnim.SetBool("Idle", false);
             }
 
 
             else if (Input.GetKey(KeyCode.A))
             {
                 isWalking = true;
+                playerAnim.SetBool("Idle", false);
+                playerDimiAnim.SetBool("Idle", false);
+                dimiAnim.SetBool("Idle", false);
             }
 
             else if (Input.GetKey(KeyCode.W))
             {
                 isWalking = true;
+                playerAnim.SetBool("Idle", false);
+                playerDimiAnim.SetBool("Idle", false);
+                dimiAnim.SetBool("Idle", false);
             }
 
             else if (Input.GetKey(KeyCode.S))
             {
                 isWalkingBack = true;
+                playerAnim.SetBool("Idle", false);
+                playerDimiAnim.SetBool("Idle", false);
+                dimiAnim.SetBool("Idle", false);
             }
 
             else
             {
                 isWalking = false;
                 isWalkingBack = false;
+
+                playerAnim.SetBool("Idle", true);
+                playerDimiAnim.SetBool("Idle", true);
+                dimiAnim.SetBool("Idle", true);
             }
 
             /*
@@ -283,6 +318,8 @@ public class TesteCharDrunk : MonoBehaviour
 
             playerAnim.SetBool("isWalkingBack", true);
             playerAnim.SetBool("isRunning", false);
+
+            
         }
 
         if (isWalkingBack == true && carregando == true)
@@ -307,6 +344,7 @@ public class TesteCharDrunk : MonoBehaviour
         {
             playerDimiAnim.SetBool("isWalking", true);
             dimiAnim.SetBool("isWalking", true);
+
         }
 
         if (!playerSound.isPlaying)
@@ -320,12 +358,15 @@ public class TesteCharDrunk : MonoBehaviour
         {
             playerAnim.SetBool("isWalking", false);
 
+
         }
 
         if (isWalking == false && carregando == true)
         {
             playerDimiAnim.SetBool("isWalking", false);
             dimiAnim.SetBool("isWalking", false);
+
+        
         }
 
 
@@ -333,6 +374,8 @@ public class TesteCharDrunk : MonoBehaviour
         {
 
             playerAnim.SetBool("isWalkingBack", false);
+
+
         }
 
         if (isWalkingBack == false == carregando == true)
@@ -345,6 +388,7 @@ public class TesteCharDrunk : MonoBehaviour
         {
             playerSound.Stop();
             isWalkPlaying = false;
+        }
         }
     }
 
