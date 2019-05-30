@@ -263,6 +263,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &1924560432 stripped
+VideoPlayer:
+  m_CorrespondingSourceObject: {fileID: 6958450943993583731, guid: ac6899f2b3776ce43a94f379bc0557c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 6958450945002535155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6958450945002535155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -344,8 +350,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 2ad3ace7575e5c642880f5b6c427558b,
+      objectReference: {fileID: 32900000, guid: ec8a68fdbd76b4e47bc8e395f61a8364,
         type: 3}
+    - target: {fileID: 6958450945427194742, guid: ac6899f2b3776ce43a94f379bc0557c6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6958450945442078886, guid: ac6899f2b3776ce43a94f379bc0557c6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ac6899f2b3776ce43a94f379bc0557c6, type: 3}
@@ -367,3 +378,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ae91bca7ed6ee43884701457c84356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VideoClip: {fileID: 1924560432}

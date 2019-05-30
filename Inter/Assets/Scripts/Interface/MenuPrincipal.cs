@@ -115,7 +115,7 @@ public class MenuPrincipal : MonoBehaviour
 		TesteCharDrunk.mouseSensivity = sensibilidade;
 
 
-		if (loadGameFase == 0)
+		/*if (loadGameFase == 0)
 		{
 			loadButtonOn.SetActive(false);
 			loadButtonOff.SetActive(true);
@@ -125,7 +125,7 @@ public class MenuPrincipal : MonoBehaviour
 		{
 			loadButtonOn.SetActive(true);
 			loadButtonOff.SetActive(false);
-		}
+		}*/
 	}
 
 	public void Jogar()
@@ -138,13 +138,13 @@ public class MenuPrincipal : MonoBehaviour
 
     public void NewGame(bool forceStart)
     {
-        if (PlayerPrefs.GetInt("Level") >= 1 && !forceStart)
+        /*if (PlayerPrefs.GetInt("Level") >= 1 && !forceStart)
         {
             ConfirmNewGameScreen.SetActive(true);
 
         }
         else
-        {
+        {*/
             //primeiraFala.SetActive(true);
             PlayerScript.enabled = true;
             MenuCam.SetActive(false);
@@ -163,7 +163,7 @@ public class MenuPrincipal : MonoBehaviour
             novo.fase = 0;
 
             PlayerPrefs.SetInt("Level", 0);
-        }
+        //}
 
 
 	}
@@ -203,7 +203,7 @@ public class MenuPrincipal : MonoBehaviour
 		MainMenuScreen.SetActive(false);
 
 		menuSound.Stop();
-		spawn = true;
+		//spawn = true;
 
 	}
 	public void Opções()
