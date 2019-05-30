@@ -17,11 +17,14 @@ public class PlaneEnemies : MonoBehaviour
 
 	public bool freeze;
 
+    public GameObject falaFinal;
+
 	public AudioSource planeDestroySound;
 
 	void Start()
 	{
-		anim = GetComponent<Animator>();
+        falaFinal.SetActive(false);
+        anim = GetComponent<Animator>();
 		explodeIndex = Animator.StringToHash("Explode");
 		direction = focalPoint.transform.position - transform.position;  
 		direction.Normalize();
@@ -49,12 +52,15 @@ public class PlaneEnemies : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Tiro2D"))
 		{
-			anim.SetTrigger(explodeIndex);
+            if(!lastPlane)
+            {
+                anim.SetTrigger(explodeIndex);
+            }
 			planeDestroySound.Play(0);
 			if (lastPlane)
 			{
 				freeze = true;
-
+                falaFinal.SetActive(true);
 				StartCoroutine(fimdejogo());
 			}
 		}
