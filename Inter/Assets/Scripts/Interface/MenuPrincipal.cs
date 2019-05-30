@@ -69,7 +69,7 @@ public class MenuPrincipal : MonoBehaviour
 	{
 		PlayerScript = Player.GetComponent<TesteCharDrunk>();
 
-		saveGameOver = PlayerPrefs.GetInt("VoltouDoGameOver");
+		//saveGameOver = PlayerPrefs.GetInt("VoltouDoGameOver");
 
 
         if (menuInicial)
@@ -93,12 +93,12 @@ public class MenuPrincipal : MonoBehaviour
 		MasterVolume = brilhoEAudioObject.GetComponent<MasterVolume>();
 		TesteCharDrunk = sensibilObject.GetComponent<TesteCharDrunk>();
 
-		if (saveGameOver >= 1)
+		/*if (saveGameOver >= 1)
 		{
 			menuInicial = false;
 			LoadGame();
 
-		}
+		}*/
 
 
 
