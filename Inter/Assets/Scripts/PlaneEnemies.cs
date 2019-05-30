@@ -17,6 +17,8 @@ public class PlaneEnemies : MonoBehaviour
 
 	public bool freeze;
 
+	public AudioSource planeDestroySound;
+
 	void Start()
 	{
 		anim = GetComponent<Animator>();
@@ -48,6 +50,7 @@ public class PlaneEnemies : MonoBehaviour
 		if (other.gameObject.CompareTag("Tiro2D"))
 		{
 			anim.SetTrigger(explodeIndex);
+			planeDestroySound.Play(0);
 			if (lastPlane)
 			{
 				freeze = true;
