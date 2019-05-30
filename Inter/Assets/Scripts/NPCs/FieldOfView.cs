@@ -9,6 +9,8 @@ public class FieldOfView : MonoBehaviour {
 
     public TesteCharDrunk shot;
 
+    public static bool cheatAtivo = false;
+
     public int copo = 1;
 
     public bool drunk;
@@ -107,46 +109,46 @@ public class FieldOfView : MonoBehaviour {
 
                 if (parte01)
                 {
-                float dstToTarget = Vector3.Distance(transform.position, target.position);
-                if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Player"))
-                {
-                    //Aqui é aonde acontece a detecção do player
-                    //feedDetecta.Play(0);
-                    visibleTargets.Add(target);
-                    Debug.Log("Encontrei o Player");
-                    DetectouPlayer();                    
-                    //Adicionar a forma que foi decidida para acabar o jogo
-                    //precisa mudar a Tag para o nome correto, no lugar de player ser dimitri ou o nome que for decidido
-                    //fadeOut.SetActive(true);
-                }
+                    float dstToTarget = Vector3.Distance(transform.position, target.position);
+                    if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Player") && cheatAtivo == false)
+                    {
+                        //Aqui é aonde acontece a detecção do player
+                        //feedDetecta.Play(0);
+                        visibleTargets.Add(target);
+                        Debug.Log("Encontrei o Player");
+                        DetectouPlayer();
+                        //Adicionar a forma que foi decidida para acabar o jogo
+                        //precisa mudar a Tag para o nome correto, no lugar de player ser dimitri ou o nome que for decidido
+                        //fadeOut.SetActive(true);
+                    }
                 }
                 if (parte02)
                 {
-                float dstToTarget = Vector3.Distance(transform.position, target.position);
-                if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Dimitri"))
-                {
-                    //Aqui é aonde acontece a detecção do player
-                   // feedDetecta.Play(0);
-                    visibleTargets.Add(target);
-                    Debug.Log("Encontrei o Player");
-                    DetectouDimitri();
-                    
-                    
-                    //Adicionar a forma que foi decidida para acabar o jogo
-                    //precisa mudar a Tag para o nome correto, no lugar de player ser dimitri ou o nome que for decidido
-                    //fadeOut.SetActive(true);
-                }
-                if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Totem") && controladorNPC.buscandoTotem == true)
-                {
-                    //Aqui é aonde acontece a detecção do totem
-                    visibleTargets.Add(target);
-                    controladorNPC.myAgent.isStopped = false;
-                    anim.SetBool("isWalking", true);
-                    anim.SetBool("isWalkingDrunk", true);
-                    Debug.Log("Encontrei o Totem");
-                    localizacaoDoPoster = target.transform.position;
-                    controladorNPC.encontrou = true;
-                }
+                    float dstToTarget = Vector3.Distance(transform.position, target.position);
+                    if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Dimitri") && cheatAtivo == false)
+                    {
+                        //Aqui é aonde acontece a detecção do player
+                        // feedDetecta.Play(0);
+                        visibleTargets.Add(target);
+                        Debug.Log("Encontrei o Player");
+                        DetectouDimitri();
+
+
+                        //Adicionar a forma que foi decidida para acabar o jogo
+                        //precisa mudar a Tag para o nome correto, no lugar de player ser dimitri ou o nome que for decidido
+                        //fadeOut.SetActive(true);
+                    }
+                    if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Totem") && controladorNPC.buscandoTotem == true)
+                    {
+                        //Aqui é aonde acontece a detecção do totem
+                        visibleTargets.Add(target);
+                        controladorNPC.myAgent.isStopped = false;
+                        anim.SetBool("isWalking", true);
+                        anim.SetBool("isWalkingDrunk", true);
+                        Debug.Log("Encontrei o Totem");
+                        localizacaoDoPoster = target.transform.position;
+                        controladorNPC.encontrou = true;
+                    }
                 }
             }
         }
