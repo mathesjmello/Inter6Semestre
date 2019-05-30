@@ -278,6 +278,12 @@ public class TesteCharDrunk : MonoBehaviour
 
         controller.Move(moveDirection * Time.deltaTime * playerSpeed);
 
+        Quaternion dir = Quaternion.LookRotation(moveDirection, Vector3.up);
+
+        serguei.transform.rotation = Quaternion.Euler(new Vector3(0, Mathf.LerpAngle(serguei.transform.rotation.eulerAngles.y, dir.eulerAngles.y, 0.5f), 0));
+        
+        dimiCarregado.transform.rotation = Quaternion.Euler(new Vector3(0, Mathf.LerpAngle(dimiCarregado.transform.rotation.eulerAngles.y, dir.eulerAngles.y, 0.5f), 0));
+
         if (isWalkingBack == true && carregando == false && isRunning == false)
         {
 
