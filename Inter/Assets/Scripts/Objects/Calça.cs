@@ -8,6 +8,7 @@ public class Calça : MonoBehaviour
     public GameObject fala_04;
     public GameObject fala_05;
     public GameObject fala_06;
+    public GameObject fala_07;
 
     public GameObject cameraMulher;
     
@@ -45,6 +46,7 @@ public class Calça : MonoBehaviour
         fala_04.SetActive(false);
         fala_05.SetActive(false);
         fala_06.SetActive(false);
+        fala_07.SetActive(false);
         cameraMulher.SetActive(false);
     }
 
@@ -80,6 +82,7 @@ public class Calça : MonoBehaviour
         fala_04.SetActive(true);
         fala_05.SetActive(true);
         fala_06.SetActive(true);
+        fala_07.SetActive(true);
         bomba.SetActive(true);
         dimitri.GetComponent<LargaDimi>().comCalca = true;
         tutoriais.SetActive(false);

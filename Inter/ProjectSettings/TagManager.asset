@@ -26,6 +26,13 @@ TagManager:
   - NPC02
   - NPC03
   - PosOriginal
+  - Fala01
+  - Fala02
+  - Fala03
+  - Fala04
+  - Fala05
+  - Fala06
+  - Fala07
   layers:
   - Default
   - TransparentFX

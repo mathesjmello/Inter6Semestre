@@ -88,6 +88,6 @@ public class ImageManager : MonoBehaviour
         {
             tutorial.SetActive(true);
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

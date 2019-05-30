@@ -40,8 +40,7 @@ public class Respawn : MonoBehaviour
     public NPCAtivos check;
 
     public Calça save;
-
-
+    
 	private CharacterController playerController;
 
     //public GameObject fala03;
@@ -58,11 +57,25 @@ public class Respawn : MonoBehaviour
 
     public bool acabouRespawn;
 
+    //public GameObject fala01;
+    //public GameObject fala02;
+    //public GameObject fala03;
+    public GameObject fala04;
+    public GameObject fala05;
+    public GameObject fala06;
+    public GameObject fala07;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        //fala01 = GameObject.FindGameObjectWithTag("Fala01");
+        //fala02 = GameObject.FindGameObjectWithTag("Fala02");
+        //fala03 = GameObject.FindGameObjectWithTag("Fala03");
+        fala04 = GameObject.FindGameObjectWithTag("Fala04");
+        fala05 = GameObject.FindGameObjectWithTag("Fala05");
+        fala06 = GameObject.FindGameObjectWithTag("Fala06");
+        fala07 = GameObject.FindGameObjectWithTag("Fala07");
         //Antes do guarda do correrdor pela 1° vez
         respawnPos = checkpoint01.transform.position;
 		playerController = player.GetComponent<CharacterController>();
@@ -86,9 +99,11 @@ public class Respawn : MonoBehaviour
             respawnPos = checkpoint02.transform.position;
             check.disable = 1;
             //dimi.carregando = false;
-            save.saveGame = false;
-            
-            
+            fala04.SetActive(true);
+            fala05.SetActive(true);
+            fala06.SetActive(true);
+            fala07.SetActive(true);
+            save.saveGame = false;            
         }
 
         if (fase == 2)
@@ -98,6 +113,9 @@ public class Respawn : MonoBehaviour
             respawnPos = checkpoint03.transform.position;
             check.disable = 2;
             //dimi.carregando = true;
+            fala05.SetActive(true);
+            fala06.SetActive(true);
+            fala07.SetActive(true);
             save.saveGame = true;
             //autoSave.salvar = false;
             
@@ -110,6 +128,9 @@ public class Respawn : MonoBehaviour
             respawnPos = checkpoint04.transform.position;
             check.disable = 3;
             //dimi.carregando = true;
+            fala05.SetActive(true);
+            fala06.SetActive(true);
+            fala07.SetActive(true);
             save.saveGame = true;
             //autoSave.salvar = false;
             
@@ -122,6 +143,8 @@ public class Respawn : MonoBehaviour
             respawnPos = checkpoint05.transform.position;
             check.disable = 4;
             //dimi.carregando = true;
+            fala06.SetActive(true);
+            fala07.SetActive(true);
             save.saveGame = true;
             //fala03.SetActive(false);
             //autoSave.salvar = false;    
@@ -143,12 +166,7 @@ public class Respawn : MonoBehaviour
         if (acabouRespawn == true)
         {
             AcabouFadeOut();
-        }
-
-
-
-		
-        
+        }        
     }
 
     void RespawnOn (){
@@ -159,15 +177,13 @@ public class Respawn : MonoBehaviour
 		playerController.enabled = false;
         player.transform.position = respawnPos;
         spawn.deuSpawn = true;
-
-
     }
 
-    void AcabouFadeOut(){
-
-    //fadeOut.SetActive(false);
-    playerController.enabled = true;
-	ativaRespawn = false;
+    void AcabouFadeOut()
+    {
+        //fadeOut.SetActive(false);
+        playerController.enabled = true;
+        ativaRespawn = false;
     }
 
     void SpawnSave(){
