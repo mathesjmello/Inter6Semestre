@@ -143,7 +143,8 @@ public class TesteCharDrunk : MonoBehaviour
                 dimiCarregado.SetActive(true);
                 time += Time.deltaTime;
                 controller.radius = 0.5f;
-                controller.center = new Vector3(0.250221f, 0.6291363f, -0.05175333f);
+                controller.center = new Vector3(0.250221f, 0.78f, -0.05175333f);
+                controller.height = 1.65f;
             }
 
 
@@ -169,6 +170,7 @@ public class TesteCharDrunk : MonoBehaviour
                 drunkSpeed = 0;
                 controller.radius = 0.3f;
                 controller.center = new Vector3(0, 0.9f, 0);
+                controller.height = 1.8f;
 
             }
 
