@@ -241,7 +241,7 @@ public class MenuPrincipal : MonoBehaviour
 
 	public void Créditos()
 	{
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene("Credits");
 
 	}
 
