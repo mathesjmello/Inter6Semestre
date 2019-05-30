@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.SceneManagement;
 
 public class PlaneEnemies : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class PlaneEnemies : MonoBehaviour
 
 
 		yield return new WaitForSeconds(1);
-		// carrega a cena nova
+        SceneManager.LoadScene("Final");
 
 	}
 

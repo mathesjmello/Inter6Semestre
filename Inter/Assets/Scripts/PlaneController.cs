@@ -35,11 +35,11 @@ public class PlaneController : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.A))
 		{
-			movement.x += -velocidade;
+			movement.z += velocidade;
 		}
 		if (Input.GetKey(KeyCode.D))
 		{
-			movement.x += velocidade;
+			movement.z += -velocidade;
 		}
 		if (Input.GetKey(KeyCode.W))
 		{
