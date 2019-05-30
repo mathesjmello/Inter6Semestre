@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Creditos : MonoBehaviour
 {
-    public GameObject stare;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,15 +17,8 @@ public class Creditos : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            Time.timeScale += 0.1f;
-            stare.SetActive(true);
-        }
-
-        else
-        {
-            Time.timeScale = 1;
-            stare.SetActive(false);
-
+            SceneManager.LoadScene("Fase01");
+            
         }
     }
 }
