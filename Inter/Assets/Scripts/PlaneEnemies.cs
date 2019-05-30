@@ -36,7 +36,7 @@ public class PlaneEnemies : MonoBehaviour
 	{
 
 
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Final");
 
 	}
