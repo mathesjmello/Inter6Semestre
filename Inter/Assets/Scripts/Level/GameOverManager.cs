@@ -14,6 +14,8 @@ public class GameOverManager : MonoBehaviour
     {
         VideoClip.loopPointReached += EndReached;
         PlayerPrefs.SetInt("VoltouDoGameOver",1);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -24,10 +26,14 @@ public class GameOverManager : MonoBehaviour
 
     public void NextScene()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         SceneManager.LoadScene("Fase01");
     }
     void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         SceneManager.LoadScene("Fase01");
     }
 }
