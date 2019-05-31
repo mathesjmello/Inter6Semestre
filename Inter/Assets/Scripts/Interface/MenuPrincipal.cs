@@ -62,11 +62,12 @@ public class MenuPrincipal : MonoBehaviour
 
 	public int saveGameOver;
 
-	
+    public GameObject questLog;
 
 
 	private void Start()
 	{
+        questLog.SetActive(false);
 		PlayerScript = Player.GetComponent<TesteCharDrunk>();
 
 		//saveGameOver = PlayerPrefs.GetInt("VoltouDoGameOver");
@@ -145,28 +146,29 @@ public class MenuPrincipal : MonoBehaviour
         }
         else
         {*/
-            //primeiraFala.SetActive(true);
-            PlayerScript.enabled = true;
-            MenuCam.SetActive(false);
-            PlayerCam.SetActive(true);
-            PauseController.SetActive(true);
+        questLog.SetActive(true);
+        primeiraFala.SetActive(true);
+        PlayerScript.enabled = true;
+        MenuCam.SetActive(false);
+        PlayerCam.SetActive(true);
+        PauseController.SetActive(true);
 
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
 
-            NewGameScreen.SetActive(false);
-            OptionScreen.SetActive(false);
-            MainMenuScreen.SetActive(false);
+        NewGameScreen.SetActive(false);
+        OptionScreen.SetActive(false);
+        MainMenuScreen.SetActive(false);
 
-            menuSound.Stop();
-            novo.fase = 0;
+        menuSound.Stop();
+        novo.fase = 0;
 
-            PlayerPrefs.SetInt("Level", 0);
+        PlayerPrefs.SetInt("Level", 0);
         //}
 
 
-	}
+    }
 
 	/*public void LoadDoGameOver(){
 
