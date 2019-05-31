@@ -47,6 +47,8 @@ public class ImageManager : MonoBehaviour
 
     public GameObject tutorial;
 
+    public bool ativoNoMomento = false;
+
     private void Start()
     {
         if (tutorial != null)
@@ -58,13 +60,44 @@ public class ImageManager : MonoBehaviour
     }
 
 
+    void Update()
+    {
+        if (currentImage < endAtImage && Input.GetKeyDown(KeyCode.Space) && ativoNoMomento == true)
+        {
+            currentImage++;
+        }
+
+        if(currentImage < endAtImage)
+        {
+            theImage.sprite = textSprites[currentImage];
+        }
+        else if(endAtImage >= currentImage)
+        {
+            textBox.SetActive(false);
+            player.freeze = false;
+            if (tutorial != null)
+            {
+                tutorial.SetActive(true);
+            }
+            gameObject.SetActive(false);
+        }
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && ativou == true)
         {
+            ativoNoMomento = true;
+            currentImage = 0;
             player.freeze = true;
             ativou = false;
-            StartCoroutine(Teste());
+            //StartCoroutine(Teste());
+            if (textBoxLigada == false)
+            {
+                textBox.SetActive(true);
+                textBoxLigada = true;
+            }
         }
     }
 
@@ -73,21 +106,8 @@ public class ImageManager : MonoBehaviour
     { 
         for (int i = 0; i < endAtImage; i++)
         {
-            theImage.sprite = textSprites[currentImage];
-            if (textBoxLigada == false)
-            {
-                textBox.SetActive(true);
-                textBoxLigada = true;
-            }
             yield return new WaitForSeconds(tempoParaProxima);
             currentImage++;
         }
-        textBox.SetActive(false);
-        player.freeze = false;
-        if (tutorial != null)
-        {
-            tutorial.SetActive(true);
-        }
-        gameObject.SetActive(false);
     }
 }
