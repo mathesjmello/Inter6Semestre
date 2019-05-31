@@ -71,6 +71,87 @@ ModelImporter:
     100130: mixamorig:Spine1
     100132: mixamorig:Spine2
     100134: polySurface22
+    100136: woman:Head
+    100138: woman:HeadTop_End
+    100140: woman:Hips
+    100142: woman:LeftArm
+    100144: woman:LeftFoot
+    100146: woman:LeftForeArm
+    100148: woman:LeftHand
+    100150: woman:LeftHandIndex1
+    100152: woman:LeftHandIndex2
+    100154: woman:LeftHandIndex3
+    100156: woman:LeftHandIndex4
+    100158: woman:LeftHandMiddle1
+    100160: woman:LeftHandMiddle2
+    100162: woman:LeftHandMiddle3
+    100164: woman:LeftHandMiddle4
+    100166: woman:LeftHandPinky1
+    100168: woman:LeftHandPinky2
+    100170: woman:LeftHandPinky3
+    100172: woman:LeftHandPinky4
+    100174: woman:LeftHandRing1
+    100176: woman:LeftHandRing2
+    100178: woman:LeftHandRing3
+    100180: woman:LeftHandRing4
+    100182: woman:LeftHandThumb1
+    100184: woman:LeftHandThumb2
+    100186: woman:LeftHandThumb3
+    100188: woman:LeftHandThumb4
+    100190: woman:LeftLeg
+    100192: woman:LeftShoulder
+    100194: woman:LeftToe_End
+    100196: woman:LeftToeBase
+    100198: woman:LeftUpLeg
+    100200: woman:Neck
+    100202: woman:polySurface41
+    100204: woman:RightArm
+    100206: woman:RightFoot
+    100208: woman:RightForeArm
+    100210: woman:RightHand
+    100212: woman:RightHandIndex1
+    100214: woman:RightHandIndex2
+    100216: woman:RightHandIndex3
+    100218: woman:RightHandIndex4
+    100220: woman:RightHandMiddle1
+    100222: woman:RightHandMiddle2
+    100224: woman:RightHandMiddle3
+    100226: woman:RightHandMiddle4
+    100228: woman:RightHandPinky1
+    100230: woman:RightHandPinky2
+    100232: woman:RightHandPinky3
+    100234: woman:RightHandPinky4
+    100236: woman:RightHandRing1
+    100238: woman:RightHandRing2
+    100240: woman:RightHandRing3
+    100242: woman:RightHandRing4
+    100244: woman:RightHandThumb1
+    100246: woman:RightHandThumb2
+    100248: woman:RightHandThumb3
+    100250: woman:RightHandThumb4
+    100252: woman:RightLeg
+    100254: woman:RightShoulder
+    100256: woman:RightToe_End
+    100258: woman:RightToeBase
+    100260: woman:RightUpLeg
+    100262: woman:Spine
+    100264: woman:Spine1
+    100266: woman:Spine2
+    100268: woman:tweakSet10
+    100270: woman:tweakSet11
+    100272: woman:tweakSet12
+    100274: woman:tweakSet13
+    100276: woman:tweakSet14
+    100278: woman:tweakSet15
+    100280: woman:tweakSet16
+    100282: woman:tweakSet2
+    100284: woman:tweakSet3
+    100286: woman:tweakSet4
+    100288: woman:tweakSet5
+    100290: woman:tweakSet6
+    100292: woman:tweakSet7
+    100294: woman:tweakSet8
+    100296: woman:tweakSet9
     400000: //RootNode
     400002: default
     400004: mixamorig:Head
@@ -139,14 +220,142 @@ ModelImporter:
     400130: mixamorig:Spine1
     400132: mixamorig:Spine2
     400134: polySurface22
+    400136: woman:Head
+    400138: woman:HeadTop_End
+    400140: woman:Hips
+    400142: woman:LeftArm
+    400144: woman:LeftFoot
+    400146: woman:LeftForeArm
+    400148: woman:LeftHand
+    400150: woman:LeftHandIndex1
+    400152: woman:LeftHandIndex2
+    400154: woman:LeftHandIndex3
+    400156: woman:LeftHandIndex4
+    400158: woman:LeftHandMiddle1
+    400160: woman:LeftHandMiddle2
+    400162: woman:LeftHandMiddle3
+    400164: woman:LeftHandMiddle4
+    400166: woman:LeftHandPinky1
+    400168: woman:LeftHandPinky2
+    400170: woman:LeftHandPinky3
+    400172: woman:LeftHandPinky4
+    400174: woman:LeftHandRing1
+    400176: woman:LeftHandRing2
+    400178: woman:LeftHandRing3
+    400180: woman:LeftHandRing4
+    400182: woman:LeftHandThumb1
+    400184: woman:LeftHandThumb2
+    400186: woman:LeftHandThumb3
+    400188: woman:LeftHandThumb4
+    400190: woman:LeftLeg
+    400192: woman:LeftShoulder
+    400194: woman:LeftToe_End
+    400196: woman:LeftToeBase
+    400198: woman:LeftUpLeg
+    400200: woman:Neck
+    400202: woman:polySurface41
+    400204: woman:RightArm
+    400206: woman:RightFoot
+    400208: woman:RightForeArm
+    400210: woman:RightHand
+    400212: woman:RightHandIndex1
+    400214: woman:RightHandIndex2
+    400216: woman:RightHandIndex3
+    400218: woman:RightHandIndex4
+    400220: woman:RightHandMiddle1
+    400222: woman:RightHandMiddle2
+    400224: woman:RightHandMiddle3
+    400226: woman:RightHandMiddle4
+    400228: woman:RightHandPinky1
+    400230: woman:RightHandPinky2
+    400232: woman:RightHandPinky3
+    400234: woman:RightHandPinky4
+    400236: woman:RightHandRing1
+    400238: woman:RightHandRing2
+    400240: woman:RightHandRing3
+    400242: woman:RightHandRing4
+    400244: woman:RightHandThumb1
+    400246: woman:RightHandThumb2
+    400248: woman:RightHandThumb3
+    400250: woman:RightHandThumb4
+    400252: woman:RightLeg
+    400254: woman:RightShoulder
+    400256: woman:RightToe_End
+    400258: woman:RightToeBase
+    400260: woman:RightUpLeg
+    400262: woman:Spine
+    400264: woman:Spine1
+    400266: woman:Spine2
+    400268: woman:tweakSet10
+    400270: woman:tweakSet11
+    400272: woman:tweakSet12
+    400274: woman:tweakSet13
+    400276: woman:tweakSet14
+    400278: woman:tweakSet15
+    400280: woman:tweakSet16
+    400282: woman:tweakSet2
+    400284: woman:tweakSet3
+    400286: woman:tweakSet4
+    400288: woman:tweakSet5
+    400290: woman:tweakSet6
+    400292: woman:tweakSet7
+    400294: woman:tweakSet8
+    400296: woman:tweakSet9
     2100000: No Name
     2300000: default
+    2300002: woman:tweakSet10
+    2300004: woman:tweakSet11
+    2300006: woman:tweakSet12
+    2300008: woman:tweakSet13
+    2300010: woman:tweakSet14
+    2300012: woman:tweakSet15
+    2300014: woman:tweakSet16
+    2300016: woman:tweakSet2
+    2300018: woman:tweakSet3
+    2300020: woman:tweakSet4
+    2300022: woman:tweakSet5
+    2300024: woman:tweakSet6
+    2300026: woman:tweakSet7
+    2300028: woman:tweakSet8
+    2300030: woman:tweakSet9
     3300000: default
+    3300002: woman:tweakSet10
+    3300004: woman:tweakSet11
+    3300006: woman:tweakSet12
+    3300008: woman:tweakSet13
+    3300010: woman:tweakSet14
+    3300012: woman:tweakSet15
+    3300014: woman:tweakSet16
+    3300016: woman:tweakSet2
+    3300018: woman:tweakSet3
+    3300020: woman:tweakSet4
+    3300022: woman:tweakSet5
+    3300024: woman:tweakSet6
+    3300026: woman:tweakSet7
+    3300028: woman:tweakSet8
+    3300030: woman:tweakSet9
     4300000: default
     4300002: polySurface22
+    4300004: woman:tweakSet8
+    4300006: woman:tweakSet16
+    4300008: woman:tweakSet13
+    4300010: woman:tweakSet12
+    4300012: woman:tweakSet7
+    4300014: woman:tweakSet4
+    4300016: woman:tweakSet5
+    4300018: woman:tweakSet6
+    4300020: woman:tweakSet14
+    4300022: woman:tweakSet15
+    4300024: woman:tweakSet3
+    4300026: woman:tweakSet2
+    4300028: woman:tweakSet9
+    4300030: woman:tweakSet10
+    4300032: woman:tweakSet11
+    4300034: woman:polySurface41
     7400000: mixamo.com
     9500000: //RootNode
     13700000: polySurface22
+    13700002: woman:polySurface41
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -200,7 +409,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.015
+    previousCalculatedGlobalScale: 0.0139999995
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
