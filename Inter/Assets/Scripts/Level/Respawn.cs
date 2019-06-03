@@ -8,8 +8,6 @@ public class Respawn : MonoBehaviour
 
     public GameObject player;
 
-    public TesteCharDrunk spawn;
-
     public TesteCharDrunk dimi;
 
     [Range(0,4)]
@@ -27,25 +25,11 @@ public class Respawn : MonoBehaviour
 
     public GameObject checkpoint05;
 
-    //public GameObject fadeOut;
-
-    //public GameObject npc01;
-
-    //public GameObject npc02;
-
-    //public GameObject npc03;
-
-    //public GameObject npc04;
-
     public NPCAtivos check;
 
     public Calça save;
     
 	private CharacterController playerController;
-
-    //public GameObject fala03;
-
-    //public GameObject fala04;
 
     public SaveControl autoSave; 
 
@@ -57,13 +41,13 @@ public class Respawn : MonoBehaviour
 
     public bool acabouRespawn;
 
-    //public GameObject fala01;
-    //public GameObject fala02;
-    //public GameObject fala03;
     public GameObject fala04;
     public GameObject fala05;
     public GameObject fala06;
     public GameObject fala07;
+
+    public bool ativaSave;
+
 
 
     // Start is called before the first frame update
@@ -76,10 +60,16 @@ public class Respawn : MonoBehaviour
         fala05 = GameObject.FindGameObjectWithTag("Fala05");
         fala06 = GameObject.FindGameObjectWithTag("Fala06");
         fala07 = GameObject.FindGameObjectWithTag("Fala07");
-        //Antes do guarda do correrdor pela 1° vez
-        respawnPos = checkpoint01.transform.position;
+
 		playerController = player.GetComponent<CharacterController>();
         saveMemory = PlayerPrefs.GetInt("VoltouDoGameOver");
+
+        if (saveMemory >= 1)
+        {
+            fase = PlayerPrefs.GetInt("Level");
+            StartCoroutine(SpawnSave());
+            Debug.Log(fase);
+        }
         
     }
 
@@ -87,113 +77,144 @@ public class Respawn : MonoBehaviour
     void Update()
     {
 
-        /*if (saveMemory >= 1)
+        if (ativaSave)
         {
-            SpawnSave();
-        }*/
+            autoSave.salvar = true;
+        }
 
-        if (fase == 1)
+
+        if(fase == 0)
         {
-			//Antes da Sra Dimitri
-            //autoSave.salvar = true;
-            respawnPos = checkpoint02.transform.position;
-            check.disable = 1;
-            //dimi.carregando = false;
+            respawnPos = checkpoint01.transform.position;
+
+            check.disable = 0;
+
             fala04.SetActive(true);
             fala05.SetActive(true);
             fala06.SetActive(true);
             fala07.SetActive(true);
-            //save.saveGame = false;            
+
+            save.saveGame = false;
+        }
+
+        if (fase == 1)
+        {
+			//Antes da Sra Dimitri
+            
+            respawnPos = checkpoint02.transform.position;
+
+
+            check.disable = 1;
+
+            fala04.SetActive(true);
+            fala05.SetActive(true);
+            fala06.SetActive(true);
+            fala07.SetActive(true);
+
+            save.saveGame = true;   
+   
         }
 
         if (fase == 2)
         {
             //No bar, Antes do guarda do corredor
-            //autoSave.salvar = true;
+            
             respawnPos = checkpoint03.transform.position;
+
             check.disable = 2;
-            //dimi.carregando = true;
+
             fala05.SetActive(true);
             fala06.SetActive(true);
             fala07.SetActive(true);
-            //save.saveGame = true;
-            //autoSave.salvar = false;
+
+            save.saveGame = true;
             
         }
 
         if (fase == 3)
         {
             //Antes da bomba
-            //autoSave.salvar = true;
+            
             respawnPos = checkpoint04.transform.position;
+
             check.disable = 3;
-            //dimi.carregando = true;
+
             fala05.SetActive(true);
             fala06.SetActive(true);
             fala07.SetActive(true);
-            //save.saveGame = true;
-            //autoSave.salvar = false;
+
+            save.saveGame = true;
+
             
         }
 
         if (fase == 4)
         {
             //Antes do Salão
-            //autoSave.salvar = true;
+            
             respawnPos = checkpoint05.transform.position;
+
+
             check.disable = 4;
-            //dimi.carregando = true;
+
             fala06.SetActive(true);
             fala07.SetActive(true);
-            //save.saveGame = true;
-            //fala03.SetActive(false);
-            //autoSave.salvar = false;    
+
+            save.saveGame = true;
+   
             
         }
 
-        /*if (ativaRespawn == true)
-        {
-            ChamouRespawn();
-		
-        }
-
-        if (spawnSave.spawn)
-        {
-            SpawnSave();
-            spawnSave.spawn = false;
-        }
-
-        if (acabouRespawn == true)
-        {
-            AcabouFadeOut();
-        } */       
+       
     }
 
-    /*void RespawnOn (){
-        ativaRespawn = true;
-    }
 
-    void ChamouRespawn(){
-		playerController.enabled = false;
-        player.transform.position = respawnPos;
-        spawn.deuSpawn = true;
-    }
 
-    void AcabouFadeOut()
-    {
-        //fadeOut.SetActive(false);
-        playerController.enabled = true;
-        ativaRespawn = false;
-    }
-
-    void SpawnSave(){
-        fase = PlayerPrefs.GetInt("Level");
+    IEnumerator SpawnSave(){
+        
         playerController.enabled = false;
-        player.transform.position = respawnPos;
-        playerController.enabled = true;
-        if (fase >= 2)
+
+        if (fase == 1)
         {
+            respawnPos = checkpoint02.transform.position;
+
+            player.transform.position = respawnPos;
+        }
+
+        if (fase == 2)
+        {
+
+            respawnPos = checkpoint03.transform.position;
+
+            player.transform.position = respawnPos;
+
             dimi.carregando = true;
         }
-    }*/
+
+        if (fase == 3)
+        {
+
+            respawnPos = checkpoint04.transform.position;
+
+            player.transform.position = respawnPos;
+            
+            dimi.carregando = true;
+        }
+
+        if (fase == 4)
+        {
+
+            respawnPos = checkpoint05.transform.position;
+
+            player.transform.position = respawnPos;
+            
+            dimi.carregando = true;
+        }
+
+        yield return new WaitForSeconds(2.0f);
+
+        spawnSave.spawn = false;
+
+        playerController.enabled = true;
+    }
 }

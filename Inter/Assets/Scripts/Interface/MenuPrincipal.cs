@@ -70,7 +70,7 @@ public class MenuPrincipal : MonoBehaviour
         questLog.SetActive(false);
 		PlayerScript = Player.GetComponent<TesteCharDrunk>();
 
-		//saveGameOver = PlayerPrefs.GetInt("VoltouDoGameOver");
+		saveGameOver = PlayerPrefs.GetInt("VoltouDoGameOver");
 
 
         if (menuInicial)
@@ -94,12 +94,11 @@ public class MenuPrincipal : MonoBehaviour
 		MasterVolume = brilhoEAudioObject.GetComponent<MasterVolume>();
 		TesteCharDrunk = sensibilObject.GetComponent<TesteCharDrunk>();
 
-		/*if (saveGameOver >= 1)
+		if (saveGameOver >= 1)
 		{
-			menuInicial = false;
-			LoadGame();
+			LoadDoGameOver();
 
-		}*/
+		}
         
 
 
@@ -170,7 +169,7 @@ public class MenuPrincipal : MonoBehaviour
 
     }
 
-	/*public void LoadDoGameOver(){
+	public void LoadDoGameOver(){
 
 		PlayerScript.enabled = true;
 		MenuCam.SetActive(false);
@@ -185,8 +184,8 @@ public class MenuPrincipal : MonoBehaviour
 		MainMenuScreen.SetActive(false);
 
 		menuSound.Stop();
-		spawn = true;
-	}*/
+		//spawn = true;
+	}
 
 	public void LoadGame()
     {
