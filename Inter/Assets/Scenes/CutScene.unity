@@ -340,5 +340,11 @@ PrefabInstance:
       propertyPath: m_TargetCamera
       value: 
       objectReference: {fileID: 1417944296}
+    - target: {fileID: 6958450943993583731, guid: ac6899f2b3776ce43a94f379bc0557c6,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: bd6d0ec32a565c04da706b3f7739bd48,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac6899f2b3776ce43a94f379bc0557c6, type: 3}

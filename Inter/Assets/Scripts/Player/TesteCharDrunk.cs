@@ -148,11 +148,6 @@ public class TesteCharDrunk : MonoBehaviour
             }
 
 
-            if (Input.GetKey(KeyCode.Z) && carregando == false)
-            {
-                carregando = true;
-            }
-
             if (time >= changeTime)
             {
 
