@@ -39,50 +39,30 @@ public class SaveControl : MonoBehaviour
 
         if (salvar)
         {
-            //Debug.Log("AutoSave");
-           // SaveGame(saveData,saveLevel);
-           SaveGame();
-            Debug.Log("AutoSave02");
-            salvou = true;
+            
+            StartCoroutine(SaveGame());
+            Debug.Log(salvar);
+         
         }
 
-        if (load)
-        {
-            //saveData = LoadGame(saveLevel);
-            load = false;
-        }
-
-        if (salvou = true)
-        {
-            salvar = false;
-            salvou = false;
-        }
         
 
     }
 
-    /*static void SaveGame (SaveData data, int charSlot){
-        PlayerPrefs.SetInt("level_CharacterSlot" + charSlot, data.savePoint);
-        PlayerPrefs.Save();
-    }
+    
+    IEnumerator SaveGame(){
 
-    static SaveData LoadGame( int charSlot){
-        SaveData loadedGame = new SaveData();
-        loadedGame.savePoint = PlayerPrefs.GetInt("level_CharacterSlot" + charSlot);
-
-        return loadedGame;
-    }*/
-
-    public void SaveGame(){
         PlayerPrefs.SetInt("Level",saveLevel);
-        saveData.savePoint = saveLevel;
         PlayerPrefs.Save();
-        //Debug.Log("AutoSave"); 
+        Debug.Log("AutoSave"); 
         myVar = PlayerPrefs.GetInt("Level");
         Debug.Log(myVar + "numeroGravado");
+
+        yield return new WaitForSeconds(1.0f);
+
+        level.ativaSave = false;
+        salvar = false;
+
     }
 
-    public void Carregar(){
-        load = true;
-    }
 }

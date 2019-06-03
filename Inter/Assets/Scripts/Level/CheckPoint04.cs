@@ -24,6 +24,7 @@ public class CheckPoint04 : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             check.fase = 3;
+            check.ativaSave = true;
         }
     }
 }

@@ -12,6 +12,8 @@ public class GameOver : MonoBehaviour
 
     public GameObject Player;
 
+    public Respawn level;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,8 @@ public class GameOver : MonoBehaviour
     IEnumerator FeedBack(){
 
     PlayerScript.enabled = false;
+    PlayerPrefs.SetInt("Level",level.fase);
+    PlayerPrefs.SetInt("VoltouDoGameOver", level.fase);
 
     yield return new WaitForSeconds(3.0f);  
      SceneManager.LoadScene("GameOverScene");
