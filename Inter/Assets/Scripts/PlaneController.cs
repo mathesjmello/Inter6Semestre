@@ -55,7 +55,7 @@ public class PlaneController : MonoBehaviour
 		movement /= 2;
 
 
-		if (Input.GetKey(KeyCode.Space))
+		if (Input.GetKey(KeyCode.Space) && Time.timeScale != 0)
 		{
 			tiros.SetActive(true);
 			tiros.transform.localScale = new Vector3(tiros.transform.localScale.x * - 1, tiros.transform.localScale.y, tiros.transform.localScale.z);
