@@ -48,6 +48,8 @@ public class Respawn : MonoBehaviour
 
     public bool ativaSave;
 
+    public LargaDimi off;
+
 
 
     // Start is called before the first frame update
@@ -182,6 +184,7 @@ public class Respawn : MonoBehaviour
             save.saveGame = true; 
 
             check.disable = 1;
+            Debug.Log("fase01");
         }
 
         if (fase == 2)
@@ -193,8 +196,10 @@ public class Respawn : MonoBehaviour
 
             dimi.carregando = true;
             save.saveGame = true; 
+            off.comDimi = false;
 
             check.disable = 2;
+            Debug.Log("fase02");
         }
 
         if (fase == 3)
@@ -205,9 +210,12 @@ public class Respawn : MonoBehaviour
             player.transform.position = respawnPos;
             
             dimi.carregando = true;
-            save.saveGame = true; 
+            save.saveGame = true;
+
+            off.comDimi = false; 
 
             check.disable = 3;
+            Debug.Log("fase03");
         }
 
         if (fase == 4)
@@ -220,7 +228,12 @@ public class Respawn : MonoBehaviour
             dimi.carregando = true;
             save.saveGame = true; 
 
+            off.comDimi = false;
+
             check.disable = 4;
+            check.disable = 4;
+            Debug.Log("fase04");
+
         }
 
         yield return new WaitForSeconds(2.0f);

@@ -42,6 +42,7 @@ public class LargaDimi : MonoBehaviour
         else
         {
             somDimitri.SetActive(false);
+            dimitri.SetActive(false);
         }
 
         if (comCalca)
@@ -62,11 +63,15 @@ public class LargaDimi : MonoBehaviour
         if(other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == false && player.GetComponent<TesteCharDrunk>().carregando == true)
         {
             StartCoroutine(LargaDimitri());
+            Debug.Log("AreaLarga");
+            
         }
 
-        else if (other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == true  && player.GetComponent<TesteCharDrunk>().carregando == false && comCalca == true)
+         if (other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == true  && player.GetComponent<TesteCharDrunk>().carregando == false && comCalca == true)
         {
             StartCoroutine(LevantaDimitri());
+            Debug.Log("AreaLeveanta");
+            
         }
 
     }
@@ -74,18 +79,23 @@ public class LargaDimi : MonoBehaviour
     IEnumerator LargaDimitri()
     {
             player.GetComponent<TesteCharDrunk>().carregando = false;
-            dimitri.SetActive(true);
-            yield return new WaitForSeconds(3.0f);
+            
+            Debug.Log("Larga1");
+            yield return new WaitForSeconds(1.0f);
             comDimi = true;
+            dimitri.SetActive(true);
+            Debug.Log("Larga2");
+            
     }
 
     IEnumerator LevantaDimitri(){
         dimiAnim.SetTrigger("Levanta");
         sergueiAnim.SetTrigger("LevantaDimi");
-         yield return new WaitForSeconds(3.0f);
+         yield return new WaitForSeconds(2.0f);
         player.GetComponent<TesteCharDrunk>().carregando = true;
          comDimi = false; 
          dimitri.SetActive(false);
+         Debug.Log("Levanta");
     }
 
         void RandomSound(){
@@ -93,4 +103,5 @@ public class LargaDimi : MonoBehaviour
          randomSound.Play ();
          CallSound ();
     }
+
 }
