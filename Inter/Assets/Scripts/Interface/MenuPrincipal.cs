@@ -97,6 +97,7 @@ public class MenuPrincipal : MonoBehaviour
 		if (saveGameOver >= 1)
 		{
 			LoadDoGameOver();
+			Debug.Log("LoadDoGameOver");
 
 		}
         
@@ -162,6 +163,7 @@ public class MenuPrincipal : MonoBehaviour
 
         menuSound.Stop();
         novo.fase = 0;
+		Debug.Log("Resetou");
 
         PlayerPrefs.SetInt("Level", 0);
         //}

@@ -91,12 +91,13 @@ public class Respawn : MonoBehaviour
 
             check.disable = 0;
 
-            fala04.SetActive(true);
+            /*fala04.SetActive(true);
             fala05.SetActive(true);
             fala06.SetActive(true);
-            fala07.SetActive(true);
+            fala07.SetActive(true);*/
 
             save.saveGame = false;
+            ativaSave = true;
         }
 
         if (fase == 1)
@@ -108,12 +109,13 @@ public class Respawn : MonoBehaviour
 
             check.disable = 1;
 
-            fala04.SetActive(true);
+            /*fala04.SetActive(true);
             fala05.SetActive(true);
             fala06.SetActive(true);
-            fala07.SetActive(true);
+            fala07.SetActive(true);*/
 
-            save.saveGame = true;   
+            save.saveGame = true;  
+            ativaSave = true; 
    
         }
 
@@ -125,11 +127,12 @@ public class Respawn : MonoBehaviour
 
             check.disable = 2;
 
-            fala05.SetActive(true);
+            /*fala05.SetActive(true);
             fala06.SetActive(true);
-            fala07.SetActive(true);
+            fala07.SetActive(true);*/
 
             save.saveGame = true;
+            ativaSave = true;
             
         }
 
@@ -141,11 +144,12 @@ public class Respawn : MonoBehaviour
 
             check.disable = 3;
 
-            fala05.SetActive(true);
+            /*fala05.SetActive(true);
             fala06.SetActive(true);
-            fala07.SetActive(true);
+            fala07.SetActive(true);*/
 
             save.saveGame = true;
+            ativaSave = true;
 
             
         }
@@ -159,10 +163,11 @@ public class Respawn : MonoBehaviour
 
             check.disable = 4;
 
-            fala06.SetActive(true);
-            fala07.SetActive(true);
+            /*fala06.SetActive(true);
+            fala07.SetActive(true);*/
 
             save.saveGame = true;
+            ativaSave = true;
    
             
         }

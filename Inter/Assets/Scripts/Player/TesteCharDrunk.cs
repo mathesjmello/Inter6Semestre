@@ -130,10 +130,10 @@ public class TesteCharDrunk : MonoBehaviour
             }
 
 
-            /*if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
+            if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
             {
                 totem.transform.parent = null;
-            }*/
+            }
 
 
             if (carregando == true)
