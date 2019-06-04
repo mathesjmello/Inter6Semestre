@@ -57,7 +57,9 @@ public class FieldOfView : MonoBehaviour {
 
     public GameOver ativa;
 
-    public GameObject feedImagem;
+    public GameObject feedImagemSerguei;
+
+    public GameObject feedImagemDimi;
 
 
     private void Start()
@@ -322,7 +324,7 @@ public class FieldOfView : MonoBehaviour {
 
         //fadeOutAnim.SetTrigger("FadeOut");
         //gameOver.SetActive(true);
-        feedImagem.SetActive(true);
+        feedImagemSerguei.SetActive(true);
         ativouDetecta = false;
         ativa.detectado = true;
 
@@ -337,7 +339,7 @@ public class FieldOfView : MonoBehaviour {
         //fadeOutAnim.SetTrigger("FadeOut");
         ativouDetecta = false;
 
-        feedImagem.SetActive(true);
+        feedImagemDimi.SetActive(true);
 
         ativa.detectado = true;
     }

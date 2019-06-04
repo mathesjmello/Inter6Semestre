@@ -179,6 +179,9 @@ public class Respawn : MonoBehaviour
             respawnPos = checkpoint02.transform.position;
 
             player.transform.position = respawnPos;
+            save.saveGame = true; 
+
+            check.disable = 1;
         }
 
         if (fase == 2)
@@ -189,6 +192,9 @@ public class Respawn : MonoBehaviour
             player.transform.position = respawnPos;
 
             dimi.carregando = true;
+            save.saveGame = true; 
+
+            check.disable = 2;
         }
 
         if (fase == 3)
@@ -199,6 +205,9 @@ public class Respawn : MonoBehaviour
             player.transform.position = respawnPos;
             
             dimi.carregando = true;
+            save.saveGame = true; 
+
+            check.disable = 3;
         }
 
         if (fase == 4)
@@ -209,6 +218,9 @@ public class Respawn : MonoBehaviour
             player.transform.position = respawnPos;
             
             dimi.carregando = true;
+            save.saveGame = true; 
+
+            check.disable = 4;
         }
 
         yield return new WaitForSeconds(2.0f);
