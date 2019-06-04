@@ -109,6 +109,7 @@ public class MenuPrincipal : MonoBehaviour
 	{
 		PostProcessProfile.TryGetSettings(out colorGrading);
 		colorGrading.postExposure.value = brilho;
+		print(colorGrading.postExposure.value);
 
 //		MasterVolume.masterVolume = volume;
 
