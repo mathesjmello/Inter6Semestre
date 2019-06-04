@@ -10,6 +10,8 @@ public class StartGame2D : MonoBehaviour
 
 	public AudioSource jogoSom;
 
+	public GameObject oldCam;
+
 	
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class StartGame2D : MonoBehaviour
 		if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
 		{
 			player2D.freeze = false;
+			oldCam.SetActive(false);
 			player3D.SetActive(false);
 			inimigos.SetActive(true);
 
