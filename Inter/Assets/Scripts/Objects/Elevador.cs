@@ -23,7 +23,7 @@ public class Elevador : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other){
-        if(other.CompareTag("Player") && acabou.fase >= 4){
+        if(other.CompareTag("Dimitri") && acabou.fase >= 4){
             SceneManager.LoadScene("Fase02");
             bell.Play(0);
         }

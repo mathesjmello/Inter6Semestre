@@ -21,6 +21,10 @@ public class PlaneEnemies : MonoBehaviour
 
 	public AudioSource planeDestroySound;
 
+	public AudioSource feedFim;
+
+	public AudioSource feedFim2;
+
     void Start()
 	{
         falaFinal.SetActive(false);
@@ -42,7 +46,7 @@ public class PlaneEnemies : MonoBehaviour
     IEnumerator fimdejogo(float tempo)
     {
 
-
+		
         yield return new WaitForSeconds(tempo);
         if (falaFinal != null)
         {
@@ -69,6 +73,8 @@ public class PlaneEnemies : MonoBehaviour
 				freeze = true;
                 falaFinal.SetActive(true);
 				StartCoroutine(fimdejogo(4));
+				feedFim.Play(0);
+				feedFim2.Play(0);
 			}
 		}
 		
