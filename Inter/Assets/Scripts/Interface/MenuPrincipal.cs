@@ -165,7 +165,7 @@ public class MenuPrincipal : MonoBehaviour
         novo.fase = 0;
 		Debug.Log("Resetou");
 
-        PlayerPrefs.SetInt("Level", 0);
+        //PlayerPrefs.SetInt("Level", 0);
         //}
 
 
