@@ -25,6 +25,8 @@ public class Elevador : MonoBehaviour
     void OnTriggerEnter(Collider other){
         if(other.CompareTag("Dimitri") && acabou.fase >= 4){
             SceneManager.LoadScene("Fase02");
+            PlayerPrefs.SetInt("Level",0);
+            PlayerPrefs.SetInt("VoltouDoGameOver",0);
             bell.Play(0);
         }
     }
