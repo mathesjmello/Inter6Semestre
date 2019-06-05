@@ -11,7 +11,12 @@ ModelImporter:
     2300000: woman:polySurface41_group
     3300000: woman:polySurface41_group
     4300000: woman:polySurface41_group
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: woman_polySurface41_groupMat
+    second: {fileID: 2100000, guid: 1b050bee69f33bc40b77593c471ce960, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

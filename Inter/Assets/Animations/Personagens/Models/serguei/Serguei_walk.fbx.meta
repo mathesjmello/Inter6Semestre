@@ -100,6 +100,8 @@ ModelImporter:
     100188: new_soldado:Spline3
     100190: new_soldado:top_cabeca
     100192: //RootNode
+    100194: new_soldado1:Head1
+    100196: new_soldado1:Sergei
     400000: new_soldado:base_cabeca
     400002: new_soldado:boca
     400004: new_soldado:ctrl_esq_clavic1
@@ -197,13 +199,23 @@ ModelImporter:
     400188: new_soldado:Spline3
     400190: new_soldado:top_cabeca
     400192: //RootNode
+    400194: new_soldado1:Head1
+    400196: new_soldado1:Sergei
     2100000: new_soldado_phongE1
+    2100002: new_soldado1_phongE1
     4300000: new_soldado:Head1
+    4300002: new_soldado1:Head1
     7400000: Walk_Seguei
     9500000: //RootNode
     13700000: new_soldado:Head1
+    13700002: new_soldado1:Head1
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: new_soldado1_phongE1
+    second: {fileID: 2100000, guid: 7be717089655d794b92c57600d0d483d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
