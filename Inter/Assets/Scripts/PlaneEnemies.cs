@@ -32,6 +32,7 @@ public class PlaneEnemies : MonoBehaviour
 		explodeIndex = Animator.StringToHash("Explode");
 		direction = focalPoint.transform.position - transform.position;  
 		direction.Normalize();
+		/*if (lastPlane) */ fimdejogo(2);
 	}
 
 	void Update()
@@ -40,7 +41,7 @@ public class PlaneEnemies : MonoBehaviour
 		float deltaSpeed = speed * Time.deltaTime;
 		transform.Translate(direction.x * deltaSpeed, direction.y * deltaSpeed, direction.z * deltaSpeed, Space.World);
 
-        if (lastPlane) fimdejogo(20);
+        
 	}
 
     IEnumerator fimdejogo(float tempo)
@@ -48,10 +49,9 @@ public class PlaneEnemies : MonoBehaviour
 
 		
         yield return new WaitForSeconds(tempo);
-        if (falaFinal != null)
-        {
+       
             falaFinal.SetActive(true);
-        }
+        
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene("Final");
 
