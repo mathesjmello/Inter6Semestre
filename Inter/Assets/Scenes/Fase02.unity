@@ -323,13 +323,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13183184}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.7400017, y: 9.889999}
@@ -368,8 +368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 13183191}
   feedFim: {fileID: 1097336691}
@@ -576,13 +576,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15917248}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -13.5, y: 9.5}
@@ -621,8 +621,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 15917255}
   feedFim: {fileID: 1097336691}
@@ -2475,13 +2475,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122568712}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0.25}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -28.74, y: 3.43}
@@ -2616,8 +2616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 1
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 122568714}
   feedFim: {fileID: 1097336691}
@@ -2734,13 +2734,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130694630}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 5, y: 14.1}
@@ -2779,8 +2779,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 130694637}
   feedFim: {fileID: 1097336691}
@@ -4501,13 +4501,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238267843}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -8.3, y: 15.8}
@@ -4546,8 +4546,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 238267850}
   feedFim: {fileID: 1097336691}
@@ -5507,13 +5507,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259485227}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -4.33, y: 7.53}
@@ -5552,8 +5552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 259485234}
   feedFim: {fileID: 1097336691}
@@ -7218,13 +7218,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382473273}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.9000015, y: 20.2}
@@ -7263,8 +7263,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 382473280}
   feedFim: {fileID: 1097336691}
@@ -12054,12 +12054,12 @@ PrefabInstance:
     - target: {fileID: 8413909707473288630, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -81.00061
+      value: -81.00073
       objectReference: {fileID: 0}
     - target: {fileID: 8413909707473288630, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 125.999985
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 8413909707473288630, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
@@ -12094,12 +12094,12 @@ PrefabInstance:
     - target: {fileID: 8413909707269180408, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -81.00012
+      value: -81.000244
       objectReference: {fileID: 0}
     - target: {fileID: 8413909707269180408, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -57.000183
+      value: -57.00006
       objectReference: {fileID: 0}
     - target: {fileID: 8413909707269180408, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
@@ -12164,12 +12164,12 @@ PrefabInstance:
     - target: {fileID: 8413909706381689424, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -80.50012
+      value: -80.500244
       objectReference: {fileID: 0}
     - target: {fileID: 8413909706381689424, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 37.99994
+      value: 37.999878
       objectReference: {fileID: 0}
     - target: {fileID: 8413909706381689424, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
@@ -12214,12 +12214,12 @@ PrefabInstance:
     - target: {fileID: 8413909708093745360, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -103.00037
+      value: -103.000244
       objectReference: {fileID: 0}
     - target: {fileID: 8413909708093745360, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -141.1701
+      value: -141.17004
       objectReference: {fileID: 0}
     - target: {fileID: 8413909708093745360, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
@@ -15549,13 +15549,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699851075}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 25.57, y: -0.40000153}
@@ -15690,8 +15690,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 1
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 699851077}
   feedFim: {fileID: 1097336691}
@@ -16161,13 +16161,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733328655}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 11, y: 10.8}
@@ -16206,8 +16206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 733328662}
   feedFim: {fileID: 1097336691}
@@ -17674,13 +17674,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799422452}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.000000059604645}
   m_LocalScale: {x: 0.04573, y: 0.04573, z: 0.04573}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.61, y: 2.65}
@@ -17719,8 +17719,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 799422459}
   feedFim: {fileID: 1097336691}
@@ -23155,10 +23155,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 100024, guid: bce731f387eee714092944f6c7f05873, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 100164, guid: bce731f387eee714092944f6c7f05873, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -23211,6 +23207,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 27f4d44aaf158bd48aca606dc3772ef2, type: 2}
+    - target: {fileID: 100024, guid: bce731f387eee714092944f6c7f05873, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: bce731f387eee714092944f6c7f05873, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -25290,13 +25290,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224457656}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -20.099998, y: -0.40000153}
@@ -25335,8 +25335,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 1
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 1224457663}
   feedFim: {fileID: 1097336691}
@@ -25594,8 +25594,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231737433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0837, z: 0}
-  m_LocalScale: {x: 9.93242, y: 12.054079, z: 9.93242}
+  m_LocalPosition: {x: 0, y: 0.0653, z: -0.0001}
+  m_LocalScale: {x: 9.891299, y: 11.810405, z: 9.891299}
   m_Children: []
   m_Father: {fileID: 2071266564}
   m_RootOrder: 3
@@ -25638,7 +25638,7 @@ SpriteMask:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 4cf2a1db859950742941b15e5ea1ff2f, type: 3}
-  m_MaskAlphaCutoff: 0
+  m_MaskAlphaCutoff: 0.424
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 0
@@ -27335,13 +27335,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341586763}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.000000059604645}
   m_LocalScale: {x: 0.04573, y: 0.04573, z: 0.04573}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.84, y: 3.92}
@@ -27380,8 +27380,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 1341586770}
   feedFim: {fileID: 1097336691}
@@ -30684,13 +30684,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471444739}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0.0000066161156}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 4.53, y: 5.32}
@@ -30729,8 +30729,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 1471444746}
   feedFim: {fileID: 1097336691}
@@ -34468,13 +34468,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679304279}
-  m_LocalRotation: {x: -0.0000000018626445, y: -0, z: 0.0000000018626445, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.04573218, y: 0.045732148, z: 0.04573218}
   m_Children: []
   m_Father: {fileID: 903421080}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 14.22, y: 2.13}
@@ -34513,8 +34513,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 1679304286}
   feedFim: {fileID: 1097336691}
@@ -43325,7 +43325,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424324585677989983}
-  m_LocalRotation: {x: -0.1338397, y: -0.095972896, z: -0.013023713, w: 0.98625886}
+  m_LocalRotation: {x: -0.13383968, y: -0.095972896, z: -0.013023712, w: 0.98625886}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -43793,7 +43793,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424324587216709475}
-  m_LocalRotation: {x: 0.12868683, y: -0.09621775, z: 0.012545938, w: 0.98692685}
+  m_LocalRotation: {x: 0.12868674, y: -0.09621775, z: 0.01254593, w: 0.98692685}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

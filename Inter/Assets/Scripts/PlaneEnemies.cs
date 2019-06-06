@@ -9,13 +9,14 @@ public class PlaneEnemies : MonoBehaviour
 	public Transform focalPoint;
 	private Vector3 direction;
 	public float speed = .75f;
+    public PlaneController planeController;
 
 	private Animator anim;
 	private int explodeIndex;
 
 	public bool lastPlane;
 
-	public bool freeze;
+	public static bool freezer;
 
     public GameObject falaFinal;
 
@@ -32,27 +33,30 @@ public class PlaneEnemies : MonoBehaviour
 		explodeIndex = Animator.StringToHash("Explode");
 		direction = focalPoint.transform.position - transform.position;  
 		direction.Normalize();
-	}
+        if (lastPlane) 
+        StartCoroutine(fimdejogo(60));
+    }
 
 	void Update()
 	{
-		if (freeze) return;
+		if (freezer) return;
 		float deltaSpeed = speed * Time.deltaTime;
 		transform.Translate(direction.x * deltaSpeed, direction.y * deltaSpeed, direction.z * deltaSpeed, Space.World);
 
-        if (lastPlane) fimdejogo(20);
+        
 	}
 
     IEnumerator fimdejogo(float tempo)
     {
 
-		
+        
         yield return new WaitForSeconds(tempo);
-        if (falaFinal != null)
-        {
-            falaFinal.SetActive(true);
-        }
-        yield return new WaitForSeconds(5);
+        planeController.freeze = true;
+        freezer = true;
+        falaFinal.SetActive(true);
+       
+
+        yield return new WaitForSeconds(9);
         SceneManager.LoadScene("Final");
 
 	}
@@ -70,9 +74,9 @@ public class PlaneEnemies : MonoBehaviour
 			planeDestroySound.Play(0);
 			if (lastPlane)
 			{
-				freeze = true;
-                falaFinal.SetActive(true);
-				StartCoroutine(fimdejogo(4));
+                
+                
+                StartCoroutine(fimdejogo(0));
 				feedFim.Play(0);
 				feedFim2.Play(0);
 			}

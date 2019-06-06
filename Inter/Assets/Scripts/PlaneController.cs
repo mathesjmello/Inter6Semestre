@@ -61,7 +61,7 @@ public class PlaneController : MonoBehaviour
 			tiros.transform.localScale = new Vector3(tiros.transform.localScale.x * - 1, tiros.transform.localScale.y, tiros.transform.localScale.z);
 		}
 
-		if (Input.GetKeyUp(KeyCode.Space))
+		if (Input.GetKeyUp(KeyCode.Space) && Time.timeScale != 0)
 		{
 			tiros.SetActive(false);
 		}
@@ -70,11 +70,5 @@ public class PlaneController : MonoBehaviour
 	}
 
 	
-	private void OnCollisionStay(Collision collision)
-	{
-		
-		if (collision.gameObject.tag == "Parede2D") parede = true;
-		Debug.Log("colidiu");
 
-	}
 }
