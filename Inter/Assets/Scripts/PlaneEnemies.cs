@@ -9,6 +9,7 @@ public class PlaneEnemies : MonoBehaviour
 	public Transform focalPoint;
 	private Vector3 direction;
 	public float speed = .75f;
+    public PlaneController planeController;
 
 	private Animator anim;
 	private int explodeIndex;
@@ -50,6 +51,7 @@ public class PlaneEnemies : MonoBehaviour
 
         
         yield return new WaitForSeconds(tempo);
+        planeController.freeze = true;
         freezer = true;
         falaFinal.SetActive(true);
        
@@ -72,7 +74,7 @@ public class PlaneEnemies : MonoBehaviour
 			planeDestroySound.Play(0);
 			if (lastPlane)
 			{
-
+                
                 
                 StartCoroutine(fimdejogo(0));
 				feedFim.Play(0);

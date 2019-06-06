@@ -368,8 +368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 13183191}
   feedFim: {fileID: 1097336691}
@@ -621,8 +621,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 15917255}
   feedFim: {fileID: 1097336691}
@@ -2616,8 +2616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 1
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 122568714}
   feedFim: {fileID: 1097336691}
@@ -2779,8 +2779,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 130694637}
   feedFim: {fileID: 1097336691}
@@ -4546,8 +4546,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 238267850}
   feedFim: {fileID: 1097336691}
@@ -5552,8 +5552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 259485234}
   feedFim: {fileID: 1097336691}
@@ -7263,8 +7263,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 382473280}
   feedFim: {fileID: 1097336691}
@@ -9335,7 +9335,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 20
+  m_Priority: 5
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
@@ -12054,12 +12054,12 @@ PrefabInstance:
     - target: {fileID: 8413909707473288630, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -81.00061
+      value: -81.00073
       objectReference: {fileID: 0}
     - target: {fileID: 8413909707473288630, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 125.999985
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 8413909707473288630, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
@@ -12094,12 +12094,12 @@ PrefabInstance:
     - target: {fileID: 8413909707269180408, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -81.00012
+      value: -81.000244
       objectReference: {fileID: 0}
     - target: {fileID: 8413909707269180408, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -57.000183
+      value: -57.00006
       objectReference: {fileID: 0}
     - target: {fileID: 8413909707269180408, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
@@ -12164,12 +12164,12 @@ PrefabInstance:
     - target: {fileID: 8413909706381689424, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -80.50012
+      value: -80.500244
       objectReference: {fileID: 0}
     - target: {fileID: 8413909706381689424, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 37.99994
+      value: 37.999878
       objectReference: {fileID: 0}
     - target: {fileID: 8413909706381689424, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
@@ -12214,12 +12214,12 @@ PrefabInstance:
     - target: {fileID: 8413909708093745360, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -103.00037
+      value: -103.000244
       objectReference: {fileID: 0}
     - target: {fileID: 8413909708093745360, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -141.1701
+      value: -141.17004
       objectReference: {fileID: 0}
     - target: {fileID: 8413909708093745360, guid: 505fcf721a7749f4d903779463d21deb,
         type: 3}
@@ -15690,8 +15690,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 1
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 699851077}
   feedFim: {fileID: 1097336691}
@@ -16206,8 +16206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 733328662}
   feedFim: {fileID: 1097336691}
@@ -17719,8 +17719,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 799422459}
   feedFim: {fileID: 1097336691}
@@ -25335,8 +25335,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 1
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 1224457663}
   feedFim: {fileID: 1097336691}
@@ -27380,8 +27380,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 1341586770}
   feedFim: {fileID: 1097336691}
@@ -30729,8 +30729,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 1471444746}
   feedFim: {fileID: 1097336691}
@@ -34513,8 +34513,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focalPoint: {fileID: 1320203676}
   speed: 0.25
+  planeController: {fileID: 1449487373}
   lastPlane: 0
-  freeze: 0
   falaFinal: {fileID: 1016501567}
   planeDestroySound: {fileID: 1679304286}
   feedFim: {fileID: 1097336691}
@@ -39523,37 +39523,37 @@ PrefabInstance:
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -91.680954
+      value: -109.108536
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -55.383076
+      value: -47.20938
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -73.91397
+      value: -89.121185
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.023337862
+      value: 0.117813125
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7067216
+      value: 0.1693665
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.023337876
+      value: -0.020422367
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7067216
+      value: 0.978273
       objectReference: {fileID: 0}
     - target: {fileID: 6818095598568735372, guid: d696e8bc5e3ccfa4a93a9ebec7af519a,
         type: 3}
@@ -43325,7 +43325,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424324585677989983}
-  m_LocalRotation: {x: -0.13383971, y: -0.095972896, z: -0.0130237155, w: 0.98625886}
+  m_LocalRotation: {x: -0.13383968, y: -0.095972896, z: -0.013023712, w: 0.98625886}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -43793,7 +43793,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424324587216709475}
-  m_LocalRotation: {x: 0.12868676, y: -0.09621775, z: 0.01254593, w: 0.98692685}
+  m_LocalRotation: {x: 0.12868674, y: -0.09621775, z: 0.01254593, w: 0.98692685}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
