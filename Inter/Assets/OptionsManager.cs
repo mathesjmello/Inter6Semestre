@@ -16,7 +16,7 @@ public class OptionsManager : MonoBehaviour
 
     static private float brilho = 0;
     static private float sensibilidade = 30;
-    static private float volume = 1;
+    
 
 
     // Start is called before the first frame update
@@ -43,11 +43,11 @@ public class OptionsManager : MonoBehaviour
 
     public void Sensibilidade(float valor)
     {
-        sensibilidade = valor;
+        TesteCharDrunk.mouseSensivity = valor;
     }
 
     public void Volume(float valor)
     {
-        volume = valor;
+        MasterVolume.masterVolume = valor;
     }
 }
