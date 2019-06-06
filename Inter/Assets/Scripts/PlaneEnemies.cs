@@ -26,6 +26,8 @@ public class PlaneEnemies : MonoBehaviour
 
 	public AudioSource feedFim2;
 
+    public Scoremanager scoremanager;
+
     void Start()
 	{
         falaFinal.SetActive(false);
@@ -70,6 +72,7 @@ public class PlaneEnemies : MonoBehaviour
             if(!lastPlane)
             {
                 anim.SetTrigger(explodeIndex);
+                scoremanager.score++;
             }
 			planeDestroySound.Play(0);
 			if (lastPlane)
