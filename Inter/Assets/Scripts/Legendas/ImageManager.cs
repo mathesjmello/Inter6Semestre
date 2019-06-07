@@ -54,6 +54,9 @@ public class ImageManager : MonoBehaviour
     public float falaA_01, falaA_02, falaA_03, falaA_04, falaA_05;
     public float falaB_01, falaB_02, falaB_03, falaB_04, falaB_05;
 
+    [Header ("Audios dos Personagens")]
+    public AudioSource OutrosPersonagensVoz;
+    public AudioSource SergueiVoz;
 
     private void Start()
     {
@@ -71,7 +74,7 @@ public class ImageManager : MonoBehaviour
     {
         if (currentImage < endAtImage && Input.GetKeyDown(KeyCode.Space) && ativoNoMomento == true)
         {
-            tocandoFala = true;
+            tocandoFala = false;
             currentImage++;
             SomDaFala();
         }
@@ -101,6 +104,7 @@ public class ImageManager : MonoBehaviour
             currentImage = 0;
             player.freeze = true;
             ativou = false;
+            SomDaFala();
             if (textBoxLigada == false)
             {
                 textBox.SetActive(true);
@@ -113,14 +117,26 @@ public class ImageManager : MonoBehaviour
     {
         if((currentImage == falaA_01 || currentImage == falaA_02 || currentImage == falaA_03 || currentImage == falaA_04 || currentImage == falaA_05) && tocandoFala == false)
         {
-            //Para fala do personagem B
-            //Roda fala do personagem A
+            if (OutrosPersonagensVoz != null)
+            {
+                OutrosPersonagensVoz.Play();
+            }
+            if (SergueiVoz != null)
+            {
+                SergueiVoz.Stop();
+            }
             tocandoFala = true;
         }
         if ((currentImage == falaB_01 || currentImage == falaB_02 || currentImage == falaB_03 || currentImage == falaB_04 || currentImage == falaB_05) && tocandoFala == false)
         {
-            //Para fala do personagem B
-            //Roda fala do personagem A
+            if (OutrosPersonagensVoz != null)
+            {
+                OutrosPersonagensVoz.Stop();
+            }
+            if (SergueiVoz != null)
+            {
+                SergueiVoz.Play();
+            }
             tocandoFala = true;
         }
     }
