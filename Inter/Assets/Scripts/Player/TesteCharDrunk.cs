@@ -46,7 +46,7 @@ public class TesteCharDrunk : MonoBehaviour
 	public float playerSpeed = 3.0f;
 	private float gravity = 0.5f;
 	public float jumpSpeed = 5;
-	public float mouseSensivity = 30;
+	public float mouseSensivity = 100;
 	private float rotationX = 0;
 	public float drunkSpeed;
 	public float drunkMax = 1.2f;
@@ -424,10 +424,10 @@ public class TesteCharDrunk : MonoBehaviour
 	void RotateView()
 	{
 		//rotaciona a câmera na horizontal
-		transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensivity * Time.deltaTime);
+		transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensivity * Time.fixedDeltaTime);
 
 		//rotaciona a câmera na vertical
-		rotationX += Input.GetAxis("Mouse Y") * mouseSensivity * Time.deltaTime * -1;
+		rotationX += Input.GetAxis("Mouse Y") * mouseSensivity * Time.fixedDeltaTime * -1;
 		rotationX = Mathf.Clamp(rotationX, -45, 45);
 
         cam.transform.localEulerAngles = new Vector3(-rotationX, cam.transform.localEulerAngles.y, cam.transform.localEulerAngles.z);
