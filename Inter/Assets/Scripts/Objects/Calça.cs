@@ -41,6 +41,7 @@ public class Calça : MonoBehaviour
 
     public GameObject mesaSalao;
 
+
     public void Start()
     {
         fala_04.SetActive(false);
@@ -63,8 +64,6 @@ public class Calça : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-           // porta01.transform.position = new Vector3(3.757956f, -3.493032f, 14.5f);
-           // porta02.transform.position = new Vector3(3.757956f, -3.493032f, 13.75f);
             PegouCalca();
         }
     }
