@@ -19,12 +19,14 @@ public class CheatManager : MonoBehaviour
 
     public void Update()
     {
+        Debug.Log(FieldOfView.cheatAtivo);
         if (Input.GetKeyDown(KeyCode.Y) && ativado == true)
         {
             textoInfo.SetActive(true);
             texto.SetActive(false);
             FieldOfView.cheatAtivo = false;
             ativado = false;
+
         }
         else if(Input.GetKeyDown(KeyCode.Y) && ativado == false)
         {
