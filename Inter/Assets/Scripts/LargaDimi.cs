@@ -64,14 +64,14 @@ public class LargaDimi : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if(other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == false && player.GetComponent<TesteCharDrunk>().carregando == true && largando == false)
+        if(other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == false && player.GetComponent<TesteCharDrunk>().carregando == true && largando == false && levantando == false)
         {
             StartCoroutine(LargaDimitri());
             Debug.Log("AreaLarga");
             
         }
 
-         if (other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == true  && player.GetComponent<TesteCharDrunk>().carregando == false && comCalca == true && levantando == false)
+         if (other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == true  && player.GetComponent<TesteCharDrunk>().carregando == false && comCalca == true && levantando == false && largando == false)
         {
             StartCoroutine(LevantaDimitri());
             Debug.Log("AreaLeveanta");
@@ -86,9 +86,13 @@ public class LargaDimi : MonoBehaviour
             largando = true;
             
             Debug.Log("Larga1");
-            yield return new WaitForSeconds(1.0f);
+            
             comDimi = true;
             dimitri.SetActive(true);
+
+
+            yield return new WaitForSeconds(3.0f);
+
             Debug.Log("Larga2");
             largando = false;
             
@@ -98,12 +102,14 @@ public class LargaDimi : MonoBehaviour
         dimiAnim.SetTrigger("Levanta");
         sergueiAnim.SetTrigger("LevantaDimi");
         levantando = true;
-         yield return new WaitForSeconds(1.0f);
         player.GetComponent<TesteCharDrunk>().carregando = true;
-         comDimi = false; 
-         dimitri.SetActive(false);
-         Debug.Log("Levanta");
-         levantando = false;
+        comDimi = false; 
+        dimitri.SetActive(false);
+
+        yield return new WaitForSeconds(3.0f);
+
+        Debug.Log("Levanta");
+        levantando = false;
     }
 
         void RandomSound(){
