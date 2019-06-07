@@ -19,6 +19,10 @@ public class LargaDimi : MonoBehaviour
 
     public bool comCalca = false;
 
+    public bool levantando = false;
+
+    public bool largando = false;
+
     public GameObject somDimitri;
 
     public LargaDimi areaDimi02;
@@ -60,14 +64,14 @@ public class LargaDimi : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if(other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == false && player.GetComponent<TesteCharDrunk>().carregando == true)
+        if(other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == false && player.GetComponent<TesteCharDrunk>().carregando == true && largando == false)
         {
             StartCoroutine(LargaDimitri());
             Debug.Log("AreaLarga");
             
         }
 
-         if (other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == true  && player.GetComponent<TesteCharDrunk>().carregando == false && comCalca == true)
+         if (other.CompareTag("Player") & Input.GetKey(KeyCode.E) && comDimi == true  && player.GetComponent<TesteCharDrunk>().carregando == false && comCalca == true && levantando == false)
         {
             StartCoroutine(LevantaDimitri());
             Debug.Log("AreaLeveanta");
@@ -79,23 +83,27 @@ public class LargaDimi : MonoBehaviour
     IEnumerator LargaDimitri()
     {
             player.GetComponent<TesteCharDrunk>().carregando = false;
+            largando = true;
             
             Debug.Log("Larga1");
             yield return new WaitForSeconds(1.0f);
             comDimi = true;
             dimitri.SetActive(true);
             Debug.Log("Larga2");
+            largando = false;
             
     }
 
     IEnumerator LevantaDimitri(){
         dimiAnim.SetTrigger("Levanta");
         sergueiAnim.SetTrigger("LevantaDimi");
-         yield return new WaitForSeconds(2.0f);
+        levantando = true;
+         yield return new WaitForSeconds(1.0f);
         player.GetComponent<TesteCharDrunk>().carregando = true;
          comDimi = false; 
          dimitri.SetActive(false);
          Debug.Log("Levanta");
+         levantando = false;
     }
 
         void RandomSound(){

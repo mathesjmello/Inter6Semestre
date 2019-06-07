@@ -47,6 +47,8 @@ public class MenuPrincipal : MonoBehaviour
 
 	public AudioSource menuSound;
 
+	public AudioSource telefoneSound;
+
 	public bool spawn;
 
 	public Respawn novo;
@@ -163,6 +165,7 @@ public class MenuPrincipal : MonoBehaviour
         MainMenuScreen.SetActive(false);
 
         menuSound.Stop();
+		telefoneSound.Stop();
         novo.fase = 0;
 		Debug.Log("Resetou");
 
@@ -187,6 +190,7 @@ public class MenuPrincipal : MonoBehaviour
 		MainMenuScreen.SetActive(false);
 
 		menuSound.Stop();
+		telefoneSound.Stop();
 		//spawn = true;
 	}
 
@@ -207,6 +211,7 @@ public class MenuPrincipal : MonoBehaviour
 		MainMenuScreen.SetActive(false);
 
 		menuSound.Stop();
+		telefoneSound.Stop();
 		//spawn = true;
 
 	}
