@@ -49,8 +49,15 @@ public class ImageManager : MonoBehaviour
 
     public bool ativoNoMomento = false;
 
+    public bool tocandoFala;
+
+    public float falaA_01, falaA_02, falaA_03, falaA_04, falaA_05;
+    public float falaB_01, falaB_02, falaB_03, falaB_04, falaB_05;
+
+
     private void Start()
     {
+        tocandoFala = false;
         if (tutorial != null)
         {
             tutorial.SetActive(false);
@@ -64,7 +71,9 @@ public class ImageManager : MonoBehaviour
     {
         if (currentImage < endAtImage && Input.GetKeyDown(KeyCode.Space) && ativoNoMomento == true)
         {
+            tocandoFala = true;
             currentImage++;
+            SomDaFala();
         }
 
         if(currentImage < endAtImage)
@@ -92,7 +101,6 @@ public class ImageManager : MonoBehaviour
             currentImage = 0;
             player.freeze = true;
             ativou = false;
-            //StartCoroutine(Teste());
             if (textBoxLigada == false)
             {
                 textBox.SetActive(true);
@@ -101,13 +109,19 @@ public class ImageManager : MonoBehaviour
         }
     }
 
-
-    IEnumerator Teste()
-    { 
-        for (int i = 0; i < endAtImage; i++)
+    void SomDaFala()
+    {
+        if((currentImage == falaA_01 || currentImage == falaA_02 || currentImage == falaA_03 || currentImage == falaA_04 || currentImage == falaA_05) && tocandoFala == false)
         {
-            yield return new WaitForSeconds(tempoParaProxima);
-            currentImage++;
+            //Para fala do personagem B
+            //Roda fala do personagem A
+            tocandoFala = true;
+        }
+        if ((currentImage == falaB_01 || currentImage == falaB_02 || currentImage == falaB_03 || currentImage == falaB_04 || currentImage == falaB_05) && tocandoFala == false)
+        {
+            //Para fala do personagem B
+            //Roda fala do personagem A
+            tocandoFala = true;
         }
     }
 }
