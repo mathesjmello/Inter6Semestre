@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 478edf6ecc6c401489df4c839cd93daf
+guid: dd9aa6acefa3dbe4f94c8bed34d3032c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -11,12 +11,7 @@ ModelImporter:
     2300000: woman:polySurface41_group
     3300000: woman:polySurface41_group
     4300000: woman:polySurface41_group
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: woman_polySurface41_groupMat
-    second: {fileID: 2100000, guid: 1b050bee69f33bc40b77593c471ce960, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

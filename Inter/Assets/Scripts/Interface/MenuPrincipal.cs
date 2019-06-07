@@ -47,6 +47,8 @@ public class MenuPrincipal : MonoBehaviour
 
 	public AudioSource menuSound;
 
+	public AudioSource telefoneSound;
+
 	public bool spawn;
 
 	public Respawn novo;
@@ -63,6 +65,10 @@ public class MenuPrincipal : MonoBehaviour
 	public int saveGameOver;
 
     public GameObject questLog;
+
+	public AudioSource clickSound;
+
+	public AudioSource jogarSound;
 
 
 	private void Start()
@@ -135,6 +141,7 @@ public class MenuPrincipal : MonoBehaviour
 		MainMenuScreen.SetActive(!MainMenuScreen.activeSelf);
 		NewGameScreen.SetActive(true);
 		loadGameFase = PlayerPrefs.GetInt("Level");
+		clickSound.Play();
 
 	}
 
@@ -163,8 +170,10 @@ public class MenuPrincipal : MonoBehaviour
         MainMenuScreen.SetActive(false);
 
         menuSound.Stop();
+		telefoneSound.Stop();
         novo.fase = 0;
 		Debug.Log("Resetou");
+		jogarSound.Play();
 
         //PlayerPrefs.SetInt("Level", 0);
         //}
@@ -187,6 +196,7 @@ public class MenuPrincipal : MonoBehaviour
 		MainMenuScreen.SetActive(false);
 
 		menuSound.Stop();
+		telefoneSound.Stop();
 		//spawn = true;
 	}
 
@@ -207,6 +217,8 @@ public class MenuPrincipal : MonoBehaviour
 		MainMenuScreen.SetActive(false);
 
 		menuSound.Stop();
+		telefoneSound.Stop();
+		clickSound.Play();
 		//spawn = true;
 
 	}
@@ -214,6 +226,7 @@ public class MenuPrincipal : MonoBehaviour
 	{
 		MainMenuScreen.SetActive(!MainMenuScreen.activeSelf);
 		OptionScreen.SetActive(true);
+		clickSound.Play();
 
 
 	}
@@ -238,6 +251,7 @@ public class MenuPrincipal : MonoBehaviour
 		NewGameScreen.SetActive(false);
 		OptionScreen.SetActive(false);
 		MainMenuScreen.SetActive(true);
+		clickSound.Play();
 
 		
 
@@ -246,6 +260,7 @@ public class MenuPrincipal : MonoBehaviour
 	public void Créditos()
 	{
 		SceneManager.LoadScene("Credits");
+		clickSound.Play();
 
 	}
 

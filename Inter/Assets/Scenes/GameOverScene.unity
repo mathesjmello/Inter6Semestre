@@ -216,8 +216,8 @@ Camera:
   m_GameObject: {fileID: 1417944294}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -281,6 +281,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Video
       objectReference: {fileID: 0}
+    - target: {fileID: 6958450943993583731, guid: ac6899f2b3776ce43a94f379bc0557c6,
+        type: 3}
+      propertyPath: m_TargetCamera
+      value: 
+      objectReference: {fileID: 1417944296}
+    - target: {fileID: 6958450943993583731, guid: ac6899f2b3776ce43a94f379bc0557c6,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 5cb21ef9473af8545a0e85c7f6c9c3f7,
+        type: 3}
     - target: {fileID: 3890883119301431518, guid: ac6899f2b3776ce43a94f379bc0557c6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -341,17 +352,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1417944296}
-    - target: {fileID: 6958450943993583731, guid: ac6899f2b3776ce43a94f379bc0557c6,
-        type: 3}
-      propertyPath: m_TargetCamera
-      value: 
-      objectReference: {fileID: 1417944296}
-    - target: {fileID: 6958450943993583731, guid: ac6899f2b3776ce43a94f379bc0557c6,
-        type: 3}
-      propertyPath: m_VideoClip
-      value: 
-      objectReference: {fileID: 32900000, guid: 5cb21ef9473af8545a0e85c7f6c9c3f7,
-        type: 3}
     m_RemovedComponents:
     - {fileID: 6958450945442078886, guid: ac6899f2b3776ce43a94f379bc0557c6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ac6899f2b3776ce43a94f379bc0557c6, type: 3}
