@@ -70,7 +70,6 @@ public class MenuPrincipal : MonoBehaviour
 
 	public AudioSource jogarSound;
 
-	public bool ativaNPCview;
 
 
 	private void Start()
@@ -199,7 +198,6 @@ public class MenuPrincipal : MonoBehaviour
 
 		menuSound.Stop();
 		telefoneSound.Stop();
-		ativaNPCview = true;
 		//spawn = true;
 	}
 

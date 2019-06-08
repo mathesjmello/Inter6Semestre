@@ -65,7 +65,6 @@ public class FieldOfView : MonoBehaviour {
 
     public bool ativouCoroutine;
 
-    public MenuPrincipal ativaFOV;
 
 
 
