@@ -71,6 +71,7 @@ public class MenuPrincipal : MonoBehaviour
 	public AudioSource jogarSound;
 
 
+
 	private void Start()
 	{
         questLog.SetActive(false);
@@ -103,7 +104,7 @@ public class MenuPrincipal : MonoBehaviour
 		if (saveGameOver >= 1)
 		{
 			LoadDoGameOver();
-			Debug.Log("LoadDoGameOver");
+			//Debug.Log("LoadDoGameOver");
 
 		}
         
@@ -115,7 +116,7 @@ public class MenuPrincipal : MonoBehaviour
 	{
 		PostProcessProfile.TryGetSettings(out colorGrading);
 		colorGrading.postExposure.value = brilho;
-		print(colorGrading.postExposure.value);
+		//print(colorGrading.postExposure.value);
 
 //		MasterVolume.masterVolume = volume;
 

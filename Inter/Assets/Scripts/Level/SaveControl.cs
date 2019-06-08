@@ -41,7 +41,7 @@ public class SaveControl : MonoBehaviour
         {
             
             StartCoroutine(SaveGame());
-            Debug.Log(salvar);
+            //Debug.Log(salvar);
          
         }
 
@@ -54,9 +54,9 @@ public class SaveControl : MonoBehaviour
 
         PlayerPrefs.SetInt("Level",saveLevel);
         PlayerPrefs.Save();
-        Debug.Log("AutoSave"); 
+        //Debug.Log("AutoSave"); 
         myVar = PlayerPrefs.GetInt("Level");
-        Debug.Log(myVar + "numeroGravado");
+        //Debug.Log(myVar + "numeroGravado");
 
         yield return new WaitForSeconds(1.0f);
 

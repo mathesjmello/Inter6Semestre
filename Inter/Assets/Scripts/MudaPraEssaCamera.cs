@@ -35,7 +35,7 @@ IEnumerator WaitToStopLooking()
     private void OnTriggerEnter(Collider other) {
         
     cam.Priority = other.CompareTag("Player") && camIndexMin <= camIndex && camIndex < camIndexMax? 20 : cam.Priority;
-    print(cam.Priority);
+    //print(cam.Priority);
     if(wait)StartCoroutine(WaitToStopLooking());
 
     }

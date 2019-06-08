@@ -70,7 +70,7 @@ public class Respawn : MonoBehaviour
         {
             fase = PlayerPrefs.GetInt("Level");
             StartCoroutine(SpawnSave());
-            Debug.Log(fase);
+            //Debug.Log(fase);
         }
         
     }
@@ -236,12 +236,11 @@ public class Respawn : MonoBehaviour
             off.comDimi = false;
 
             check.disable = 4;
-            check.disable = 4;
-            Debug.Log("fase04");
+            //Debug.Log("fase04");
 
         }
 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
 
         spawnSave.spawn = false;
 
