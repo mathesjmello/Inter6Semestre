@@ -70,6 +70,8 @@ public class MenuPrincipal : MonoBehaviour
 
 	public AudioSource jogarSound;
 
+	public bool ativaNPCview;
+
 
 	private void Start()
 	{
@@ -103,7 +105,7 @@ public class MenuPrincipal : MonoBehaviour
 		if (saveGameOver >= 1)
 		{
 			LoadDoGameOver();
-			Debug.Log("LoadDoGameOver");
+			//Debug.Log("LoadDoGameOver");
 
 		}
         
@@ -115,7 +117,7 @@ public class MenuPrincipal : MonoBehaviour
 	{
 		PostProcessProfile.TryGetSettings(out colorGrading);
 		colorGrading.postExposure.value = brilho;
-		print(colorGrading.postExposure.value);
+		//print(colorGrading.postExposure.value);
 
 //		MasterVolume.masterVolume = volume;
 
@@ -197,6 +199,7 @@ public class MenuPrincipal : MonoBehaviour
 
 		menuSound.Stop();
 		telefoneSound.Stop();
+		ativaNPCview = true;
 		//spawn = true;
 	}
 

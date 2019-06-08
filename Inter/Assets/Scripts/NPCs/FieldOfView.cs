@@ -61,6 +61,13 @@ public class FieldOfView : MonoBehaviour {
 
     public GameObject feedImagemDimi;
 
+    public int saveMemory;
+
+    public bool ativouCoroutine;
+
+    public MenuPrincipal ativaFOV;
+
+
 
     private void Start()
     {
@@ -68,13 +75,23 @@ public class FieldOfView : MonoBehaviour {
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
-        StartCoroutine("FindTargetWithDelay", .2f);
+        StartCoroutine("FindTargetWithDelay", 0.2f);
+        Debug.Log("Coroutine");
+        saveMemory = PlayerPrefs.GetInt("VoltouDoGameOver");
     }
 
 
 
     private void LateUpdate()
     {
+        //Debug.Log(cheatAtivo);
+        if (saveMemory >=0 && ativouCoroutine == false)
+        {
+            StartCoroutine("FindTargetWithDelay", 0.2f);
+            Debug.Log("Courotine02");
+            
+        }
+
         DrawFieldOfView();
         if (drunk)
         {
@@ -87,10 +104,15 @@ public class FieldOfView : MonoBehaviour {
 
     IEnumerator FindTargetWithDelay(float delay)
     {
+        
         while (true)
         {
+            
             yield return new WaitForSeconds(delay);
             FindVisibleTargets();
+            ativouCoroutine = true;
+            Debug.Log("Delay");
+           
         }
     }
 
@@ -99,17 +121,21 @@ public class FieldOfView : MonoBehaviour {
 
     void FindVisibleTargets()
     {
-
+         
         visibleTargets.Clear();
 
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
+        
+
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
+
             Transform target = targetsInViewRadius[i].transform;
             Vector3 dirToTarget = (target.position - transform.position).normalized;
             if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
             {
+
 
                 if (parte01)
                 {
@@ -134,7 +160,7 @@ public class FieldOfView : MonoBehaviour {
                         //Aqui é aonde acontece a detecção do player
                         // feedDetecta.Play(0);
                         visibleTargets.Add(target);
-                        Debug.Log("Encontrei o Player");
+                        Debug.Log("Encontrei o Dimitri");
                         DetectouDimitri();
 
 
@@ -245,12 +271,15 @@ public class FieldOfView : MonoBehaviour {
 
     ViewCastInfo ViewCast(float globalAngle)
     {
+        
         Vector3 dir = DirFromAngle(globalAngle, true);
         RaycastHit hit;
 
         if (Physics.Raycast(transform.position, dir, out hit, viewRadius, obstacleMask))
         {
+           
             return new ViewCastInfo(true, hit.point, hit.distance, globalAngle);
+             Debug.Log(hit.distance);
         }
         else
         {

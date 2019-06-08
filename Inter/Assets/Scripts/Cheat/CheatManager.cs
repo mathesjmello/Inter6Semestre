@@ -19,7 +19,7 @@ public class CheatManager : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(FieldOfView.cheatAtivo);
+        //Debug.Log(FieldOfView.cheatAtivo);
         if (Input.GetKeyDown(KeyCode.Y) && ativado == true)
         {
             textoInfo.SetActive(true);
