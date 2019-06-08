@@ -236,7 +236,6 @@ public class Respawn : MonoBehaviour
             off.comDimi = false;
 
             check.disable = 4;
-            check.disable = 4;
             Debug.Log("fase04");
 
         }
