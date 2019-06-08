@@ -99,8 +99,8 @@ public class LargaDimi : MonoBehaviour
     }
 
     IEnumerator LevantaDimitri(){
-        dimiAnim.SetTrigger("Levanta");
-        sergueiAnim.SetTrigger("LevantaDimi");
+        //dimiAnim.SetTrigger("Levanta");
+        //sergueiAnim.SetTrigger("LevantaDimi");
         levantando = true;
         player.GetComponent<TesteCharDrunk>().carregando = true;
         comDimi = false; 

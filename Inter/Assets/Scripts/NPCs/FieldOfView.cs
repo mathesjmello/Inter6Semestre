@@ -68,7 +68,7 @@ public class FieldOfView : MonoBehaviour {
 
 
 
-    private void Start()
+    private void Awake()
     {
         controladorNPC = GetComponent<ControllerNPC>();
         viewMesh = new Mesh();

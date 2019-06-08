@@ -33,6 +33,14 @@ TagManager:
   - Fala05
   - Fala06
   - Fala07
+  - NPC02A
+  - NPC02B
+  - NPC04
+  - NPC05
+  - NPC06
+  - NPC07
+  - NPC08
+  - NPC09
   layers:
   - Default
   - TransparentFX

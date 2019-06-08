@@ -169,11 +169,11 @@ public class TesteCharDrunk : MonoBehaviour
 
             }
 
-            if (isRunning == true && carregando == false)
+            if (isRunning == true && carregando == false && isWalking == true || isWalkingBack == true)
             {
                 playerSpeed = 5.0f;
-                isWalking = false;
-                isWalkingBack = false;
+                //isWalking = false;
+                //isWalkingBack = false;
                 playerAnim.SetBool("isRunning", true);
             }
             else
