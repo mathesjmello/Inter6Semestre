@@ -103,6 +103,10 @@ public class NPCAtivos : MonoBehaviour
             npcParte03.SetActive(true);
             npcParte04.SetActive(true);
 
+            npc02A.GetComponent<FieldOfView>().enabled = true;
+
+            npc02B.GetComponent<FieldOfView>().enabled = true;
+
             npc04.GetComponent<FieldOfView>().enabled = true;
 
             npc05.GetComponent<FieldOfView>().enabled = true;
