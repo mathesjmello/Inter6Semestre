@@ -41,6 +41,9 @@ public class Respawn : MonoBehaviour
 
     public bool acabouRespawn;
 
+    public GameObject fala01;
+    public GameObject fala02;
+    public GameObject fala03;
     public GameObject fala04;
     public GameObject fala05;
     public GameObject fala06;
@@ -55,9 +58,9 @@ public class Respawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //fala01 = GameObject.FindGameObjectWithTag("Fala01");
-        //fala02 = GameObject.FindGameObjectWithTag("Fala02");
-        //fala03 = GameObject.FindGameObjectWithTag("Fala03");
+        fala01 = GameObject.FindGameObjectWithTag("Fala01");
+        fala02 = GameObject.FindGameObjectWithTag("Fala02");
+        fala03 = GameObject.FindGameObjectWithTag("Fala03");
         fala04 = GameObject.FindGameObjectWithTag("Fala04");
         fala05 = GameObject.FindGameObjectWithTag("Fala05");
         fala06 = GameObject.FindGameObjectWithTag("Fala06");
@@ -74,8 +77,8 @@ public class Respawn : MonoBehaviour
         }
         
     }
+    
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -91,10 +94,14 @@ public class Respawn : MonoBehaviour
 
             check.disable = 0;
 
-            /*fala04.SetActive(true);
+            
+            fala01.SetActive(false);
+            fala02.SetActive(false);
+            fala03.SetActive(false);
+            fala04.SetActive(true);
             fala05.SetActive(true);
             fala06.SetActive(true);
-            fala07.SetActive(true);*/
+            fala07.SetActive(true);
 
             save.saveGame = false;
             ativaSave = true;
@@ -109,10 +116,15 @@ public class Respawn : MonoBehaviour
 
             check.disable = 1;
 
-            /*fala04.SetActive(true);
+
+            
+            fala01.SetActive(false);
+            fala02.SetActive(false);
+            fala03.SetActive(false);
+            fala04.SetActive(true);
             fala05.SetActive(true);
             fala06.SetActive(true);
-            fala07.SetActive(true);*/
+            fala07.SetActive(true);
 
             save.saveGame = true;  
             ativaSave = true; 
@@ -127,9 +139,14 @@ public class Respawn : MonoBehaviour
 
             check.disable = 2;
 
-            /*fala05.SetActive(true);
+            
+            fala01.SetActive(false);
+            fala02.SetActive(false);
+            fala03.SetActive(false);
+            fala04.SetActive(false);            
+            fala05.SetActive(true);
             fala06.SetActive(true);
-            fala07.SetActive(true);*/
+            fala07.SetActive(true);
 
             save.saveGame = true;
             ativaSave = true;
@@ -144,9 +161,14 @@ public class Respawn : MonoBehaviour
 
             check.disable = 3;
 
-            /*fala05.SetActive(true);
+            
+            fala01.SetActive(false);
+            fala02.SetActive(false);
+            fala03.SetActive(false);
+            fala04.SetActive(false);
+            fala05.SetActive(true);
             fala06.SetActive(true);
-            fala07.SetActive(true);*/
+            fala07.SetActive(true);
 
             save.saveGame = true;
             ativaSave = true;
@@ -162,9 +184,15 @@ public class Respawn : MonoBehaviour
 
 
             check.disable = 4;
-
-            /*fala06.SetActive(true);
-            fala07.SetActive(true);*/
+     
+            
+            fala01.SetActive(false);
+            fala02.SetActive(false);
+            fala03.SetActive(false);
+            fala04.SetActive(false);
+            fala05.SetActive(true);
+            fala06.SetActive(true);
+            fala07.SetActive(true);
 
             save.saveGame = true;
             ativaSave = true;
