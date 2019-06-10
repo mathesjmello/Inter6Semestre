@@ -19,8 +19,9 @@ public class PlaneEnemies : MonoBehaviour
 	public static bool freezer;
 
     public GameObject falaFinal;
+    public GameObject noise;
 
-	public AudioSource planeDestroySound;
+    public AudioSource planeDestroySound;
 
 	public AudioSource feedFim;
 
@@ -31,6 +32,9 @@ public class PlaneEnemies : MonoBehaviour
 	public GameObject tiros;
 
 	public AudioSource fala;
+
+  
+
 
     void Start()
 	{
@@ -60,6 +64,7 @@ public class PlaneEnemies : MonoBehaviour
         planeController.freeze = true;
         freezer = true;
         falaFinal.SetActive(true);
+        noise.SetActive(true);
         feedFim.Play(0);
 		feedFim2.Play(0);
 		fala.Play();
