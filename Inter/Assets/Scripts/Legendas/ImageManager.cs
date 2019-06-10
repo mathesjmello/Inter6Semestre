@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ImageManager : MonoBehaviour
@@ -63,6 +64,10 @@ public class ImageManager : MonoBehaviour
 
     public Animator fadeOutAnim;
 
+    public GameObject espaco;
+
+    public bool proximaCena;
+
     private void Start()
     {
         tocandoFala = false;
@@ -100,21 +105,18 @@ public class ImageManager : MonoBehaviour
             {
                 tutorial.SetActive(true);
             }
+            if(proximaCena == true)
+            {
+                SceneManager.LoadScene("Fase02");
+            }
             gameObject.SetActive(false);
+            espaco.SetActive(false);
         }
 
         if(currentImage == 1 && SomDeFundo != null)
-        {
-           
+        {           
             telefoneSom.SetActive(false);
             SomDeFundo.volume = 0.0f;
-            //Abaixa o Som aqui (pode deletar esse comentário depois)
-            //Abaixa o Som aqui (pode deletar esse comentário depois)
-            //Abaixa o Som aqui (pode deletar esse comentário depois)
-            //Abaixa o Som aqui (pode deletar esse comentário depois)
-            //Abaixa o Som aqui (pode deletar esse comentário depois)
-            //Abaixa o Som aqui (pode deletar esse comentário depois)
-            //Abaixa o Som aqui (pode deletar esse comentário depois)
         }
 
     }
@@ -126,6 +128,7 @@ public class ImageManager : MonoBehaviour
         { 
             fadeOutAnim.SetTrigger("Acabou");
             ativoNoMomento = true;
+            espaco.SetActive(true);
             currentImage = 0;
             player.freeze = true;
             ativou = false;
