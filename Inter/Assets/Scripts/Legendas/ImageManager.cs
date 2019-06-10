@@ -61,6 +61,8 @@ public class ImageManager : MonoBehaviour
 
     public GameObject telefoneSom;
 
+    public Animator fadeOutAnim;
+
     private void Start()
     {
         tocandoFala = false;
@@ -103,8 +105,9 @@ public class ImageManager : MonoBehaviour
 
         if(currentImage == 1 && SomDeFundo != null)
         {
+           
             telefoneSom.SetActive(false);
-            SomDeFundo.volume = 0.1f;
+            SomDeFundo.volume = 0.0f;
             //Abaixa o Som aqui (pode deletar esse comentário depois)
             //Abaixa o Som aqui (pode deletar esse comentário depois)
             //Abaixa o Som aqui (pode deletar esse comentário depois)
@@ -120,7 +123,8 @@ public class ImageManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && ativou == true)
-        {
+        { 
+            fadeOutAnim.SetTrigger("Acabou");
             ativoNoMomento = true;
             currentImage = 0;
             player.freeze = true;
