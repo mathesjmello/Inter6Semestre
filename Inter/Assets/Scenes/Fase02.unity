@@ -276,6 +276,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &13183188
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -530,6 +532,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &15917252
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2088,6 +2092,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &122568717
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2252,6 +2258,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &130694634
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3859,6 +3867,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &238267847
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5041,6 +5051,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &259485231
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6268,6 +6280,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &382473277
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11894,7 +11908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.00030517578, y: -0.00024414062}
+  m_AnchoredPosition: {x: -0.00024414062, y: -0.00024414062}
   m_SizeDelta: {x: 938.1, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &653146648
@@ -13799,6 +13813,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &699851080
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14251,6 +14267,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &733328659
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15765,6 +15783,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &799422456
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16073,8 +16093,8 @@ MonoBehaviour:
   falaB_03: 9
   falaB_04: 9
   falaB_05: 9
-  OutrosPersonagensVoz: {fileID: 0}
-  SergueiVoz: {fileID: 0}
+  OutrosPersonagensVoz: {fileID: 2070899658}
+  SergueiVoz: {fileID: 2070899658}
 --- !u!65 &808221061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18516,6 +18536,7 @@ MonoBehaviour:
   Speed: 0
   InputX: 0
   InputZ: 0
+  on: {fileID: 0}
 --- !u!143 &977139284
 CharacterController:
   m_ObjectHideFlags: 0
@@ -22780,6 +22801,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &1224457660
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24028,6 +24051,7 @@ Transform:
   - {fileID: 695339040}
   - {fileID: 1623127945}
   - {fileID: 1798088309}
+  - {fileID: 2070899659}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24531,6 +24555,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &1341586767
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27782,6 +27808,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &1471444743
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30461,6 +30489,7 @@ MonoBehaviour:
   drunk: 0
   raioVisao: 8
   drunkView: 1
+  viewRadius: 0
   viewAngle: 30
   targetMask:
     serializedVersion: 2
@@ -31365,6 +31394,8 @@ MonoBehaviour:
   feedFim: {fileID: 1097336691}
   feedFim2: {fileID: 663200110}
   scoremanager: {fileID: 247398490}
+  tiros: {fileID: 1329265329}
+  fala: {fileID: 2070899658}
 --- !u!54 &1679304283
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34615,6 +34646,9 @@ MonoBehaviour:
   spawnSave: {fileID: 0}
   saveMemory: 0
   acabouRespawn: 0
+  fala01: {fileID: 0}
+  fala02: {fileID: 0}
+  fala03: {fileID: 0}
   fala04: {fileID: 0}
   fala05: {fileID: 0}
   fala06: {fileID: 0}
@@ -37599,6 +37633,133 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 361676af90afa1743a756b167e945a9c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2611de24ec87fc94e97c0b61dff94415, type: 3}
+--- !u!1 &2070899657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2070899659}
+  - component: {fileID: 2070899658}
+  m_Layer: 0
+  m_Name: FalaDimitri
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2070899658
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070899657}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5383c2079fb178c45a6bcdf267db915f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 0.8
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2070899659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070899657}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1321820330}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2071266563
 GameObject:
   m_ObjectHideFlags: 0
@@ -39669,7 +39830,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424324585541124342}
-  m_LocalRotation: {x: 0.021359473, y: -0.0969041, z: 0.0020801995, w: 0.99506235}
+  m_LocalRotation: {x: 0.021359473, y: -0.096904114, z: 0.0020801995, w: 0.9950624}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -42884,7 +43045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.04078985, y: 0.040000003}
   m_AnchorMax: {x: 0.24624345, y: 0.36200002}
-  m_AnchoredPosition: {x: -81.00037, y: -57.00006}
+  m_AnchoredPosition: {x: -81.00037, y: -56.999695}
   m_SizeDelta: {x: -234, y: -318}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8413909707951263914

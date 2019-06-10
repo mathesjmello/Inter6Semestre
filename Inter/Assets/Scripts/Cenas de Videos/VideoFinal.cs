@@ -19,6 +19,8 @@ public class VideoFinal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("VoltouDoGameOver",0);
+        PlayerPrefs.SetInt("Level",0);
         VideoClip.loopPointReached += EndReached;
     }
 

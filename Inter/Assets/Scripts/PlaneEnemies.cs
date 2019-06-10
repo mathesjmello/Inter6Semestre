@@ -28,6 +28,10 @@ public class PlaneEnemies : MonoBehaviour
 
     public Scoremanager scoremanager;
 
+	public GameObject tiros;
+
+	public AudioSource fala;
+
     void Start()
 	{
         falaFinal.SetActive(false);
@@ -56,7 +60,10 @@ public class PlaneEnemies : MonoBehaviour
         planeController.freeze = true;
         freezer = true;
         falaFinal.SetActive(true);
-       
+        feedFim.Play(0);
+		feedFim2.Play(0);
+		fala.Play();
+		tiros.SetActive(false);
 
         yield return new WaitForSeconds(9);
         SceneManager.LoadScene("Final");
@@ -80,8 +87,7 @@ public class PlaneEnemies : MonoBehaviour
                 
                 
                 StartCoroutine(fimdejogo(0));
-				feedFim.Play(0);
-				feedFim2.Play(0);
+				
 			}
 		}
 		
