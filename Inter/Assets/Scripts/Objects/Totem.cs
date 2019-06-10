@@ -7,6 +7,7 @@ public class Totem : MonoBehaviour
 
     public GameObject player;
 
+    public GameObject posterText;
     public bool segurando;
 
 
@@ -17,26 +18,35 @@ public class Totem : MonoBehaviour
              this.transform.parent = player.transform;
         }
 
-        if (segurando == false)
+        else
         {
             this.transform.parent = null;
         }
 
-        if (segurando == true && Input.GetKey(KeyCode.E))
-        {
-            segurando = false;
-        }
+
 
     }
 
     void OnTriggerStay(Collider other)
     {
-     if (segurando == false && other.CompareTag("Player") && Input.GetKey(KeyCode.E))
+     if ( other.CompareTag("Player") && Input.GetKeyDown(KeyCode.LeftShift))
      {
         
          segurando = true;
+         posterText.SetActive(false);
         
      }   
+
+     if ( other.CompareTag("Player") && Input.GetKeyUp(KeyCode.LeftShift))
+     {
+        
+         segurando = false;
+        
+     } 
+
+
     }
+
+
 }
 

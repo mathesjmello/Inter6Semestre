@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckPoint05 : MonoBehaviour
 {
+    public GameObject posterText;
 
     public Respawn check;
 
@@ -23,6 +24,7 @@ public class CheckPoint05 : MonoBehaviour
         {
             check.fase = 4;
             check.ativaSave = true;
+            posterText.SetActive(true);
         }
     }    
 }
