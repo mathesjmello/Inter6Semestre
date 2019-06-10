@@ -35,3 +35,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+Inter/BuildMac\.app/
+
+Inter/BuildMac\.app\.rar
+
+Inter/SerializedBuildInfo/
