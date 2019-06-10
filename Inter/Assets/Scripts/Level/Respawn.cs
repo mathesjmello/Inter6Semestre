@@ -86,16 +86,6 @@ public class Respawn : MonoBehaviour
 
             check.disable = 0;
 
-            QuestLog.currentLine = 1;
-
-            fala01.SetActive(false);
-            fala02.SetActive(false);
-            fala03.SetActive(true);
-            fala04.SetActive(true);
-            fala05.SetActive(true);
-            fala06.SetActive(true);
-            fala07.SetActive(true);
-
             save.saveGame = false;
             ativaSave = true;
         }
@@ -107,17 +97,7 @@ public class Respawn : MonoBehaviour
             respawnPos = checkpoint02.transform.position;
 
 
-            check.disable = 1;
-
-            QuestLog.currentLine = 3;
-
-            fala01.SetActive(false);
-            fala02.SetActive(false);
-            fala03.SetActive(false);
-            fala04.SetActive(true);
-            fala05.SetActive(true);
-            fala06.SetActive(true);
-            fala07.SetActive(true);
+            check.disable = 0;
 
             save.saveGame = true;  
             ativaSave = true; 
@@ -132,16 +112,6 @@ public class Respawn : MonoBehaviour
 
             check.disable = 2;
 
-            QuestLog.currentLine = 3;
-
-            fala01.SetActive(false);
-            fala02.SetActive(false);
-            fala03.SetActive(false);
-            fala04.SetActive(false);            
-            fala05.SetActive(true);
-            fala06.SetActive(true);
-            fala07.SetActive(true);
-
             save.saveGame = true;
             ativaSave = true;
             
@@ -153,17 +123,7 @@ public class Respawn : MonoBehaviour
             
             respawnPos = checkpoint04.transform.position;
 
-            check.disable = 3;
-
-            QuestLog.currentLine = 3;
-
-            fala01.SetActive(false);
-            fala02.SetActive(false);
-            fala03.SetActive(false);
-            fala04.SetActive(false);
-            fala05.SetActive(true);
-            fala06.SetActive(true);
-            fala07.SetActive(true);
+            check.disable = 2;
 
             save.saveGame = true;
             ativaSave = true;
@@ -177,18 +137,8 @@ public class Respawn : MonoBehaviour
             
             respawnPos = checkpoint05.transform.position;
 
-            QuestLog.currentLine = 3;
 
             check.disable = 4;
-     
-            
-            fala01.SetActive(false);
-            fala02.SetActive(false);
-            fala03.SetActive(false);
-            fala04.SetActive(false);
-            fala05.SetActive(true);
-            fala06.SetActive(true);
-            fala07.SetActive(true);
 
             save.saveGame = true;
             ativaSave = true;
@@ -209,6 +159,16 @@ public class Respawn : MonoBehaviour
         {
             respawnPos = checkpoint02.transform.position;
 
+            QuestLog.currentLine = 3;
+
+            fala01.SetActive(false);
+            fala02.SetActive(false);
+            fala03.SetActive(false);
+            fala04.SetActive(true);
+            fala05.SetActive(true);
+            fala06.SetActive(true);
+            fala07.SetActive(true);
+
             player.transform.position = respawnPos;
             save.saveGame = true; 
 
@@ -220,6 +180,16 @@ public class Respawn : MonoBehaviour
         {
 
             respawnPos = checkpoint03.transform.position;
+
+            QuestLog.currentLine = 2;
+
+            fala01.SetActive(false);
+            fala02.SetActive(false);
+            fala03.SetActive(false);
+            fala04.SetActive(false);
+            fala05.SetActive(true);
+            fala06.SetActive(true);
+            fala07.SetActive(true);
 
             player.transform.position = respawnPos;
 
@@ -236,6 +206,16 @@ public class Respawn : MonoBehaviour
 
             respawnPos = checkpoint04.transform.position;
 
+            QuestLog.currentLine = 3;
+
+            fala01.SetActive(false);
+            fala02.SetActive(false);
+            fala03.SetActive(false);
+            fala04.SetActive(false);
+            fala05.SetActive(true);
+            fala06.SetActive(true);
+            fala07.SetActive(true);
+
             player.transform.position = respawnPos;
             
             dimi.carregando = true;
@@ -251,6 +231,16 @@ public class Respawn : MonoBehaviour
         {
 
             respawnPos = checkpoint05.transform.position;
+
+            QuestLog.currentLine = 2;
+
+            fala01.SetActive(false);
+            fala02.SetActive(false);
+            fala03.SetActive(false);
+            fala04.SetActive(false);
+            fala05.SetActive(true);
+            fala06.SetActive(true);
+            fala07.SetActive(true);
 
             player.transform.position = respawnPos;
             

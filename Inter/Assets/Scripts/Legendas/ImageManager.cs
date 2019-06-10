@@ -57,6 +57,7 @@ public class ImageManager : MonoBehaviour
     [Header ("Audios dos Personagens")]
     public AudioSource OutrosPersonagensVoz;
     public AudioSource SergueiVoz;
+    public AudioSource SomDeFundo;
 
     private void Start()
     {
@@ -97,6 +98,18 @@ public class ImageManager : MonoBehaviour
             }
             gameObject.SetActive(false);
         }
+
+        if(currentImage == 1 && SomDeFundo != null)
+        {
+            //Abaixa o Som aqui (pode deletar esse comentário depois)
+            //Abaixa o Som aqui (pode deletar esse comentário depois)
+            //Abaixa o Som aqui (pode deletar esse comentário depois)
+            //Abaixa o Som aqui (pode deletar esse comentário depois)
+            //Abaixa o Som aqui (pode deletar esse comentário depois)
+            //Abaixa o Som aqui (pode deletar esse comentário depois)
+            //Abaixa o Som aqui (pode deletar esse comentário depois)
+        }
+
     }
 
 
