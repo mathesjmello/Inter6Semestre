@@ -67,6 +67,7 @@ public class FieldOfView : MonoBehaviour {
 
 
 
+
     private void Awake() {
         StartCoroutine("FindTargetWithDelay", 0f);
     }
@@ -77,8 +78,8 @@ public class FieldOfView : MonoBehaviour {
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
-        StartCoroutine("FindTargetWithDelay", 0f);
-        Debug.Log("Coroutine");
+       // StartCoroutine("FindTargetWithDelay", 0f);
+        //Debug.Log("Coroutine");
         saveMemory = PlayerPrefs.GetInt("VoltouDoGameOver");
     }
 
@@ -95,11 +96,11 @@ public class FieldOfView : MonoBehaviour {
         }
 
         
-        /*if (drunk)
+        if (drunk)
         {
             divView = drunkView;
-        }*/
-        viewRadius = raioVisao; // divView;
+        }
+        viewRadius = raioVisao / divView;
         
         DrawFieldOfView();
     }
@@ -185,6 +186,7 @@ public class FieldOfView : MonoBehaviour {
                         Debug.Log("Encontrei o Totem");
                         localizacaoDoPoster = target.transform.position;
                         controladorNPC.encontrou = true;
+                        
                     }
                 }
             }

@@ -47,6 +47,9 @@ public class ControllerNPC : MonoBehaviour
 
     public bool fazRota;
 
+    
+    public AudioSource totemSom;
+
     void Start()
     {
         campoDeVisao = GetComponent<FieldOfView>();
@@ -122,11 +125,13 @@ public class ControllerNPC : MonoBehaviour
         
         if (other.CompareTag("Totem"))
         {
+            totemSom.Play();
             buscandoTotem = false;
             myAgent.isStopped = true;
             campoDeVisao.anim.SetBool("isWalking", false);
             campoDeVisao.anim.SetBool("isWalkingDrunk", false);
             StartCoroutine(ColidiuComPoster());
+            
         }
         
         if (other.CompareTag("Reset") && fazRota == true)
@@ -165,7 +170,9 @@ public class ControllerNPC : MonoBehaviour
     IEnumerator ColidiuComPoster()
     {
         //Roda Animação de Confusão
+        
         Debug.Log("Poster");
+        
         yield return new WaitForSeconds(tempoDeConfusao);
         myAgent.isStopped = false;
         campoDeVisao.anim.SetBool("isWalking", true);
