@@ -62,7 +62,6 @@ public class ImageManager : MonoBehaviour
 
     public GameObject telefoneSom;
 
-    public Animator fadeOutAnim;
 
     public GameObject espaco;
 
@@ -126,7 +125,6 @@ public class ImageManager : MonoBehaviour
     {
         if (other.CompareTag("Player") && ativou == true)
         { 
-            fadeOutAnim.SetTrigger("Acabou");
             ativoNoMomento = true;
             espaco.SetActive(true);
             currentImage = 0;
