@@ -27,6 +27,7 @@ public class ImageManager : MonoBehaviour
     /// </summary>
 
 
+    public Animator fadeOutAnim;
 
     public GameObject textBox;
 
@@ -54,6 +55,9 @@ public class ImageManager : MonoBehaviour
 
     public float falaA_01, falaA_02, falaA_03, falaA_04, falaA_05;
     public float falaB_01, falaB_02, falaB_03, falaB_04, falaB_05;
+
+    public bool precisaDimitri;
+
 
     [Header ("Audios dos Personagens")]
     public AudioSource OutrosPersonagensVoz;
@@ -92,7 +96,7 @@ public class ImageManager : MonoBehaviour
         {
             theImage.sprite = textSprites[currentImage];
         }
-        else if(endAtImage >= currentImage)
+        else if(endAtImage <= currentImage)
         {
             textBox.SetActive(false);
             player.freeze = false;
@@ -104,8 +108,9 @@ public class ImageManager : MonoBehaviour
             {
                 tutorial.SetActive(true);
             }
-            if(proximaCena == true)
+            if(proximaCena == true && fadeOutAnim != null)
             {
+                fadeOutAnim.SetTrigger("Acabou");
                 SceneManager.LoadScene("Fase02");
             }
             gameObject.SetActive(false);
@@ -123,16 +128,16 @@ public class ImageManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && ativou == true)
+        if ((other.CompareTag("Player") && ativou == true) && precisaDimitri == false || other.CompareTag("Dimitri") && precisaDimitri == true)
         { 
             ativoNoMomento = true;
-            espaco.SetActive(true);
             currentImage = 0;
             player.freeze = true;
             ativou = false;
             SomDaFala();
             if (textBoxLigada == false)
             {
+                espaco.SetActive(true);
                 textBox.SetActive(true);
                 textBoxLigada = true;
             }
