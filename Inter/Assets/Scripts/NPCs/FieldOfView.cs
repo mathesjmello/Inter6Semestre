@@ -67,8 +67,11 @@ public class FieldOfView : MonoBehaviour {
 
 
 
+    private void Awake() {
+        StartCoroutine("FindTargetWithDelay", 0.2f);
+    }
 
-    private void Awake()
+    private void Start()
     {
         controladorNPC = GetComponent<ControllerNPC>();
         viewMesh = new Mesh();
@@ -110,7 +113,7 @@ public class FieldOfView : MonoBehaviour {
             yield return new WaitForSeconds(delay);
             FindVisibleTargets();
             ativouCoroutine = true;
-            Debug.Log("Delay");
+            //Debug.Log("Delay");
            
         }
     }
@@ -156,9 +159,12 @@ public class FieldOfView : MonoBehaviour {
                     float dstToTarget = Vector3.Distance(transform.position, target.position);
                     if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && target.CompareTag("Dimitri") && cheatAtivo == false)
                     {
+
+                        Debug.DrawLine(transform.position, target.position, Color.red);
                         //Aqui é aonde acontece a detecção do player
                         // feedDetecta.Play(0);
                         visibleTargets.Add(target);
+                        Debug.Log(target);
                         Debug.Log("Encontrei o Dimitri");
                         DetectouDimitri();
 
@@ -193,7 +199,7 @@ public class FieldOfView : MonoBehaviour {
         for (int i = 0; i <= stepCount; i++)
         {
             float angle = transform.eulerAngles.y - viewAngle / 2 + stepAngleSize * i;
-            //Debug.DrawLine(transform.position, transform.position + DirFromAngle(angle, true) * viewRadius, Color.red);
+            Debug.DrawLine(transform.position, transform.position + DirFromAngle(angle, true) * raioVisao, Color.red);
             ViewCastInfo newViewCast = ViewCast(angle);
 
             if(i > 0)
@@ -205,6 +211,8 @@ public class FieldOfView : MonoBehaviour {
                     if (edge.pointA != Vector3.zero)
                     {
                         viewPoints.Add(edge.pointA);
+
+                         Debug.DrawLine(transform.position, edge.pointA, Color.blue);
                     }
                     if (edge.pointB != Vector3.zero)
                     {
@@ -261,7 +269,7 @@ public class FieldOfView : MonoBehaviour {
                 maxAngle = angle;
                 maxPoint = newViewCast.point;
             }
-        }
+    }
         return new EdgeInfo(minPoint, maxPoint);
     }
 

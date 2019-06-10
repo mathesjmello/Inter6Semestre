@@ -87,6 +87,10 @@ public class ImageManager : MonoBehaviour
         {
             textBox.SetActive(false);
             player.freeze = false;
+
+             OutrosPersonagensVoz.Stop();
+             SergueiVoz.Stop();
+
             if (tutorial != null)
             {
                 tutorial.SetActive(true);
