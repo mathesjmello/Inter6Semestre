@@ -82,7 +82,7 @@ public class Calça : MonoBehaviour
         fala_05.SetActive(true);
         fala_06.SetActive(true);
         fala_07.SetActive(true);
-        bomba.SetActive(true);
+        //bomba.SetActive(true);
         dimitri.GetComponent<LargaDimi>().comCalca = true;
         tutoriais.SetActive(false);
         tutoriais2.SetActive(true);

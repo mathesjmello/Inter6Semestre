@@ -79,6 +79,8 @@ public class TesteCharDrunk : MonoBehaviour
     public float InputX;
     public float InputZ;
 
+    public Totem on;
+
     void Start()
 	{
 		controller = GetComponent<CharacterController>();
@@ -130,10 +132,11 @@ public class TesteCharDrunk : MonoBehaviour
             }
 
 
-            if (totem.transform.parent == player.transform && Input.GetKey(KeyCode.E))
+            /*if (on.segurando == true && Input.GetKey(KeyCode.E))
             {
-                totem.transform.parent = null;
-            }
+                //totem.transform.parent = null;
+                on.segurando = false;
+            }*/
 
 
             if (carregando == true)

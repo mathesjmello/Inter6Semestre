@@ -7,15 +7,34 @@ public class Totem : MonoBehaviour
 
     public GameObject player;
 
+    public bool segurando;
 
 
 
+    void Update(){
+        if (segurando == true)
+        {
+             this.transform.parent = player.transform;
+        }
+
+        if (segurando == false)
+        {
+            this.transform.parent = null;
+        }
+
+        if (segurando == true && Input.GetKey(KeyCode.E))
+        {
+            segurando = false;
+        }
+
+    }
 
     void OnTriggerStay(Collider other)
     {
-     if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
+     if (segurando == false && other.CompareTag("Player") && Input.GetKey(KeyCode.E))
      {
-         this.transform.parent = player.transform;
+        
+         segurando = true;
         
      }   
     }
