@@ -59,6 +59,8 @@ public class ImageManager : MonoBehaviour
     public AudioSource SergueiVoz;
     public AudioSource SomDeFundo;
 
+    public GameObject telefoneSom;
+
     private void Start()
     {
         tocandoFala = false;
@@ -101,6 +103,8 @@ public class ImageManager : MonoBehaviour
 
         if(currentImage == 1 && SomDeFundo != null)
         {
+            telefoneSom.SetActive(false);
+            SomDeFundo.volume = 0.1f;
             //Abaixa o Som aqui (pode deletar esse comentário depois)
             //Abaixa o Som aqui (pode deletar esse comentário depois)
             //Abaixa o Som aqui (pode deletar esse comentário depois)

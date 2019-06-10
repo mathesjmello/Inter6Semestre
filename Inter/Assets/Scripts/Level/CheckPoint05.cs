@@ -5,6 +5,8 @@ using UnityEngine;
 public class CheckPoint05 : MonoBehaviour
 {
 
+    public GameObject posterText; 
+
     public Respawn check;
 
     // Start is called before the first frame update
@@ -23,6 +25,7 @@ public class CheckPoint05 : MonoBehaviour
         {
             check.fase = 4;
             check.ativaSave = true;
+            posterText.SetActive(true);
         }
     }    
 }
