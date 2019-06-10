@@ -97,7 +97,7 @@ public class Respawn : MonoBehaviour
             respawnPos = checkpoint02.transform.position;
 
 
-            check.disable = 1;
+            check.disable = 0;
 
             save.saveGame = true;  
             ativaSave = true; 
@@ -123,7 +123,7 @@ public class Respawn : MonoBehaviour
             
             respawnPos = checkpoint04.transform.position;
 
-            check.disable = 3;
+            check.disable = 2;
 
             save.saveGame = true;
             ativaSave = true;
