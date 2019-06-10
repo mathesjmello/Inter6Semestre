@@ -184,6 +184,8 @@ public class MenuPrincipal : MonoBehaviour
 
 	public void LoadDoGameOver(){
 
+		questLog.SetActive(true);
+
 		PlayerScript.enabled = true;
 		MenuCam.SetActive(false);
 		PlayerCam.SetActive(true);
