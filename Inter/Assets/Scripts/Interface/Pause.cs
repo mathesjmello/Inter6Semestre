@@ -17,6 +17,10 @@ public class Pause : MonoBehaviour
 
 	public AudioSource menuSound;
 
+	public AudioSource clickSom;
+
+	public AudioSource continuarSom;
+
 
 	private void Start()
 	{
@@ -64,32 +68,39 @@ public class Pause : MonoBehaviour
 		Cursor.lockState = PauseScreen.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
 		Cursor.visible = PauseScreen.activeSelf;
 		PauseTime();
+		continuarSom.Play();
 	}
 
 	public void Opções()
 	{
+		clickSom.Play();
 		PauseScreen.SetActive(!PauseScreen.activeSelf);
 		OptionScreen.SetActive(true);
+		
 
 
 	}
 
 	public void VoltaOpções()
 	{
+		clickSom.Play();
 		OptionScreen.SetActive(false);
 		PauseScreen.SetActive(true);
+		
 		
 	}
 
 
 	public void VaiPraMenuPrincipal()
 	{
+		clickSom.Play();
 		Time.timeScale = 1.0f;
 		Time.fixedDeltaTime = originalFixedTimeScale;
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
 		SceneManager.LoadScene("Fase01");
 		PlayerPrefs.SetInt("VoltouDoGameOver",0);
+		
 
 	}
 
