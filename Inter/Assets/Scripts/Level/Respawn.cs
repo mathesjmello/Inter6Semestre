@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Respawn : MonoBehaviour
 {
@@ -52,6 +53,8 @@ public class Respawn : MonoBehaviour
     public bool ativaSave;
 
     public LargaDimi off;
+
+    public bool pula;
 
 
 
@@ -144,6 +147,39 @@ public class Respawn : MonoBehaviour
             ativaSave = true;
    
             
+        }
+
+        if (pula == true)
+        {
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            fase = 1;
+            StartCoroutine(SpawnSave());
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            fase = 2;
+            StartCoroutine(SpawnSave());
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            fase = 3;
+            StartCoroutine(SpawnSave());
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            fase = 4;
+            StartCoroutine(SpawnSave());
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            SceneManager.LoadScene("Fase02");
+        }
+
         }
 
        
