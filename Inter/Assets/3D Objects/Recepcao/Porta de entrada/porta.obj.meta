@@ -17,7 +17,17 @@ ModelImporter:
     3300002: porta:polySurface21_group1
     4300000: group1_porta:pCube30
     4300002: porta:polySurface21_group1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: group1_porta_pCube30Mat
+    second: {fileID: 2100000, guid: 7e23dd206afe443498d49926df58b757, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: porta_polySurface21_group1Mat
+    second: {fileID: 2100002, guid: 7e23dd206afe443498d49926df58b757, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
