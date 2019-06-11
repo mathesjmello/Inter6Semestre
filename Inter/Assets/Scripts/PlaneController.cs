@@ -16,6 +16,9 @@ public class PlaneController : MonoBehaviour
 
 	public float velocidade = 15f;
 
+    public Transform analogico;
+    public float giranalogico = 20;
+
 
 	private bool parede;
     // Start is called before the first frame update
@@ -36,22 +39,29 @@ public class PlaneController : MonoBehaviour
 		if (Input.GetKey(KeyCode.A))
 		{
 			movement.z += velocidade;
-		}
+            analogico.localRotation = Quaternion.Slerp(analogico.localRotation, Quaternion.Euler(giranalogico, 0, 0), .1f);
+
+        }
 		if (Input.GetKey(KeyCode.D))
 		{
 			movement.z += -velocidade;
-		}
+            analogico.localRotation = Quaternion.Slerp(analogico.localRotation, Quaternion.Euler(-giranalogico, 0, 0), .1f);
+        }
 		if (Input.GetKey(KeyCode.W))
 		{
 			movement.y += velocidade;
-		}
+            analogico.localRotation = Quaternion.Slerp(analogico.localRotation, Quaternion.Euler(0, 0, -giranalogico), .1f);
+        }
 		if (Input.GetKey(KeyCode.S))
 		{
 			movement.y += -velocidade;
-		}
+            analogico.localRotation = Quaternion.Slerp(analogico.localRotation, Quaternion.Euler(0, 0, giranalogico), .1f);
+        }
 
-	
-		rb.velocity = movement * Time.deltaTime;
+        analogico.localRotation = Quaternion.Slerp(analogico.localRotation, Quaternion.Euler(0, 0, 0), .1f);
+
+
+        rb.velocity = movement * Time.deltaTime;
 		movement /= 2;
 
 
