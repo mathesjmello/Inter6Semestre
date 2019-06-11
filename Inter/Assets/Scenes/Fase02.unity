@@ -13334,7 +13334,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 734d63aae780af44b8094b53732bdf6b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c3e78d1ab830fb345bc9e1b9f8634ce1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1
@@ -16107,6 +16107,9 @@ MonoBehaviour:
   OutrosPersonagensVoz: {fileID: 2070899658}
   SergueiVoz: {fileID: 2070899658}
   SomDeFundo: {fileID: 0}
+  telefoneSom: {fileID: 0}
+  espaco: {fileID: 0}
+  proximaCena: 0
 --- !u!65 &808221061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40093,7 +40096,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424324585677989983}
-  m_LocalRotation: {x: -0.1338397, y: -0.095972896, z: -0.013023713, w: 0.98625886}
+  m_LocalRotation: {x: -0.13383965, y: -0.095972896, z: -0.01302371, w: 0.98625886}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -40561,7 +40564,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424324587216709475}
-  m_LocalRotation: {x: 0.12868683, y: -0.09621775, z: 0.012545938, w: 0.98692685}
+  m_LocalRotation: {x: 0.12868686, y: -0.09621775, z: 0.012545941, w: 0.98692685}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

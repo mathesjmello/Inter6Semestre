@@ -20,10 +20,11 @@ public class Totem : MonoBehaviour
              this.transform.parent = player.transform;
         }
 
-        else
+        if (segurando == false)
         {
-            segurando = false;
+            this.transform.parent = null;
         }
+
 
     }
 
