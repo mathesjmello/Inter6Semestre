@@ -16096,7 +16096,7 @@ MonoBehaviour:
   endAtImage: 0
   theImage: {fileID: 934479947}
   textSprites:
-  - {fileID: 21300000, guid: 908e0761cb7e144448834052cf9a24bb, type: 3}
+  - {fileID: 21300000, guid: 9be0eb5c0ad07f145af2eb6ff6231dfb, type: 3}
   tempoParaProxima: 5
   player: {fileID: 977139283}
   tutorial: {fileID: 0}
@@ -22947,6 +22947,7 @@ MonoBehaviour:
   somDimitri: {fileID: 1859432458}
   areaDimi02: {fileID: 0}
   areaDimi03: {fileID: 0}
+  dimiSemCalca: {fileID: 0}
 --- !u!65 &1222864255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41090,7 +41091,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424324585677989983}
-  m_LocalRotation: {x: -0.13383971, y: -0.095972896, z: -0.0130237155, w: 0.98625886}
+  m_LocalRotation: {x: -0.13383967, y: -0.095972896, z: -0.01302371, w: 0.98625886}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -41558,7 +41559,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424324587216709475}
-  m_LocalRotation: {x: 0.12868676, y: -0.09621775, z: 0.01254593, w: 0.98692685}
+  m_LocalRotation: {x: 0.12868682, y: -0.09621775, z: 0.012545936, w: 0.98692685}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
