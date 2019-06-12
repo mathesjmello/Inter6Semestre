@@ -29,6 +29,8 @@ public class LargaDimi : MonoBehaviour
 
     public LargaDimi areaDimi03;
 
+    public GameObject dimiSemCalca;
+
 
     // Start is called before the first frame update
     void Start()
@@ -101,15 +103,26 @@ public class LargaDimi : MonoBehaviour
     IEnumerator LevantaDimitri(){
         //dimiAnim.SetTrigger("Levanta");
         //sergueiAnim.SetTrigger("LevantaDimi");
+        
+        if (dimiSemCalca != null)
+        {
+            dimiSemCalca.SetActive(false);
+        }
+
+        
         levantando = true;
         player.GetComponent<TesteCharDrunk>().carregando = true;
         comDimi = false; 
         dimitri.SetActive(false);
+        
+        
 
         yield return new WaitForSeconds(3.0f);
 
         Debug.Log("Levanta");
         levantando = false;
+
+        
     }
 
         void RandomSound(){
