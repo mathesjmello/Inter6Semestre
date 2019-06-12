@@ -72,6 +72,8 @@ public class MenuPrincipal : MonoBehaviour
 
 
 
+
+
 	private void Start()
 	{
         questLog.SetActive(false);
