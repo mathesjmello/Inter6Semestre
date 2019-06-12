@@ -114,7 +114,11 @@ public class ImageManager : MonoBehaviour
                 SceneManager.LoadScene("Fase02");
             }
             gameObject.SetActive(false);
-            espaco.SetActive(false);
+
+            if (espaco != null)
+            {
+                espaco.SetActive(false);
+            }
         }
 
         if(currentImage == 1 && SomDeFundo != null)
@@ -137,7 +141,10 @@ public class ImageManager : MonoBehaviour
             SomDaFala();
             if (textBoxLigada == false)
             {
-                espaco.SetActive(true);
+                if(espaco != null)
+                {
+                    espaco.SetActive(true);
+                }
                 textBox.SetActive(true);
                 textBoxLigada = true;
             }

@@ -12,20 +12,18 @@ public class StartGame2D : MonoBehaviour
 
 	public GameObject oldCam;
 
-	
-    // Start is called before the first frame update
-    void Start()
+    public GameObject instrucoes;
+
+    private void Awake()
     {
-        
+        if(instrucoes != null)
+        {
+            instrucoes.SetActive(false);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-	private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
 	{
 		if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
 		{
@@ -34,7 +32,19 @@ public class StartGame2D : MonoBehaviour
 			player3D.SetActive(false);
 			inimigos.SetActive(true);
 
+            if(instrucoes != null)
+            {
+                StartCoroutine(instrucoesAviao());
+            }
+
 			jogoSom.Play(0);
 		}
 	}
+
+    IEnumerator instrucoesAviao()
+    {
+        instrucoes.SetActive(true);
+        yield return new WaitForSeconds(10);
+        instrucoes.SetActive(false);
+    }
 }
