@@ -110,6 +110,13 @@ ModelImporter:
     100208: transform7
     100210: transform8
     100212: transform9
+    100214: nurbsCircle11
+    100216: nurbsCircle12
+    100218: nurbsCircle13
+    100220: nurbsCircle17
+    100222: nurbsCircle19
+    100224: nurbsCircle3
+    100226: nurbsCircle4
     400000: bacia
     400002: base_cabec
     400004: Bigode
@@ -217,6 +224,13 @@ ModelImporter:
     400208: transform7
     400210: transform8
     400212: transform9
+    400214: nurbsCircle11
+    400216: nurbsCircle12
+    400218: nurbsCircle13
+    400220: nurbsCircle17
+    400222: nurbsCircle19
+    400224: nurbsCircle3
+    400226: nurbsCircle4
     2100000: phongE1
     4300000: group6
     9500000: //RootNode
