@@ -89,7 +89,7 @@ public class TesteCharDrunk : MonoBehaviour
 	}
 
 
-    void FixedUpdate()
+    void Update()
     {
         if (freeze == true) {
 
