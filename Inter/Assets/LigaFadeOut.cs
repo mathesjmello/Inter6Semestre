@@ -21,7 +21,7 @@ public class LigaFadeOut : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
 
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Dimitri"))
         {
             fadeOutAnim.SetTrigger("Acabou");
         }
