@@ -10,7 +10,9 @@ public class OptionsManager : MonoBehaviour
     private ColorGrading colorGrading;
     private MasterVolume MasterVolume;
     private TesteCharDrunk TesteCharDrunk;
-
+    public Slider MasterSlider;
+    public Slider musicSlider;
+    public Slider sfxSlider;
     public GameObject brilhoEAudioObject;
     public GameObject sensibilObject;
 
@@ -24,6 +26,18 @@ public class OptionsManager : MonoBehaviour
     {
         MasterVolume = brilhoEAudioObject.GetComponent<MasterVolume>();
         TesteCharDrunk = sensibilObject.GetComponent<TesteCharDrunk>();
+        MasterSlider.maxValue = 20;
+        MasterSlider.minValue = -80;
+        musicSlider.maxValue = 20;
+        musicSlider.minValue = -80;
+        sfxSlider.maxValue = 20;
+        sfxSlider.minValue = -80;
+        
+        
+        MasterSlider.value = PlayerPrefs.GetFloat("volumePrefs");
+        musicSlider.value = PlayerPrefs.GetFloat("musicPrefs");
+        sfxSlider.value = PlayerPrefs.GetFloat("sfxPrefs");
+
     }
 
     // Update is called once per frame
@@ -49,5 +63,18 @@ public class OptionsManager : MonoBehaviour
     public void Volume(float valor)
     {
         MasterVolume.masterVolume = valor;
+        PlayerPrefs.SetFloat("volumePrefs", valor);
     }
+
+    public void Music(float valor)
+    {
+        MasterVolume.musicVolume = valor;
+        PlayerPrefs.SetFloat("musicPrefs", valor);
+    }
+    public void Sfx(float valor)
+    {
+        MasterVolume.sfxVolume = valor;
+        PlayerPrefs.SetFloat("sfxPrefs", valor);
+    }
+    
 }

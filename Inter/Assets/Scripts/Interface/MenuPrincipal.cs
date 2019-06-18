@@ -19,7 +19,7 @@ public class MenuPrincipal : MonoBehaviour
 	public GameObject NewGameScreen;
 	public GameObject PauseController;
     public GameObject ConfirmNewGameScreen;
-
+	public GameObject PauseScreen;
 	public GameObject Player;
 	public GameObject PlayerCam;
 
@@ -80,7 +80,7 @@ public class MenuPrincipal : MonoBehaviour
 		PlayerScript = Player.GetComponent<TesteCharDrunk>();
 
 		saveGameOver = PlayerPrefs.GetInt("VoltouDoGameOver");
-
+		
 
         if (menuInicial)
 		{
@@ -101,6 +101,9 @@ public class MenuPrincipal : MonoBehaviour
             tutorial.SetActive(false);
 		}
 		MasterVolume = brilhoEAudioObject.GetComponent<MasterVolume>();
+		MasterVolume.masterVolume =PlayerPrefs.GetFloat("volumePrefs");
+		MasterVolume.musicVolume = PlayerPrefs.GetFloat("musicPrefs");
+		MasterVolume.sfxVolume= PlayerPrefs.GetFloat("sfxPrefs");
 		TesteCharDrunk = sensibilObject.GetComponent<TesteCharDrunk>();
 
 		if (saveGameOver >= 1)
@@ -248,11 +251,28 @@ public class MenuPrincipal : MonoBehaviour
 
 	public void Volume(float valor)
 	{
-		volume = valor;
+			volume = valor;	
+	}
+	public void Music(float valor)
+	{
+		MasterVolume.musicVolume = valor;
+	}
+	public void Sfx(float valor)
+	{
+		MasterVolume.sfxVolume = valor;
 	}
 
 	public void VoltaOpções()
 	{
+		if (PauseController.GetComponent<Pause>().Paused)
+		{
+		NewGameScreen.SetActive(false);
+		OptionScreen.SetActive(false);
+		PauseScreen.SetActive(true);
+		clickSound.Play();
+		return;
+		
+		}
 		NewGameScreen.SetActive(false);
 		OptionScreen.SetActive(false);
 		MainMenuScreen.SetActive(true);

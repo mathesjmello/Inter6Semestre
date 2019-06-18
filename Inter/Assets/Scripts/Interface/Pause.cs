@@ -10,6 +10,7 @@ public class Pause : MonoBehaviour
     public GameObject PauseScreen;
 	public GameObject OptionScreen;
 
+	public bool Paused;
 
 	
 
@@ -45,6 +46,7 @@ public class Pause : MonoBehaviour
     {
         if (PauseScreen.activeSelf)
         {
+	        Paused = true;
             Time.timeScale = 0f;
 			Time.fixedDeltaTime = 0;
 			AudioListener.pause = true;
@@ -53,6 +55,7 @@ public class Pause : MonoBehaviour
         }
         else
         {
+	        Paused = false;
             Time.timeScale = 1.0f;
 			Time.fixedDeltaTime = originalFixedTimeScale;
 			AudioListener.pause = false;
